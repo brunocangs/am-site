@@ -29,7 +29,7 @@ collections:
     label: "Landing page"
     folder: "src/pages/landing"
     create: true
-    slug: "index.{{language}}.js"
+    slug: "index-{{language}}"
     fields:
       - {
           label: "Template Key",
