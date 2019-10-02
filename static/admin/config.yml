@@ -25,68 +25,68 @@ collections:
       - { label: "Body", name: "body", widget: "markdown" }
       - { label: "Tags", name: "tags", widget: "list" }
   - name: "pages"
-    folder: "src/landing"
-    label: "Landing Page"
-    create: true
-    identifier_field: "language"
-    fields:
-      - {
-          label: "Template Key",
-          name: "templateKey",
-          widget: "hidden",
-          default: "index-page",
-        }
-      - { label: "Base path", name: "basePath", widget: "hidden", default: "/" }
-      - { label: Title, name: title, widget: string }
-      - { label: Language, name: language, widget: select, options: [en, pt] }
-      - { label: Heading, name: heading, widget: string }
-      - { label: Subheading, name: subheading, widget: string }
-      - {
-          label: Mainpitch,
-          name: mainpitch,
-          widget: object,
-          fields:
-            [
-              { label: Title, name: title, widget: string },
-              { label: Description, name: description, widget: text },
-            ],
-        }
-      - { label: Description, name: description, widget: string }
-      - {
-          label: Intro,
-          name: intro,
-          widget: object,
-          fields:
-            [
-              { label: Heading, name: heading, widget: string },
-              { label: Description, name: description, widget: text },
-              {
-                label: Blurbs,
-                name: blurbs,
-                widget: list,
-                fields:
-                  [
-                    { label: Image, name: image, widget: image },
-                    { label: Text, name: text, widget: text },
-                  ],
-              },
-            ],
-        }
-  - file: "src/pages/about/index.md"
-    label: "About"
-    name: "about"
-    fields:
-      - {
-          label: "Template Key",
-          name: "templateKey",
-          widget: "hidden",
-          default: "about-page",
-        }
-      - {
-          label: "Page path",
-          name: "path",
-          widget: "hidden",
-          default: "/about",
-        }
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Body", name: "body", widget: "markdown" }
+    - label: "Landing Page"
+      folder: "src/landing"
+      create: true
+      identifier_field: "language"
+      fields:
+        - {
+            label: "Template Key",
+            name: "templateKey",
+            widget: "hidden",
+            default: "index-page",
+          }
+        - { label: "Base path", name: "basePath", widget: "hidden", default: "/" }
+        - { label: Title, name: title, widget: string }
+        - { label: Language, name: language, widget: select, options: [en, pt] }
+        - { label: Heading, name: heading, widget: string }
+        - { label: Subheading, name: subheading, widget: string }
+        - {
+            label: Mainpitch,
+            name: mainpitch,
+            widget: object,
+            fields:
+              [
+                { label: Title, name: title, widget: string },
+                { label: Description, name: description, widget: text },
+              ],
+          }
+        - { label: Description, name: description, widget: string }
+        - {
+            label: Intro,
+            name: intro,
+            widget: object,
+            fields:
+              [
+                { label: Heading, name: heading, widget: string },
+                { label: Description, name: description, widget: text },
+                {
+                  label: Blurbs,
+                  name: blurbs,
+                  widget: list,
+                  fields:
+                    [
+                      { label: Image, name: image, widget: image },
+                      { label: Text, name: text, widget: text },
+                    ],
+                },
+              ],
+          }
+    - file: "src/pages/about/index.md"
+      label: "About"
+      name: "about"
+      fields:
+        - {
+            label: "Template Key",
+            name: "templateKey",
+            widget: "hidden",
+            default: "about-page",
+          }
+        - {
+            label: "Page path",
+            name: "path",
+            widget: "hidden",
+            default: "/about",
+          }
+        - { label: "Title", name: "title", widget: "string" }
+        - { label: "Body", name: "body", widget: "markdown" }
