@@ -37,7 +37,7 @@ collections:
           widget: "hidden",
           default: "landing-page",
         }
-      - { label: "Base url", name: "baseUrl", widget: "hidden", default: "/" }
+      - { label: "Base url", name: "baseUrl", widget: "hidden", default: "" }
       - {
           label: "Language",
           name: "language",
