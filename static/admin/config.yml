@@ -10,7 +10,6 @@ collections:
     label: "Blog"
     folder: "src/pages/blog"
     create: true
-    slug: "{{slug}}"
     fields:
       - {
           label: "Template Key",
@@ -28,6 +27,7 @@ collections:
   - name: "pages"
     folder: "src/landing"
     label: "Landing Page"
+    create: true
     identifier_field: "language"
     fields:
       - {
