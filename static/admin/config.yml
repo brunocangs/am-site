@@ -37,23 +37,14 @@ collections:
           widget: "hidden",
           default: "landing-page",
         }
-        - {
-          label: "Base url",
-          name: "baseUrl",
-          widget: "hidden",
-          default: "/",
-        }
+      - { label: "Base url", name: "baseUrl", widget: "hidden", default: "/" }
       - {
           label: "Language",
           name: "language",
           widget: "select",
-          options: ["en", "us"]
+          options: ["en", "us"],
         }
-      - {
-          label: "Title",
-          value: "title",
-          widget: "string"
-        }
+      - { label: "Title", value: "title", widget: "string" }
   - name: "pages"
     label: "Pages"
     files:
