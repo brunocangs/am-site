@@ -47,5 +47,6 @@ collections:
               { label: "Português", value: "pt" },
               { label: "Inglês", value: "en" },
             ],
+          default: "pt",
         }
       - { label: "Title", name: "title", widget: "string" }
