@@ -42,6 +42,10 @@ collections:
           label: "Language",
           name: "language",
           widget: "select",
-          options: ["en", "us"],
+          options:
+            [
+              { label: "Português", value: "pt" },
+              { label: "Inglês", value: "en" },
+            ],
         }
       - { label: "Title", name: "title", widget: "string" }
