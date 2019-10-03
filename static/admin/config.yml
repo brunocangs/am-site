@@ -66,7 +66,7 @@ collections:
           label: "Base url",
           name: "baseUrl",
           widget: "hidden",
-          default: "/projeto",
+          default: "/projetos",
         }
       - {
           label: "Language",
@@ -115,7 +115,7 @@ collections:
           name: "clientName",
           widget: "string",
         }
-      - { label: "Depoimento", name: "testimony", widget: "string" }
+      - { label: "Depoimento", name: "testimony", widget: "text" }
       - { label: "Tags", name: "tags", widget: "list" }
   - name: "services"
     label: "Serviços"
@@ -165,7 +165,7 @@ collections:
           label: "Base url",
           name: "baseUrl",
           widget: "hidden",
-          default: "/servicos",
+          default: "/tecnologias",
         }
       - {
           label: "Language",
