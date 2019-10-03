@@ -38,9 +38,7 @@ export default function Header(props) {
       <Link to="/">
         <Logo />
       </Link>
-      <NavMenu>
-        <NavItem>Hi</NavItem>
-      </NavMenu>
+      <NavMenu>{/* <NavItem>Hi</NavItem> */}</NavMenu>
     </Nav>
   );
 }
