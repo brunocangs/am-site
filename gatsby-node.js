@@ -35,13 +35,21 @@ exports.createPages = ({ actions, graphql }) => {
 
     posts.forEach(edge => {
       const id = edge.node.id;
+      let path = "";
+      if (edge.node.frontmatter.baseUrl) {
+        path += `${edge.node.frontmatter.language}${edge.node.frontmatter.baseUrl}`;
+        if (edge.node.fields.slug) {
+          path += `/${edge.node.fields.slug}`;
+        }
+      } else {
+        path += edge.node.fields.slug;
+      }
+      console.log("PATH>>>>", path);
       createPage({
-        path: edge.node.frontmatter.baseUrl
-          ? `${edge.node.frontmatter.language}${edge.node.frontmatter.baseUrl}`
-          : edge.node.fields.slug,
+        path,
         tags: edge.node.frontmatter.tags,
-        component: path.resolve(
-          `src/templates/${String(edge.node.frontmatter.templateKey)}.js`
+        component: require.resolve(
+          `./src/templates/${String(edge.node.frontmatter.templateKey)}.js`
         ),
         // additional data can be passed via context
         context: {
@@ -81,7 +89,9 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   fmImagesToRelative(node); // convert image paths for gatsby images
 
   if (node.internal.type === `MarkdownRemark`) {
-    const value = createFilePath({ node, getNode });
+    let value = createFilePath({ node, getNode });
+    value = value.split("/")[2];
+    if (!value.startsWith("index")) value = value.match(/(.*)-\w{2}/)[1];
     createNodeField({
       name: `slug`,
       node,
