@@ -34,11 +34,10 @@ exports.createPages = ({ actions, graphql }) => {
     const posts = result.data.allMarkdownRemark.edges;
 
     posts.forEach(edge => {
-      console.log(edge.node.frontmatter);
       const id = edge.node.id;
       createPage({
         path: edge.node.frontmatter.baseUrl
-          ? `${edge.node.frontmatter.baseUrl}/${edge.node.frontmatter.language}`
+          ? `${edge.node.frontmatter.language}${edge.node.frontmatter.baseUrl}`
           : edge.node.fields.slug,
         tags: edge.node.frontmatter.tags,
         component: path.resolve(
