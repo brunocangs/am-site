@@ -44,7 +44,6 @@ exports.createPages = ({ actions, graphql }) => {
       } else {
         path += edge.node.fields.slug;
       }
-      console.log("PATH>>>>", path);
       createPage({
         path,
         tags: edge.node.frontmatter.tags,
@@ -90,7 +89,9 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 
   if (node.internal.type === `MarkdownRemark`) {
     let value = createFilePath({ node, getNode });
+    // Arruma o slug do arquivo
     value = value.split("/")[2];
+    // Pula slug para arquivos que começam com index-... (Páginas base e não slugs)
     if (!value.startsWith("index")) value = value.match(/(.*)-\w{2}/)[1];
     createNodeField({
       name: `slug`,

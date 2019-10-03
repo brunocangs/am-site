@@ -7,6 +7,5 @@ featuredpost: true
 featuredimage: /img/tweet.png
 tags:
   - React Native
-  - ''
 ---
 asd
