@@ -39,7 +39,7 @@ exports.createPages = ({ actions, graphql }) => {
       let path = "";
       if (edge.node.frontmatter.baseUrl) {
         path += `${edge.node.frontmatter.language}${edge.node.frontmatter.baseUrl}`;
-        if (edge.node.fields.slug) {
+        if (edge.node.fields.slug !== "index") {
           path += `/${edge.node.fields.slug}`;
         }
       } else {
@@ -93,7 +93,8 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     // Arruma o slug do arquivo
     value = value.split("/")[2];
     // Pula slug para arquivos que começam com index-... (Páginas base e não slugs)
-    if (!value.startsWith("index")) value = value.match(/(.*)-\w{2}/)[1];
+    if (value.startsWith("index") !== false)
+      value = value.match(/(.*)-\w{2}/)[1];
     createNodeField({
       name: `slug`,
       node,
