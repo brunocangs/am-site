@@ -52,7 +52,7 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
   - name: "project"
     label: "Projetos"
-    folder: "src/pages/project"
+    folder: "src/pages/projects"
     create: true
     slug: "{{slug}}-{{language}}"
     fields:
