@@ -2,7 +2,7 @@
 templateKey: technology-page
 baseUrl: /servicos
 language: pt
-title: React native
+title: React
 logo: /img/react.png
 tags:
   - React
