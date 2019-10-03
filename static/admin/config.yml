@@ -79,7 +79,7 @@ collections:
             ],
           default: "pt",
         }
-      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Nome", name: "title", widget: "string" }
       - { label: "Descrição curta", name: "summary", widget: "string" }
       - { label: "Descrição completa", name: "body", widget: "markdown" }
       - { label: "Nome do cliente", name: "clientName", widget: "string" }
@@ -101,4 +101,84 @@ collections:
           valueType: "int",
         }
       - { label: "Imagem", name: "image", widget: "image" }
+      - { label: "Tags", name: "tags", widget: "list" }
+  - name: "testimony"
+    label: "Depoimentos"
+    folder: "src/testimonies"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Nome da pessoa", name: "title", widget: "string" }
+      - { label: "Foto", name: "avatar", widget: "image" }
+      - {
+          label: "Nome da empresa ou cliente",
+          name: "clientName",
+          widget: "string",
+        }
+      - { label: "Depoimento", name: "testimony", widget: "string" }
+      - { label: "Tags", name: "tags", widget: "list" }
+  - name: "services"
+    label: "Serviços"
+    folder: "src/pages/services"
+    slug: "{{slug}}-{{language}}"
+    create: true
+    fields:
+      - {
+          label: "Template Key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "service-page",
+        }
+      - {
+          label: "Base url",
+          name: "baseUrl",
+          widget: "hidden",
+          default: "/servicos",
+        }
+      - {
+          label: "Language",
+          name: "language",
+          widget: "select",
+          options:
+            [
+              { label: "Português", value: "pt" },
+              { label: "Inglês", value: "en" },
+            ],
+          default: "pt",
+        }
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Corpo", name: "body", widget: "markdown" }
+      - { label: "Tags", name: "tags", widget: "list" }
+  - name: "technologies"
+    label: "Tecnologias"
+    folder: "src/pages/technologies"
+    slug: "{{slug}}-{{language}}"
+    create: true
+    fields:
+      - {
+          label: "Template Key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "technology-page",
+        }
+      - {
+          label: "Base url",
+          name: "baseUrl",
+          widget: "hidden",
+          default: "/servicos",
+        }
+      - {
+          label: "Language",
+          name: "language",
+          widget: "select",
+          options:
+            [
+              { label: "Português", value: "pt" },
+              { label: "Inglês", value: "en" },
+            ],
+          default: "pt",
+        }
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Logo", name: "logo", widget: "image" }
+      - { label: "Corpo", name: "body", widget: "markdown" }
       - { label: "Tags", name: "tags", widget: "list" }
