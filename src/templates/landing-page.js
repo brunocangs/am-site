@@ -18,6 +18,7 @@ export const query = graphql`
   fragment LandingPage on MarkdownRemarkFrontmatter {
     title
   }
+
   query LandingPageQuery($language: String!) {
     markdownRemark(
       frontmatter: {

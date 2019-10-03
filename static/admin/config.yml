@@ -19,6 +19,17 @@ collections:
           default: "blog-post",
         }
       - { label: "Title", name: "title", widget: "string" }
+      - {
+          label: "Language",
+          name: "language",
+          widget: "select",
+          options:
+            [
+              { label: "Português", value: "pt" },
+              { label: "Inglês", value: "en" },
+            ],
+          default: "pt",
+        }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Description", name: "description", widget: "text" }
       - { label: "Featured Post", name: "featuredpost", widget: "boolean" }

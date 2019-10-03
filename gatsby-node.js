@@ -94,8 +94,12 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     // Arruma o slug do arquivo
     value = value.split("/")[2];
     // Pula slug para arquivos que começam com index-... (Páginas base e não slugs)
-    if (value.startsWith("index") !== false)
+    console.log("value:", value, value.match(/(.*)-\w{2}/));
+    if (value.indexOf("index") === -1) {
       value = value.match(/(.*)-\w{2}/)[1];
+    } else {
+      value = "index";
+    }
     createNodeField({
       name: `slug`,
       node,
