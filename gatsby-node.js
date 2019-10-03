@@ -53,7 +53,8 @@ exports.createPages = ({ actions, graphql }) => {
         ),
         // additional data can be passed via context
         context: {
-          id
+          id,
+          language: edge.node.frontmatter.language
         }
       });
     });

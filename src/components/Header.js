@@ -1,20 +1,38 @@
 import styled from "styled-components";
+import React from "react";
 
-export const Nav = styled.nav``;
+const Nav = styled.nav`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+`;
 
-export const NavMenu = styled.ul`
+const NavMenu = styled.ul`
   list-style: none;
   display: flex;
   flex-direction: row;
   align-items: center;
 `;
 
-export const NavItem = styled.li`
+const NavItem = styled.li`
   & a {
   }
 `;
 
-export const Logo = styled.img`
+const Logo = styled.img.attrs({
+  src: "/img/logo.png"
+})`
   height: 100%;
   width: auto;
 `;
+
+export default function Header(props) {
+  return (
+    <Nav>
+      <Logo />
+      <NavMenu>
+        <NavItem>Hi</NavItem>
+      </NavMenu>
+    </Nav>
+  );
+}
