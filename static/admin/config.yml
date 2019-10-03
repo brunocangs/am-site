@@ -26,7 +26,7 @@ collections:
       - { label: "Body", name: "body", widget: "markdown" }
       - { label: "Tags", name: "tags", widget: "list" }
   - name: "landing-page"
-    label: "Landing page"
+    label: "Página inicial"
     folder: "src/pages/landing"
     create: true
     slug: "index-{{language}}"
@@ -51,6 +51,7 @@ collections:
         }
       - { label: "Title", name: "title", widget: "string" }
   - name: "project"
+    label: "Projetos"
     folder: "src/pages/project"
     create: true
     slug: "{{slug}}-{{language}}"
