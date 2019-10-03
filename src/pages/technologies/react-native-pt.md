@@ -1,6 +1,6 @@
 ---
 templateKey: technology-page
-baseUrl: /servicos
+baseUrl: /tecnologias
 language: pt
 title: React
 logo: /img/react.png
