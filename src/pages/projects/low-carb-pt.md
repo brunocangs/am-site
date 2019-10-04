@@ -21,7 +21,7 @@ tags:
 >
 > \-- <cite>Albert einstein</cite>
 
-```javascript
+```javascript{1,3}
 let a = [1,2,3];
 // highlightLine
 a.map(i => i * i).forEach(console.log);
