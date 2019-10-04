@@ -2,6 +2,6 @@
 templateKey: landing-page
 baseUrl: /
 language: pt
-title: App masters
+title: App Masters
 ---
 
