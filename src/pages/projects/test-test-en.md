@@ -1,6 +1,6 @@
 ---
-baseUrl: /projects
 templateKey: project-page
+baseUrl: /project
 language: pt
 title: Low carb app
 summary: Um aplicativo pra tu ficar magro irmão
