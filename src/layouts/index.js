@@ -31,16 +31,18 @@ const Main = styled.main`
   padding: 12px;
 `;
 
-export default ({ children }) => {
+export default props => {
+  const { children } = props;
+  let language = props.path.split("/")[1] || "en";
   return (
     <>
       <Globals />
       <header>
-        <Header />
+        <Header language={language} />
       </header>
       <Main>{children}</Main>
       <footer>
-        <Footer />
+        <Footer language={language} />
       </footer>
     </>
   );

@@ -48,7 +48,7 @@ collections:
           widget: "hidden",
           default: "landing-page",
         }
-      - { label: "Base url", name: "baseUrl", widget: "hidden", default: "/" }
+      - { label: "Link base", name: "baseUrl", widget: "string", default: "/" }
       - {
           label: "Language",
           name: "language",
@@ -74,9 +74,9 @@ collections:
           default: "project-page",
         }
       - {
-          label: "Base url",
+          label: "Link base",
           name: "baseUrl",
-          widget: "hidden",
+          widget: "string",
           default: "/projetos",
         }
       - {
@@ -141,9 +141,9 @@ collections:
           default: "service-page",
         }
       - {
-          label: "Base url",
+          label: "Link base",
           name: "baseUrl",
-          widget: "hidden",
+          widget: "string",
           default: "/servicos",
         }
       - {
@@ -173,9 +173,9 @@ collections:
           default: "technology-page",
         }
       - {
-          label: "Base url",
+          label: "Link base",
           name: "baseUrl",
-          widget: "hidden",
+          widget: "string",
           default: "/tecnologias",
         }
       - {
