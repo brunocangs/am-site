@@ -110,12 +110,11 @@ const getLinks = language => {
 };
 
 export default function Header(props) {
-  const { language } = props.pageContext;
+  const { language } = props;
   const navLinks = getLinks(language);
-  console.log(props);
   return (
     <Nav>
-      <Link to="/">
+      <Link to={`/${language || ""}`}>
         <Logo />
       </Link>
       <NavMenu>

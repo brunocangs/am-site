@@ -41,15 +41,17 @@ const Main = styled.main`
 
 export default props => {
   const { children } = props;
+  let language = props.path.split("/")[1];
+  if (language.length > 2) language = "en";
   return (
     <>
       <Globals />
       <header>
-        <Header {...props} />
+        <Header language={language} {...props} />
       </header>
       <Main>{children}</Main>
       <footer>
-        <Footer {...props} />
+        <Footer language={language} />
       </footer>
     </>
   );
