@@ -75,7 +75,7 @@ export default function Header(props) {
       <NavMenu>
         {navLinks.map(({ url, label }) => (
           <NavItem>
-            <Link to={url}>{label}</Link>
+            <Link to={`${language}/${url}`}>{label}</Link>
           </NavItem>
         ))}
       </NavMenu>
