@@ -7,40 +7,37 @@ export default props => {
   const { edges: projects } = allProjects;
   const { edges: technologies } = allTechnologies;
   return (
-    <div>
+    <>
       <Helmet>
         <title>{landing.frontmatter.title}</title>
       </Helmet>
-      {JSON.stringify(props.data, null, "-")
-        .split("\n")
-        .map(i => (
-          <>
-            {i}
-            <br />
-          </>
-        ))}
-      Landing Page bruv
-    </div>
+      <div></div>
+    </>
   );
 };
 
 export const query = graphql`
+  # Definição da landing page
   fragment LandingPage on MarkdownRemark {
     frontmatter {
       title
     }
   }
 
+  # Definição de um depoimento
   fragment Testimony on MarkdownRemark {
     frontmatter {
       title
-      avatar
+      avatar {
+        ...SiteImageFluid
+      }
       clientName
       testimony
       tags
     }
   }
 
+  # Detalhes da landing page
   query LandingPageQuery($language: String!) {
     landing: markdownRemark(
       frontmatter: {
@@ -50,6 +47,8 @@ export const query = graphql`
     ) {
       ...LandingPage
     }
+
+    # Todos os projetos
     allProjects: allMarkdownRemark(
       filter: {
         frontmatter: {
@@ -64,6 +63,8 @@ export const query = graphql`
         }
       }
     }
+
+    # Todas tecnologias
     allTechnologies: allMarkdownRemark(
       filter: {
         frontmatter: {
@@ -75,6 +76,22 @@ export const query = graphql`
       edges {
         node {
           ...TechnologyPage
+        }
+      }
+    }
+
+    # Todos os depoimentos
+    allTestimonies: allMarkdownRemark(
+      filter: {
+        frontmatter: {
+          baseUrl: { eq: "testimony" }
+          language: { eq: $language }
+        }
+      }
+    ) {
+      edges {
+        node {
+          ...Testimony
         }
       }
     }
