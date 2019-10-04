@@ -1,7 +1,7 @@
 ---
 templateKey: project-page
 baseUrl: /project
-language: pt
+language: en
 title: Low carb app
 summary: Um aplicativo pra tu ficar magro irmão
 clientName: Turi
@@ -21,6 +21,8 @@ Sabe o que ele faz?
 * doidera doidera aeuhakl jshdlkf jahsdfkl jabsdfk jabs fliabef oqbwedi qbwfuiq bwdnjqeuf bnisfdhbqu iasd abjsdiuf onajd fihuoanskj dfbuioasndkl jhbdiuhiso nkadisufohnkjdsbifuonkjdb fiuwheoidnjhbvuaoyigsudbjh vgqtfwgiufvquwegiuhonjxhfyiuhonkjfd biqguhiownkj bhviuhowi
 * coisa doida
 * viagem
+
+doidera doidera aeuhakl jshdlkf jahsdfkl jabsdfk jabs fliabef oqbwedi qbwfuiq bwdnjqeuf bnisfdhbqu iasd abjsdiuf onajd fihuoanskj dfbuioasndkl jhbdiuhiso nkadisufohnkjdsbifuonkjdb fiuwheoidnjhbvuaoyigsudbjh vgqtfwgiufvquwegiuhonjxhfyiuhonkjfd biqguhiownkj bhviuhowidoidera doidera aeuhakl jshdlkf jahsdfkl jabsdfk jabs fliabef oqbwedi qbwfuiq bwdnjqeuf bnisfdhbqu iasd abjsdiuf onajd fihuoanskj dfbuioasndkl jhbdiuhiso nkadisufohnkjdsbifuonkjdb fiuwheoidnjhbvuaoyigsudbjh vgqtfwgiufvquwegiuhonjxhfyiuhonkjfd biqguhiownkj bhviuhowidoidera doidera aeuhakl jshdlkf jahsdfkl jabsdfk jabs fliabef oqbwedi qbwfuiq bwdnjqeuf bnisfdhbqu iasd abjsdiuf onajd fihuoanskj dfbuioasndkl jhbdiuhiso nkadisufohnkjdsbifuonkjdb fiuwheoidnjhbvuaoyigsudbjh vgqtfwgiufvquwegiuhonjxhfyiuhonkjfd biqguhiownkj bhviuhowidoidera doidera aeuhakl jshdlkf jahsdfkl jabsdfk jabs fliabef oqbwedi qbwfuiq bwdnjqeuf bnisfdhbqu iasd abjsdiuf onajd fihuoanskj dfbuioasndkl jhbdiuhiso nkadisufohnkjdsbifuonkjdb fiuwheoidnjhbvuaoyigsudbjh vgqtfwgiufvquwegiuhonjxhfyiuhonkjfd biqguhiownkj bhviuhowidoidera doidera aeuhakl jshdlkf jahsdfkl jabsdfk jabs fliabef oqbwedi qbwfuiq bwdnjqeuf bnisfdhbqu iasd abjsdiuf onajd fihuoanskj dfbuioasndkl jhbdiuhiso nkadisufohnkjdsbifuonkjdb fiuwheoidnjhbvuaoyigsudbjh vgqtfwgiufvquwegiuhonjxhfyiuhonkjfd biqguhiownkj bhviuhowi
 
 Tem até imagem, se liga
 
