@@ -37,22 +37,19 @@ const Globals = createGlobalStyle`
 const Main = styled.main`
   flex: 1;
   display: flex;
-  padding: 12px;
 `;
 
 export default props => {
   const { children } = props;
-  let language = props.path.split("/")[1];
-  if (language.length > 2) language = "en";
   return (
     <>
       <Globals />
       <header>
-        <Header language={language} />
+        <Header {...props} />
       </header>
       <Main>{children}</Main>
       <footer>
-        <Footer language={language} />
+        <Footer {...props} />
       </footer>
     </>
   );

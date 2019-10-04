@@ -1,7 +1,7 @@
 ---
 templateKey: project-page
-baseUrl: /projetos
-language: pt
+baseUrl: /project
+language: en
 title: Low carb
 summary: Aplicativo para low carb peoples
 clientName: Turi

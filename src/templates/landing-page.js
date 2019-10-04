@@ -3,13 +3,19 @@ import { graphql } from "gatsby";
 import Helmet from "react-helmet";
 
 export default props => {
-  const { landing, allProjects, allTechnologies } = props.data;
-  const { edges: projects } = allProjects;
-  const { edges: technologies } = allTechnologies;
+  // const { landing, allProjects, allTechnologies } = props.data;
+  // const {
+  //   banner: {
+  //     childImageSharp: { fluid: image }
+  //   },
+  //   bannerContent: { content, header }
+  // } = landing.frontmatter;
+  // const { edges: projects } = allProjects;
+  // const { edges: technologies } = allTechnologies;
   return (
     <>
       <Helmet>
-        <title>{landing.frontmatter.title}</title>
+        <title>{props.data.landing.frontmatter.title}</title>
       </Helmet>
       <div></div>
     </>
@@ -21,6 +27,13 @@ export const query = graphql`
   fragment LandingPage on MarkdownRemark {
     frontmatter {
       title
+      banner {
+        ...SiteImageFluid
+      }
+      bannerContent {
+        content
+        header
+      }
     }
   }
 
