@@ -10,6 +10,9 @@ const Nav = styled.nav`
   padding: 8px;
   height: 75px;
   box-shadow: 0px 2px 3px -2px rgba(0, 0, 0, 0.3);
+  & > a {
+    height: inherit;
+  }
 `;
 
 const NavMenu = styled.ul`
@@ -21,7 +24,6 @@ const NavMenu = styled.ul`
 
 const NavItem = styled.li`
   & a {
-    height: 100%;
     padding: 8px;
   }
 `;
@@ -31,6 +33,7 @@ const Logo = styled.img.attrs({
 })`
   height: 100%;
   width: auto;
+  object-fit: contain;
 `;
 
 export default function Header(props) {

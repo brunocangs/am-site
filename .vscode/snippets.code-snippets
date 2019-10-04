@@ -20,8 +20,8 @@
     "prefix": "ncol",
     "body": [
       "export const $1 = \"$0\";",
-      "export const light${1/(.*)/${1:/capitalize}/} = color($1).lighten(0.1).hex();",
-      "export const dark${1/(.*)/${1:/capitalize}/} = color($1).darken(0.1).hex();"
+      "export const light${1/(.*)/${1:/capitalize}/} = color($1).lighten(0.2).hex();",
+      "export const dark${1/(.*)/${1:/capitalize}/} = color($1).darken(0.2).hex();"
     ]
   }
 }

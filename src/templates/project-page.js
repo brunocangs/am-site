@@ -26,6 +26,14 @@ export default ({ data }) => {
 };
 
 export const query = graphql`
+  fragment SiteImageFluid on File {
+    childImageSharp {
+      fluid {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
+
   fragment ProjectPage on MarkdownRemark {
     html
     frontmatter {
@@ -37,11 +45,7 @@ export const query = graphql`
       devTime
       devMonths
       image {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
+        ...SiteImageFluid
       }
       tags
     }

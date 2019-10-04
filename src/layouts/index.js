@@ -2,6 +2,7 @@ import React from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import styled, { createGlobalStyle } from "styled-components";
+import * as Colors from "../styles/colors";
 import "../codeHighlight.css";
 
 const Globals = createGlobalStyle`
@@ -22,6 +23,14 @@ const Globals = createGlobalStyle`
         display: flex;
         flex-direction: column;
         flex: 1;
+    }
+    a {
+      color: ${Colors.grey};
+      text-decoration: none;
+      &:hover {
+        color: ${Colors.darkGrey};
+        text-decoration: underline;
+      }
     }
 `;
 

@@ -115,16 +115,33 @@ collections:
       - { label: "Tags", name: "tags", widget: "list" }
   - name: "testimony"
     label: "Depoimentos"
-    folder: "src/testimonies"
+    folder: "src/pages/testimonies"
     create: true
     slug: "{{slug}}"
     fields:
       - { label: "Nome da pessoa", name: "title", widget: "string" }
       - { label: "Foto", name: "avatar", widget: "image" }
       - {
+          label: "Base Url",
+          name: "baseUrl",
+          widget: "hidden",
+          default: "testimony",
+        }
+      - {
           label: "Nome da empresa ou cliente",
           name: "clientName",
           widget: "string",
+        }
+      - {
+          label: "Language",
+          name: "language",
+          widget: "select",
+          options:
+            [
+              { label: "Português", value: "pt" },
+              { label: "Inglês", value: "en" },
+            ],
+          default: "pt",
         }
       - { label: "Depoimento", name: "testimony", widget: "text" }
       - { label: "Tags", name: "tags", widget: "list" }
