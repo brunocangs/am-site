@@ -18,9 +18,9 @@ tags:
 
 Sabe o que ele faz?
 
-- doidera
-- coisa doida
-- viagem
+* doidera doidera aeuhakl jshdlkf jahsdfkl jabsdfk jabs fliabef oqbwedi qbwfuiq bwdnjqeuf bnisfdhbqu iasd abjsdiuf onajd fihuoanskj dfbuioasndkl jhbdiuhiso nkadisufohnkjdsbifuonkjdb fiuwheoidnjhbvuaoyigsudbjh vgqtfwgiufvquwegiuhonjxhfyiuhonkjfd biqguhiownkj bhviuhowi
+* coisa doida
+* viagem
 
 Tem até imagem, se liga
 
