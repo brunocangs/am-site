@@ -1,6 +1,7 @@
 ---
 templateKey: project-page
 baseUrl: /project
+featured: true
 language: en
 title: Low carb
 summary: Aplicativo para low carb peoples
