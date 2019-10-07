@@ -26,6 +26,19 @@ ourWork: >-
   nisi quaerat enim reprehenderit rerum quisquam atque mollitia nesciunt
   similique eveniet obcaecati corrupti dolorem. Provident ex voluptatum eaque
   temporibus similique!
+
+
+  ```javascript{1,2}
+
+  let a = 'tset';
+
+  do {
+
+  //
+
+  } while(true);
+
+  ```
 manifest:
   content: >-
     * We aren't just looking for clients, we're working towards successful cases
