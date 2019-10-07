@@ -4,8 +4,12 @@ import Helmet from "react-helmet";
 import {
   Content,
   BannerContainer,
-  BannerContent
+  BannerContent,
+  Manifest,
+  Projects
 } from "../components/LandingComponents";
+import MdIt from "markdown-it";
+const md = new MdIt();
 
 export default props => {
   const { landing, allProjects, allTechnologies } = props.data;
@@ -13,7 +17,12 @@ export default props => {
     banner: {
       childImageSharp: { fluid: image }
     },
-    bannerContent: { content, header }
+    bannerContent: { content, header },
+    manifest,
+    ourWork,
+    weAreHiring,
+    hireUs,
+    language
   } = landing.frontmatter;
   const { edges: projects } = allProjects;
   const { edges: technologies } = allTechnologies;
@@ -27,10 +36,24 @@ export default props => {
         <BannerContainer aspectRatio={image.aspectRatio}>
           <img srcSet={image.srcSet} sizes={image.sizes} alt="Tech banner" />
           <BannerContent>
-            <h3>{header}</h3>
+            <h2>{header}</h2>
             {content}
           </BannerContent>
         </BannerContainer>
+        <div dangerouslySetInnerHTML={{ __html: md.render(ourWork) }}></div>
+        <Manifest
+          dangerouslySetInnerHTML={{
+            __html: `<h2>${manifest.title}</h2>${md.render(manifest.content)}`
+          }}
+        />
+        {language === "en" && (
+          <Projects>
+            <h2>Projects</h2>
+            {projects.map(({ node: project }) => {
+              return <div>project</div>;
+            })}
+          </Projects>
+        )}
       </Content>
     </>
   );
@@ -47,6 +70,14 @@ export const query = graphql`
       bannerContent {
         content
         header
+      }
+      language
+      ourWork
+      weAreHiring
+      hireUs
+      manifest {
+        content
+        title
       }
     }
   }

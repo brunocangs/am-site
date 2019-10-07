@@ -31,6 +31,7 @@ const NavMenu = styled.ul`
 const Drowpdown = styled.ul`
   list-style: none;
   position: absolute;
+  z-index: 999;
   top: 100%;
   right: 50%;
   transform: translateX(50%);

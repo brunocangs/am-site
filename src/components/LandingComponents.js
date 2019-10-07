@@ -1,8 +1,15 @@
 import styled from "styled-components";
-import { white } from "../styles/colors";
+import { white, lightestGrey } from "../styles/colors";
 import { medium } from "../styles/screens";
 export const Content = styled.div`
   flex: 1;
+  > div:not(:first-child) {
+    margin: 18px;
+    padding: 4px;
+  }
+  > div + div {
+    border-top: 1px solid ${lightestGrey};
+  }
 `;
 export const BannerContainer = styled.div`
   width: 100%;
@@ -43,3 +50,21 @@ export const BannerContent = styled.div`
     text-align: initial;
   }
 `;
+
+export const Manifest = styled.div`
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, 0.05);
+    li {
+      padding: 12px;
+    }
+    li + li {
+      border-top: 1px solid rgba(0, 0, 0, 0.05);
+    }
+  }
+`;
+
+export const Projects = styled.div``;

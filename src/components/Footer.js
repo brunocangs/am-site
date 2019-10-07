@@ -20,7 +20,7 @@ const FooterContainer = styled.div`
 
 const FooterContent = styled.div`
   flex: 1;
-  width: 25%;
+  width: 100%;
   padding: 8px;
   text-align: center;
   color: ${darkGrey};
@@ -35,6 +35,9 @@ const FooterContent = styled.div`
     display: block;
     margin-top: 6px;
   }
+  @media screen and (min-width: ${medium}) {
+    width: 33%;
+  }
 `;
 
 const SocialWrapper = styled.div`
@@ -44,60 +47,69 @@ const SocialWrapper = styled.div`
   }
 `;
 
-export default props => (
-  <FooterContainer>
-    <FooterContent>
-      <h3>Endereço</h3>
-      Av. Barão do Rio Branco, 3480 - Passos, Juiz de Fora - MG, 36025-020 3º
-      andar, Sala 1
-      <a
-        href="https://www.google.com.br/maps/place/App+Masters/@-21.7725999,-43.3486377,17z/data=!3m1!4b1!4m5!3m4!1s0x989b5d3104ae57:0x9216e0df6326e89f!8m2!3d-21.7725999!4d-43.3471735"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Abrir no Google Maps
-      </a>
-    </FooterContent>
-    <FooterContent>
-      <h3>Links relevantes</h3>
-      <a href="/">Projetos</a>
-      <a href="/">Blog</a>
-      <a href="/">Sobre nós</a>
-      <a href="/">Fale conosco</a>
-    </FooterContent>
-    <FooterContent>
-      <h3>Redes sociais</h3>
-      <SocialWrapper>
+export default props => {
+  const { language } = props;
+  const isEn = language === "en";
+  return (
+    <FooterContainer>
+      <FooterContent>
+        <h3>{isEn ? "Address" : "Endereço"}</h3>
+        {isEn
+          ? "Rio Branco Avenue 3480, 36025-020, Juiz de Fora, Minas Gerais, Brazil"
+          : "Av. Barão do Rio Branco, 3480 - Passos, Juiz de Fora - MG, 36025-020 3º andar, Sala 1"}
         <a
-          href="https://www.facebook.com/appmasters.io/"
+          href="https://www.google.com.br/maps/place/App+Masters/@-21.7725999,-43.3486377,17z/data=!3m1!4b1!4m5!3m4!1s0x989b5d3104ae57:0x9216e0df6326e89f!8m2!3d-21.7725999!4d-43.3471735"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <FaFacebook />
+          {isEn ? "Open in " : "Abrir no "} Google Maps
         </a>
-        <a
-          href="https://www.instagram.com/appmasters.io/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FaInstagram />
-        </a>
-        <a
-          href="https://www.linkedin.com/company/appmasters.io/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FaLinkedin />
-        </a>
-      </SocialWrapper>
-    </FooterContent>
-    <FooterContent>
-      <h3>Alguma coisa a mais</h3>
-      <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam natus enim
-        excepturi, eligendi est ut ratione cum incidunt aperiam recusandae sequi
-        fugiat reiciendis error, eaque corporis quasi ab consequatur fuga.
-      </p>
-    </FooterContent>
-  </FooterContainer>
-);
+      </FooterContent>
+      <FooterContent>
+        {isEn ? (
+          <>
+            <h3>Relevant links</h3>
+            <a href="/en/projects">Projects</a>
+            <a href="/en/blog">Blog</a>
+            <a href="/en/about">About us</a>
+            <a href="/en/contact">Contact</a>
+          </>
+        ) : (
+          <>
+            <h3>Links relevantes</h3>
+            <a href="/pt/projetos">Projetos</a>
+            <a href="/pt/blog">Blog</a>
+            <a href="/pt/sobre">Sobre nós</a>
+            <a href="/pt/contato">Fale conosco</a>
+          </>
+        )}
+      </FooterContent>
+      <FooterContent>
+        <h3>{isEn ? "Social networks" : "Redes sociais"}</h3>
+        <SocialWrapper>
+          <a
+            href="https://www.facebook.com/appmasters.io/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaFacebook />
+          </a>
+          <a
+            href="https://www.instagram.com/appmasters.io/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaInstagram />
+          </a>
+          <a
+            href="https://www.linkedin.com/company/appmasters.io/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaLinkedin />
+          </a>
+        </SocialWrapper>
+      </FooterContent>
+    </FooterContainer>
+  );
+};
