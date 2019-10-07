@@ -40,16 +40,10 @@ ourWork: >-
 
   ```
 manifest:
-  content: >-
+  content: |-
     * We aren't just looking for clients, we're working towards successful cases
-
     * Collaborating with the clients is more important than just contracts
-
-    * Responder a mudanças do cliente é mais importante que seguir o plano
-    inicial
-
     * Responding quickly to the client's requests is what's most important
-
     * We'll provide weekly demos until the project is complete
   title: We've turned our goals into a manifest!
 hireUs: >-
