@@ -1,17 +1,17 @@
 ---
 templateKey: landing-page
 baseUrl: /
-language: pt
-title: App Masters
+language: en
+title: Home - App Masters
 banner: /img/landing-banner.jpg
 bannerContent:
   content: >-
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam tenetur
     distinctio alias harum quo eveniet cupiditate ex, iure deleniti
     reprehenderit?
-  header: Aplicativos em tempo recorde
+  header: 'Your idea, built in record-breaking time'
 ourWork: >-
-  ## Título
+  ## What we do
 
 
   Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi odio incidunt
@@ -28,16 +28,28 @@ ourWork: >-
   temporibus similique!
 manifest:
   content: >-
-    * Não queremos apenas clientes, queremos cases de sucesso!
+    * We aren't just looking for clients, we're working towards successful cases
 
-    * Colaboração com o cliente é mais importante que contratos
+    * Collaborating with the clients is more important than just contracts
 
     * Responder a mudanças do cliente é mais importante que seguir o plano
     inicial
 
-    * Betas semanais até a conclusão do projeto
-  title: Convertemos nossos objetivos em um manifesto!
-hireUs: unset
+    * Responding quickly to the client's requests is what's most important
+
+    * We'll provide weekly demos until the project is complete
+  title: We've turned our goals into a manifest!
+hireUs: >-
+  At App Masters we have a highly skilled and well trained team of developers
+  that are capable of working in all parts of a project, be it QA, CI/CD, SEO,
+  Front and Backend, as well as mobile. We use [React](/en/technologies/react)
+  as the main framework for building quick and robust applications, which when
+  paired with [Redux](/en/technologies/redux) provides the best structure for
+  making your idea awesome.
+
+
+  Have we peaked your interest? [Get in touch](/en/contact) and let's discuss
+  your idea, we're always excited to meet new teams and new ideas.
 weAreHiring: 'Gostaria de trabalhar conosco? [Envie seu curriculum](/?)'
 ---
 
