@@ -37,13 +37,7 @@ manifest:
 
     * Betas semanais até a conclusão do projeto
   title: Convertemos nossos objetivos em um manifesto!
-hireUs: >-
-  Looking for a well trained and capable team to develop your idea? At App
-  Masters our developers are trained in the latest tech including CI/CD, Unit
-  and End to end testing, and all that on top of React and Redux.
-
-
-  If that's what you're looking for, [let's talk!](/contact)
+hireUs: unset
 weAreHiring: 'Gostaria de trabalhar conosco? [Envie seu curriculum](/?)'
 ---
 
