@@ -110,6 +110,12 @@ collections:
           default: "/projetos",
         }
       - {
+          label: "Mostrar na página principal",
+          name: "featured",
+          widget: "boolean",
+          default: false,
+        }
+      - {
           label: "Language",
           name: "language",
           widget: "select",
