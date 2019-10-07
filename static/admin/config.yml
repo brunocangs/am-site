@@ -244,5 +244,11 @@ collections:
         }
       - { label: "Título", name: "title", widget: "string" }
       - { label: "Logo", name: "logo", widget: "image" }
+      - {
+          label: "Mostrar na página principal",
+          name: "featured",
+          widget: "boolean",
+          default: false,
+        }
       - { label: "Corpo", name: "body", widget: "markdown" }
       - { label: "Tags", name: "tags", widget: "list" }
