@@ -2,8 +2,8 @@
 templateKey: landing-page
 baseUrl: /
 language: pt
-title: App Masters
-banner: /img/landing-banner.jpg
+title: Início - App Masters
+banner: /img/untitled.png
 bannerContent:
   content: >-
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam tenetur
