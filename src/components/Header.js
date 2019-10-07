@@ -3,6 +3,7 @@ import { Link } from "gatsby";
 import { FaLanguage } from "react-icons/fa";
 import React from "react";
 import * as Colors from "../styles/colors";
+import { medium, mediumPlus } from "../styles/screens";
 
 const Nav = styled.nav`
   display: flex;
@@ -19,9 +20,12 @@ const Nav = styled.nav`
 
 const NavMenu = styled.ul`
   list-style: none;
-  display: flex;
   flex-direction: row;
   align-items: center;
+  display: none;
+  @media screen and (min-width: ${mediumPlus}) {
+    display: flex;
+  }
 `;
 
 const Drowpdown = styled.ul`

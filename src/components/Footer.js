@@ -25,6 +25,7 @@ const FooterContent = styled.div`
   text-align: center;
   color: ${darkGrey};
   h3 {
+    font-size: 16px;
     color: ${black};
     text-transform: uppercase;
     font-weight: 400;

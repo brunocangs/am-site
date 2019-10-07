@@ -1,23 +1,37 @@
 import React from "react";
 import { graphql } from "gatsby";
 import Helmet from "react-helmet";
+import {
+  Content,
+  BannerContainer,
+  BannerContent
+} from "../components/LandingComponents";
 
 export default props => {
-  // const { landing, allProjects, allTechnologies } = props.data;
-  // const {
-  //   banner: {
-  //     childImageSharp: { fluid: image }
-  //   },
-  //   bannerContent: { content, header }
-  // } = landing.frontmatter;
-  // const { edges: projects } = allProjects;
-  // const { edges: technologies } = allTechnologies;
+  const { landing, allProjects, allTechnologies } = props.data;
+  const {
+    banner: {
+      childImageSharp: { fluid: image }
+    },
+    bannerContent: { content, header }
+  } = landing.frontmatter;
+  const { edges: projects } = allProjects;
+  const { edges: technologies } = allTechnologies;
+  console.log({ projects, technologies, landing });
   return (
     <>
       <Helmet>
         <title>{props.data.landing.frontmatter.title}</title>
       </Helmet>
-      <div></div>
+      <Content>
+        <BannerContainer aspectRatio={image.aspectRatio}>
+          <img srcSet={image.srcSet} sizes={image.sizes} alt="Tech banner" />
+          <BannerContent>
+            <h3>{header}</h3>
+            {content}
+          </BannerContent>
+        </BannerContainer>
+      </Content>
     </>
   );
 };
@@ -67,6 +81,7 @@ export const query = graphql`
         frontmatter: {
           templateKey: { eq: "project-page" }
           language: { eq: $language }
+          featured: { eq: true }
         }
       }
     ) {
@@ -83,6 +98,7 @@ export const query = graphql`
         frontmatter: {
           templateKey: { eq: "technology-page" }
           language: { eq: $language }
+          featured: { eq: true }
         }
       }
     ) {
