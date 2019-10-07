@@ -102,7 +102,7 @@ const getLinks = language => {
       },
       {
         url: "/sobre",
-        label: "Sobre nos"
+        label: "Sobre nós"
       }
     ];
   }

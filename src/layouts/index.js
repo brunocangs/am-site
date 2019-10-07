@@ -51,7 +51,7 @@ export default props => {
       </header>
       <Main>{children}</Main>
       <footer>
-        <Footer language={language} />
+        <Footer language={language} {...props} />
       </footer>
     </>
   );

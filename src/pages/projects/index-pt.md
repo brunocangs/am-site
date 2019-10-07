@@ -1,9 +1,9 @@
 ---
-templateKey: project-page
+templateKey: all-projects-page
 baseUrl: /projetos
 language: pt
-title: Index
-summary: TEste
+title: Página de projetos
+summary: Teste
 clientName: teste
 clientLocation: teste
 devTime: 123
