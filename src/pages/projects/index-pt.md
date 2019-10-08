@@ -1,8 +1,9 @@
 ---
 templateKey: all-projects-page
 baseUrl: /projetos
+featured: false
 language: pt
-title: Página de projetos
+title: Projetos - App Masters
 summary: Teste
 clientName: teste
 clientLocation: teste
