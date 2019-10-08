@@ -2,7 +2,7 @@
 templateKey: technology-page
 baseUrl: tecnologias
 language: pt
-title: index
+title: Tecnologias - App Masters
 logo: /img/react.png
 featured: false
 tags:
