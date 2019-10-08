@@ -257,11 +257,34 @@ collections:
     label: "Página Sobre nós"
     folder: "src/pages/about"
     create: true
-    slug: "{{slug}}-{{language}}"
+    slug: "index-{{language}}"
     fields:
       - label: "Título"
         name: "title"
         widget: "string"
+      - {
+          label: "Template Key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "technology-page",
+        }
+      - {
+          label: "Link base",
+          name: "baseUrl",
+          widget: "string",
+          default: "sobre",
+        }
+      - {
+          label: "Language",
+          name: "language",
+          widget: "select",
+          options:
+            [
+              { label: "Português", value: "pt" },
+              { label: "Inglês", value: "en" },
+            ],
+          default: "pt",
+        }
       - label: "Página"
         name: "body"
         widget: "markdown"
