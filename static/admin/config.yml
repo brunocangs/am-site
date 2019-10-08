@@ -266,7 +266,7 @@ collections:
           label: "Template Key",
           name: "templateKey",
           widget: "hidden",
-          default: "technology-page",
+          default: "about-page",
         }
       - {
           label: "Link base",
