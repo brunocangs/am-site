@@ -3,7 +3,7 @@ title: Bruno Cangussu
 avatar: /img/react.png
 baseUrl: testimony
 clientName: Cangs enterprises
-language: en
+language: pt
 testimony: >-
   Cool cool cool cool cool cool cool cool cool cool cool cool cool cool cool
   cool cool cool cool cool cool cool cool cool cool cool cool cool cool
