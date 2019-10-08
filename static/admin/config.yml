@@ -250,5 +250,6 @@ collections:
           widget: "boolean",
           default: false,
         }
+      - { label: "Resumo", name: "summary", widget: "string" }
       - { label: "Corpo", name: "body", widget: "markdown" }
       - { label: "Tags", name: "tags", widget: "list" }
