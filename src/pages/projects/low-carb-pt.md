@@ -1,6 +1,6 @@
 ---
 templateKey: project-page
-baseUrl: /projeto
+baseUrl: projeto
 featured: true
 language: pt
 title: Low carb

@@ -1,6 +1,6 @@
 ---
 templateKey: technology-page
-baseUrl: /tecnologias
+baseUrl: tecnologias
 language: pt
 title: React Native
 logo: /img/react.png

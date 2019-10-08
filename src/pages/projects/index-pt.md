@@ -1,6 +1,6 @@
 ---
 templateKey: all-projects-page
-baseUrl: /projetos
+baseUrl: projetos
 featured: false
 language: pt
 title: Projetos - App Masters
