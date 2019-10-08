@@ -253,3 +253,15 @@ collections:
       - { label: "Resumo", name: "summary", widget: "string" }
       - { label: "Corpo", name: "body", widget: "markdown" }
       - { label: "Tags", name: "tags", widget: "list" }
+  - name: "about"
+    label: "Página Sobre nós"
+    folder: "src/pages/about"
+    create: true
+    slug: "{{slug}}-{{language}}"
+    fields:
+      - label: "Título"
+        name: "title"
+        widget: "string"
+      - label: "Página"
+        name: "body"
+        widget: "markdown"
