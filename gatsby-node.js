@@ -70,7 +70,7 @@ exports.createPages = ({ actions, graphql }) => {
       }
     });
     // Eliminate duplicate tags
-    tags = _.uniq(tags);
+    tags = _.uniq(tags).filter(Boolean);
 
     // Make tag pages
     tags.forEach(tag => {

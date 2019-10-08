@@ -1,5 +1,5 @@
 ---
-templateKey: technology-page
+templateKey: all-technologies-page
 baseUrl: technologies
 language: en
 title: Technologies - App Masters
