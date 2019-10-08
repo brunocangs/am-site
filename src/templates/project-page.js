@@ -33,6 +33,13 @@ export const query = graphql`
       }
     }
   }
+  fragment SiteImageFixed on File {
+    childImageSharp {
+      fixed {
+        ...GatsbyImageSharpFixed
+      }
+    }
+  }
 
   fragment ProjectPage on MarkdownRemark {
     html
@@ -48,6 +55,9 @@ export const query = graphql`
         ...SiteImageFluid
       }
       tags
+    }
+    fields {
+      slug
     }
   }
 

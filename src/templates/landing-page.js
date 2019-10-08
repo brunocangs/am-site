@@ -1,21 +1,25 @@
 import React from "react";
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 import Helmet from "react-helmet";
+import { Parallax } from "react-parallax";
+import MdIt from "markdown-it";
+
 import {
   Content,
   BannerContainer,
   BannerContent,
   Manifest,
-  Projects
+  Projects,
+  Testimonies
 } from "../components/LandingComponents";
-import MdIt from "markdown-it";
+
 const md = new MdIt();
 
 export default props => {
-  const { landing, allProjects, allTechnologies } = props.data;
+  const { landing, allProjects, allTechnologies, allTestimonies } = props.data;
   const {
     banner: {
-      childImageSharp: { fluid: image }
+      childImageSharp: { fixed: image }
     },
     bannerContent: { content, header },
     manifest,
@@ -26,33 +30,55 @@ export default props => {
   } = landing.frontmatter;
   const { edges: projects } = allProjects;
   const { edges: technologies } = allTechnologies;
-  console.log({ projects, technologies, landing });
+  const { edges: testimonies } = allTestimonies;
+  console.log({ projects, technologies, testimonies, landing });
   return (
     <>
       <Helmet>
         <title>{props.data.landing.frontmatter.title}</title>
       </Helmet>
       <Content>
-        <BannerContainer aspectRatio={image.aspectRatio}>
-          <img srcSet={image.srcSet} sizes={image.sizes} alt="Tech banner" />
+        <Parallax
+          bgImage={
+            image.srcSet
+              .split("\n")
+              .slice(-1)[0]
+              .match(/(.*) /)[1]
+          }
+        >
           <BannerContent>
-            <h2>{header}</h2>
-            {content}
+            <h3>{header}</h3>
+            <p>{content}</p>
           </BannerContent>
-        </BannerContainer>
-        <div dangerouslySetInnerHTML={{ __html: md.render(ourWork) }}></div>
+        </Parallax>
+        <div dangerouslySetInnerHTML={{ __html: md.render(ourWork) }} />
         <Manifest
           dangerouslySetInnerHTML={{
             __html: `<h2>${manifest.title}</h2>${md.render(manifest.content)}`
           }}
         />
         {language === "en" && (
-          <Projects>
-            <h2>Projects</h2>
-            {projects.map(({ node: project }) => {
-              return <div>project</div>;
-            })}
-          </Projects>
+          <>
+            <Projects>
+              <h2>Projects</h2>
+              {projects.map(({ node: project }) => {
+                const { title, summary, image } = project.frontmatter;
+                const srcSet = image.childImageSharp.fluid.srcSet;
+                return (
+                  <Link to={`/en/project/${project.fields.slug}`}>
+                    <div>
+                      <img srcSet={srcSet} style={{ width: 150 }} />
+                      <div>{title}</div>
+                      <p>{summary}</p>
+                    </div>
+                  </Link>
+                );
+              })}
+            </Projects>
+            <Testimonies>
+              <h2>What people are saying about us!</h2>
+            </Testimonies>
+          </>
         )}
       </Content>
     </>
@@ -65,7 +91,7 @@ export const query = graphql`
     frontmatter {
       title
       banner {
-        ...SiteImageFluid
+        ...SiteImageFixed
       }
       bannerContent {
         content
@@ -86,12 +112,14 @@ export const query = graphql`
   fragment Testimony on MarkdownRemark {
     frontmatter {
       title
-      avatar {
-        ...SiteImageFluid
-      }
+      baseUrl
+      language
       clientName
       testimony
       tags
+      avatar {
+        ...SiteImageFluid
+      }
     }
   }
 

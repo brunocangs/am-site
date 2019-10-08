@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { white, lightestGrey } from "../styles/colors";
 import { medium } from "../styles/screens";
+
 export const Content = styled.div`
   flex: 1;
   > div:not(:first-child) {
@@ -11,6 +12,7 @@ export const Content = styled.div`
     border-top: 1px solid ${lightestGrey};
   }
 `;
+
 export const BannerContainer = styled.div`
   width: 100%;
   height: 0;
@@ -31,11 +33,8 @@ export const BannerContainer = styled.div`
 `;
 
 export const BannerContent = styled.div`
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  width: 100%;
+  height: 300px;
   padding: 16px;
   font-size: 22px;
   color: ${white};
@@ -45,8 +44,10 @@ export const BannerContent = styled.div`
     margin: 8px;
   }
   @media screen and (min-width: ${medium}) {
+    height: 400px;
     font-size: 28px;
-    right: 33%;
+    width: 60%;
+    margin-right: 40%;
     text-align: initial;
   }
 `;
@@ -68,3 +69,5 @@ export const Manifest = styled.div`
 `;
 
 export const Projects = styled.div``;
+
+export const Testimonies = styled.div``;
