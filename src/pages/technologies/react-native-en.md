@@ -5,6 +5,7 @@ language: en
 title: React Native
 logo: /img/react.png
 featured: true
+summary: Summary of React Native
 tags:
   - React
   - React Native
