@@ -66,22 +66,25 @@ exports.createPages = ({ actions, graphql }) => {
     // Iterate through each post, putting all found tags into `tags`
     posts.forEach(edge => {
       if (_.get(edge, `node.frontmatter.tags`)) {
-        tags = tags.concat(edge.node.frontmatter.tags);
+        tags = tags.concat(
+          edge.node.frontmatter.tags.map(tag => ({
+            tag,
+            language: edge.node.frontmatter.language
+          }))
+        );
       }
     });
-    // Eliminate duplicate tags
-    tags = _.uniq(tags).filter(Boolean);
+    // Eliminate duplicate and empty tags
+    tags = _.uniq(tags).filter(tag => !!tag.tag);
 
     // Make tag pages
     tags.forEach(tag => {
-      const tagPath = `/tags/${_.kebabCase(tag)}/`;
+      const tagPath = `/${tag.language}/tags/${_.kebabCase(tag.tag)}/`;
 
       createPage({
         path: tagPath,
         component: path.resolve(`src/templates/tags.js`),
-        context: {
-          tag
-        }
+        context: tag
       });
     });
   });
