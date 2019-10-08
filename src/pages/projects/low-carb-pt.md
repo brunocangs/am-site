@@ -13,6 +13,7 @@ image: /img/tweet.png
 tags:
   - React
   - React Native
+  - lalalalalala
 ---
 # Olha que titulozao
 
