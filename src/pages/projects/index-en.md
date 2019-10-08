@@ -3,7 +3,7 @@ templateKey: all-projects-page
 baseUrl: projects
 featured: false
 language: en
-title: index
+title: Projects - App Masters
 summary: a
 clientName: a
 clientLocation: a
