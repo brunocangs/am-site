@@ -38,6 +38,9 @@ manifest:
     * Betas semanais até a conclusão do projeto
   title: Convertemos nossos objetivos em um manifesto!
 hireUs: unset
-weAreHiring: 'Gostaria de trabalhar conosco? [Envie seu curriculum](/?)'
+weAreHiring: |-
+  ## Estamos contratando!
+
+  Gostaria de trabalhar conosco? [Envie seu curriculum](/?)
 ---
 
