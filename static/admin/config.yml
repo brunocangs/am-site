@@ -107,7 +107,7 @@ collections:
           label: "Link base",
           name: "baseUrl",
           widget: "string",
-          default: "/projetos",
+          default: "projetos",
         }
       - {
           label: "Mostrar na página principal",
@@ -197,7 +197,7 @@ collections:
           label: "Link base",
           name: "baseUrl",
           widget: "string",
-          default: "/servicos",
+          default: "servicos",
         }
       - {
           label: "Language",
@@ -229,7 +229,7 @@ collections:
           label: "Link base",
           name: "baseUrl",
           widget: "string",
-          default: "/tecnologias",
+          default: "tecnologias",
         }
       - {
           label: "Language",

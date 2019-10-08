@@ -1,6 +1,6 @@
 ---
-templateKey: project-page
-baseUrl: /projects
+templateKey: all-projects-page
+baseUrl: projects
 featured: false
 language: en
 title: index

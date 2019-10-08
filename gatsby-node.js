@@ -38,7 +38,9 @@ exports.createPages = ({ actions, graphql }) => {
       const id = edge.node.id;
       let path = "";
       if (edge.node.frontmatter.baseUrl) {
-        path += `${edge.node.frontmatter.language}${edge.node.frontmatter.baseUrl}`;
+        const { baseUrl } = edge.node.frontmatter;
+        const url = baseUrl.startsWith("/") ? baseUrl : `/${baseUrl}`;
+        path += `${edge.node.frontmatter.language}${url}`;
         if (edge.node.fields.slug !== "index") {
           path += `/${edge.node.fields.slug}`;
         }

@@ -60,7 +60,7 @@ export default props => {
         {language === "en" && (
           <>
             <Projects>
-              <h2>Projects</h2>
+              <h2>Our projects</h2>
               {projects.map(({ node: project }) => {
                 const { title, summary, image } = project.frontmatter;
                 const srcSet = image.childImageSharp.fluid.srcSet;
@@ -76,7 +76,14 @@ export default props => {
               })}
             </Projects>
             <Testimonies>
-              <h2>What people are saying about us!</h2>
+              <h2>What people are saying about us</h2>
+              {testimonies.map(({ node: { frontmatter: testimony } }) => (
+                <div>
+                  <div>
+                    {testimony.testimony}--<cite>{testimony.title}</cite>
+                  </div>
+                </div>
+              ))}
             </Testimonies>
           </>
         )}
