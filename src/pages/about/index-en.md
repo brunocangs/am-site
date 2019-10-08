@@ -1,6 +1,6 @@
 ---
 title: About - App Masters
-templateKey: technology-page
+templateKey: about-page
 baseUrl: about
 language: en
 ---

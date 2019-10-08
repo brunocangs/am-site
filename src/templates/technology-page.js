@@ -9,6 +9,7 @@ export const query = graphql`
     frontmatter {
       templateKey
       baseUrl
+      summary
       language
       title
       logo {

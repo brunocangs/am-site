@@ -37,11 +37,15 @@ export const BannerContent = styled.div`
   height: 300px;
   padding: 16px;
   font-size: 22px;
+  margin: 22px 0;
   color: ${white};
   text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
   h2 {
-    margin: 8px;
+    margin: 8px 0;
   }
   @media screen and (min-width: ${medium}) {
     height: 400px;
@@ -71,3 +75,13 @@ export const Manifest = styled.div`
 export const Projects = styled.div``;
 
 export const Testimonies = styled.div``;
+
+export const HireUs = styled.div``;
+
+export const WeAreHiring = styled.div``;
+
+export const HowMuchIsMyApp = styled.div`
+  a {
+    display: block;
+  }
+`;

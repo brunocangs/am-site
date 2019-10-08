@@ -1,6 +1,6 @@
 ---
 title: Sobre - App Masters
-templateKey: technology-page
+templateKey: about-page
 baseUrl: sobre
 language: pt
 ---

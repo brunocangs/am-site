@@ -10,7 +10,10 @@ import {
   BannerContent,
   Manifest,
   Projects,
-  Testimonies
+  Testimonies,
+  HireUs,
+  WeAreHiring,
+  HowMuchIsMyApp
 } from "../components/LandingComponents";
 
 const md = new MdIt();
@@ -31,7 +34,6 @@ export default props => {
   const { edges: projects } = allProjects;
   const { edges: technologies } = allTechnologies;
   const { edges: testimonies } = allTestimonies;
-  console.log({ projects, technologies, testimonies, landing });
   return (
     <>
       <Helmet>
@@ -47,7 +49,7 @@ export default props => {
           }
         >
           <BannerContent>
-            <h3>{header}</h3>
+            <h2>{header}</h2>
             <p>{content}</p>
           </BannerContent>
         </Parallax>
@@ -57,7 +59,7 @@ export default props => {
             __html: `<h2>${manifest.title}</h2>${md.render(manifest.content)}`
           }}
         />
-        {language === "en" && (
+        {language === "en" ? (
           <>
             <Projects>
               <h2>Our projects</h2>
@@ -80,13 +82,38 @@ export default props => {
               {testimonies.map(({ node: { frontmatter: testimony } }) => (
                 <div>
                   <div>
-                    {testimony.testimony}--<cite>{testimony.title}</cite>
+                    {testimony.testimony}- <cite>{testimony.title}</cite>
                   </div>
                 </div>
               ))}
             </Testimonies>
+            <HireUs
+              dangerouslySetInnerHTML={{
+                __html: `<h2>Hire Us</h2>${md.render(hireUs)}`
+              }}
+            />
           </>
+        ) : (
+          <HowMuchIsMyApp>
+            <h2>Quanto custa um aplicativo?</h2>
+            <p>
+              Gostaria de saber rapidamente o preço da sua ideia? Entre em
+              contato com a gente ou faça um teste rápido
+              <a
+                href="https://quantocustaumapp.appmasters.io/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Fazer uma simulação
+              </a>
+            </p>
+          </HowMuchIsMyApp>
         )}
+        <WeAreHiring
+          dangerouslySetInnerHTML={{
+            __html: md.render(weAreHiring)
+          }}
+        />
       </Content>
     </>
   );

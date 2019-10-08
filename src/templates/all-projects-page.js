@@ -6,13 +6,13 @@ import Helmet from "react-helmet";
 export default ({ data }) => {
   const { allProjects, allProjectsPage } = data;
   const { edges: projects } = allProjects;
-  const { frontmatter: page } = allProjectsPage;
+  const { frontmatter: page, html } = allProjectsPage;
   return (
     <div>
       <Helmet>
         <title>{page.title}</title>
       </Helmet>
-      <h2>All projects</h2>
+      <div dangerouslySetInnerHTML={{ __html: html }} />
       <div>
         {projects.map(({ node: project }, i) => {
           const {
@@ -21,13 +21,20 @@ export default ({ data }) => {
             tags,
             clientName,
             clientLocation,
-            image
+            image,
+            language
           } = project.frontmatter;
           const { slug } = project.fields;
           const { srcSet, sizes } = image.childImageSharp.fluid;
           return (
             <div key={i}>
-              <Link to={`/en/project/${slug}`}>
+              <Link
+                to={
+                  language === "en"
+                    ? `/en/project/${slug}`
+                    : `/pt/projeto/${slug}`
+                }
+              >
                 <img srcSet={srcSet} sizes={sizes} style={{ width: 100 }} />
               </Link>
               <div>{title}</div>
@@ -60,7 +67,10 @@ export const query = graphql`
   query AllProjectsPageQuery($language: String!) {
     allProjects: allMarkdownRemark(
       filter: {
-        frontmatter: { baseUrl: { eq: "project" }, language: { eq: $language } }
+        frontmatter: {
+          templateKey: { eq: "project-page" }
+          language: { eq: $language }
+        }
       }
     ) {
       edges {
@@ -70,7 +80,10 @@ export const query = graphql`
       }
     }
     allProjectsPage: markdownRemark(
-      frontmatter: { templateKey: { eq: "all-projects-page" } }
+      frontmatter: {
+        templateKey: { eq: "all-projects-page" }
+        language: { eq: $language }
+      }
     ) {
       ...ProjectPage
     }
