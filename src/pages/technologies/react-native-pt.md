@@ -1,8 +1,8 @@
 ---
 templateKey: technology-page
-baseUrl: tecnologias
+baseUrl: tecnologia
 language: pt
-title: React Native
+title: React Native - App Masters
 logo: /img/react.png
 featured: true
 summary: Resumo de React Native
