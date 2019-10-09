@@ -27,6 +27,7 @@ export const query = graphql`
       baseUrl
       summary
       language
+      bgColor
       title
       logo {
         ...SiteImageFluid

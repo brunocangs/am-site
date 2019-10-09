@@ -15,7 +15,7 @@ export default ({ data }) => {
       </Helmet>
       <h3>{header.innerText}</h3>
       {technologies.map(({ node: technology }) => {
-        const { logo, title, summary } = technology.frontmatter;
+        const { logo, title, summary, bgColor } = technology.frontmatter;
         const image = logo.childImageSharp.fluid;
         return (
           <Link
@@ -26,11 +26,17 @@ export default ({ data }) => {
             }
           >
             <div>
-              <img
-                srcSet={image.srcSet}
-                sizes={image.sizes}
-                style={{ width: 100 }}
-              />
+              <div style={{ background: bgColor, height: 100, width: 100 }}>
+                <img
+                  srcSet={image.srcSet}
+                  sizes={image.sizes}
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "contain"
+                  }}
+                />
+              </div>
               <h3>{title}</h3>
               <div>{summary}</div>
             </div>

@@ -61,7 +61,12 @@ collections:
           default: "pt",
         }
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Banner", name: "banner", widget: "image" }
+      - {
+          label: "Banner",
+          name: "banner",
+          widget: "image",
+          hint: "Imagem da chamada principal (2:1)",
+        }
       - label: "Textos do banner"
         name: "bannerContent"
         widget: "object"
@@ -147,7 +152,18 @@ collections:
           widget: "number",
           valueType: "int",
         }
-      - { label: "Imagem", name: "image", widget: "image" }
+      - {
+          label: "Imagem",
+          name: "image",
+          widget: "image",
+          hint: "Imagem principal do projeto (2:1)",
+        }
+      - {
+          label: "Thumbnail",
+          name: "thumbnailImage",
+          widget: "image",
+          hint: "Imagem para thumbnail do projeto (1:1)",
+        }
       - { label: "Tags", name: "tags", widget: "list" }
   - name: "testimony"
     label: "Depoimentos"
@@ -156,7 +172,12 @@ collections:
     slug: "{{slug}}"
     fields:
       - { label: "Nome da pessoa", name: "title", widget: "string" }
-      - { label: "Foto", name: "avatar", widget: "image" }
+      - {
+          label: "Foto",
+          name: "avatar",
+          widget: "image",
+          hint: "Imagem da pessoa (1:1)",
+        }
       - {
           label: "Base Url",
           name: "baseUrl",
