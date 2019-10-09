@@ -47,6 +47,7 @@ export default props => {
               .slice(-1)[0]
               .match(/(.*) /)[1]
           }
+          strength={350}
         >
           <BannerContent>
             <h2>{header}</h2>

@@ -1,6 +1,6 @@
 ---
 templateKey: project-page
-baseUrl: projetos
+baseUrl: projeto
 featured: true
 language: pt
 title: Teste

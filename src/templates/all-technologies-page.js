@@ -1,5 +1,5 @@
 import React from "react";
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 import Helmet from "react-helmet";
 
 export default ({ data }) => {
@@ -18,15 +18,23 @@ export default ({ data }) => {
         const { logo, title, summary } = technology.frontmatter;
         const image = logo.childImageSharp.fluid;
         return (
-          <div>
-            <img
-              srcSet={image.srcSet}
-              sizes={image.sizes}
-              style={{ width: 100 }}
-            />
-            <h3>{title}</h3>
-            <div>{summary}</div>
-          </div>
+          <Link
+            to={
+              page.language === "en"
+                ? `/en/technology/${technology.fields.slug}`
+                : `/pt/tecnologia/${technology.fields.slug}`
+            }
+          >
+            <div>
+              <img
+                srcSet={image.srcSet}
+                sizes={image.sizes}
+                style={{ width: 100 }}
+              />
+              <h3>{title}</h3>
+              <div>{summary}</div>
+            </div>
+          </Link>
         );
       })}
     </div>

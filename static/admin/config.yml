@@ -243,7 +243,13 @@ collections:
           default: "pt",
         }
       - { label: "Título", name: "title", widget: "string" }
-      - { label: "Logo", name: "logo", widget: "image" }
+      - {
+          label: "Logo",
+          name: "logo",
+          widget: "image",
+          hint: "Imagem com mesma altura e largura (1:1) e fundo transparente",
+        }
+      - { label: "Cor de fundo", name: "bgColor", widget: "color" }
       - {
           label: "Mostrar na página principal",
           name: "featured",

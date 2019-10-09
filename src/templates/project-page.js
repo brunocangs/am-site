@@ -61,8 +61,9 @@ export const query = graphql`
     }
   }
 
-  query ProjectQuery($language: String!) {
+  query ProjectQuery($language: String!, $id: String!) {
     markdownRemark(
+      id: { eq: $id }
       frontmatter: {
         templateKey: { eq: "project-page" }
         language: { eq: $language }
