@@ -4,7 +4,7 @@ baseUrl: tecnologia
 language: pt
 title: React Native - App Masters
 logo: /img/react.png
-bgColor: '#2c0989'
+bgColor: '#b4f7ff'
 featured: true
 summary: Resumo de React Native
 tags:
