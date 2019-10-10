@@ -3,7 +3,7 @@ templateKey: landing-page
 baseUrl: /
 language: en
 title: Home - App Masters
-banner: /img/banner_bg.png
+banner: /img/banner_img.png
 bannerContent:
   content: >-
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam tenetur
