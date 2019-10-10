@@ -26,16 +26,15 @@ const Globals = createGlobalStyle`
         flex-direction: column;
         flex: 1;
     }
-    a {
-      color: ${Colors.grey};
-      text-decoration: none;
-      &:hover {
-        color: ${Colors.darkGrey};
-        text-decoration: underline;
-      }
-    }
     h1, h2, h3, h4, h5 {
       font-family: "Poppins", sans-serif;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+      &:hover {
+        text-decoration: underline;
+      }
     }
 `;
 

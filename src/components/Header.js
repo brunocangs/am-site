@@ -4,6 +4,7 @@ import { FaLanguage } from "react-icons/fa";
 import React, { useEffect, useState } from "react";
 import * as Colors from "../styles/colors";
 import { medium, mediumPlus } from "../styles/screens";
+import Logo from "../styles/svgs/white_logo.svg";
 
 const Nav = styled.nav`
   position: fixed;
@@ -16,10 +17,24 @@ const Nav = styled.nav`
   justify-content: space-between;
   padding: 8px;
   height: 75px;
-  background: white;
+  background: ${props => (props.scroll > 75 ? "#fff" : "transparent")};
+  color: ${props => (props.scroll > 75 ? Colors.black : Colors.white)};
+  box-shadow: ${props =>
+    props.scroll > 75 ? "0px 1px 3px -2px rgba(0,0,0,0.6)" : "none"};
+  transition: all 0.3s ease-in-out;
   & > a {
+    padding: 6px;
     height: inherit;
     justify-self: center;
+  }
+  ul {
+    transition: all 0.4s ease-in-out;
+    color: ${props => (props.scroll > 75 ? Colors.grey : Colors.white)};
+    > li {
+      &:hover {
+        color: ${props => (props.scroll > 75 ? Colors.darkGrey : Colors.white)};
+      }
+    }
   }
 `;
 
@@ -54,36 +69,30 @@ const DropdownItem = styled.li`
 const NavItem = styled.li`
   display: inline-flex;
   align-items: center;
-  & a {
+  a {
     padding: 8px;
   }
-  & svg {
+  svg {
     font-size: 1.8em;
     margin-right: 4px;
   }
   &:first-child {
     position: relative;
     margin-right: 8px;
-    color: ${Colors.grey};
     cursor: pointer;
     &:hover {
-      color: ${Colors.darkGrey};
-      text-decoration: underline;
       & ${Drowpdown} {
         display: block;
+        color: ${Colors.grey};
+        li:hover {
+          color: ${Colors.darkGrey};
+          text-decoration: underline;
+        }
       }
     }
   }
 `;
 
-const Logo = styled.img.attrs({
-  src: "/img/logo.png"
-})`
-  height: 100%;
-  max-width: 60vw;
-  width: auto;
-  object-fit: contain;
-`;
 const getLinks = language => {
   let navLinks;
   if (language === "en") {

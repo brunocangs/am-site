@@ -1,16 +1,9 @@
 import styled from "styled-components";
-import { white, lightestGrey } from "../styles/colors";
+import * as Colors from "../styles/colors";
 import media from "../styles/medias";
 
 export const Content = styled.div`
   flex: 1;
-  /* > div:not(:first-child) {
-    margin: 18px;
-    padding: 4px;
-  }
-  > div + div {
-    border-top: 1px solid ${lightestGrey};
-  } */
 `;
 
 export const BannerContainer = styled.section`
@@ -19,13 +12,12 @@ export const BannerContainer = styled.section`
   height: 700px;
   > img {
     position: absolute;
-    top: 75px;
     right: 0;
     bottom: 0;
     left: 0;
     z-index: 0;
     width: 100%;
-    height: calc(100% - 75px);
+    height: 100%;
     object-fit: cover;
   }
   ${media("medium", "large")} {
@@ -35,30 +27,28 @@ export const BannerContainer = styled.section`
     height: 1020px;
   }
 `;
-
-export const BannerContent = styled.div`
-  /* Container */
+const Container = styled.div`
   position: relative;
-  margin-top: 75px;
   z-index: 0;
   padding: 12px;
   display: flex;
-  justify-content: center;
-  align-items: center;
   width: 100%;
-  height: 100%;
+  height: inherit;
   margin: auto;
   font-family: "Poppins", sans-serif;
-  color: #fff;
-
-  ${media("medium", "large")} {
-    max-width: 70%;
+  max-width: 75%;
+  ${media("large", "extraLarge")} {
+    max-width: 950px;
   }
-
-  ${media("large")} {
+  ${media("extraLarge")} {
     max-width: 1120px;
   }
-
+`;
+export const BannerContent = styled(Container)`
+  /* Container */
+  justify-content: center;
+  align-items: center;
+  color: #fff;
   /* Text container */
   div {
     /* Title */
@@ -112,20 +102,82 @@ export const Manifest = styled.div`
   }
 `;
 
-export const OurWork = styled.div`
-  max-width: 100vw;
-  overflow: hidden;
+const SectionContainer = Container.withComponent("section");
+
+export const OurWork = styled.section``;
+
+export const Projects = styled.section``;
+
+export const Testimonies = styled(SectionContainer)`
+  margin-top: 65px;
+  flex-direction: column-reverse;
+  ${media("large")} {
+    flex-direction: row;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    ${media("large")} {
+      width: 60%;
+      flex-direction: row;
+    }
+    li {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      div {
+        margin: 12px;
+        padding: 8px;
+        border: 1px solid ${Colors.lightestGrey};
+        border-radius: 8px;
+        width: 100%;
+        ${media("large")} {
+          width: 85%;
+          margin: 8px auto;
+        }
+        h3 {
+          margin: 0;
+          line-height: 1.5em;
+          font-weight: 400;
+        }
+        div {
+        }
+        img {
+          border-radius: 100%;
+          height: 42px;
+          width: 42px;
+        }
+      }
+    }
+  }
+  > div {
+    flex: 1;
+    ${media("large")} {
+      margin-left: 12px;
+    }
+  }
+  h1 {
+    font-weight: 400;
+    font-size: 32px;
+    ${media("medium")} {
+      font-size: 40px;
+    }
+  }
+  p {
+    color: ${Colors.darkGrey};
+    line-height: 1.8em;
+  }
 `;
 
-export const Projects = styled.div``;
+export const HireUs = styled.section``;
 
-export const Testimonies = styled.div``;
+export const WeAreHiring = styled.section``;
 
-export const HireUs = styled.div``;
-
-export const WeAreHiring = styled.div``;
-
-export const HowMuchIsMyApp = styled.div`
+export const HowMuchIsMyApp = styled.section`
   a {
     display: block;
   }

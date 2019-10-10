@@ -43,7 +43,6 @@ export default props => {
       </Helmet>
       <Content>
         <BannerContainer>
-          {/* <Img fluid={image} /> */}
           <img src="/img/banner_bg.png" />
           <BannerContent>
             <div>
@@ -53,7 +52,9 @@ export default props => {
             <img src={`/img/${image.originalName}`} />
           </BannerContent>
         </BannerContainer>
-        <OurWork dangerouslySetInnerHTML={{ __html: md.render(ourWork) }} />
+        {/* <OurWork>
+          <div dangerouslySetInnerHTML={{ __html: md.render(ourWork) }} />
+        </OurWork> */}
         {/* <Manifest
           dangerouslySetInnerHTML={{
             __html: `<h2>${manifest.title}</h2>${md.render(manifest.content)}`
@@ -77,16 +78,70 @@ export default props => {
                 );
               })}
             </Projects> */}
-            {/* <Testimonies>
-              <h2>What people are saying about us</h2>
-              {testimonies.map(({ node: { frontmatter: testimony } }) => (
-                <div>
-                  <div>
-                    {testimony.testimony}- <cite>{testimony.title}</cite>
-                  </div>
-                </div>
-              ))}
-            </Testimonies> */}
+            <Testimonies>
+              <ul>
+                <li>
+                  {testimonies.slice(0, 1).map(({ node: testimony }, i) => {
+                    const { frontmatter, html } = testimony;
+                    const { avatar, testimony: body, title } = frontmatter;
+                    const image = avatar.childImageSharp.fluid;
+                    return (
+                      <div key={i + Math.random().toString()}>
+                        <img src={image.src} />
+                        <h3>{title}</h3>
+                        <p>
+                          {body.length > 65 ? body.slice(0, 65) + "..." : body}
+                        </p>
+                      </div>
+                    );
+                  })}
+                </li>
+                <li>
+                  {testimonies.slice(0, 1).map(({ node: testimony }, i) => {
+                    const { frontmatter, html } = testimony;
+                    const { avatar, testimony: body, title } = frontmatter;
+                    const image = avatar.childImageSharp.fluid;
+                    return (
+                      <>
+                        <div key={i + Math.random().toString()}>
+                          <img src={image.src} />
+                          <h3>{title}</h3>
+                          <p>
+                            {body.length > 65
+                              ? body.slice(0, 65) + "..."
+                              : body}
+                          </p>
+                        </div>
+                        <div key={i + Math.random().toString()}>
+                          <img src={image.src} />
+                          <h3>{title}</h3>
+                          <p>
+                            {body.length > 65
+                              ? body.slice(0, 65) + "..."
+                              : body}
+                          </p>
+                        </div>
+                      </>
+                    );
+                  })}
+                </li>
+              </ul>
+              <div>
+                <h1>Testimonies</h1>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
+                  minima sapiente ratione. Culpa asperiores aliquam dolor,
+                  veniam quas quod beatae, atque, iste earum eum porro cum quam
+                  at nam labore.
+                </p>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
+                  minima sapiente ratione. Culpa asperiores aliquam dolor,
+                  veniam quas quod beatae, atque, iste earum eum porro cum quam
+                  at nam labore.
+                </p>
+              </div>
+            </Testimonies>
             {/* <HireUs
               dangerouslySetInnerHTML={{
                 __html: `<h2>Hire Us</h2>${md.render(hireUs)}`
