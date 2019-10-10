@@ -1,6 +1,6 @@
 ---
 title: Bruno Cangussu
-avatar: /img/react.png
+avatar: /img/post_2.png
 baseUrl: testimony
 clientName: Cangs enterprises
 language: pt
