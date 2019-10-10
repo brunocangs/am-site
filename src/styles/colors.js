@@ -22,18 +22,18 @@ export const darkGrey = color(grey)
   .darken(0.2)
   .hex();
 
-export const blue = "#1693cb";
-export const lightBlue = color(blue)
-  .lighten(0.2)
-  .hex();
-export const darkBlue = color(blue)
-  .darken(0.2)
-  .hex();
-
 export const white = "#f4f4f4";
 export const lightWhite = color(white)
   .lighten(0.2)
   .hex();
 export const darkWhite = color(white)
+  .darken(0.2)
+  .hex();
+
+export const blue = "#0ab6ff";
+export const lightBlue = color(blue)
+  .lighten(0.2)
+  .hex();
+export const darkBlue = color(blue)
   .darken(0.2)
   .hex();

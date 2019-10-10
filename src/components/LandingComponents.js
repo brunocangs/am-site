@@ -1,58 +1,98 @@
 import styled from "styled-components";
 import { white, lightestGrey } from "../styles/colors";
-import { medium } from "../styles/screens";
+import media from "../styles/medias";
 
 export const Content = styled.div`
   flex: 1;
-  > div:not(:first-child) {
+  /* > div:not(:first-child) {
     margin: 18px;
     padding: 4px;
   }
   > div + div {
     border-top: 1px solid ${lightestGrey};
-  }
+  } */
 `;
 
-export const BannerContainer = styled.div`
+export const BannerContainer = styled.section`
   width: 100%;
-  height: 0;
-  padding-top: ${props => (1 / props.aspectRatio) * 100}%;
-  overflow: hidden;
   position: relative;
-  img {
+  height: 700px;
+  > img {
     position: absolute;
-    top: 0;
+    top: 75px;
     right: 0;
     bottom: 0;
     left: 0;
-    height: 100%;
+    z-index: 0;
     width: 100%;
+    height: calc(100% - 75px);
     object-fit: cover;
   }
-  min-height: 300px;
+  ${media("medium", "large")} {
+    height: 750px;
+  }
+  ${media("large")} {
+    height: 1020px;
+  }
 `;
 
 export const BannerContent = styled.div`
-  width: 100%;
-  height: 300px;
-  padding: 16px;
-  font-size: 22px;
-  margin: 22px 0;
-  color: ${white};
-  text-align: center;
+  /* Container */
+  position: relative;
+  margin-top: 75px;
+  z-index: 0;
+  padding: 12px;
   display: flex;
   justify-content: center;
-  flex-direction: column;
-  text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
-  h2 {
-    margin: 8px 0;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+
+  ${media("medium", "large")} {
+    max-width: 70%;
   }
-  @media screen and (min-width: ${medium}) {
-    height: 400px;
-    font-size: 28px;
-    width: 60%;
-    margin-right: 40%;
-    text-align: initial;
+
+  ${media("large")} {
+    max-width: 1120px;
+  }
+
+  /* Text container */
+  div {
+    /* Title */
+    h1 {
+      text-transform: capitalize;
+      font-size: 34px;
+      line-height: 1.2em;
+      ${media("medium", "large")} {
+        font-size: 45px;
+      }
+      ${media("large")} {
+        font-size: 55px;
+      }
+    }
+    /* Content */
+    p {
+      font-size: 15px;
+      line-height: 1.8;
+      font-family: "Poppins", sans-serif;
+      ${media("medium", "large")} {
+      }
+      ${media("large")} {
+      }
+    }
+  }
+  /* Side image */
+  img {
+    display: none;
+    height: 100%;
+    width: 45%;
+    object-fit: contain;
+    ${media("medium")} {
+      display: block;
+    }
   }
 `;
 
@@ -70,6 +110,11 @@ export const Manifest = styled.div`
       border-top: 1px solid rgba(0, 0, 0, 0.05);
     }
   }
+`;
+
+export const OurWork = styled.div`
+  max-width: 100vw;
+  overflow: hidden;
 `;
 
 export const Projects = styled.div``;

@@ -5,15 +5,27 @@ import Helmet from "react-helmet";
 export default ({ data }) => {
   const { html, frontmatter } = data.technology;
   const { title, logo, summary } = frontmatter;
+  const image = logo.childImageSharp.fluid;
+  console.log(image);
   return (
     <>
       <Helmet>
         <title>{title}</title>
       </Helmet>
-      <div style={{ padding: 12 }}>
-        <h2>Hi</h2>
-        <p>{summary}</p>
-        <div dangerouslySetInnerHTML={{ __html: html }} />
+      <div>
+        <div
+          style={{
+            backgroundColor: frontmatter.bgColor,
+            height: 100
+          }}
+        >
+          <img src={image.src} style={{ height: 100, width: 100 }} />
+        </div>
+        <div style={{ padding: 12 }}>
+          <h2>Hi</h2>
+          <p>{summary}</p>
+          <div dangerouslySetInnerHTML={{ __html: html }} />
+        </div>
       </div>
     </>
   );

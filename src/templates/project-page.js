@@ -30,6 +30,7 @@ export const query = graphql`
     childImageSharp {
       fluid {
         ...GatsbyImageSharpFluid
+        originalName
       }
     }
   }
@@ -37,6 +38,7 @@ export const query = graphql`
     childImageSharp {
       fixed {
         ...GatsbyImageSharpFixed
+        originalName
       }
     }
   }

@@ -1,20 +1,25 @@
 import styled from "styled-components";
 import { Link } from "gatsby";
 import { FaLanguage } from "react-icons/fa";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import * as Colors from "../styles/colors";
 import { medium, mediumPlus } from "../styles/screens";
 
 const Nav = styled.nav`
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
   display: flex;
-  flex-direction: row;
+  z-index: 9;
   align-items: center;
   justify-content: space-between;
   padding: 8px;
   height: 75px;
-  box-shadow: 0px 2px 3px -2px rgba(0, 0, 0, 0.3);
+  background: white;
   & > a {
     height: inherit;
+    justify-self: center;
   }
 `;
 
@@ -75,6 +80,7 @@ const Logo = styled.img.attrs({
   src: "/img/logo.png"
 })`
   height: 100%;
+  max-width: 60vw;
   width: auto;
   object-fit: contain;
 `;
@@ -114,11 +120,24 @@ const getLinks = language => {
   return navLinks;
 };
 
+const useWindowScroll = () => {
+  const [scroll, setScroll] = useState(window.scrollY);
+  useEffect(() => {
+    const handler = () => {
+      setScroll(window.scrollY);
+    };
+    window.addEventListener("scroll", handler);
+    return () => window.removeEventListener("scroll", handler);
+  });
+  return scroll;
+};
+
 export default function Header(props) {
   const { language } = props;
   const navLinks = getLinks(language);
+  const scroll = useWindowScroll();
   return (
-    <Nav>
+    <Nav scroll={scroll}>
       <Link to={`/${language || ""}`}>
         <Logo />
       </Link>

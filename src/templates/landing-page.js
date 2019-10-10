@@ -1,8 +1,9 @@
 import React from "react";
 import { graphql, Link } from "gatsby";
 import Helmet from "react-helmet";
-import { Parallax } from "react-parallax";
+// import { Parallax } from "react-parallax";
 import MdIt from "markdown-it";
+import Img from "gatsby-image";
 
 import {
   Content,
@@ -13,7 +14,8 @@ import {
   Testimonies,
   HireUs,
   WeAreHiring,
-  HowMuchIsMyApp
+  HowMuchIsMyApp,
+  OurWork
 } from "../components/LandingComponents";
 
 const md = new MdIt();
@@ -22,7 +24,7 @@ export default props => {
   const { landing, allProjects, allTechnologies, allTestimonies } = props.data;
   const {
     banner: {
-      childImageSharp: { fixed: image }
+      childImageSharp: { fluid: image }
     },
     bannerContent: { content, header },
     manifest,
@@ -40,29 +42,26 @@ export default props => {
         <title>{props.data.landing.frontmatter.title}</title>
       </Helmet>
       <Content>
-        <Parallax
-          bgImage={
-            image.srcSet
-              .split("\n")
-              .slice(-1)[0]
-              .match(/(.*) /)[1]
-          }
-          strength={350}
-        >
+        <BannerContainer>
+          {/* <Img fluid={image} /> */}
+          <img src="/img/banner_bg.png" />
           <BannerContent>
-            <h2>{header}</h2>
-            <p>{content}</p>
+            <div>
+              <h1>{header}</h1>
+              <p>{content}</p>
+            </div>
+            <img src={`/img/${image.originalName}`} />
           </BannerContent>
-        </Parallax>
-        <div dangerouslySetInnerHTML={{ __html: md.render(ourWork) }} />
-        <Manifest
+        </BannerContainer>
+        <OurWork dangerouslySetInnerHTML={{ __html: md.render(ourWork) }} />
+        {/* <Manifest
           dangerouslySetInnerHTML={{
             __html: `<h2>${manifest.title}</h2>${md.render(manifest.content)}`
           }}
-        />
+        /> */}
         {language === "en" ? (
           <>
-            <Projects>
+            {/* <Projects>
               <h2>Our projects</h2>
               {projects.map(({ node: project }) => {
                 const { title, summary, image } = project.frontmatter;
@@ -77,8 +76,8 @@ export default props => {
                   </Link>
                 );
               })}
-            </Projects>
-            <Testimonies>
+            </Projects> */}
+            {/* <Testimonies>
               <h2>What people are saying about us</h2>
               {testimonies.map(({ node: { frontmatter: testimony } }) => (
                 <div>
@@ -87,15 +86,16 @@ export default props => {
                   </div>
                 </div>
               ))}
-            </Testimonies>
-            <HireUs
+            </Testimonies> */}
+            {/* <HireUs
               dangerouslySetInnerHTML={{
                 __html: `<h2>Hire Us</h2>${md.render(hireUs)}`
               }}
-            />
+            /> */}
           </>
         ) : (
-          <HowMuchIsMyApp>
+          <>
+            {/* <HowMuchIsMyApp>
             <h2>Quanto custa um aplicativo?</h2>
             <p>
               Gostaria de saber rapidamente o preço da sua ideia? Entre em
@@ -108,13 +108,14 @@ export default props => {
                 Fazer uma simulação
               </a>
             </p>
-          </HowMuchIsMyApp>
+          </HowMuchIsMyApp> */}
+          </>
         )}
-        <WeAreHiring
+        {/* <WeAreHiring
           dangerouslySetInnerHTML={{
             __html: md.render(weAreHiring)
           }}
-        />
+        /> */}
       </Content>
     </>
   );
@@ -126,7 +127,7 @@ export const query = graphql`
     frontmatter {
       title
       banner {
-        ...SiteImageFixed
+        ...SiteImageFluid
       }
       bannerContent {
         content

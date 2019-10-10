@@ -4,16 +4,18 @@ import Footer from "../components/Footer";
 import styled, { createGlobalStyle } from "styled-components";
 import * as Colors from "../styles/colors";
 import "../codeHighlight.css";
+import Helmet from "react-helmet";
 
 const Globals = createGlobalStyle`
     *, *::after, *::before {
         box-sizing: border-box;
-        font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+        font-family: 'Roboto', sans-serif;
     }
     body, html {
         margin: 0;
         padding: 0;
         background-color: #fafafa;
+        color: ${Colors.lightBlack};
     }
     body {
         min-height: 100vh;
@@ -32,6 +34,9 @@ const Globals = createGlobalStyle`
         text-decoration: underline;
       }
     }
+    h1, h2, h3, h4, h5 {
+      font-family: "Poppins", sans-serif;
+    }
 `;
 
 const Main = styled.main`
@@ -45,8 +50,14 @@ export default props => {
   if (language.length > 2) language = "en";
   return (
     <>
+      <Helmet>
+        <link
+          href="https://fonts.googleapis.com/css?family=Open+Sans:800|Poppins:300,400,500,600,700,800|Roboto:300,400,500"
+          rel="stylesheet"
+        />
+      </Helmet>
       <Globals />
-      <header>
+      <header style={{ zIndex: 1 }}>
         <Header language={language} {...props} />
       </header>
       <Main>{children}</Main>

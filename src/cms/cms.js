@@ -5,13 +5,12 @@ class ColorPickerControl extends React.Component {
     return true;
   }
   render() {
-    console.log(this);
     return (
       <input
         type="color"
         value={this.props.value || "#fff"}
         onChange={e => this.props.onChange(e.target.value)}
-        id="forID"
+        id={this.props.forID}
       />
     );
   }
