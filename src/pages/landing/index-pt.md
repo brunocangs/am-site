@@ -3,13 +3,13 @@ templateKey: landing-page
 baseUrl: /
 language: pt
 title: Início - App Masters
-banner: /img/banner_bg.png
+banner: /img/banner_img.png
 bannerContent:
   content: >-
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam tenetur
     distinctio alias harum quo eveniet cupiditate ex, iure deleniti
     reprehenderit?
-  header: Aplicativos em tempo recorde
+  header: 'Suas melhores ideias, desenvolvidas em tempo recorde'
 ourWork: >-
   ## Título
 
