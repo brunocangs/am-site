@@ -120,7 +120,7 @@ export const Testimonies = styled(SectionContainer)`
     display: flex;
     flex-direction: column;
     ${media("large")} {
-      width: 60%;
+      width: 56%;
       flex-direction: row;
     }
     li {
@@ -132,12 +132,13 @@ export const Testimonies = styled(SectionContainer)`
       div {
         margin: 12px;
         padding: 8px;
-        border: 1px solid ${Colors.lightestGrey};
+        box-shadow: 1px 1px 4px 0px rgba(0,0,0,0.15);
+        /* border: 1px solid ${Colors.lightestGrey}; */
         border-radius: 8px;
         width: 100%;
         ${media("large")} {
-          width: 85%;
-          margin: 8px auto;
+          width: calc(100% - 16px);
+          margin: 8px;
         }
         h3 {
           margin: 0;
@@ -157,7 +158,7 @@ export const Testimonies = styled(SectionContainer)`
   > div {
     flex: 1;
     ${media("large")} {
-      margin-left: 12px;
+      margin-left: 18px;
     }
   }
   h1 {
