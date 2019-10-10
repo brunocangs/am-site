@@ -11,9 +11,10 @@ bannerContent:
     reprehenderit?
   header: 'Suas melhores ideias, desenvolvidas em tempo recorde'
 ourWork: >-
-  ![imagem](/img/img_3235.jpg "Galeras")
+  ![Equipe trabalhando](/img/img_3235.jpg "Equipe")
 
-  ## Título
+
+  ## O que fazemos
 
 
   Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi odio incidunt
@@ -25,6 +26,11 @@ ourWork: >-
   nisi quaerat enim reprehenderit rerum quisquam atque mollitia nesciunt
   similique eveniet obcaecati corrupti dolorem. Provident ex voluptatum eaque
   temporibus similique!
+
+
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima voluptatum, ea
+  asperiores dolore voluptatem odit ducimus quo aspernatur repudiandae dolorum,
+  nisi quaerat enim reprehenderit rerum quisquam atque.
 manifest:
   content: >-
     * Não queremos apenas clientes, queremos cases de sucesso!
