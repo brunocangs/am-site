@@ -1,9 +1,9 @@
 ---
 title: Bruno Cangussu
-avatar: /img/react.png
+avatar: /img/post_2.png
+baseUrl: testimony
 clientName: Cangs enterprises
 language: en
-baseUrl: testimony
 testimony: >-
   Po achei bem doido Po achei bem doido Po achei bem doido Po achei bem doido Po
   achei bem doido Po achei bem doido Po achei bem doido Po achei bem doido Po
