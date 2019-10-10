@@ -11,14 +11,13 @@ bannerContent:
     reprehenderit?
   header: 'Suas melhores ideias, desenvolvidas em tempo recorde'
 ourWork: >-
+  ![imagem](/img/img_3235.jpg "Galeras")
+
   ## Título
 
 
   Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi odio incidunt
   accusantium vel minus id illum nihil quam fuga excepturi!
-
-
-  ![imagem](/img/img_3235.jpg "Galeras")
 
 
   Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima voluptatum, ea
