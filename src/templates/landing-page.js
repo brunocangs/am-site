@@ -36,6 +36,20 @@ export default props => {
   const { edges: projects } = allProjects;
   const { edges: technologies } = allTechnologies;
   const { edges: testimonies } = allTestimonies;
+
+  const renderTestimony = ({ node: testimony }, i) => {
+    const { frontmatter, html } = testimony;
+    const { avatar, testimony: body, title } = frontmatter;
+    const image = avatar.childImageSharp.fluid;
+    return (
+      <div key={i}>
+        <img src={image.src} />
+        <h3>{title}</h3>
+        <p>{body.length > 65 ? body.slice(0, 65) + "..." : body}</p>
+      </div>
+    );
+  };
+
   return (
     <>
       <Helmet>
@@ -80,51 +94,8 @@ export default props => {
             </Projects> */}
             <Testimonies>
               <ul>
-                <li>
-                  {testimonies.slice(0, 1).map(({ node: testimony }, i) => {
-                    const { frontmatter, html } = testimony;
-                    const { avatar, testimony: body, title } = frontmatter;
-                    const image = avatar.childImageSharp.fluid;
-                    return (
-                      <div key={i + Math.random().toString()}>
-                        <img src={image.src} />
-                        <h3>{title}</h3>
-                        <p>
-                          {body.length > 65 ? body.slice(0, 65) + "..." : body}
-                        </p>
-                      </div>
-                    );
-                  })}
-                </li>
-                <li>
-                  {testimonies.slice(0, 1).map(({ node: testimony }, i) => {
-                    const { frontmatter, html } = testimony;
-                    const { avatar, testimony: body, title } = frontmatter;
-                    const image = avatar.childImageSharp.fluid;
-                    return (
-                      <>
-                        <div key={i + Math.random().toString()}>
-                          <img src={image.src} />
-                          <h3>{title}</h3>
-                          <p>
-                            {body.length > 65
-                              ? body.slice(0, 65) + "..."
-                              : body}
-                          </p>
-                        </div>
-                        <div key={i + Math.random().toString()}>
-                          <img src={image.src} />
-                          <h3>{title}</h3>
-                          <p>
-                            {body.length > 65
-                              ? body.slice(0, 65) + "..."
-                              : body}
-                          </p>
-                        </div>
-                      </>
-                    );
-                  })}
-                </li>
+                <li>{testimonies.slice(0, 1).map(renderTestimony)}</li>
+                <li>{testimonies.slice(1, 3).map(renderTestimony)}</li>
               </ul>
               <div>
                 <h1>Testimonies</h1>
