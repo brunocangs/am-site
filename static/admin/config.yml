@@ -169,7 +169,7 @@ collections:
     label: "Depoimentos"
     folder: "src/pages/testimonies"
     create: true
-    slug: "{{slug}}"
+    slug: "{{slug}}-{{language}}"
     fields:
       - { label: "Nome da pessoa", name: "title", widget: "string" }
       - {

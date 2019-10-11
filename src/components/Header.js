@@ -3,11 +3,11 @@ import { Link } from "gatsby";
 import { FaLanguage } from "react-icons/fa";
 import React, { useEffect, useState } from "react";
 import * as Colors from "../styles/colors";
-import { medium, mediumPlus } from "../styles/screens";
+import { mediumPlus } from "../styles/screens";
 import Logo from "../styles/svgs/white_logo.svg";
 
 const Nav = styled.nav`
-  position: fixed;
+  position: sticky;
   top: 0;
   right: 0;
   left: 0;
@@ -17,10 +17,14 @@ const Nav = styled.nav`
   justify-content: space-between;
   padding: 8px;
   height: 75px;
-  background: ${props => (props.scroll > 75 ? "#fff" : "transparent")};
-  color: ${props => (props.scroll > 75 ? Colors.black : Colors.white)};
+  background: ${props =>
+    props.scroll > 75 && props.isIndex ? "#fff" : "transparent"};
+  color: ${props =>
+    props.scroll > 75 && props.isIndex ? Colors.black : Colors.white};
   box-shadow: ${props =>
-    props.scroll > 75 ? "0px 1px 3px -2px rgba(0,0,0,0.6)" : "none"};
+    props.scroll > 75 && props.isIndex
+      ? "0px 1px 3px -2px rgba(0,0,0,0.6)"
+      : "none"};
   transition: all 0.3s ease-in-out;
   & > a {
     padding: 6px;
@@ -29,12 +33,17 @@ const Nav = styled.nav`
   }
   ul {
     transition: all 0.4s ease-in-out;
-    color: ${props => (props.scroll > 75 ? Colors.grey : Colors.white)};
+    color: ${props =>
+      props.scroll > 75 && props.isIndex ? Colors.grey : Colors.white};
     > li {
       &:hover {
-        color: ${props => (props.scroll > 75 ? Colors.darkGrey : Colors.white)};
+        color: ${props =>
+          props.scroll > 75 && props.isIndex ? Colors.darkGrey : Colors.white};
       }
     }
+  }
+  svg {
+    max-width: 60vw;
   }
 `;
 
@@ -145,10 +154,11 @@ export default function Header(props) {
   const { language } = props;
   const navLinks = getLinks(language);
   const scroll = useWindowScroll();
+  console.log(props);
   return (
-    <Nav scroll={scroll}>
+    <Nav scroll={scroll} isIndex={props.path.split("/").length === 3}>
       <Link to={`/${language || ""}`}>
-        <Logo />
+        <Logo style={{ height: "100%" }} />
       </Link>
       <NavMenu>
         <NavItem>

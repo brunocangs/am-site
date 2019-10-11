@@ -56,7 +56,7 @@ export default props => {
         />
       </Helmet>
       <Globals />
-      <header style={{ zIndex: 1 }}>
+      <header style={{ zIndex: 1, position: 'sticky', top: 0, right: 0, left: 0 }}>
         <Header language={language} {...props} />
       </header>
       <Main>{children}</Main>

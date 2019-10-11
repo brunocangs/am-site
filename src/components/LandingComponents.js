@@ -4,6 +4,7 @@ import media from "../styles/medias";
 
 export const Content = styled.div`
   flex: 1;
+  margin-top: -75px;
 `;
 
 export const BannerContainer = styled.section`
