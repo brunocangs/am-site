@@ -6,7 +6,6 @@ export default ({ data }) => {
   const { html, frontmatter } = data.technology;
   const { title, logo, summary } = frontmatter;
   const image = logo.childImageSharp.fluid;
-  console.log(image);
   return (
     <>
       <Helmet>

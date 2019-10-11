@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import * as Colors from "../styles/colors";
 import media from "../styles/medias";
-
+import React, { useRef, useState, useLayoutEffect } from "react";
 export const Content = styled.div`
   flex: 1;
   margin-top: -75px;
@@ -104,39 +104,77 @@ export const Manifest = styled(SectionContainer)`
   p {
     line-height: 1.8em;
   }
+  /* Lista de items do manifesto */
   > ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    border-radius: 3px;
-    background-color: rgba(0, 0, 0, 0.05);
-
-    li {
-      padding: 12px;
-      &:hover {
-        ul {
-          height: 100px;
-        }
-      }
-      ul {
+    border-radius: 6px;
+    border: 1px solid ${Colors.lightestGrey};
+    /* Item da lista */
+    > li {
+      /* Titulo */
+      > p {
+        cursor: pointer;
         margin: 0;
-        padding: 0;
-        height: 0;
-        transition: all 0.2s ease-in-out;
+        font-size: 1.15em;
+      }
+      padding: 12px;
+      /* Toggle */
+      ul {
         overflow: hidden;
+        transition: all 0.3s ease-in-out;
+        padding: 0;
+        margin: 0;
+        /* Item do toggle */
         li {
         }
       }
     }
+    /* Item a partir do segundo */
     li + li {
-      border-top: 1px solid rgba(0, 0, 0, 0.05);
+      border-top: 1px solid ${Colors.lightestGrey};
     }
   }
 `;
 
+export const ManifestItem = props => {
+  const i = props.content;
+  const md = props.md;
+  const content = useRef(null);
+  const [height, setHeight] = useState(0);
+  const [open, setOpen] = useState(false);
+  useLayoutEffect(() => {
+    if (content.current) {
+      setHeight(content.current.scrollHeight);
+    }
+  }, [open, height, content]);
+  return (
+    <li>
+      <p onClick={() => setOpen(!open)}>{i.title}</p>
+      <ul ref={content} style={{ height: open ? height : 0 }}>
+        <li dangerouslySetInnerHTML={{ __html: md.render(i.content) }} />
+      </ul>
+    </li>
+  );
+};
+
 export const OurWork = styled.section``;
 
-export const Projects = styled.section``;
+export const Projects = styled(SectionContainer)`
+  margin-top: 80px;
+  h1 {
+    font-weight: 400;
+    font-size: 32px;
+    ${media("medium")} {
+      font-size: 40px;
+    }
+  }
+  p {
+    color: ${Colors.darkGrey};
+    line-height: 1.8em;
+  }
+`;
 
 export const Testimonies = styled(SectionContainer)`
   margin-top: 65px;
@@ -204,7 +242,32 @@ export const Testimonies = styled(SectionContainer)`
   }
 `;
 
-export const HireUs = styled.section``;
+export const HireUs = styled(SectionContainer)`
+  padding: 80px 0;
+  margin: 0;
+  color: white !important;
+  max-width: unset !important;
+  flex-direction: column;
+  text-align: center;
+  background-image: url(/img/cta_bg.png);
+  background-position: center center;
+  background-size: cover;
+  h1 {
+    font-weight: 800;
+    font-size: 45px;
+    ${media("medium")} {
+      font-size: 40px;
+    }
+  }
+  p {
+    line-height: 1.8em;
+    margin: auto;
+    max-width: 80%;
+    ${media("large")} {
+      max-width: 45%;
+    }
+  }
+`;
 
 export const WeAreHiring = styled.section``;
 

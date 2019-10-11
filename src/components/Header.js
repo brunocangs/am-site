@@ -18,11 +18,11 @@ const Nav = styled.nav`
   padding: 8px;
   height: 75px;
   background: ${props =>
-    props.scroll > 75 && props.isIndex ? "#fff" : "transparent"};
+    !props.isIndex || props.scroll > 75 ? "#fff" : "transparent"};
   color: ${props =>
-    props.scroll > 75 && props.isIndex ? Colors.black : Colors.white};
+    !props.isIndex || props.scroll > 75 ? Colors.black : Colors.white};
   box-shadow: ${props =>
-    props.scroll > 75 && props.isIndex
+    !props.isIndex || props.scroll > 75
       ? "0px 1px 3px -2px rgba(0,0,0,0.6)"
       : "none"};
   transition: all 0.3s ease-in-out;
@@ -34,11 +34,11 @@ const Nav = styled.nav`
   ul {
     transition: all 0.4s ease-in-out;
     color: ${props =>
-      props.scroll > 75 && props.isIndex ? Colors.grey : Colors.white};
+      !props.isIndex || props.scroll > 75 ? Colors.grey : Colors.white};
     > li {
       &:hover {
         color: ${props =>
-          props.scroll > 75 && props.isIndex ? Colors.darkGrey : Colors.white};
+          !props.isIndex || props.scroll > 75 ? Colors.darkGrey : Colors.white};
       }
     }
   }
@@ -154,9 +154,8 @@ export default function Header(props) {
   const { language } = props;
   const navLinks = getLinks(language);
   const scroll = useWindowScroll();
-  console.log(props);
   return (
-    <Nav scroll={scroll} isIndex={props.path.split("/").length === 3}>
+    <Nav scroll={scroll} isIndex={props.path.split("/")[2] === ""}>
       <Link to={`/${language || ""}`}>
         <Logo style={{ height: "100%" }} />
       </Link>
