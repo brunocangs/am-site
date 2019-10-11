@@ -42,9 +42,13 @@ ourWork: >-
 manifest:
   content: |-
     * We aren't just looking for clients, we're working towards successful cases
+      * testing for collapse
     * Collaborating with the clients is more important than just contracts
+      * collapse content
     * Responding quickly to the client's requests is what's most important
+      * collapse this
     * We'll provide weekly demos until the project is complete
+      * weepwoop
   title: We've turned our goals into a manifest!
 hireUs: >-
   At App Masters we have a highly skilled and well trained team of developers
