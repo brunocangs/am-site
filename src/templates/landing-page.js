@@ -69,11 +69,6 @@ export default props => {
         {/* <OurWork>
           <div dangerouslySetInnerHTML={{ __html: md.render(ourWork) }} />
         </OurWork> */}
-        {/* <Manifest
-          dangerouslySetInnerHTML={{
-            __html: `<h2>${manifest.title}</h2>${md.render(manifest.content)}`
-          }}
-        /> */}
         {language === "en" ? (
           <>
             {/* <Projects>
@@ -137,6 +132,11 @@ export default props => {
           </HowMuchIsMyApp> */}
           </>
         )}
+        <Manifest
+          dangerouslySetInnerHTML={{
+            __html: `<h1>${manifest.title}</h1>${md.render(manifest.content)}`
+          }}
+        />
         {/* <WeAreHiring
           dangerouslySetInnerHTML={{
             __html: md.render(weAreHiring)

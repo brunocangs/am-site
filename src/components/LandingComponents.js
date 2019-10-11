@@ -87,23 +87,52 @@ export const BannerContent = styled(Container)`
   }
 `;
 
-export const Manifest = styled.div`
-  ul {
+const SectionContainer = Container.withComponent("section");
+
+export const Manifest = styled(SectionContainer)`
+  flex-direction: column;
+  & *:not(h1) {
+    color: ${Colors.darkGrey};
+  }
+  h1 {
+    font-weight: 400;
+    font-size: 32px;
+    ${media("medium")} {
+      font-size: 40px;
+    }
+  }
+  p {
+    line-height: 1.8em;
+  }
+  > ul {
     list-style: none;
     padding: 0;
     margin: 0;
     border-radius: 3px;
     background-color: rgba(0, 0, 0, 0.05);
+
     li {
       padding: 12px;
+      &:hover {
+        ul {
+          height: 100px;
+        }
+      }
+      ul {
+        margin: 0;
+        padding: 0;
+        height: 0;
+        transition: all 0.2s ease-in-out;
+        overflow: hidden;
+        li {
+        }
+      }
     }
     li + li {
       border-top: 1px solid rgba(0, 0, 0, 0.05);
     }
   }
 `;
-
-const SectionContainer = Container.withComponent("section");
 
 export const OurWork = styled.section``;
 
