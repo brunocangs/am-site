@@ -39,6 +39,32 @@ ourWork: >-
   } while(true);
 
   ```
+manifest:
+  content:
+    - content: Collapse content weepwoop
+      title: >-
+        We aren't just looking for clients, we're working towards successful
+        cases
+    - content: >-
+        Collapse content weepwoopCollapse content weepwoopCollapse content
+        weepwoopCollapse content weepwoopCollapse content weepwoopCollapse
+        content weepwoop
+      title: Collaborating with the clients is more important than just contracts
+    - content: >-
+        Collapse content weepwoopCollapse content weepwoopCollapse content
+        weepwoopCollapse content weepwoopCollapse content weepwoopCollapse
+        content weepwoopCollapse content weepwoopCollapse content
+        weepwoopCollapse content weepwoop
+      title: Responding quickly to the client's requests is what's most important
+    - content: >-
+        We'll provide weekly demos until the project is complete We'll provide
+        weekly demos until the project is completeWe'll provide weekly demos
+        until the project is complete We'll provide weekly demos until the
+        project is complete We'll provide weekly demos until the project is
+        complete We'll provide weekly demos until the project is complete We'll
+        provide weekly demos until the project is complete
+      title: We'll provide weekly demos until the project is complete
+  title: We've turned our goals into a manifest!
 hireUs: >-
   At App Masters we have a highly skilled and well trained team of developers
   that are capable of working in all parts of a project, be it QA, CI/CD, SEO,
