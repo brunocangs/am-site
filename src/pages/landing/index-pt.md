@@ -11,9 +11,6 @@ bannerContent:
     reprehenderit?
   header: 'Suas melhores ideias, desenvolvidas em tempo recorde'
 ourWork: >-
-  ![Equipe trabalhando](/img/img_3235.jpg "Equipe")
-
-
   # O que fazemos
 
 
@@ -26,6 +23,9 @@ ourWork: >-
   nisi quaerat enim reprehenderit rerum quisquam atque mollitia nesciunt
   similique eveniet obcaecati corrupti dolorem. Provident ex voluptatum eaque
   temporibus similique!
+
+
+  ![Equipe trabalhando](/img/img_3235.jpg "Equipe")
 
 
   Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima voluptatum, ea
