@@ -24,7 +24,9 @@ ourWork: >-
   similique eveniet obcaecati corrupti dolorem. Provident ex voluptatum eaque
   temporibus similique!
 
+
   ![Equipe trabalhando](/img/img_3235.jpg "Equipe")
+
 
   Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima voluptatum, ea
   asperiores dolore voluptatem odit ducimus quo aspernatur repudiandae dolorum,
