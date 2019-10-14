@@ -56,6 +56,9 @@ export const query = graphql`
       image {
         ...SiteImageFluid
       }
+      thumbnailImage {
+        ...SiteImageFluid
+      }
       tags
     }
     fields {

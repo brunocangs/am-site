@@ -5,6 +5,7 @@ import React, { useRef, useState, useLayoutEffect } from "react";
 export const Content = styled.div`
   flex: 1;
   margin-top: -75px;
+  padding-bottom: 60px;
 `;
 
 export const BannerContainer = styled.section`
@@ -37,7 +38,7 @@ const Container = styled.div`
   height: inherit;
   margin: auto;
   font-family: "Poppins", sans-serif;
-  max-width: 75%;
+  max-width: 85%;
   ${media("large", "extraLarge")} {
     max-width: 950px;
   }
@@ -69,10 +70,6 @@ export const BannerContent = styled(Container)`
       font-size: 15px;
       line-height: 1.8;
       font-family: "Poppins", sans-serif;
-      ${media("medium", "large")} {
-      }
-      ${media("large")} {
-      }
     }
   }
   /* Side image */
@@ -108,18 +105,17 @@ export const Manifest = styled(SectionContainer)`
   > ul {
     list-style: none;
     padding: 0;
-    margin: 0;
     border-radius: 6px;
     border: 1px solid ${Colors.lightestGrey};
     /* Item da lista */
     > li {
+      padding: 12px;
       /* Titulo */
       > p {
         cursor: pointer;
         margin: 0;
         font-size: 1.15em;
       }
-      padding: 12px;
       /* Toggle */
       ul {
         overflow: hidden;
@@ -159,10 +155,9 @@ export const ManifestItem = props => {
   );
 };
 
-export const OurWork = styled.section``;
-
 export const Projects = styled(SectionContainer)`
-  margin-top: 80px;
+  margin-top: 30px;
+  flex-direction: column;
   h1 {
     font-weight: 400;
     font-size: 32px;
@@ -174,10 +169,106 @@ export const Projects = styled(SectionContainer)`
     color: ${Colors.darkGrey};
     line-height: 1.8em;
   }
+  /* Div com título e texto */
+  > div {
+  }
+  /* Lista de projetos */
+  > ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    ${media("medium")} {
+      flex-direction: row;
+    }
+    a + a {
+      margin-top: 26px;
+      ${media("medium")} {
+        margin-top: 0;
+      }
+    }
+    /* Projeto */
+    li {
+      border-radius: 6px;
+      box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.15);
+      height: 260px;
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+      ${media("medium")} {
+        width: 260px;
+        &:hover {
+          div {
+            transform: translateY(0%);
+          }
+          img {
+            transform: translateY(-40px);
+          }
+        }
+      }
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        transition: all 0.2s ease-in-out;
+      }
+      div {
+        padding: 10px;
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        background: white;
+        transition: all 0.2s ease-in-out;
+        ${media("medium")} {
+          transform: translateY(100%);
+        }
+        h2 {
+          margin: 4px 0 8px 0;
+          font-weight: 400;
+        }
+        p {
+          margin: 0;
+          line-height: 1.6em;
+        }
+      }
+    }
+  }
+`;
+
+export const OurWork = styled(SectionContainer)`
+  margin-top: 80px;
+  h1 {
+    font-weight: 400;
+    font-size: 32px;
+    ${media("medium")} {
+      font-size: 40px;
+    }
+  }
+  p {
+    color: ${Colors.darkGrey};
+    line-height: 1.8em;
+    display: flex;
+  }
+  div {
+    display: flex;
+    flex-direction: column;
+  }
+  img {
+    justify-self: center;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    ${media("medium")} {
+      max-height: 350px;
+    }
+  }
 `;
 
 export const Testimonies = styled(SectionContainer)`
-  margin-top: 65px;
+  margin: 65px auto 80px auto;
   flex-direction: column-reverse;
   ${media("large")} {
     flex-direction: row;
@@ -261,7 +352,7 @@ export const HireUs = styled(SectionContainer)`
   }
   p {
     line-height: 1.8em;
-    margin: auto;
+    margin: 10px auto;
     max-width: 80%;
     ${media("large")} {
       max-width: 45%;
@@ -269,9 +360,34 @@ export const HireUs = styled(SectionContainer)`
   }
 `;
 
-export const WeAreHiring = styled.section``;
+export const WeAreHiring = styled(SectionContainer)`
+  h1 {
+    font-weight: 400;
+    font-size: 32px;
+    ${media("medium")} {
+      font-size: 40px;
+    }
+  }
+  p {
+    color: ${Colors.darkGrey};
+    line-height: 1.8em;
+  }
+  flex-direction: column;
+`;
 
-export const HowMuchIsMyApp = styled.section`
+export const HowMuchIsMyApp = styled(SectionContainer)`
+  h1 {
+    font-weight: 400;
+    font-size: 32px;
+    ${media("medium")} {
+      font-size: 40px;
+    }
+  }
+  p {
+    color: ${Colors.darkGrey};
+    line-height: 1.8em;
+  }
+  flex-direction: column;
   a {
     display: block;
   }

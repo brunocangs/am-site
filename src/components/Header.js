@@ -142,7 +142,7 @@ const useWindowScroll = () => {
   const [scroll, setScroll] = useState(window.scrollY);
   useEffect(() => {
     const handler = () => {
-      setScroll(window.scrollY);
+      setScroll(window ? window.scrollY : 0);
     };
     window.addEventListener("scroll", handler);
     return () => window.removeEventListener("scroll", handler);

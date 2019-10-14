@@ -38,7 +38,7 @@ export default props => {
   const { edges: testimonies } = allTestimonies;
 
   const renderTestimony = ({ node: testimony }, i) => {
-    const { frontmatter, html } = testimony;
+    const { frontmatter } = testimony;
     const { avatar, testimony: body, title } = frontmatter;
     const image = avatar.childImageSharp.fluid;
     return (
@@ -66,9 +66,9 @@ export default props => {
             <img src={`/img/${image.originalName}`} />
           </BannerContent>
         </BannerContainer>
-        {/* <OurWork>
+        <OurWork>
           <div dangerouslySetInnerHTML={{ __html: md.render(ourWork) }} />
-        </OurWork> */}
+        </OurWork>
         {language === "en" ? (
           <>
             <Projects>
@@ -90,21 +90,36 @@ export default props => {
                   voluptate totam unde aut!
                 </p>
               </div>
-              <div>
-                {projects.map(({ node: project }) => {
-                  const { title, summary, image } = project.frontmatter;
-                  const srcSet = image.childImageSharp.fluid.srcSet;
-                  return (
-                    <Link to={`/en/project/${project.fields.slug}`}>
-                      <div>
-                        <img srcSet={srcSet} style={{ width: 150 }} />
-                        <div>{title}</div>
-                        <p>{summary}</p>
-                      </div>
-                    </Link>
-                  );
-                })}
-              </div>
+              <ul>
+                {new Array(3)
+                  .fill(projects.slice(0, 1)[0])
+                  .map(({ node: project }) => {
+                    const {
+                      title,
+                      summary,
+                      thumbnailImage
+                    } = project.frontmatter;
+                    const {
+                      srcSet,
+                      sizes
+                    } = thumbnailImage.childImageSharp.fluid;
+                    return (
+                      <Link to={`/en/project/${project.fields.slug}`}>
+                        <li>
+                          <img srcSet={srcSet} sizes={sizes} />
+                          <div>
+                            <h2>{title}</h2>
+                            <p>
+                              {summary.length > 60
+                                ? summary.slice(0, 60) + "..."
+                                : summary}
+                            </p>
+                          </div>
+                        </li>
+                      </Link>
+                    );
+                  })}
+              </ul>
             </Projects>
             <Manifest>
               <h1>{manifest.title}</h1>
@@ -151,27 +166,29 @@ export default props => {
                 ))}
               </ul>
             </Manifest>
-            {/* <HowMuchIsMyApp>
-            <h2>Quanto custa um aplicativo?</h2>
-            <p>
-              Gostaria de saber rapidamente o preço da sua ideia? Entre em
-              contato com a gente ou faça um teste rápido
-              <a
-                href="https://quantocustaumapp.appmasters.io/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Fazer uma simulação
-              </a>
-            </p>
-          </HowMuchIsMyApp> */}
+            <HowMuchIsMyApp>
+              <div>
+                <h1>Quanto custa um aplicativo?</h1>
+                <p>
+                  Gostaria de saber rapidamente o preço da sua ideia? Entre em
+                  contato com a gente ou faça um teste rápido
+                  <a
+                    href="https://quantocustaumapp.appmasters.io/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Fazer uma simulação
+                  </a>
+                </p>
+              </div>
+            </HowMuchIsMyApp>
           </>
         )}
-        {/* <WeAreHiring
+        <WeAreHiring
           dangerouslySetInnerHTML={{
             __html: md.render(weAreHiring)
           }}
-        /> */}
+        />
       </Content>
     </>
   );
