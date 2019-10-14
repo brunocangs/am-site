@@ -11,7 +11,7 @@ bannerContent:
     reprehenderit?
   header: 'Your idea, built in record-breaking time'
 ourWork: >-
-  ## What we do
+  # What we do
 
 
   Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi odio incidunt
