@@ -4,12 +4,15 @@ baseUrl: projeto
 featured: true
 language: pt
 title: Low carb
-summary: Aplicativo para low carb peoples
+summary: >-
+  Aplicativo para low carb peoples Aplicativo para low carb peoples Aplicativo
+  para low carb peoples Aplicativo para low carb peoples 
 clientName: Turi
 clientLocation: Aqui
 devTime: 2
 devMonths: 2
-image: /img/tweet.png
+image: /img/lowcarb_mockup.png
+thumbnailImage: /img/lowcarb-thumbnail.png
 tags:
   - React
   - React Native
