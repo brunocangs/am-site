@@ -18,27 +18,11 @@ ourWork: >-
   accusantium vel minus id illum nihil quam fuga excepturi!
 
 
-  ![imagem](/img/img_3235.jpg "Galeras")
-
-
   Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima voluptatum, ea
   asperiores dolore voluptatem odit ducimus quo aspernatur repudiandae dolorum,
   nisi quaerat enim reprehenderit rerum quisquam atque mollitia nesciunt
   similique eveniet obcaecati corrupti dolorem. Provident ex voluptatum eaque
   temporibus similique!
-
-
-  ```javascript{1,2}
-
-  let a = 'tset';
-
-  do {
-
-  //
-
-  } while(true);
-
-  ```
 manifest:
   content:
     - content: Collapse content weepwoop
