@@ -236,6 +236,11 @@ export const Projects = styled(SectionContainer)`
 
 export const OurWork = styled(SectionContainer)`
   margin-top: 80px;
+  align-items: center;
+  flex-direction: column;
+  ${media("medium")} {
+    flex-direction: row;
+  }
   h1 {
     font-weight: 400;
     font-size: 32px;
@@ -251,15 +256,28 @@ export const OurWork = styled(SectionContainer)`
   div {
     display: flex;
     flex-direction: column;
-  }
-  img {
-    justify-self: center;
-    margin: auto;
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    ${media("medium")} {
-      max-height: 350px;
+    :first-child {
+      flex: 1;
+      ${media("medium")} {
+        margin-right: 16px;
+      }
+      img {
+        justify-self: center;
+        margin: auto;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        ${media("medium")} {
+          max-height: 350px;
+        }
+      }
+    }
+    :nth-child(2) {
+      max-width: 65vw;
+      width: 100%;
+      ${media("medium")} {
+        width: 45%;
+      }
     }
   }
 `;

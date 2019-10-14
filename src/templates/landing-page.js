@@ -23,7 +23,13 @@ import {
 const md = new MdIt();
 
 export default props => {
-  const { landing, allProjects, allTechnologies, allTestimonies } = props.data;
+  const {
+    landing,
+    allProjects,
+    allTechnologies,
+    allTestimonies,
+    ourWorkImage
+  } = props.data;
   const {
     banner: {
       childImageSharp: { fluid: image }
@@ -71,7 +77,7 @@ export default props => {
         <OurWork>
           <div dangerouslySetInnerHTML={{ __html: md.render(ourWork) }} />
           <div>
-            <Img fluid={{}} />
+            <Img fluid={ourWorkImage.childImageSharp.fluid} />
           </div>
         </OurWork>
         {language === "en" ? (
@@ -297,6 +303,9 @@ export const query = graphql`
           ...Testimony
         }
       }
+    }
+    ourWorkImage: file(relativePath: { eq: "about_img_1.png" }) {
+      ...SiteImageFluid
     }
   }
 `;
