@@ -25,7 +25,7 @@ ourWork: >-
   temporibus similique!
 
 
-  ![Equipe trabalhando](/img/img_3235.jpg "Equipe")
+  ![Equipe trabalhando](/img/scrum-header.png "Equipe")
 
 
   Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima voluptatum, ea
