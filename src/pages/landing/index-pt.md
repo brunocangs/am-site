@@ -54,7 +54,7 @@ manifest:
   title: Convertemos nossos objetivos em um manifesto!
 hireUs: unset
 weAreHiring: |-
-  ## Estamos contratando!
+  # Estamos contratando!
 
   Gostaria de trabalhar conosco? [Envie seu curriculum](/?)
 ---
