@@ -6,14 +6,13 @@ export default ({ data }) => {
   const { edges: technologies } = data.allTechnologies;
   const { frontmatter: page, html } = data.allTechnologiesPage;
   const [headerHtml, ...rest] = html.split("<hr>");
-  const header = document.createElement("div");
-  header.innerHTML = headerHtml;
+  const headerText = headerHtml.replace(/<[^>]*>/g, "");
   return (
     <div>
       <Helmet>
         <title>{page.title}</title>
       </Helmet>
-      <h3>{header.innerText}</h3>
+      <h3>{headerText}</h3>
       {technologies.map(({ node: technology }) => {
         const { logo, title, summary, bgColor } = technology.frontmatter;
         const image = logo.childImageSharp.fluid;

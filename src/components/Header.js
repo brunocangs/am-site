@@ -139,8 +139,7 @@ const getLinks = language => {
 };
 
 const useWindowScroll = () => {
-  if (!window) return 0;
-  const [scroll, setScroll] = useState(window.scrollY);
+  const [scroll, setScroll] = useState(0);
   useEffect(() => {
     const handler = () => {
       setScroll(window.scrollY);
