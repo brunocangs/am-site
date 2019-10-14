@@ -1,6 +1,8 @@
 import React from "react";
 import { graphql, Link } from "gatsby";
 import Helmet from "react-helmet";
+import Img from "gatsby-image";
+import ClampLines from "react-clamp-lines";
 // import { Parallax } from "react-parallax";
 import MdIt from "markdown-it";
 
@@ -68,6 +70,9 @@ export default props => {
         </BannerContainer>
         <OurWork>
           <div dangerouslySetInnerHTML={{ __html: md.render(ourWork) }} />
+          <div>
+            <Img fluid={{}} />
+          </div>
         </OurWork>
         {language === "en" ? (
           <>
@@ -99,21 +104,19 @@ export default props => {
                       summary,
                       thumbnailImage
                     } = project.frontmatter;
-                    const {
-                      srcSet,
-                      sizes
-                    } = thumbnailImage.childImageSharp.fluid;
+                    const { fluid } = thumbnailImage.childImageSharp;
                     return (
                       <Link to={`/en/project/${project.fields.slug}`}>
                         <li>
-                          <img srcSet={srcSet} sizes={sizes} />
+                          <Img fluid={fluid} />
                           <div>
                             <h2>{title}</h2>
-                            <p>
-                              {summary.length > 60
-                                ? summary.slice(0, 60) + "..."
-                                : summary}
-                            </p>
+                            <ClampLines
+                              buttons={false}
+                              text={summary}
+                              lines={2}
+                              innerElement="p"
+                            />
                           </div>
                         </li>
                       </Link>

@@ -178,43 +178,40 @@ export const Projects = styled(SectionContainer)`
     padding: 0;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     align-items: center;
     ${media("medium")} {
       flex-direction: row;
     }
-    a + a {
-      margin-top: 26px;
-      ${media("medium")} {
-        margin-top: 0;
+    a {
+      width: 100%;
+      position: relative ${media("medium")} {
+        flex: 1;
+      }
+      + a {
+        margin-top: 20px;
+        ${media("medium")} {
+          margin: 0 0 0 20px;
+        }
       }
     }
     /* Projeto */
     li {
+      width: 100%;
+      max-width: 260px;
+      margin: auto;
       border-radius: 6px;
       box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.15);
-      height: 260px;
-      width: 100%;
       position: relative;
       overflow: hidden;
       ${media("medium")} {
-        width: 260px;
+        max-width: unset;
         &:hover {
-          div {
+          div:nth-child(2) {
             transform: translateY(0%);
-          }
-          img {
-            transform: translateY(-40px);
           }
         }
       }
-      img {
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-        transition: all 0.2s ease-in-out;
-      }
-      div {
+      > div:nth-child(2) {
         padding: 10px;
         position: absolute;
         width: 100%;
