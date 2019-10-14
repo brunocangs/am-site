@@ -58,6 +58,7 @@ hireUs: >-
   making your idea awesome.
 
 
+
   Have we peaked your interest? [Get in touch](/en/contact) and let's discuss
   your idea, we're always excited to meet new teams and new ideas.
 weAreHiring: |-
