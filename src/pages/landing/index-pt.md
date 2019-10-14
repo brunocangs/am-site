@@ -14,7 +14,7 @@ ourWork: >-
   ![Equipe trabalhando](/img/img_3235.jpg "Equipe")
 
 
-  ## O que fazemos
+  # O que fazemos
 
 
   Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi odio incidunt
