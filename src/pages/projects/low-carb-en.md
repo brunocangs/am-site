@@ -1,19 +1,22 @@
 ---
 templateKey: project-page
-baseUrl: project
+baseUrl: projects
 featured: true
 language: en
 title: Low carb
-summary: Aplicativo para low carb peoples e pra emagrecer e tal
-clientName: Turi
-clientLocation: Aqui
-devTime: 2
-devMonths: 2
+summary: >-
+  Low Carb is your direct guide to the latest low carb diets and manners, as
+  well as intermittent fasting so you can start losing weight immediately
+clientName: Turi Souza
+clientLocation: Brazil
+devTime: 400
+devMonths: 3
 image: /img/lowcarb_mockup.png
 thumbnailImage: /img/low-carb-thumbnail.jpg
 tags:
   - React
   - React Native
+  - MongoDB
 ---
 # Olha que titulozao
 
