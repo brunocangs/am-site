@@ -3,7 +3,9 @@ templateKey: all-projects-page
 baseUrl: projects
 featured: false
 language: en
-title: Projects - App Masters
+title: Projects
+technology:
+  - Technologies
 summary: a
 clientName: a
 clientLocation: a
