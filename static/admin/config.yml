@@ -139,6 +139,16 @@ collections:
           default: "pt",
         }
       - { label: "Nome", name: "title", widget: "string" }
+      - label: "Tecnologias"
+        name: "technologies"
+        widget: "list"
+        field:
+          label: "technology"
+          name: "Tecnologia"
+          collection: "technologies"
+          searchFields: ["title"]
+          valueField: "title"
+          displayFields: ["title"]
       - { label: "Descrição curta", name: "summary", widget: "string" }
       - { label: "Descrição completa", name: "body", widget: "markdown" }
       - { label: "Nome do cliente", name: "clientName", widget: "string" }
