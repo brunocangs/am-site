@@ -4,11 +4,13 @@ baseUrl: projetos
 featured: true
 language: pt
 title: Low Carb App
+technology:
+  - React Native
 summary: >-
   Low Carb is your direct guide to the latest low carb diets and manners, as
   well as intermittent fasting so you can start losing weight immediately
 clientName: Turi Souza
-clientLocation: Juiz de Fora, Minas Gerais
+clientLocation: 'Juiz de Fora, Minas Gerais'
 devTime: 400
 devMonths: 3
 image: /img/lowcarb_mockup.png
