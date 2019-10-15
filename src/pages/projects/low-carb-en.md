@@ -4,10 +4,7 @@ baseUrl: project
 featured: true
 language: en
 title: Low carb
-summary: >-
-  Aplicativo para low carb peoples Aplicativo para low carb peoples Aplicativo
-  para low carb peoples Aplicativo para low carb peoples Aplicativo para low
-  carb peoples Aplicativo para low carb peoples 
+summary: Aplicativo para low carb peoples e pra emagrecer e tal
 clientName: Turi
 clientLocation: Aqui
 devTime: 2
