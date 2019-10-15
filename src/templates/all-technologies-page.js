@@ -7,10 +7,11 @@ export default ({ data }) => {
   const { frontmatter: page, html } = data.allTechnologiesPage;
   const [headerHtml] = html.split("<hr>");
   const headerText = headerHtml.replace(/<[^>]*>/g, "");
+  console.log(data);
   return (
     <div>
       <Helmet>
-        <title>{page.title}</title>
+        <title>{page.title} - App Masters</title>
       </Helmet>
       <h3>{headerText}</h3>
       {technologies.map(({ node: technology }) => {

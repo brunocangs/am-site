@@ -25,7 +25,7 @@ export default ({ data }) => {
           />
         </div>
         <div style={{ padding: 12 }}>
-          <h1>{title}</h1>
+          <h1>{title.split(" |")[1]}</h1>
           <p>{summary}</p>
           <div dangerouslySetInnerHTML={{ __html: html }} />
         </div>
