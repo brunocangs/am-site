@@ -3,7 +3,7 @@ templateKey: project-page
 baseUrl: projeto
 featured: true
 language: pt
-title: Low carb
+title: Low Carb App
 summary: >-
   Aplicativo para low carb peoples Aplicativo para low carb peoples Aplicativo
   para low carb peoples Aplicativo para low carb peoples 
