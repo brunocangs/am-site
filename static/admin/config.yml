@@ -140,12 +140,12 @@ collections:
         }
       - { label: "Nome", name: "title", widget: "string" }
       - label: "Tecnologia"
-          name: "technology"
-          collection: "technologies"
-          searchFields: ["title"]
-          valueField: "title"
-          multiple: true
-          displayFields: ["title"]
+        name: "technology"
+        collection: "technologies"
+        searchFields: ["title"]
+        valueField: "title"
+        multiple: true
+        displayFields: ["title"]
       - { label: "Descrição curta", name: "summary", widget: "string" }
       - { label: "Descrição completa", name: "body", widget: "markdown" }
       - { label: "Nome do cliente", name: "clientName", widget: "string" }
