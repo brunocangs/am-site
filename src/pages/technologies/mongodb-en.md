@@ -2,7 +2,7 @@
 templateKey: technology-page
 baseUrl: technologies
 language: en
-title: MongoDB
+title: Technologies | MongoDB
 logo: /img/mongodb_logostacked_fullcolorblack_rgb.png
 bgColor: '#6AD381'
 featured: false
