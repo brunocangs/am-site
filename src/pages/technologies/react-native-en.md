@@ -4,7 +4,7 @@ baseUrl: technologies
 language: en
 title: React Native
 logo: /img/react.png
-bgColor: '#00feff'
+bgColor: '#145567'
 featured: true
 summary: Summary of React Native
 tags:
