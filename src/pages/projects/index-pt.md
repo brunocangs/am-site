@@ -3,13 +3,16 @@ templateKey: all-projects-page
 baseUrl: projetos
 featured: false
 language: pt
-title: Projetos - App Masters
+title: Projetos
+technology:
+  - React Native
 summary: Teste
 clientName: teste
 clientLocation: teste
 devTime: 123
 devMonths: 119
-image: /img/react.png
+image: /img/lowcarb_mockup.png
+thumbnailImage: /img/low-carb-thumbnail.jpg
 tags:
   - React
   - React Native
