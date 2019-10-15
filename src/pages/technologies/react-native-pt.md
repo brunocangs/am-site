@@ -2,7 +2,7 @@
 templateKey: technology-page
 baseUrl: tecnologias
 language: pt
-title: React Native - App Masters
+title: React Native
 logo: /img/react.png
 bgColor: '#ceffff'
 featured: true
