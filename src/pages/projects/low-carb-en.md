@@ -10,7 +10,7 @@ clientLocation: Aqui
 devTime: 2
 devMonths: 2
 image: /img/lowcarb_mockup.png
-thumbnailImage: /img/lowcarb-thumbnail.png
+thumbnailImage: /img/low-carb-thumbnail.jpg
 tags:
   - React
   - React Native
