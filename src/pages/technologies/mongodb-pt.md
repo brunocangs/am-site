@@ -4,7 +4,7 @@ baseUrl: tecnologias
 language: pt
 title: MongoDB
 logo: /img/mongodb_logostacked_fullcolorblack_rgb.png
-bgColor: '#265f2f'
+bgColor: '#6AD381'
 featured: false
 summary: >-
   MongoDB is a general purpose, document-based, distributed database built for

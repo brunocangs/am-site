@@ -20,8 +20,8 @@ export default ({ data }) => {
           <Link
             to={
               page.language === "en"
-                ? `/en/technology/${technology.fields.slug}`
-                : `/pt/tecnologia/${technology.fields.slug}`
+                ? `/en/technologies/${technology.fields.slug}`
+                : `/pt/tecnologias/${technology.fields.slug}`
             }
           >
             <div>

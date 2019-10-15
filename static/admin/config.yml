@@ -142,7 +142,7 @@ collections:
       - label: "Tecnologia"
         name: "technology"
         collection: "technologies"
-        searchFields: ["title"]
+        searchFields: ["title", "language"]
         valueField: "title"
         multiple: true
         displayFields: ["title", "language"]

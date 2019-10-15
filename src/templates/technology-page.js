@@ -9,7 +9,7 @@ export default ({ data }) => {
   return (
     <>
       <Helmet>
-        <title>{title}</title>
+        <title>{title} - App Masters</title>
       </Helmet>
       <div>
         <div
@@ -25,7 +25,7 @@ export default ({ data }) => {
           />
         </div>
         <div style={{ padding: 12 }}>
-          <h2>Hi</h2>
+          <h1>{title}</h1>
           <p>{summary}</p>
           <div dangerouslySetInnerHTML={{ __html: html }} />
         </div>
