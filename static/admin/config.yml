@@ -146,6 +146,7 @@ collections:
         valueField: "title"
         multiple: true
         displayFields: ["title"]
+        widget: relation
       - { label: "Descrição curta", name: "summary", widget: "string" }
       - { label: "Descrição completa", name: "body", widget: "markdown" }
       - { label: "Nome do cliente", name: "clientName", widget: "string" }
