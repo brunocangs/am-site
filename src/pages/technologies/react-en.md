@@ -4,7 +4,7 @@ baseUrl: technologies
 language: en
 title: React
 logo: /img/react.png
-bgColor: '#9afa68'
+bgColor: '#145567'
 featured: true
 summary: React is a package
 tags:
