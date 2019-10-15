@@ -2,7 +2,7 @@
 templateKey: technology-page
 baseUrl: technologies
 language: en
-title: React
+title: Technologies | React
 logo: /img/react.png
 bgColor: '#145567'
 featured: true

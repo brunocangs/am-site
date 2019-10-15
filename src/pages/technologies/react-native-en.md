@@ -2,7 +2,7 @@
 templateKey: technology-page
 baseUrl: technologies
 language: en
-title: React Native
+title: Technologies | React Native
 logo: /img/react.png
 bgColor: '#145567'
 featured: true
