@@ -143,8 +143,8 @@ collections:
         name: "technologies"
         widget: "list"
         field:
-          label: "technology"
-          name: "Tecnologia"
+          label: "Tecnologia"
+          name: "technology"
           collection: "technologies"
           searchFields: ["title"]
           valueField: "title"
