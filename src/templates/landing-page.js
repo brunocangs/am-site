@@ -26,7 +26,7 @@ export default props => {
   const {
     landing,
     allProjects,
-    allTechnologies,
+    // allTechnologies,
     allTestimonies,
     ourWorkImage
   } = props.data;
@@ -42,7 +42,7 @@ export default props => {
     language
   } = landing.frontmatter;
   const { edges: projects } = allProjects;
-  const { edges: technologies } = allTechnologies;
+  // const { edges: technologies } = allTechnologies;
   const { edges: testimonies } = allTestimonies;
 
   const renderTestimony = ({ node: testimony }, i) => {
@@ -51,7 +51,7 @@ export default props => {
     const image = avatar.childImageSharp.fluid;
     return (
       <div key={i}>
-        <img src={image.src} />
+        <img src={image.src} alt={title} />
         <h3>{title}</h3>
         <p>{body.length > 65 ? body.slice(0, 65) + "..." : body}</p>
       </div>
@@ -65,13 +65,13 @@ export default props => {
       </Helmet>
       <Content>
         <BannerContainer>
-          <img src="/img/banner_bg.png" />
+          <img src="/img/banner_bg.png" alt="Person interacting with a phone" />
           <BannerContent>
             <div>
               <h1>{header}</h1>
               <p>{content}</p>
             </div>
-            <img src={`/img/${image.originalName}`} />
+            <img src={`/img/${image.originalName}`} alt={"Banner"} />
           </BannerContent>
         </BannerContainer>
         <OurWork>
@@ -112,7 +112,7 @@ export default props => {
                     } = project.frontmatter;
                     const { fluid } = thumbnailImage.childImageSharp;
                     return (
-                      <Link to={`/en/project/${project.fields.slug}`}>
+                      <Link to={`/en/projects/${project.fields.slug}`}>
                         <li>
                           <Img fluid={fluid} />
                           <div>

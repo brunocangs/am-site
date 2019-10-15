@@ -1,6 +1,6 @@
 ---
 templateKey: technology-page
-baseUrl: technology
+baseUrl: technologies
 language: en
 title: React - App Masters
 logo: /img/react.png

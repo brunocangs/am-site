@@ -18,7 +18,11 @@ export default ({ data }) => {
             height: 100
           }}
         >
-          <img src={image.src} style={{ height: 100, width: 100 }} />
+          <img
+            src={image.src}
+            style={{ height: 100, width: 100 }}
+            alt={title}
+          />
         </div>
         <div style={{ padding: 12 }}>
           <h2>Hi</h2>

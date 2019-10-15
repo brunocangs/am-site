@@ -1,6 +1,6 @@
 ---
 templateKey: technology-page
-baseUrl: tecnologia
+baseUrl: tecnologias
 language: pt
 title: React Native - App Masters
 logo: /img/react.png

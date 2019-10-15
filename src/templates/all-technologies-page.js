@@ -5,7 +5,7 @@ import Helmet from "react-helmet";
 export default ({ data }) => {
   const { edges: technologies } = data.allTechnologies;
   const { frontmatter: page, html } = data.allTechnologiesPage;
-  const [headerHtml, ...rest] = html.split("<hr>");
+  const [headerHtml] = html.split("<hr>");
   const headerText = headerHtml.replace(/<[^>]*>/g, "");
   return (
     <div>

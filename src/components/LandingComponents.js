@@ -6,6 +6,9 @@ export const Content = styled.div`
   flex: 1;
   margin-top: -75px;
   padding-bottom: 60px;
+  p {
+    font-weight: 300;
+  }
 `;
 
 export const BannerContainer = styled.section`
@@ -84,7 +87,7 @@ export const BannerContent = styled(Container)`
   }
 `;
 
-const SectionContainer = Container.withComponent("section");
+export const SectionContainer = Container.withComponent("section");
 
 export const Manifest = styled(SectionContainer)`
   flex-direction: column;
@@ -169,9 +172,6 @@ export const Projects = styled(SectionContainer)`
     color: ${Colors.darkGrey};
     line-height: 1.8em;
   }
-  /* Div com título e texto */
-  > div {
-  }
   /* Lista de projetos */
   > ul {
     list-style: none;
@@ -206,13 +206,20 @@ export const Projects = styled(SectionContainer)`
       ${media("medium")} {
         max-width: unset;
         &:hover {
-          div:nth-child(2) {
+          > div:first-child {
+            transform: translateY(-10%);
+          }
+          > div:nth-child(2) {
             transform: translateY(0%);
           }
         }
       }
+      transition: all 0.2 ease-in-out;
+      > div:first-child {
+        transition: all 0.2s ease-in-out;
+      }
       > div:nth-child(2) {
-        padding: 10px;
+        padding: 14px;
         position: absolute;
         width: 100%;
         bottom: 0;
@@ -371,6 +378,10 @@ export const HireUs = styled(SectionContainer)`
     max-width: 80%;
     ${media("large")} {
       max-width: 45%;
+    }
+    a {
+      font-weight: 400;
+      text-decoration: underline !important;
     }
   }
 `;

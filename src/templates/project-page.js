@@ -1,27 +1,39 @@
 import React from "react";
-import Img from "../components/Image";
-import { HTMLContent } from "../components/Content";
+import Img from "gatsby-image";
 import { graphql } from "gatsby";
-
-export const ProjectPageTemplate = props => {
-  const { html, image, content } = props;
-  const renderedContent = content ? content : <HTMLContent content={html} />;
-  return (
-    <div>
-      <Img image={image} />
-      {renderedContent}
-    </div>
-  );
-};
+import {
+  Content,
+  ProjectDetailsContainer
+} from "../components/ProjectComponents";
+import Helmet from "react-helmet";
 
 export default ({ data }) => {
   const { frontmatter, ...restData } = data.markdownRemark;
+  const {
+    language,
+    title,
+    summary,
+    clientName,
+    clientLocation,
+    devTime,
+    devMonths,
+    image,
+    thumbnailImage,
+    tags
+  } = frontmatter;
   return (
-    <ProjectPageTemplate
-      image={data.markdownRemark.frontmatter.image}
-      {...restData}
-      {...frontmatter}
-    />
+    <>
+      <Helmet>
+        <title>{title} - App Masters</title>
+      </Helmet>
+      <Content>
+        <Img fluid={image.childImageSharp.fluid} />
+        <ProjectDetailsContainer>
+          <div dangerouslySetInnerHTML={{ __html: restData.html }} />
+          <div></div>
+        </ProjectDetailsContainer>
+      </Content>
+    </>
   );
 };
 
