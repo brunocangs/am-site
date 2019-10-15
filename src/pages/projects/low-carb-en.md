@@ -3,7 +3,7 @@ templateKey: project-page
 baseUrl: projects
 featured: true
 language: en
-title: Low carb
+title: Low Carb App
 summary: >-
   Low Carb is your direct guide to the latest low carb diets and manners, as
   well as intermittent fasting so you can start losing weight immediately
