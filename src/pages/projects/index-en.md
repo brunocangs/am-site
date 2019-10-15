@@ -17,6 +17,6 @@ tags:
 ---
 # All our projects
 
-\---
+---
 
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab harum explicabo, voluptate earum accusantium quam accusamus minima fugiat eaque? Earum beatae magni laborum nihil vel!
