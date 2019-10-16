@@ -54,9 +54,9 @@ collections:
         name: "author"
         widget: "relation"
         collection: "authors"
-        searchFields: ["name"]
-        valueField: "name"
-        displayFields: ["name"]
+        searchFields: ["title"]
+        valueField: "title"
+        displayFields: ["title"]
       - { label: "Description", name: "description", widget: "text" }
       - { label: "Featured Post", name: "featuredpost", widget: "boolean" }
       - { label: "Featured Image", name: "featuredimage", widget: image }
