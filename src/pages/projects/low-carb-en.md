@@ -38,8 +38,8 @@ Com toda a informação adquirida e as ideias em mente, seguimos para um protót
 
 Ao final do projeto, abrimos o app para testes beta, onde apenas convidados poderiam instalar o aplicativo para experimentar. Depois de algumas semanas em beta, ajustamos os últimos detalhes e liberamos o app Emagreça Já nas lojas.
 
-[![App Store Button](/img/apple_store.png "Download for iOS")](https://itunes.apple.com/us/app/emagre%C3%A7a-j%C3%A1/id1281662637?l=pt&ls=1&mt=8)
-
+[![App Store Button](/img/apple_store.png "Download for iOS")](https://itunes.apple.com/us/app/emagre%C3%A7a-j%C3%A1/id1281662637?l=pt&ls=1&mt=8) 
+[![Play Store button](/img/google_play.png "Download for Android")](https://play.google.com/store/apps/details?id=io.appmasters.lowcarb)
 ## Recepção e retorno sobre investimento
 
 Não é fácil ter uma boa ideia no momento certo, que atenda uma demanda real e tenha boa aceitação. Mas assim aconteceu com o Emagreça Já. O app está à venda na Play Store e Google Play por R$9,90 e alcançou mais de mil vendas em menos de dois meses, sem investimento em marketing. Essa aceitação se reflete em vendas, gerando um retorno de investimento de aproximadamente 40% em aproximadamente 50 dias.
