@@ -155,7 +155,7 @@ export const ProjectDetailsContainer = styled(AllProjectsContainer)`
     margin-top: 48px;
   }
   > div {
-    :nth-child(3) {
+    :nth-child(2) {
       ul {
         list-style: none;
         padding: 0;
@@ -172,11 +172,49 @@ export const ProjectDetailsContainer = styled(AllProjectsContainer)`
           display: flex;
           flex-direction: column;
           align-items: center;
+          ${media("medium", true)} {
+            + li {
+              margin-top: 26px;
+            }
+          }
           h3 {
             font-size: 60px;
             margin: 0;
             font-weight: 300;
             color: ${Colors.darkBlue};
+          }
+        }
+      }
+    }
+    :nth-child(3) {
+      ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 0;
+        li {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          flex: 1;
+          ${media("medium")} {
+            max-width: 180px;
+          }
+          a {
+            width: 100%;
+            > div {
+              width: 100%;
+              max-width: 85px;
+              margin: auto;
+            }
+            p {
+              line-height: 1.2em;
+            }
           }
         }
       }

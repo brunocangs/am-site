@@ -36,6 +36,7 @@ export default ({ data }) => {
 
 export const query = graphql`
   fragment TechnologyPage on MarkdownRemark {
+    id
     html
     frontmatter {
       templateKey
@@ -58,7 +59,7 @@ export const query = graphql`
     technology: markdownRemark(
       id: { eq: $id }
       frontmatter: {
-        templateKey: { eq: "project-page" }
+        templateKey: { eq: "technology-page" }
         language: { eq: $language }
       }
     ) {

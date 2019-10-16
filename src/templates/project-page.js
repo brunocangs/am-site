@@ -1,6 +1,6 @@
 import React from "react";
 import Img from "gatsby-image";
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 import {
   Content,
   ProjectDetailsContainer
@@ -12,14 +12,16 @@ const getStrings = isEn => {
     return {
       aboutDevelopment: "Development details",
       developmentMonths: "Months to deliver",
-      developmentTime: "Hours of development",
-      developmentCommits: "Commits pushed"
+      developmentTime: "Hours of work",
+      developmentCommits: "Commits pushed",
+      usedTech: "Technologies used"
     };
   return {
     aboutDevelopment: "Informações do desenvolvimento",
-    developmentMonths: "Meses até entregar",
-    developmentTime: "Horas de desenvolvimento",
-    developmentCommits: "Commits realizados"
+    developmentMonths: "Meses até a entrega",
+    developmentTime: "Horas de trabalho",
+    developmentCommits: "Commits realizados",
+    usedTech: "Tecnologias utilizadas"
   };
 };
 
@@ -35,18 +37,20 @@ export default ({ data }) => {
     devMonths,
     devCommits,
     image,
+    technology: projectTechnologies,
     tags
   } = frontmatter;
-  const [mainPitch, storeButtons, techDetail, financial] = restData.html.split(
-    "<hr>"
-  );
+  const [mainPitch, techDetail, financial] = restData.html.split("<hr>");
   const isEn = language === "en";
   const {
     aboutDevelopment,
     developmentMonths,
     developmentTime,
-    developmentCommits
+    developmentCommits,
+    usedTech
   } = getStrings(isEn);
+  const { edges: technologies } = data.allTechnologies;
+  console.log(data);
   return (
     <>
       <Helmet>
@@ -56,7 +60,6 @@ export default ({ data }) => {
         <Img fluid={image.childImageSharp.fluid} />
         <ProjectDetailsContainer>
           <div dangerouslySetInnerHTML={{ __html: mainPitch }} />
-          <div dangerouslySetInnerHTML={{ __html: storeButtons }} />
           <div>
             <h2>{aboutDevelopment}</h2>
             <ul>
@@ -72,6 +75,36 @@ export default ({ data }) => {
                 <h3>{devCommits}</h3>
                 <span>{developmentCommits}</span>
               </li>
+            </ul>
+          </div>
+          <div>
+            <h2>{usedTech}</h2>
+            <ul>
+              {technologies
+                .filter(i => {
+                  return (
+                    data.markdownRemark.frontmatter.technology.indexOf(
+                      i.node.frontmatter.title
+                    ) > -1
+                  );
+                })
+                .map(({ node: technology }) => {
+                  const { frontmatter, fields } = technology;
+                  const { title, logo, bgColor } = frontmatter;
+                  const { smallLogo, fluid } = logo.childImageSharp;
+                  return (
+                    <li>
+                      <Link
+                        to={`/${language}/${
+                          isEn ? "technologies" : "tecnologias"
+                        }/${fields.slug}`}
+                      >
+                        <Img fluid={smallLogo} />
+                        <p>{technology.frontmatter.title.split("| ")[1]}</p>
+                      </Link>
+                    </li>
+                  );
+                })}
             </ul>
           </div>
           <div dangerouslySetInnerHTML={{ __html: techDetail }} />
@@ -111,12 +144,19 @@ export const query = graphql`
       devTime
       devMonths
       devCommits
+      whereToFind {
+        link
+        image {
+          ...SiteImageFluid
+        }
+      }
       image {
         ...SiteImageFluid
       }
       thumbnailImage {
         ...SiteImageFluid
       }
+      technology
       tags
     }
     fields {
@@ -133,6 +173,29 @@ export const query = graphql`
       }
     ) {
       ...ProjectPage
+    }
+    allTechnologies: allMarkdownRemark(
+      filter: {
+        frontmatter: {
+          templateKey: { eq: "technology-page" }
+          language: { eq: $language }
+        }
+      }
+    ) {
+      edges {
+        node {
+          ...TechnologyPage
+          frontmatter {
+            logo {
+              childImageSharp {
+                smallLogo: fluid(maxWidth: 85) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 `;

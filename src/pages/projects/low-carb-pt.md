@@ -2,15 +2,22 @@
 templateKey: project-page
 baseUrl: projetos
 featured: true
+whereToFind:
+  - image: /img/apple_store.png
+    link: >-
+      https://itunes.apple.com/us/app/emagre%C3%A7a-j%C3%A1/id1281662637?l=pt&ls=1&mt=8
+  - image: /img/google_play.png
+    link: 'https://play.google.com/store/apps/details?id=io.appmasters.lowcarb'
 language: pt
 title: Low Carb App
 technology:
-  - React Native
+  - Tecnologias | React Native
+  - Tecnologias | MongoDB
 summary: >-
   Low Carb is your direct guide to the latest low carb diets and manners, as
   well as intermittent fasting so you can start losing weight immediately
 clientName: Turi Souza
-clientLocation: 'Juiz de Fora, Minas Gerais'
+clientLocation: Brazil
 devTime: 400
 devMonths: 3
 devCommits: 375
@@ -36,14 +43,6 @@ Com toda a informação adquirida e as ideias em mente, seguimos para um protót
 > “Minha experiência com a App Masters tem sido ótima. Desde o início do meu projeto estamos trabalhando em conjunto buscando a melhor experiência para os clientes. A prontidão em atender minhas necessidades, cumprindo o planejamento e trazendo sugestões produtivas para o desenvolvimento do meu aplicativo está sendo um grande diferencial.” - Dr. Turi
 
 Ao final do projeto, abrimos o app para testes beta, onde apenas convidados poderiam instalar o aplicativo para experimentar. Depois de algumas semanas em beta, ajustamos os últimos detalhes e liberamos o app Emagreça Já nas lojas.
-
----
-
-<a href="https://itunes.apple.com/us/app/emagre%C3%A7a-j%C3%A1/id1281662637?l=pt&ls=1&mt=8" target="_blank" rel="noopener noreferrer">
-<img src="/img/apple_store.png" alt="App Store Button"/></a>
-
-<a href="https://play.google.com/store/apps/details?id=io.appmasters.lowcarb" target="_blank" rel="noopener noreferrer">
-<img src="/img/google_play.png" alt="Google Play Button"/></a>
 
 ---
 

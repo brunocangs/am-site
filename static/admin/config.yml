@@ -163,7 +163,7 @@ collections:
           label: "Descrição completa",
           name: "body",
           widget: "markdown",
-          default: "## Main pitch\n\nPitchContent\n\n---\n\nStore Buttons\n\n---## Tech detail\n\nTech content\n\n---\n\n## Financial details\n\nFinancial content",
+          default: "## Main pitch\n\nPitchContent\n\n---## Tech detail\n\nTech content\n\n---\n\n## Financial details\n\nFinancial content",
         }
       - { label: "Nome do cliente", name: "clientName", widget: "string" }
       - {
