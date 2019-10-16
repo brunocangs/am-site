@@ -36,6 +36,27 @@ Com toda a informação adquirida e as ideias em mente, seguimos para um protót
 
 Ao final do projeto, abrimos o app para testes beta, onde apenas convidados poderiam instalar o aplicativo para experimentar. Depois de algumas semanas em beta, ajustamos os últimos detalhes e liberamos o app Emagreça Já nas lojas.
 
+---
+
+<a href="https://itunes.apple.com/us/app/emagre%C3%A7a-j%C3%A1/id1281662637?l=pt&ls=1&mt=8" target="_blank" rel="noopener noreferrer">
+<img src="/img/apple_store.png" alt="App Store Button"/></a>
+
+<a href="https://play.google.com/store/apps/details?id=io.appmasters.lowcarb" target="_blank" rel="noopener noreferrer">
+<img src="/img/google_play.png" alt="Google Play Button"/></a>
+
+---
+
+## Detalhes técnicos
+
+Um recurso que ficou muito bom é a possibilidade do app funcionar 100% offline, assim, independente de ter conexão ou não, o usuário consegue ter acesso aos cardápios, receitas e alimentos permitidos.
+
+Utilizamos, como em todos os outros projetos, uma ferramenta de registro de falhas online, onde, caso aconteça algum erro com algum usuário, somos avisados imediatamente para verificação e possível correção, mantendo assim o app sempre em perfeito funcionamento.
+
+O projeto foi desenvolvido para Android e iOS, nativo nos dois ambientes, com React Native. A API foi desenvolvida em node com MongoDB e está em funcionamento no heroku. A “área administrativa” foi implementada com React e está hospedada no firebase.
+
+---
+
+
 ## Recepção e retorno sobre investimento
 
 Não é fácil ter uma boa ideia no momento certo, que atenda uma demanda real e tenha boa aceitação. Mas assim aconteceu com o Emagreça Já. O app está à venda na Play Store e Google Play por R$9,90 e alcançou mais de mil vendas em menos de dois meses, sem investimento em marketing. Essa aceitação se reflete em vendas, gerando um retorno de investimento de aproximadamente 40% em aproximadamente 50 dias.
@@ -45,11 +66,3 @@ Não é fácil ter uma boa ideia no momento certo, que atenda uma demanda real e
 João Paulo, um dos usuários, está bastante satisfeito com o Emagreça Já e o avaliou como 5 estrelas. 
 
 > “Perdi quase 17 quilos em 3 meses depois de ler o livro do Dr. Turí Souza. Com esse app, agora eu estou tranquilo de conseguir manter o meu peso com sucesso.” - João Paulo
-
-## Detalhes técnicos
-
-Um recurso que ficou muito bom é a possibilidade do app funcionar 100% offline, assim, independente de ter conexão ou não, o usuário consegue ter acesso aos cardápios, receitas e alimentos permitidos.
-
-Utilizamos, como em todos os outros projetos, uma ferramenta de registro de falhas online, onde, caso aconteça algum erro com algum usuário, somos avisados imediatamente para verificação e possível correção, mantendo assim o app sempre em perfeito funcionamento.
-
-O projeto foi desenvolvido para Android e iOS, nativo nos dois ambientes, com React Native. A API foi desenvolvida em node com MongoDB e está em funcionamento no heroku. A “área administrativa” foi implementada com React e está hospedada no firebase.

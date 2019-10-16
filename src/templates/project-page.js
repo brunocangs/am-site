@@ -6,7 +6,10 @@ import {
   ProjectDetailsContainer
 } from "../components/ProjectComponents";
 import Helmet from "react-helmet";
-
+const getStrings = isEn => {
+  if (isEn) return { aboutDevelopment: "Development details" };
+  return { aboutDevelopment: "Informações do desenvolvimento" };
+};
 export default ({ data }) => {
   const { frontmatter, ...restData } = data.markdownRemark;
   const {
@@ -21,6 +24,11 @@ export default ({ data }) => {
     thumbnailImage,
     tags
   } = frontmatter;
+  const [mainPitch, storeButtons, techDetail, financial] = restData.html.split(
+    "<hr>"
+  );
+  const isEn = language === "en";
+  const { aboutDevelopment } = getStrings(isEn);
   return (
     <>
       <Helmet>
@@ -29,8 +37,13 @@ export default ({ data }) => {
       <Content>
         <Img fluid={image.childImageSharp.fluid} />
         <ProjectDetailsContainer>
-          <div dangerouslySetInnerHTML={{ __html: restData.html }} />
-          <div></div>
+          <div dangerouslySetInnerHTML={{ __html: mainPitch }} />
+          <div dangerouslySetInnerHTML={{ __html: storeButtons }} />
+          <div>
+            <h2>{aboutDevelopment}</h2>
+          </div>
+          <div dangerouslySetInnerHTML={{ __html: techDetail }} />
+          <div dangerouslySetInnerHTML={{ __html: financial }} />
         </ProjectDetailsContainer>
       </Content>
     </>
