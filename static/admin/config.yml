@@ -127,15 +127,15 @@ collections:
           widget: "boolean",
           default: false,
         }
-      - label: "Onde encontrar (App Store, Play store, Web, etc)",
-        name: "whereToFind",
-        widget: "list",
+      - label: "Onde encontrar (App Store, Play store, Web, etc)"
+        name: "whereToFind"
+        widget: "list"
         fields:
           - label: "Link"
             name: "link"
             widget: "string"
-          - label: "Imagem",
-            name: "image",
+          - label: "Imagem"
+            name: "image"
             widget: "image"
       - {
           label: "Language",
