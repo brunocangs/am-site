@@ -72,7 +72,7 @@ export default ({ data }) => {
   const { allProjects, allProjectsPage } = data;
   const { edges: projects } = allProjects;
   const { frontmatter: page, html } = allProjectsPage;
-  const [title, content] = html.split("<hr>");
+  const [title] = html.split("<hr>");
   return (
     <AllProjectsContainer>
       <Helmet>

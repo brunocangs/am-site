@@ -30,15 +30,15 @@ export default ({ data }) => {
   const {
     language,
     title,
-    summary,
-    clientName,
-    clientLocation,
+    // summary,
+    // clientName,
+    // clientLocation,
     devTime,
     devMonths,
     devCommits,
-    image,
-    technology: projectTechnologies,
-    tags
+    image
+    // technology: projectTechnologies,
+    // tags
   } = frontmatter;
   const [mainPitch, techDetail, financial] = restData.html.split("<hr>");
   const isEn = language === "en";
@@ -90,8 +90,8 @@ export default ({ data }) => {
                 })
                 .map(({ node: technology }) => {
                   const { frontmatter, fields } = technology;
-                  const { title, logo, bgColor } = frontmatter;
-                  const { smallLogo, fluid } = logo.childImageSharp;
+                  const { logo } = frontmatter;
+                  const { smallLogo } = logo.childImageSharp;
                   return (
                     <li>
                       <Link

@@ -6,11 +6,26 @@ media_folder: static/img
 public_folder: /img
 
 collections:
+  - name: "authors"
+    label: "Autores"
+    folder: "src/pages/authors"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - label: "Nome"
+        name: "title"
+        widget: "string"
+      - label: "Foto"
+        name: "image"
+        widget: "image"
+      - label: "Descrição"
+        name: "body"
+        widget: "markdown"
   - name: "blog"
     label: "Blog"
     folder: "src/pages/blog"
     create: true
-    slug: "{{slug}}"
+    slug: "{{slug}}-{{language}}"
     fields:
       - {
           label: "Template Key",
@@ -30,6 +45,10 @@ collections:
             ],
           default: "pt",
         }
+      - label: "URL base"
+        name: "baseUrl"
+        widget: "string"
+        default: "blog"
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Description", name: "description", widget: "text" }
       - { label: "Featured Post", name: "featuredpost", widget: "boolean" }

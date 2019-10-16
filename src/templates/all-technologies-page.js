@@ -30,6 +30,7 @@ export default ({ data }) => {
                 <img
                   srcSet={image.srcSet}
                   sizes={image.sizes}
+                  alt={title}
                   style={{
                     width: "100%",
                     height: "100%",
