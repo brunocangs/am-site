@@ -4,6 +4,7 @@ import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 import { medium } from "../styles/screens";
 import { lightestGrey, lightBlack, darkGrey, black } from "../styles/colors";
+import { Link } from "gatsby";
 
 const FooterContainer = styled.div`
   background-color: ${lightestGrey};
@@ -69,18 +70,20 @@ export default props => {
         {isEn ? (
           <>
             <h3>Relevant links</h3>
-            <a href="/en/projects">Projects</a>
-            <a href="/en/blog">Blog</a>
-            <a href="/en/about">About us</a>
-            <a href="/en/contact">Contact</a>
+            <Link to="/en/projects">Projects</Link>
+            <Link to="/en/blog">Blog</Link>
+            <Link to="/en/technologies">Technologies</Link>
+            <Link to="/en/about">About us</Link>
+            <Link to="/en/contact">Contact</Link>
           </>
         ) : (
           <>
             <h3>Links relevantes</h3>
-            <a href="/pt/projetos">Projetos</a>
-            <a href="/pt/blog">Blog</a>
-            <a href="/pt/sobre">Sobre nós</a>
-            <a href="/pt/contato">Fale conosco</a>
+            <Link to="/pt/projetos">Projetos</Link>
+            <Link to="/pt/blog">Blog</Link>
+            <Link to="pt/tecnologias">Tecnologias</Link>
+            <Link to="/pt/sobre">Sobre nós</Link>
+            <Link to="/pt/contato">Fale conosco</Link>
           </>
         )}
       </FooterContent>

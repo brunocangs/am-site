@@ -111,8 +111,8 @@ const getLinks = language => {
         label: "Projects"
       },
       {
-        url: "/technologies",
-        label: "Technologies"
+        url: "/blog",
+        label: "Blog"
       },
       {
         url: "/about",
@@ -126,8 +126,8 @@ const getLinks = language => {
         label: "Projetos"
       },
       {
-        url: "/tecnologias",
-        label: "Tecnologias"
+        url: "/blog",
+        label: "Blog"
       },
       {
         url: "/sobre",

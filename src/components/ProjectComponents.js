@@ -148,6 +148,7 @@ export const Content = styled.div`
     margin: 0;
     padding-left: 14px;
   }
+  padding-bottom: 60px;
 `;
 
 export const ProjectDetailsContainer = styled(AllProjectsContainer)`
