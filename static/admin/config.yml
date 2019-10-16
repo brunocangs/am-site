@@ -127,7 +127,8 @@ collections:
           widget: "boolean",
           default: false,
         }
-      - label: "Onde encontrar (App Store, Play store, Web, etc)"
+      - label: "Onde encontrar"
+        hint: "App Store, Play store, Web, etc"
         name: "whereToFind"
         widget: "list"
         fields:
