@@ -11,6 +11,7 @@ clientName: teste
 clientLocation: teste
 devTime: 123
 devMonths: 119
+devCommits: 375
 image: /img/lowcarb_mockup.png
 thumbnailImage: /img/low-carb-thumbnail.jpg
 tags:

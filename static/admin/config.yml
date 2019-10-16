@@ -127,6 +127,16 @@ collections:
           widget: "boolean",
           default: false,
         }
+      - label: "Onde encontrar (App Store, Play store, Web, etc)",
+        name: "whereToFind",
+        widget: "list",
+        fields:
+          - label: "Link"
+            name: "link"
+            widget: "string"
+          - label: "Imagem",
+            name: "image",
+            widget: "image"
       - {
           label: "Language",
           name: "language",
@@ -169,6 +179,12 @@ collections:
       - {
           label: "Meses de desenvolvimento",
           name: "devMonths",
+          widget: "number",
+          valueType: "int",
+        }
+      - {
+          label: "Quantidade de commits",
+          name: "devCommits",
           widget: "number",
           valueType: "int",
         }

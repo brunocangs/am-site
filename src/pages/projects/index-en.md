@@ -11,6 +11,7 @@ clientName: a
 clientLocation: a
 devTime: 22
 devMonths: 20
+devCommits: 375
 image: /img/react.png
 thumbnailImage: /img/react.png
 tags:

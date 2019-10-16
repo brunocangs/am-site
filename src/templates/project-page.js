@@ -6,10 +6,23 @@ import {
   ProjectDetailsContainer
 } from "../components/ProjectComponents";
 import Helmet from "react-helmet";
+
 const getStrings = isEn => {
-  if (isEn) return { aboutDevelopment: "Development details" };
-  return { aboutDevelopment: "Informações do desenvolvimento" };
+  if (isEn)
+    return {
+      aboutDevelopment: "Development details",
+      developmentMonths: "Months to deliver",
+      developmentTime: "Hours of development",
+      developmentCommits: "Commits pushed"
+    };
+  return {
+    aboutDevelopment: "Informações do desenvolvimento",
+    developmentMonths: "Meses até entregar",
+    developmentTime: "Horas de desenvolvimento",
+    developmentCommits: "Commits realizados"
+  };
 };
+
 export default ({ data }) => {
   const { frontmatter, ...restData } = data.markdownRemark;
   const {
@@ -20,15 +33,20 @@ export default ({ data }) => {
     clientLocation,
     devTime,
     devMonths,
+    devCommits,
     image,
-    thumbnailImage,
     tags
   } = frontmatter;
   const [mainPitch, storeButtons, techDetail, financial] = restData.html.split(
     "<hr>"
   );
   const isEn = language === "en";
-  const { aboutDevelopment } = getStrings(isEn);
+  const {
+    aboutDevelopment,
+    developmentMonths,
+    developmentTime,
+    developmentCommits
+  } = getStrings(isEn);
   return (
     <>
       <Helmet>
@@ -41,6 +59,20 @@ export default ({ data }) => {
           <div dangerouslySetInnerHTML={{ __html: storeButtons }} />
           <div>
             <h2>{aboutDevelopment}</h2>
+            <ul>
+              <li>
+                <h3>{devTime}</h3>
+                <span>{developmentTime}</span>
+              </li>
+              <li>
+                <h3>{devMonths}</h3>
+                <span>{developmentMonths}</span>
+              </li>
+              <li>
+                <h3>{devCommits}</h3>
+                <span>{developmentCommits}</span>
+              </li>
+            </ul>
           </div>
           <div dangerouslySetInnerHTML={{ __html: techDetail }} />
           <div dangerouslySetInnerHTML={{ __html: financial }} />
@@ -78,6 +110,7 @@ export const query = graphql`
       clientLocation
       devTime
       devMonths
+      devCommits
       image {
         ...SiteImageFluid
       }

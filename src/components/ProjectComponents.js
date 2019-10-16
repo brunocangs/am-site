@@ -154,4 +154,32 @@ export const ProjectDetailsContainer = styled(AllProjectsContainer)`
   h2 {
     margin-top: 48px;
   }
+  > div {
+    :nth-child(3) {
+      ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        ${media("medium")} {
+          flex-direction: row;
+          justify-content: space-between;
+        }
+        li {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          h3 {
+            font-size: 60px;
+            margin: 0;
+            font-weight: 300;
+            color: ${Colors.darkBlue};
+          }
+        }
+      }
+    }
+  }
 `;
