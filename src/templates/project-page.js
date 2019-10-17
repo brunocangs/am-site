@@ -50,7 +50,6 @@ export default ({ data }) => {
     usedTech
   } = getStrings(isEn);
   const { edges: technologies } = data.allTechnologies;
-  console.log(data);
   return (
     <>
       <Helmet>

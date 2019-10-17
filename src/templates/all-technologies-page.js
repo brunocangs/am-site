@@ -7,7 +7,6 @@ export default ({ data }) => {
   const { frontmatter: page, html } = data.allTechnologiesPage;
   const [headerHtml] = html.split("<hr>");
   const headerText = headerHtml.replace(/<[^>]*>/g, "");
-  console.log(data);
   return (
     <div>
       <Helmet>
