@@ -54,7 +54,7 @@ const renderProjectItem = ({ node: project }, i) => {
             {tags.map((tag, i) => {
               return (
                 <Link
-                  to={`/en/tags/${kebabCase(tag)}`}
+                  to={`/${language}/tags/${kebabCase(tag)}`}
                   key={i}
                   style={{ display: "block" }}
                 >

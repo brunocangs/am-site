@@ -88,12 +88,12 @@ export default ({ data }) => {
                     ) > -1
                   );
                 })
-                .map(({ node: technology }) => {
+                .map(({ node: technology }, i) => {
                   const { frontmatter, fields } = technology;
                   const { logo } = frontmatter;
                   const { smallLogo } = logo.childImageSharp;
                   return (
-                    <li>
+                    <li key={i}>
                       <Link
                         to={`/${language}/${
                           isEn ? "technologies" : "tecnologias"

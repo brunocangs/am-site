@@ -9,6 +9,7 @@ import Helmet from "react-helmet";
 const Globals = createGlobalStyle`
     *, *::after, *::before {
         box-sizing: border-box;
+        outline: none;
         font-family: 'Roboto', sans-serif;
     }
     body, html {
@@ -20,6 +21,16 @@ const Globals = createGlobalStyle`
     body {
         min-height: 100vh;
         display: flex;
+    }
+    .clamp-lines__button {
+      padding: 0;
+      color: ${Colors.blue};
+      border: 0px solid transparent;
+      background: transparent;
+      :hover {
+        text-decoration: underline;
+        cursor: pointer;
+      }
     }
     #___gatsby, #gatsby-focus-wrapper {
         display: flex;
@@ -56,7 +67,9 @@ export default props => {
         />
       </Helmet>
       <Globals />
-      <header style={{ zIndex: 1, position: 'sticky', top: 0, right: 0, left: 0 }}>
+      <header
+        style={{ zIndex: 1, position: "sticky", top: 0, right: 0, left: 0 }}
+      >
         <Header language={language} {...props} />
       </header>
       <Main>{children}</Main>

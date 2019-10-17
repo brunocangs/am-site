@@ -21,6 +21,21 @@ collections:
       - label: "Descrição"
         name: "body"
         widget: "markdown"
+      - label: "URL"
+        name: "baseUrl"
+        widget: "hidden"
+        default: "author"
+      - {
+          label: "Language",
+          name: "language",
+          widget: "select",
+          options:
+            [
+              { label: "Português", value: "pt" },
+              { label: "Inglês", value: "en" },
+            ],
+          default: "pt",
+        }
   - name: "blog"
     label: "Blog"
     folder: "src/pages/blog"
@@ -58,8 +73,8 @@ collections:
         valueField: "title"
         displayFields: ["title"]
       - { label: "Description", name: "description", widget: "text" }
-      - { label: "Featured Post", name: "featuredpost", widget: "boolean" }
-      - { label: "Featured Image", name: "featuredimage", widget: image }
+      - { label: "Featured Post", name: "featuredPost", widget: "boolean" }
+      - { label: "Featured Image", name: "featuredImage", widget: image }
       - { label: "Body", name: "body", widget: "markdown" }
       - { label: "Tags", name: "tags", widget: "list" }
   - name: "landing-page"

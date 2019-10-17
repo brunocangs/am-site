@@ -154,8 +154,15 @@ export default function Header(props) {
   const { language } = props;
   const navLinks = getLinks(language);
   const scroll = useWindowScroll();
+  const allowedRoutes = ["", "blog"];
   return (
-    <Nav scroll={scroll} isIndex={props.path.split("/")[2] === ""}>
+    <Nav
+      scroll={scroll}
+      isIndex={
+        allowedRoutes.indexOf(props.path.split("/")[2]) > -1 &&
+        props.path.split("/").length <= 3
+      }
+    >
       <Link to={`/${language || ""}`}>
         <Logo style={{ height: "100%" }} />
       </Link>

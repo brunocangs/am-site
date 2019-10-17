@@ -1,7 +1,7 @@
 ---
 templateKey: all-blog-page
 title: index
-language: pt
+language: en
 baseUrl: blog
 date: 2019-10-16T14:16:30.381Z
 description: a

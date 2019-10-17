@@ -6,8 +6,8 @@ baseUrl: blog
 date: 2019-10-03T11:50:33.966Z
 author: Tiago Gouvea
 description: Hi
-featuredpost: true
-featuredimage: /img/tweet.png
+featuredPost: true
+featuredImage: /img/tweet.png
 tags:
   - React Native
 ---

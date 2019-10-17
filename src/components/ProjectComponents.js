@@ -119,10 +119,12 @@ export const ProjectItemDetails = styled.div`
     div {
       display: flex;
       flex-wrap: wrap;
+      font-size: 0.6em;
       a {
         padding: 4px 6px;
         border: 1px solid ${Colors.blue};
         border-radius: 3px;
+        color: ${Colors.blue};
         margin: 0px 3px;
         transition: all 0.1s ease-in-out;
         :first-child {
