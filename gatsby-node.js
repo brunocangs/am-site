@@ -56,7 +56,8 @@ exports.createPages = ({ actions, graphql }) => {
         // additional data can be passed via context
         context: {
           id,
-          language: edge.node.frontmatter.language
+          language: edge.node.frontmatter.language,
+          tags: edge.node.frontmatter.tags
         }
       });
     });

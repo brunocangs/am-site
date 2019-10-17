@@ -1,7 +1,114 @@
 import React from "react";
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
+import Helmet from "react-helmet";
+import {
+  Post,
+  PostContent,
+  AllBlogContainer
+} from "../components/BlogComponents";
+import Img from "gatsby-image";
+import { kebabCase } from "lodash";
+import ClampLines from "react-clamp-lines";
 
-export default ({ data }) => <pre>{JSON.stringify(data, null, 2)}</pre>;
+export default ({ data }) => {
+  const { html, frontmatter } = data.post;
+  const { edges: authors } = data.allAuthors;
+  const { title, language, date, featuredImage, tags, author } = frontmatter;
+  const image = featuredImage.childImageSharp.fluid;
+  const { node: postAuthor } = authors.find(
+    i => i.node.frontmatter.title === author
+  );
+  const { edges: relatedPosts } = data.allRelatedPosts;
+  const isEn = language === "en";
+  return (
+    <>
+      <Helmet>
+        <title>{title} - App Maters</title>
+      </Helmet>
+      <Post>
+        <Img fluid={{ ...image, aspectRatio: 2.5 }} />
+        <PostContent>
+          <h1>{title}</h1>
+          <div>
+            {tags.map((tag, i) => {
+              return (
+                <Link
+                  to={`/${language}/tags/${kebabCase(tag)}`}
+                  key={i}
+                  style={{ display: "block" }}
+                >
+                  {tag}
+                </Link>
+              );
+            })}
+          </div>
+          <h2>{isEn ? "Written by" : "Escrito por"}</h2>
+          <div>
+            <Img
+              fixed={postAuthor.frontmatter.image.childImageSharp.fixed}
+              imgStyle={{ borderRadius: "100%" }}
+            />
+            <div>
+              <h3>{postAuthor.frontmatter.title}</h3>
+              <div dangerouslySetInnerHTML={{ __html: postAuthor.html }} />
+            </div>
+          </div>
+          <div dangerouslySetInnerHTML={{ __html: html }} />
+          <h2>{isEn ? "Related posts" : "Posts relacionados"}</h2>
+          <AllBlogContainer related>
+            <ul>
+              {relatedPosts.map(({ node: relatedPost }, i) => {
+                const { frontmatter, html, fields } = relatedPost;
+                const {
+                  featuredImage,
+                  title,
+                  date,
+                  author,
+                  description,
+                  language,
+                  formattedDate,
+                  tags
+                } = frontmatter;
+                const image = featuredImage.childImageSharp.fluid;
+                return (
+                  <li key={i}>
+                    <Img fluid={{ ...image, aspectRatio: 2.5 }} />
+                    <div>
+                      <Link to={`/${language}/blog/${fields.slug}`}>
+                        <h2>{title}</h2>
+                        <span>{author}</span>
+                        <br />
+                        <span>{formattedDate}</span>
+                      </Link>
+                      <ClampLines
+                        text={description}
+                        lines={3}
+                        innerElement="p"
+                      />
+                      <div>
+                        {tags.map((tag, i) => {
+                          return (
+                            <Link
+                              to={`/${language}/tags/${kebabCase(tag)}`}
+                              key={i}
+                              style={{ display: "block" }}
+                            >
+                              {tag}
+                            </Link>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  </li>
+                );
+              })}
+            </ul>
+          </AllBlogContainer>
+        </PostContent>
+      </Post>
+    </>
+  );
+};
 
 export const query = graphql`
   fragment BlogPost on MarkdownRemark {
@@ -31,7 +138,7 @@ export const query = graphql`
       }
     }
   }
-  query BlogPostQuery($id: String!, $language: String!) {
+  query BlogPostQuery($id: String!, $language: String!, $tags: [String]!) {
     post: markdownRemark(id: { eq: $id }) {
       ...BlogPost
     }
@@ -47,9 +154,29 @@ export const query = graphql`
           frontmatter {
             title
             image {
-              ...SiteImageFluid
+              childImageSharp {
+                fixed(width: 64, height: 64) {
+                  ...GatsbyImageSharpFixed
+                }
+              }
             }
           }
+        }
+      }
+    }
+    allRelatedPosts: allMarkdownRemark(
+      filter: {
+        frontmatter: {
+          tags: { in: $tags }
+          language: { eq: $language }
+          templateKey: { eq: "blog-post" }
+        }
+      }
+      limit: 3
+    ) {
+      edges {
+        node {
+          ...BlogPost
         }
       }
     }

@@ -58,6 +58,7 @@ export const AllBlogContainer = styled(BaseContainer)`
   max-width: 100%;
   display: flex;
   flex-direction: column;
+  ${props => (props.related ? "padding: 0;" : "")}
   /* Lista de posts */
   > ul {
     margin: 0;
@@ -65,7 +66,16 @@ export const AllBlogContainer = styled(BaseContainer)`
     margin-top: 12px;
     padding: 0;
     width: 100%;
-    display: block;
+    display: ${props => (props.related ? "flex" : "block")};
+    ${props =>
+      props.related
+        ? `
+        flex-direction: column;
+      ${media("large")} {
+        flex-direction: row;
+      }
+    `
+        : ""}
     /* Post */
     li {
       overflow: hidden;
@@ -73,7 +83,17 @@ export const AllBlogContainer = styled(BaseContainer)`
       box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.1);
       /* Margin para elementos a partir do segundo */
       + li {
-        margin-top: 36px;
+        ${props =>
+          props.related
+            ? `
+          ${media("large", true)} {
+            margin-top: 36px;
+          }
+          ${media("large")} {
+            margin-left: 24px;
+          }
+        `
+            : "margin-top: 36px;"}
       }
       width: 100%;
       /* Segundo div do item => conteúdo de texto */
@@ -83,6 +103,7 @@ export const AllBlogContainer = styled(BaseContainer)`
           padding: 14px 24px;
           /* Link */
           a {
+            /* Título */
             h2 {
               margin: 0;
               font-size: 20px;
@@ -90,6 +111,7 @@ export const AllBlogContainer = styled(BaseContainer)`
                 font-size: 28px;
               }
             }
+            /* Autor e data */
             span {
               color: ${Colors.lighterGrey};
               font-size: 0.8em;
@@ -173,6 +195,7 @@ export const AllBlogContainer = styled(BaseContainer)`
         padding: 8px 16px;
         background-color: white;
         border: 1px solid ${Colors.lightestGrey};
+        /* Lógica de borda pra não exibir quando não houver resultados */
         :first-child {
           border-top-left-radius: 4px;
           border-top-right-radius: 4px;
@@ -186,6 +209,63 @@ export const AllBlogContainer = styled(BaseContainer)`
         }
         + li {
           border-bottom-width: 0;
+        }
+      }
+    }
+  }
+`;
+
+export const Post = styled.div`
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 60px;
+`;
+
+export const PostContent = styled(BaseContainer)`
+  flex-direction: column;
+  h1 {
+    margin-bottom: 0;
+  }
+  > div {
+    :nth-of-type(1) {
+      display: flex;
+      flex-wrap: wrap;
+      padding-bottom: 8px;
+      margin-top: 6px;
+      /* Tag */
+      a {
+        padding: 4px 6px;
+        border: 1px solid ${Colors.blue};
+        border-radius: 3px;
+        margin: 0px 3px;
+        transition: all 0.1s ease-in-out;
+        font-size: 0.8em;
+        color: ${Colors.blue};
+        :first-child {
+          margin-left: 0;
+        }
+        :hover {
+          color: ${Colors.white};
+          background-color: ${Colors.blue};
+        }
+      }
+    }
+    /* Wrapper de autor */
+    :nth-of-type(2) {
+      display: flex;
+      align-items: flex-start;
+      /* Divs internos */
+      > div {
+        margin-bottom: 16px;
+        /* Div com texto */
+        :nth-of-type(2) {
+          flex: 1;
+          margin-left: 14px;
+          h3,
+          p {
+            margin: 0;
+          }
         }
       }
     }
