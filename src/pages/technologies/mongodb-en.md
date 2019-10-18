@@ -15,11 +15,11 @@ tags:
   - NoSQL
   - Data
 ---
-# About
+## About
 
 MongoDB is a document database, which means it stores data in JSON-like documents. We believe this is the most natural way to think about data, and is much more expressive and powerful than the traditional row/column model.
 
-# Rich JSON Documents
+## Rich JSON Documents
 
 - The most natural and productive way to work with data.
 - Supports arrays and nested objects as values.
