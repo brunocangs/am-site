@@ -6,6 +6,7 @@ import {
   ProjectDetailsContainer
 } from "../components/ProjectComponents";
 import Helmet from "react-helmet";
+import { renderTechnologyItem } from "./all-technologies-page";
 
 const getStrings = isEn => {
   if (isEn)
@@ -30,15 +31,10 @@ export default ({ data }) => {
   const {
     language,
     title,
-    // summary,
-    // clientName,
-    // clientLocation,
     devTime,
     devMonths,
     devCommits,
     image
-    // technology: projectTechnologies,
-    // tags
   } = frontmatter;
   const [mainPitch, techDetail, financial] = restData.html.split("<hr>");
   const isEn = language === "en";
@@ -56,7 +52,7 @@ export default ({ data }) => {
         <title>{title} - App Masters</title>
       </Helmet>
       <Content>
-        <Img fluid={image.childImageSharp.fluid} />
+        <Img fluid={{ ...image.childImageSharp.fluid, aspectRatio: 2.5 }} />
         <ProjectDetailsContainer>
           <div dangerouslySetInnerHTML={{ __html: mainPitch }} />
           <div>
@@ -87,23 +83,7 @@ export default ({ data }) => {
                     ) > -1
                   );
                 })
-                .map(({ node: technology }, i) => {
-                  const { frontmatter, fields } = technology;
-                  const { logo } = frontmatter;
-                  const { smallLogo } = logo.childImageSharp;
-                  return (
-                    <li key={i}>
-                      <Link
-                        to={`/${language}/${
-                          isEn ? "technologies" : "tecnologias"
-                        }/${fields.slug}`}
-                      >
-                        <Img fluid={smallLogo} />
-                        <p>{technology.frontmatter.title.split("| ")[1]}</p>
-                      </Link>
-                    </li>
-                  );
-                })}
+                .map(renderTechnologyItem)}
             </ul>
           </div>
           <div dangerouslySetInnerHTML={{ __html: techDetail }} />

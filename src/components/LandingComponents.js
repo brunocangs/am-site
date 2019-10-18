@@ -204,7 +204,7 @@ export const Projects = styled(SectionContainer)`
       position: relative;
       overflow: hidden;
       ${media("medium")} {
-        max-width: unset;
+        max-width: 33%;
         &:hover {
           > div:first-child {
             transform: translateY(-10%);
@@ -310,7 +310,7 @@ export const Testimonies = styled(SectionContainer)`
       flex-direction: column;
       justify-content: space-around;
       align-items: center;
-      div {
+      > div {
         margin: 12px;
         padding: 8px;
         box-shadow: 1px 1px 4px 0px rgba(0,0,0,0.15);

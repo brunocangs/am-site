@@ -53,8 +53,13 @@ export default ({ data }) => {
               <div dangerouslySetInnerHTML={{ __html: postAuthor.html }} />
             </div>
           </div>
-          <div dangerouslySetInnerHTML={{ __html: html }} />
-          <h2>{isEn ? "Related posts" : "Posts relacionados"}</h2>
+          <div
+            dangerouslySetInnerHTML={{ __html: html }}
+            style={{ borderBottom: "1px solid #eee", paddingBottom: 24 }}
+          />
+          <h1 style={{ marginTop: 48 }}>
+            {isEn ? "Related posts" : "Posts relacionados"}
+          </h1>
           <AllBlogContainer related>
             <ul>
               {relatedPosts.map(({ node: relatedPost }, i) => {
@@ -177,6 +182,12 @@ export const query = graphql`
       edges {
         node {
           ...BlogPost
+          frontmatter {
+            formattedDate: date(
+              formatString: "DD MMM YYYY - HH:mm"
+              locale: $language
+            )
+          }
         }
       }
     }

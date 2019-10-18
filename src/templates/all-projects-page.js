@@ -11,7 +11,7 @@ import Img from "gatsby-image";
 import { FaMapPin } from "react-icons/fa";
 import ClampLines from "react-clamp-lines";
 
-const renderProjectItem = ({ node: project }, i) => {
+export const renderProjectItem = ({ node: project }, i) => {
   const {
     title,
     summary,
@@ -79,10 +79,7 @@ export default ({ data }) => {
         <title>{page.title}</title>
       </Helmet>
       <div dangerouslySetInnerHTML={{ __html: title }} />
-
-      <ProjectsList>
-        {new Array(6).fill(projects.slice(0, 1)[0]).map(renderProjectItem)}
-      </ProjectsList>
+      <ProjectsList>{projects.map(renderProjectItem)}</ProjectsList>
     </AllProjectsContainer>
   );
 };

@@ -348,7 +348,6 @@ collections:
           widget: "image",
           hint: "Imagem com mesma altura e largura (1:1) e fundo transparente",
         }
-      - { label: "Cor de fundo", name: "bgColor", widget: "color" }
       - {
           label: "Mostrar na página principal",
           name: "featured",

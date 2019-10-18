@@ -81,21 +81,29 @@ export const AllBlogContainer = styled(BaseContainer)`
       overflow: hidden;
       border-radius: 6px;
       box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      ${props =>
+        props.related
+          ? `
+          ${media("large")} {
+            max-width: 33%;
+          }
+          `
+          : ""}
       /* Margin para elementos a partir do segundo */
       + li {
         ${props =>
           props.related
             ? `
-          ${media("large", true)} {
-            margin-top: 36px;
-          }
-          ${media("large")} {
-            margin-left: 24px;
-          }
-        `
+              ${media("large", true)} {
+                margin-top: 36px;
+              }
+              ${media("large")} {
+                margin-left: 24px;
+              }
+            `
             : "margin-top: 36px;"}
       }
-      width: 100%;
       /* Segundo div do item => conteúdo de texto */
       > div {
         :nth-of-type(2) {

@@ -53,7 +53,7 @@ export default props => {
       <div key={i}>
         <img src={image.src} alt={title} />
         <h3>{title}</h3>
-        <p>{body.length > 65 ? body.slice(0, 65) + "..." : body}</p>
+        <ClampLines buttons={false} text={body} lines={2} innerElement="p" />
       </div>
     );
   };
@@ -102,32 +102,30 @@ export default props => {
                 </p>
               </div>
               <ul>
-                {new Array(3)
-                  .fill(projects.slice(0, 1)[0])
-                  .map(({ node: project }) => {
-                    const {
-                      title,
-                      summary,
-                      thumbnailImage
-                    } = project.frontmatter;
-                    const { fluid } = thumbnailImage.childImageSharp;
-                    return (
-                      <Link to={`/en/projects/${project.fields.slug}`}>
-                        <li>
-                          <Img fluid={fluid} />
-                          <div>
-                            <h2>{title}</h2>
-                            <ClampLines
-                              buttons={false}
-                              text={summary}
-                              lines={2}
-                              innerElement="p"
-                            />
-                          </div>
-                        </li>
-                      </Link>
-                    );
-                  })}
+                {projects.map(({ node: project }) => {
+                  const {
+                    title,
+                    summary,
+                    thumbnailImage
+                  } = project.frontmatter;
+                  const { fluid } = thumbnailImage.childImageSharp;
+                  return (
+                    <Link to={`/en/projects/${project.fields.slug}`}>
+                      <li>
+                        <Img fluid={fluid} />
+                        <div>
+                          <h2>{title}</h2>
+                          <ClampLines
+                            buttons={false}
+                            text={summary}
+                            lines={2}
+                            innerElement="p"
+                          />
+                        </div>
+                      </li>
+                    </Link>
+                  );
+                })}
               </ul>
             </Projects>
             <Manifest>

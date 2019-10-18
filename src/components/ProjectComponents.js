@@ -84,7 +84,7 @@ export const ProjectItemDetails = styled.div`
     color: ${Colors.black};
     /* Parte com nome do cliente e localização */
     :first-child {
-      div {
+      > div {
         :first-child {
           color: ${Colors.lightGrey};
           display: flex;
@@ -119,7 +119,6 @@ export const ProjectItemDetails = styled.div`
     div {
       display: flex;
       flex-wrap: wrap;
-      font-size: 0.6em;
       a {
         padding: 4px 6px;
         border: 1px solid ${Colors.blue};

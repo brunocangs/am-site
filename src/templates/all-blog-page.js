@@ -102,6 +102,13 @@ const ComponentName = ({ data, pageContext }) => {
               );
             })}
           </ul>
+          {blogPosts.length === 0 && (
+            <p>
+              {isEn
+                ? `There are no blog posts at the moment, we will add content soon!`
+                : `Não temos posts no blog no momento, mas teremos conteúdo em breve`}
+            </p>
+          )}
           {page * 5 < blogPosts.length && (
             <Button onClick={() => setPage(page + 1)}>
               {isEn ? "See more" : "Ver mais"}
@@ -116,7 +123,12 @@ const ComponentName = ({ data, pageContext }) => {
 export const query = graphql`
   query AllBlogsPage($language: String!) {
     allBlogPosts: allMarkdownRemark(
-      filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
+      filter: {
+        frontmatter: {
+          templateKey: { eq: "blog-post" }
+          language: { eq: $language }
+        }
+      }
       sort: { order: ASC, fields: frontmatter___date }
     ) {
       edges {

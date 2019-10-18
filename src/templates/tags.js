@@ -1,5 +1,9 @@
 import React from "react";
 import { graphql } from "gatsby";
+import { ProjectsList } from "../components/ProjectComponents";
+import { renderProjectItem } from "./all-projects-page";
+import { Content } from "../components/TagsComponents";
+import Helmet from "react-helmet";
 
 const getStrings = language => {
   let strings = {};
@@ -25,55 +29,55 @@ export default ({ data, pageContext }) => {
   const { edges: technologies } = data.allTechnologies;
   const strings = getStrings(pageContext.language);
   return (
-    <div style={{ padding: 12 }}>
-      {blogs.length > 0 && (
-        <div>
-          <h2>
-            {strings.blogs}
-            {pageContext.tag} ({blogs.length}):
-          </h2>
+    <>
+      <Helmet>
+        <title>{pageContext.tag} tag - App Masters</title>
+      </Helmet>
+      <Content>
+        <h1>{pageContext.tag} tag</h1>
+        {blogs.length > 0 && (
           <div>
-            {blogs.map(({ node: blog }) => {
+            <h2>
+              {strings.blogs}
+              {pageContext.tag} ({blogs.length}):
+            </h2>
+            <div>
+              {blogs.map(({ node: blog }) => {
+                return (
+                  <>
+                    <h3>{blog.frontmatter.title}</h3>
+                  </>
+                );
+              })}
+            </div>
+          </div>
+        )}
+        {projects.length > 0 && (
+          <>
+            <h2>
+              {strings.projects}
+              {pageContext.tag} ({projects.length}):
+            </h2>
+            <ProjectsList>{projects.map(renderProjectItem)}</ProjectsList>
+          </>
+        )}
+        {technologies.length > 0 && (
+          <div>
+            <h2>
+              {strings.technologies}
+              {pageContext.tag} ({technologies.length}):
+            </h2>
+            {technologies.map(({ node: technology }) => {
               return (
                 <>
-                  <h3>{blog.frontmatter.title}</h3>
+                  <h3>{technology.frontmatter.title}</h3>
                 </>
               );
             })}
           </div>
-        </div>
-      )}
-      {projects.length > 0 && (
-        <div>
-          <h2>
-            {strings.projects}
-            {pageContext.tag} ({projects.length}):
-          </h2>
-          {projects.map(({ node: project }) => {
-            return (
-              <>
-                <h3>{project.frontmatter.title}</h3>
-              </>
-            );
-          })}
-        </div>
-      )}
-      {technologies.length > 0 && (
-        <div>
-          <h2>
-            {strings.technologies}
-            {pageContext.tag} ({technologies.length}):
-          </h2>
-          {technologies.map(({ node: technology }) => {
-            return (
-              <>
-                <h3>{technology.frontmatter.title}</h3>
-              </>
-            );
-          })}
-        </div>
-      )}
-    </div>
+        )}
+      </Content>
+    </>
   );
 };
 

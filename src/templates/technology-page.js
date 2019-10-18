@@ -1,35 +1,29 @@
 import React from "react";
 import { graphql } from "gatsby";
 import Helmet from "react-helmet";
+import { TechnologyPageWrapper } from "../components/TechnologyComponents";
+import Img from "gatsby-image";
 
-export default ({ data }) => {
+export default props => {
+  const { data } = props;
+  console.log(props);
   const { html, frontmatter } = data.technology;
   const { title, logo, summary } = frontmatter;
-  const image = logo.childImageSharp.fluid;
+  const image = logo.childImageSharp.fixed;
   return (
     <>
       <Helmet>
         <title>{title} - App Masters</title>
       </Helmet>
-      <div>
-        <div
-          style={{
-            backgroundColor: frontmatter.bgColor,
-            height: 100
-          }}
-        >
-          <img
-            src={image.src}
-            style={{ height: 100, width: 100 }}
-            alt={title}
-          />
+      <TechnologyPageWrapper>
+        <div>
+          <div>
+            <h1>{title.split(" |")[1]}</h1>
+            <Img fixed={image} />
+          </div>
         </div>
-        <div style={{ padding: 12 }}>
-          <h1>{title.split(" |")[1]}</h1>
-          <p>{summary}</p>
-          <div dangerouslySetInnerHTML={{ __html: html }} />
-        </div>
-      </div>
+        <div dangerouslySetInnerHTML={{ __html: html }} />
+      </TechnologyPageWrapper>
     </>
   );
 };
@@ -47,6 +41,11 @@ export const query = graphql`
       title
       logo {
         ...SiteImageFluid
+        childImageSharp {
+          fixed(width: 80, height: 80) {
+            ...GatsbyImageSharpFixed
+          }
+        }
       }
       tags
     }
