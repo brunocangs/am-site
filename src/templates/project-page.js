@@ -72,6 +72,7 @@ export default ({ data }) => {
               </li>
             </ul>
           </div>
+          <div dangerouslySetInnerHTML={{ __html: techDetail }} />
           <div>
             <h2>{usedTech}</h2>
             <ul>
@@ -86,7 +87,6 @@ export default ({ data }) => {
                 .map(renderTechnologyItem)}
             </ul>
           </div>
-          <div dangerouslySetInnerHTML={{ __html: techDetail }} />
           <div dangerouslySetInnerHTML={{ __html: financial }} />
         </ProjectDetailsContainer>
       </Content>

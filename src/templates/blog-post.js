@@ -9,6 +9,7 @@ import {
 import Img from "gatsby-image";
 import { kebabCase } from "lodash";
 import ClampLines from "react-clamp-lines";
+import { renderBlogItem } from "./all-blog-page";
 
 export default ({ data }) => {
   const { html, frontmatter } = data.post;
@@ -62,51 +63,9 @@ export default ({ data }) => {
           </h1>
           <AllBlogContainer related>
             <ul>
-              {relatedPosts.map(({ node: relatedPost }, i) => {
-                const { frontmatter, html, fields } = relatedPost;
-                const {
-                  featuredImage,
-                  title,
-                  date,
-                  author,
-                  description,
-                  language,
-                  formattedDate,
-                  tags
-                } = frontmatter;
-                const image = featuredImage.childImageSharp.fluid;
-                return (
-                  <li key={i}>
-                    <Img fluid={{ ...image, aspectRatio: 2.5 }} />
-                    <div>
-                      <Link to={`/${language}/blog/${fields.slug}`}>
-                        <h2>{title}</h2>
-                        <span>{author}</span>
-                        <br />
-                        <span>{formattedDate}</span>
-                      </Link>
-                      <ClampLines
-                        text={description}
-                        lines={3}
-                        innerElement="p"
-                      />
-                      <div>
-                        {tags.map((tag, i) => {
-                          return (
-                            <Link
-                              to={`/${language}/tags/${kebabCase(tag)}`}
-                              key={i}
-                              style={{ display: "block" }}
-                            >
-                              {tag}
-                            </Link>
-                          );
-                        })}
-                      </div>
-                    </div>
-                  </li>
-                );
-              })}
+              {new Array(3)
+                .fill(relatedPosts.slice(0, 1)[0])
+                .map(renderBlogItem(true))}
             </ul>
           </AllBlogContainer>
         </PostContent>
@@ -177,6 +136,7 @@ export const query = graphql`
           templateKey: { eq: "blog-post" }
         }
       }
+      sort: { order: ASC, fields: frontmatter___date }
       limit: 3
     ) {
       edges {

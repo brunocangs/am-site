@@ -79,7 +79,17 @@ export const TechnologyPageWrapper = styled(BaseContainer)`
       margin-top: 8px;
     }
   }
-  p {
+  *:not(h1):not(h2) {
     font-weight: 300;
+  }
+  span {
+    color: ${Colors.blue};
+    position: absolute;
+    top: 56px;
+    left: 12px;
+    cursor: pointer;
+    :hover {
+      color: ${Colors.darkBlue};
+    }
   }
 `;

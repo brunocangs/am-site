@@ -71,94 +71,12 @@ export const AllBlogContainer = styled(BaseContainer)`
       props.related
         ? `
         flex-direction: column;
+        justify-content: space-between;
       ${media("large")} {
         flex-direction: row;
       }
     `
         : ""}
-    /* Post */
-    li {
-      overflow: hidden;
-      border-radius: 6px;
-      box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.1);
-      width: 100%;
-      ${props =>
-        props.related
-          ? `
-          ${media("large")} {
-            max-width: 33%;
-          }
-          `
-          : ""}
-      /* Margin para elementos a partir do segundo */
-      + li {
-        ${props =>
-          props.related
-            ? `
-              ${media("large", true)} {
-                margin-top: 36px;
-              }
-              ${media("large")} {
-                margin-left: 24px;
-              }
-            `
-            : "margin-top: 36px;"}
-      }
-      /* Segundo div do item => conteúdo de texto */
-      > div {
-        :nth-of-type(2) {
-          position: relative;
-          padding: 14px 24px;
-          /* Link */
-          a {
-            /* Título */
-            h2 {
-              margin: 0;
-              font-size: 20px;
-              ${media("medium")} {
-                font-size: 28px;
-              }
-            }
-            /* Autor e data */
-            span {
-              color: ${Colors.lighterGrey};
-              font-size: 0.8em;
-            }
-          }
-          /* Texto */
-          p {
-            color: ${Colors.grey};
-            font-weight: 300;
-            font-size: 0.95em;
-            margin-bottom: 0;
-          }
-          /* Lista de tags */
-          > div:nth-of-type(2) {
-            display: flex;
-            flex-wrap: wrap;
-            padding-bottom: 8px;
-            margin-top: 16px;
-            /* Tag */
-            a {
-              padding: 4px 6px;
-              border: 1px solid ${Colors.blue};
-              border-radius: 3px;
-              margin: 0px 3px;
-              transition: all 0.1s ease-in-out;
-              font-size: 0.8em;
-              color: ${Colors.blue};
-              :first-child {
-                margin-left: 0;
-              }
-              :hover {
-                color: ${Colors.white};
-                background-color: ${Colors.blue};
-              }
-            }
-          }
-        }
-      }
-    }
   }
   /* Sidebar com search input */
   > div {
@@ -217,6 +135,79 @@ export const AllBlogContainer = styled(BaseContainer)`
         }
         + li {
           border-bottom-width: 0;
+        }
+      }
+    }
+  }
+`;
+
+export const PostWrapper = styled.li`
+  overflow: hidden;
+  border-radius: 6px;
+  box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  ${props =>
+    props.related
+      ? `
+          ${media("large")} {
+            max-width: 32%;
+          }
+          `
+      : ""}
+  /* Margin para elementos a partir do segundo */
+  + li {
+    ${props => (props.related ? `` : "margin-top: 36px;")}
+  }
+  /* Segundo div do item => conteúdo de texto */
+  > div {
+    :nth-of-type(2) {
+      position: relative;
+      padding: 14px 24px;
+      /* Link */
+      a {
+        /* Título */
+        h2 {
+          margin: 0;
+          font-size: 20px;
+          ${media("medium")} {
+            font-size: 28px;
+          }
+        }
+        /* Autor e data */
+        span {
+          color: ${Colors.lighterGrey};
+          font-size: 0.8em;
+        }
+      }
+      /* Texto */
+      p {
+        color: ${Colors.grey};
+        font-weight: 300;
+        font-size: 0.95em;
+        margin-bottom: 0;
+      }
+      /* Lista de tags */
+      > div:nth-of-type(2) {
+        display: flex;
+        flex-wrap: wrap;
+        padding-bottom: 8px;
+        margin-top: 16px;
+        /* Tag */
+        a {
+          padding: 4px 6px;
+          border: 1px solid ${Colors.blue};
+          border-radius: 3px;
+          margin: 0px 3px;
+          transition: all 0.1s ease-in-out;
+          font-size: 0.8em;
+          color: ${Colors.blue};
+          :first-child {
+            margin-left: 0;
+          }
+          :hover {
+            color: ${Colors.white};
+            background-color: ${Colors.blue};
+          }
         }
       }
     }

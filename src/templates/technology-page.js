@@ -6,10 +6,10 @@ import Img from "gatsby-image";
 
 export default props => {
   const { data } = props;
-  console.log(props);
   const { html, frontmatter } = data.technology;
-  const { title, logo, summary } = frontmatter;
+  const { title, logo, summary, language } = frontmatter;
   const image = logo.childImageSharp.fixed;
+  const isEn = language === "en";
   return (
     <>
       <Helmet>
@@ -21,6 +21,9 @@ export default props => {
             <h1>{title.split(" |")[1]}</h1>
             <Img fixed={image} />
           </div>
+          <span onClick={() => window.history.back()}>
+            {isEn ? "Go back" : "Voltar"}
+          </span>
         </div>
         <div dangerouslySetInnerHTML={{ __html: html }} />
       </TechnologyPageWrapper>

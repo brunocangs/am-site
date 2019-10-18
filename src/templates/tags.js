@@ -4,6 +4,8 @@ import { ProjectsList } from "../components/ProjectComponents";
 import { renderProjectItem } from "./all-projects-page";
 import { Content } from "../components/TagsComponents";
 import Helmet from "react-helmet";
+import { renderTechnologyItem } from "./all-technologies-page";
+import { renderBlogItem } from "./all-blog-page";
 
 const getStrings = language => {
   let strings = {};
@@ -34,22 +36,16 @@ export default ({ data, pageContext }) => {
         <title>{pageContext.tag} tag - App Masters</title>
       </Helmet>
       <Content>
-        <h1>{pageContext.tag} tag</h1>
+        <h1>
+          Tag: <span style={{ fontSize: "0.9em" }}>{pageContext.tag}</span>
+        </h1>
         {blogs.length > 0 && (
           <div>
             <h2>
               {strings.blogs}
               {pageContext.tag} ({blogs.length}):
             </h2>
-            <div>
-              {blogs.map(({ node: blog }) => {
-                return (
-                  <>
-                    <h3>{blog.frontmatter.title}</h3>
-                  </>
-                );
-              })}
-            </div>
+            <ul>{blogs.map(renderBlogItem(true))}</ul>
           </div>
         )}
         {projects.length > 0 && (
@@ -67,13 +63,7 @@ export default ({ data, pageContext }) => {
               {strings.technologies}
               {pageContext.tag} ({technologies.length}):
             </h2>
-            {technologies.map(({ node: technology }) => {
-              return (
-                <>
-                  <h3>{technology.frontmatter.title}</h3>
-                </>
-              );
-            })}
+            <div>{technologies.map(renderTechnologyItem)}</div>
           </div>
         )}
       </Content>
@@ -121,10 +111,11 @@ export const query = graphql`
           language: { eq: $language }
         }
       }
+      sort: { order: ASC, fields: frontmatter___date }
     ) {
       edges {
         node {
-          ...TechnologyPage
+          ...BlogPost
         }
       }
     }

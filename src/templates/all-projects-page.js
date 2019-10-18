@@ -8,7 +8,7 @@ import {
   ProjectItemDetails
 } from "../components/ProjectComponents";
 import Img from "gatsby-image";
-import { FaMapPin } from "react-icons/fa";
+import { IoIosPin } from "react-icons/io";
 import ClampLines from "react-clamp-lines";
 
 export const renderProjectItem = ({ node: project }, i) => {
@@ -35,7 +35,7 @@ export const renderProjectItem = ({ node: project }, i) => {
         <div>
           <div>
             <span>Client{isEn ? "" : "e"}</span>
-            <FaMapPin />
+            <IoIosPin />
           </div>
           <div>
             <span>{clientName}</span>

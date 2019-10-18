@@ -188,7 +188,7 @@ export const ProjectDetailsContainer = styled(AllProjectsContainer)`
         }
       }
     }
-    :nth-child(3) {
+    :nth-child(4) {
       ul {
         list-style: none;
         padding: 0;

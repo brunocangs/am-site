@@ -5,13 +5,55 @@ import Img from "gatsby-image";
 import {
   Content,
   AllBlogContainer,
-  Button
+  Button,
+  PostWrapper
 } from "../components/BlogComponents";
 import { kebabCase } from "lodash";
 import ClampLines from "react-clamp-lines";
 import Fuse from "fuse.js";
 import { FaUser } from "react-icons/fa";
 
+export const renderBlogItem = related => ({ node: post }, i) => {
+  const { frontmatter, html, fields } = post;
+  const {
+    featuredImage,
+    title,
+    date,
+    author,
+    description,
+    language,
+    formattedDate,
+    tags
+  } = frontmatter;
+  const image = featuredImage.childImageSharp.fluid;
+  return (
+    <PostWrapper key={i} related={related}>
+      <Img fluid={{ ...image, aspectRatio: 2.5 }} />
+      <div>
+        <Link to={`/${language}/blog/${fields.slug}`}>
+          <h2>{title}</h2>
+          <span>{author}</span>
+          <br />
+          <span>{formattedDate}</span>
+        </Link>
+        <ClampLines text={description} lines={3} innerElement="p" />
+        <div>
+          {tags.map((tag, i) => {
+            return (
+              <Link
+                to={`/${language}/tags/${kebabCase(tag)}`}
+                key={i}
+                style={{ display: "block" }}
+              >
+                {tag}
+              </Link>
+            );
+          })}
+        </div>
+      </div>
+    </PostWrapper>
+  );
+};
 const ComponentName = ({ data, pageContext }) => {
   const [search, setSearch] = useState("");
   const [page, setPage] = useState(1);
@@ -59,49 +101,7 @@ const ComponentName = ({ data, pageContext }) => {
               })}
             </ul>
           </div>
-          <ul>
-            {blogPosts.slice(0, page * 5).map(({ node: post }, i) => {
-              const { frontmatter, html, fields } = post;
-              const {
-                featuredImage,
-                title,
-                date,
-                author,
-                description,
-                language,
-                formattedDate,
-                tags
-              } = frontmatter;
-              const image = featuredImage.childImageSharp.fluid;
-              return (
-                <li key={i}>
-                  <Img fluid={{ ...image, aspectRatio: 2.5 }} />
-                  <div>
-                    <Link to={`/${language}/blog/${fields.slug}`}>
-                      <h2>{title}</h2>
-                      <span>{author}</span>
-                      <br />
-                      <span>{formattedDate}</span>
-                    </Link>
-                    <ClampLines text={description} lines={3} innerElement="p" />
-                    <div>
-                      {tags.map((tag, i) => {
-                        return (
-                          <Link
-                            to={`/${language}/tags/${kebabCase(tag)}`}
-                            key={i}
-                            style={{ display: "block" }}
-                          >
-                            {tag}
-                          </Link>
-                        );
-                      })}
-                    </div>
-                  </div>
-                </li>
-              );
-            })}
-          </ul>
+          <ul>{blogPosts.slice(0, page * 5).map(renderBlogItem(false))}</ul>
           {blogPosts.length === 0 && (
             <p>
               {isEn
