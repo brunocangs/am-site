@@ -11,6 +11,11 @@ export default class Index extends React.Component {
         data-netlify-recaptcha="true"
         data-netlify="true"
       >
+        <p hidden>
+          <label>
+            Email: <input type="hidden" name="form-name" value="contact" />
+          </label>
+        </p>
         <p>
           <label>
             Email: <input type="text" name="name" />
