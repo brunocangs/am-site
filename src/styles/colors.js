@@ -37,3 +37,19 @@ export const lightBlue = color(blue)
 export const darkBlue = color(blue)
   .darken(0.2)
   .hex();
+
+export const red = "#a8290e";
+export const lightRed = color(red)
+  .lighten(0.2)
+  .hex();
+export const darkRed = color(red)
+  .darken(0.2)
+  .hex();
+
+export const green = "#48b43a";
+export const lightGreen = color(green)
+  .lighten(0.2)
+  .hex();
+export const darkGreen = color(green)
+  .darken(0.2)
+  .hex();

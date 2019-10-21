@@ -1,5 +1,7 @@
-import React, { useState } from "react";
-import { navigate } from "gatsby-link";
+import React, { useState, useEffect, useRef } from "react";
+import Helmet from "react-helmet";
+import ReCAPTCHA from "react-google-recaptcha";
+
 import { Contact } from "../components/ContactComponents";
 import { Button } from "../components/BlogComponents";
 
@@ -8,39 +10,128 @@ function encode(data) {
     .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
     .join("&");
 }
-
+const getStrings = isEn => {
+  return isEn
+    ? {
+        title: "Contact",
+        nameLabel: "Your name",
+        messageLabel: "Message",
+        sendLabel: "Send",
+        successMessage:
+          "Your message was sent successfully, thank you for your feedback!"
+      }
+    : {
+        title: "Contato",
+        nameLabel: "Seu nome",
+        messageLabel: "Mensagem",
+        sendLabel: "Enviar",
+        successMessage:
+          "Recebemos sua mensagem com sucesso, obrigado pelo seu contato!"
+      };
+};
+const getError = (isEn, field) => {
+  if (isEn) {
+    switch (field) {
+      case "captcha":
+        return "You must complete the CAPTCHA to submit your message";
+      default:
+        return "Error on form";
+    }
+  } else {
+    switch (field) {
+      case "captcha":
+        return "Complete o CAPTCHA para enviar sua mensagem";
+      default:
+        return "Erro no formulário";
+    }
+  }
+};
 export default props => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [bot, setBot] = useState("");
+  const [captcha, setCaptcha] = useState("");
+  const [success, setSuccess] = useState(false);
+  const captchaRef = useRef(null);
+  const [error, setError] = useState({
+    field: "",
+    message: ""
+  });
+  const isEn = props.pageContext.language === "en";
+  const {
+    title,
+    nameLabel,
+    messageLabel,
+    sendLabel,
+    successMessage
+  } = getStrings(isEn);
+
+  useEffect(() => {
+    if (success) {
+      setName("");
+      setEmail("");
+      setError({
+        field: "",
+        message: ""
+      });
+      captchaRef.current.reset();
+      setCaptcha("");
+      setMessage("");
+    }
+  }, [success]);
+
   const handleChange = cb => e => {
     cb(e.target.value);
+    setError({ field: "", message: "" });
+    setSuccess(false);
   };
 
   const handleSubmit = e => {
     e.preventDefault();
+    if (!captcha) {
+      return setError({
+        field: "captcha",
+        message: getError(isEn, "captcha")
+      });
+    }
     const form = e.target;
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({
         "form-name": form.getAttribute("name"),
-        ...{ name, email, message, "bot-field": bot }
+        ...{
+          name,
+          email,
+          message,
+          "bot-field": bot,
+          "g-captcha-response": captcha
+        }
       })
-    });
+    })
+      .then(() => setSuccess(true))
+      .catch(e => {
+        setError({
+          field: "form",
+          message: "Error when submiting"
+        });
+      });
   };
 
   return (
     <Contact>
+      <Helmet>
+        <title>{title} - App Masters</title>
+      </Helmet>
       <div className="container">
         <div className="content">
-          <h1>Contact</h1>
+          <h1>{title}</h1>
           <form
             name="contact"
             method="post"
-            action="/contact/thanks/"
             data-netlify="true"
+            data-netlify-recaptcha="true"
             data-netlify-honeypot="bot-field"
             onSubmit={handleSubmit}
           >
@@ -54,7 +145,7 @@ export default props => {
             </div>
             <div className="field">
               <label className="label" htmlFor={"name"}>
-                Your name
+                {nameLabel}
               </label>
               <div className="control">
                 <input
@@ -86,7 +177,7 @@ export default props => {
             </div>
             <div className="field">
               <label className="label" htmlFor={"message"}>
-                Message
+                {messageLabel}
               </label>
               <div className="control">
                 <textarea
@@ -100,9 +191,18 @@ export default props => {
                 />
               </div>
             </div>
+            <ReCAPTCHA
+              sitekey={"6Ldesr4UAAAAANgIbrtB2Xg06yAs5e9H-PiPgBip"}
+              onChange={setCaptcha}
+              ref={captchaRef}
+            />
+            {error.field && error.message && (
+              <span id="error">{error.message}</span>
+            )}
+            {success && <span id="success">{successMessage}</span>}
             <div className="field">
               <Button className="button is-link" type="submit">
-                Send
+                {sendLabel}
               </Button>
             </div>
           </form>

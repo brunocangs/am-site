@@ -28,6 +28,16 @@ export const Contact = styled(BaseContainer)`
           border-color: ${Colors.blue};
         }
       }
+      span {
+        margin-top: 10px 0;
+        display: block;
+      }
+      span#error {
+        color: ${Colors.red};
+      }
+      span#success {
+        color: ${Colors.green};
+      }
     }
   }
 `;
