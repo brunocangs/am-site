@@ -81,7 +81,7 @@ export default props => {
             <h3>Links relevantes</h3>
             <Link to="/pt/projetos">Projetos</Link>
             <Link to="/pt/blog">Blog</Link>
-            <Link to="pt/tecnologias">Tecnologias</Link>
+            <Link to="/pt/tecnologias">Tecnologias</Link>
             <Link to="/pt/sobre">Sobre nós</Link>
             <Link to="/pt/contato">Fale conosco</Link>
           </>
