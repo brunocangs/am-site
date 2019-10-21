@@ -102,7 +102,7 @@ export default props => {
                 </p>
               </div>
               <ul>
-                {projects.map(({ node: project }) => {
+                {projects.map(({ node: project }, i) => {
                   const {
                     title,
                     summary,
@@ -110,7 +110,7 @@ export default props => {
                   } = project.frontmatter;
                   const { fluid } = thumbnailImage.childImageSharp;
                   return (
-                    <Link to={`/en/projects/${project.fields.slug}`}>
+                    <Link to={`/en/projects/${project.fields.slug}`} key={i}>
                       <li>
                         <Img fluid={fluid} />
                         <div>
@@ -131,8 +131,8 @@ export default props => {
             <Manifest>
               <h1>{manifest.title}</h1>
               <ul>
-                {manifest.content.map(content => (
-                  <ManifestItem content={content} md={md} />
+                {manifest.content.map((content, i) => (
+                  <ManifestItem key={i} content={content} md={md} />
                 ))}
               </ul>
             </Manifest>

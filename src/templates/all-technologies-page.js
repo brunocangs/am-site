@@ -3,11 +3,12 @@ import { graphql } from "gatsby";
 import Helmet from "react-helmet";
 import { Content, TechnologyWrapper } from "../components/TechnologyComponents";
 
-export const renderTechnologyItem = ({ node: technology }) => {
-  const { logo, title, summary, bgColor, language } = technology.frontmatter;
+export const renderTechnologyItem = ({ node: technology }, i) => {
+  const { logo, title, language } = technology.frontmatter;
   const image = logo.childImageSharp;
   return (
     <TechnologyWrapper
+      key={i}
       to={
         language === "en"
           ? `/en/technologies/${technology.fields.slug}`
@@ -16,7 +17,11 @@ export const renderTechnologyItem = ({ node: technology }) => {
     >
       <div>
         <div>
-          <img srcSet={image.fixed.srcSet} sizes={image.fixed.sizes} />
+          <img
+            srcSet={image.fixed.srcSet}
+            sizes={image.fixed.sizes}
+            alt={title}
+          />
         </div>
         <h3>{title.split("| ")[1]}</h3>
       </div>

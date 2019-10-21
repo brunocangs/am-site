@@ -8,13 +8,12 @@ import {
 } from "../components/BlogComponents";
 import Img from "gatsby-image";
 import { kebabCase } from "lodash";
-import ClampLines from "react-clamp-lines";
 import { renderBlogItem } from "./all-blog-page";
 
 export default ({ data }) => {
   const { html, frontmatter } = data.post;
   const { edges: authors } = data.allAuthors;
-  const { title, language, date, featuredImage, tags, author } = frontmatter;
+  const { title, language, featuredImage, tags, author } = frontmatter;
   const image = featuredImage.childImageSharp.fluid;
   const { node: postAuthor } = authors.find(
     i => i.node.frontmatter.title === author

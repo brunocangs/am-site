@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef } from "react";
 import { graphql, Link } from "gatsby";
 import Helmet from "react-helmet";
 import Img from "gatsby-image";
@@ -11,14 +11,12 @@ import {
 import { kebabCase } from "lodash";
 import ClampLines from "react-clamp-lines";
 import Fuse from "fuse.js";
-import { FaUser } from "react-icons/fa";
 
 export const renderBlogItem = related => ({ node: post }, i) => {
-  const { frontmatter, html, fields } = post;
+  const { frontmatter, fields } = post;
   const {
     featuredImage,
     title,
-    date,
     author,
     description,
     language,
