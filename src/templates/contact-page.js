@@ -97,6 +97,7 @@ export default class Index extends React.Component {
                   />
                 </div>
               </div>
+              <div data-netlify-recaptcha="true" />
               <div className="field">
                 <button className="button is-link" type="submit">
                   Send
