@@ -7,6 +7,7 @@ export default class Index extends React.Component {
       <form
         name="contact"
         method="POST"
+        action="/"
         data-netlify-recaptcha="true"
         data-netlify="true"
       >
