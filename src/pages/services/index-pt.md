@@ -1,6 +1,6 @@
 ---
-templateKey: service-page
-baseUrl: servico
+templateKey: all-services-page
+baseUrl: servicos
 language: pt
 title: A gente vende app
 tags:
