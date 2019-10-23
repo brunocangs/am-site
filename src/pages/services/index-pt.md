@@ -2,14 +2,20 @@
 templateKey: all-services-page
 baseUrl: servicos
 language: pt
-title: A gente vende app
-tags:
-  - App developement
-  - Desenvolvimento
-  - Isso ai
+title: Serviços
+services:
+  - description: |
+      ## Teste
+
+      as;dlkas;ldaksd
+
+      ```javascript
+      let a = 10;
+      ```
+    image: /img/img_3235.jpg
+    tags:
+      - React
+      - PWA
+    title: Asd
 ---
-# Quer comprar?
 
-## Fala com a gente!
-
-Po isso ai
