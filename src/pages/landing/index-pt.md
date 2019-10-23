@@ -6,10 +6,9 @@ title: Início - App Masters
 banner: /img/banner_img.png
 bannerContent:
   content: >-
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam tenetur
-    distinctio alias harum quo eveniet cupiditate ex, iure deleniti
-    reprehenderit?
-  header: 'Suas melhores ideias, desenvolvidas em tempo recorde'
+    Muito mais do que colaboradores, queremos devs dispostos a aprender cada vez
+    mais, compartilhar o que aprender e crescer conosco!
+  header: 'A melhor empresa para trabalhar com programação, aprender e se divertir'
 ourWork: >-
   # O que fazemos
 
