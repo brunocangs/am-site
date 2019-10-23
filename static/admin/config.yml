@@ -290,7 +290,7 @@ collections:
           label: "Template Key",
           name: "templateKey",
           widget: "hidden",
-          default: "service-page",
+          default: "all-services-page",
         }
       - {
           label: "Link base",
@@ -309,9 +309,20 @@ collections:
             ],
           default: "pt",
         }
-      - { label: "Título", name: "title", widget: "string" }
-      - { label: "Corpo", name: "body", widget: "markdown" }
-      - { label: "Tags", name: "tags", widget: "list" }
+      - { label: "Título da página", name: "title", widget: "string" }
+      - label: "Servicos"
+        name: "services"
+        widget: "list"
+        fields:
+          - label: "Nome"
+            name: "title"
+            widget: "string"
+          - label: "Descrição"
+            name: "description"
+            widget: "markdown"
+          - label: "Tags"
+            name: "tags"
+            widget: "list"
   - name: "technologies"
     label: "Tecnologias"
     folder: "src/pages/technologies"
