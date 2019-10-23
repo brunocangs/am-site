@@ -9,13 +9,13 @@ whereToFind:
   - image: /img/google_play.png
     link: 'https://play.google.com/store/apps/details?id=io.appmasters.lowcarb'
 language: pt
-title: Low Carb App
+title: Emagreça já
 technology:
   - Tecnologias | React Native
   - Tecnologias | MongoDB
 summary: >-
-  Low Carb is your direct guide to the latest low carb diets and manners, as
-  well as intermittent fasting so you can start losing weight immediately
+  App para auxiliar aqueles que iniciaram sua dieta low carb e acompanhá-los em
+  sua progressão
 clientName: Turi Souza
 clientLocation: Brazil
 devTime: 400
@@ -27,9 +27,8 @@ tags:
   - React
   - React Native
   - MongoDB
+  - Node.Js
 ---
-# Emagreça já - Sua dieta Low Carb
-
 Desenvolvemos juntamente com o Dr. Turí Souza, autor do livro Emagreça Já,  um app para auxiliar aqueles que iniciaram sua dieta low carb e acompanhá-los em sua progressão, oferecendo informações úteis e receitas sempre novas de acordo com seu perfil, objetivos e até problemas de saúde. Trata-se do Emagreça Já.
 
 A liberdade de criação e o foco no resultado para o usuário nos permitiram planejar algo que superasse as expectativas do nosso cliente e entregar um app que realmente fizesse diferença na rotina das pessoas.
@@ -44,7 +43,7 @@ Com toda a informação adquirida e as ideias em mente, seguimos para um protót
 
 Ao final do projeto, abrimos o app para testes beta, onde apenas convidados poderiam instalar o aplicativo para experimentar. Depois de algumas semanas em beta, ajustamos os últimos detalhes e liberamos o app Emagreça Já nas lojas.
 
----
+- - -
 
 ## Detalhes técnicos
 
@@ -54,8 +53,7 @@ Utilizamos, como em todos os outros projetos, uma ferramenta de registro de falh
 
 O projeto foi desenvolvido para Android e iOS, nativo nos dois ambientes, com React Native. A API foi desenvolvida em node com MongoDB e está em funcionamento no heroku. A “área administrativa” foi implementada com React e está hospedada no firebase.
 
----
-
+- - -
 
 ## Recepção e retorno sobre investimento
 
