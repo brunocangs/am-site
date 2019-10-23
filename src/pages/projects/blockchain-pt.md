@@ -5,7 +5,7 @@ featured: false
 language: pt
 title: Blockchain
 technology:
-  - Tecnologias
+  - Blockchain
 summary: Blockhain para gerir pagamentos e confirmações de entregas
 clientName: Antonio
 clientLocation: Belo Horizonte / MG
