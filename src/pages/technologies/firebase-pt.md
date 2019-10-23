@@ -2,7 +2,7 @@
 templateKey: technology-page
 baseUrl: tecnologias
 language: pt
-title: Firebase
+title: Tecnologia | Firebase
 logo: /img/mongodb_logostacked_fullcolorblack_rgb.png
 featured: false
 summary: >-
