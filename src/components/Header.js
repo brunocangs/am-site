@@ -111,12 +111,12 @@ const getLinks = language => {
         label: "Projects"
       },
       {
-        url: "/blog",
-        label: "Blog"
-      },
-      {
         url: "/services",
         label: "Services"
+      },
+      {
+        url: "/blog",
+        label: "Blog"
       },
       {
         url: "/about",
