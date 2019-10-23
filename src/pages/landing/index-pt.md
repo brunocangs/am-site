@@ -13,23 +13,14 @@ ourWork: >-
   # O que fazemos
 
 
-  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi odio incidunt
-  accusantium vel minus id illum nihil quam fuga excepturi!
+  Somos uma empresa de desenvolvimento para web e app, com uma forte cultura
+  voltada para as novas tecnologias, principalmente no stack JavaScript.
 
+  Fazemos aplicativos e sistemas web para empresas mundo afora, entregando
+  sempre projetos de alta qualidade, em um prazo adequado.
 
-  Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima voluptatum, ea
-  asperiores dolore voluptatem odit ducimus quo aspernatur repudiandae dolorum,
-  nisi quaerat enim reprehenderit rerum quisquam atque mollitia nesciunt
-  similique eveniet obcaecati corrupti dolorem. Provident ex voluptatum eaque
-  temporibus similique!
-
-
-  ![Equipe trabalhando](/img/scrum-header.png "Equipe")
-
-
-  Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima voluptatum, ea
-  asperiores dolore voluptatem odit ducimus quo aspernatur repudiandae dolorum,
-  nisi quaerat enim reprehenderit rerum quisquam atque.
+  Oferecemos um ótimo ambiente de trabalho, sem stress, onde focamos em fazer
+  nosso melhor pelos nossos projetos.
 manifest:
   content:
     - content: 'texto texto texto texto texto texto texto texto '
@@ -52,9 +43,15 @@ manifest:
       title: Betas semanais até a conclusão do projeto
   title: Convertemos nossos objetivos em um manifesto!
 hireUs: unset
-weAreHiring: |-
-  # Estamos contratando!
+weAreHiring: >-
+  # Trabalhe conosco!
 
-  Gostaria de trabalhar conosco? [Envie seu curriculum](/?)
+
+  Nossos processos de seleção são rápidos, dinâmicos e divertidos!
+
+
+  Cadastre-se no [Programadores em Juiz de
+  Fora](https://programador.emjuizdefora.com/) e seja avisado de nossas vagas
+  assim que forem abertas.
 ---
 
