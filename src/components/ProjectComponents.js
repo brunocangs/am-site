@@ -114,7 +114,6 @@ export const ProjectItemDetails = styled.div`
     :nth-child(2) {
       p {
         font-weight: 300;
-        height: ${3 * lineHeight}em;
       }
     }
     div {

@@ -5,6 +5,7 @@ import React, { useEffect, useState } from "react";
 import * as Colors from "../styles/colors";
 import { mediumPlus } from "../styles/screens";
 import Logo from "../styles/svgs/white_logo.svg";
+import media from "../styles/medias";
 
 const Nav = styled.nav`
   position: sticky;
@@ -18,13 +19,13 @@ const Nav = styled.nav`
   padding: 8px;
   height: 75px;
   background: ${props =>
-    !props.isIndex || props.scroll > 75 ? "#fff" : "transparent"};
+    props.isIndex && props.scroll < 75 ? "transparent" : "#fff"};
   color: ${props =>
-    !props.isIndex || props.scroll > 75 ? Colors.black : Colors.white};
+    props.isIndex && props.scroll < 75 ? Colors.white : Colors.black};
   box-shadow: ${props =>
-    !props.isIndex || props.scroll > 75
-      ? "0px 1px 3px -2px rgba(0,0,0,0.6)"
-      : "none"};
+    props.isIndex && props.scroll < 75
+      ? "none"
+      : "0px 1px 3px -2px rgba(0,0,0,0.6)"};
   transition: all 0.3s ease-in-out;
   & > a {
     padding: 6px;
@@ -34,11 +35,11 @@ const Nav = styled.nav`
   ul {
     transition: all 0.4s ease-in-out;
     color: ${props =>
-      !props.isIndex || props.scroll > 75 ? Colors.grey : Colors.white};
+      props.isIndex && props.scroll < 75 ? Colors.white : Colors.grey};
     > li {
       &:hover {
         color: ${props =>
-          !props.isIndex || props.scroll > 75 ? Colors.darkGrey : Colors.white};
+          props.isIndex && props.scroll < 75 ? Colors.white : Colors.darkGrey};
       }
     }
   }
@@ -52,7 +53,7 @@ const NavMenu = styled.ul`
   flex-direction: row;
   align-items: center;
   display: none;
-  @media screen and (min-width: ${mediumPlus}) {
+  ${media("mediumPlus")} {
     display: flex;
   }
 `;
@@ -99,6 +100,66 @@ const NavItem = styled.li`
         }
       }
     }
+  }
+`;
+
+const Hamburger = styled.div`
+  width: 30px;
+  height: 30px;
+  display: flex;
+  ${media("mediumPlus")} {
+    display: none;
+  }
+  justify-content: center;
+  align-items: center;
+  margin-right: 16px;
+  cursor: pointer;
+  position: relative;
+  span {
+    position: absolute;
+    display: block;
+    right: 0;
+    left: 0;
+    padding: 2px;
+    transition: all 0.3s ease-in-out;
+    background-color: ${props =>
+      props.isIndex && props.scroll < 75 ? Colors.white : Colors.darkBlue};
+    border-radius: 4px;
+    :nth-child(1) {
+      transform: ${props =>
+        props.open ? "rotate(-45deg)" : "translateY(-10px)"};
+    }
+    :nth-child(2) {
+      opacity: ${props => (props.open ? "0" : "1")};
+    }
+    :nth-child(3) {
+      transform: ${props =>
+        props.open ? "rotate(45deg)" : "translateY(10px)"};
+    }
+  }
+`;
+
+const HamburgerMenu = styled.div`
+  position: fixed;
+  top: 75px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 8px 14px;
+  background-color: ${Colors.white};
+  z-index: 8;
+  ${media("mediumPlus")} {
+    display: none;
+  }
+  overflow: auto;
+  transition: transform 0.2s ease-in-out;
+  transform: translateX(${props => (props.open ? "0" : "calc(-100%)")});
+  div {
+    color: ${Colors.grey};
+    font-weight: 300;
+    padding: 18px;
+    text-align: center;
+    font-size: 1.3em;
   }
 `;
 
@@ -159,19 +220,17 @@ const useWindowScroll = () => {
 };
 
 export default function Header(props) {
+  const [open, setOpen] = useState(false);
   const { language } = props;
   const navLinks = getLinks(language);
   const scroll = useWindowScroll();
-  const allowedRoutes = ["", "blog"];
+  const allowedRoutes = ["", "blog", "*"];
+  const isIndex =
+    allowedRoutes.indexOf(props.path.split("/")[2]) > -1 &&
+    props.path.split("/").length <= 3;
   return (
-    <Nav
-      scroll={scroll}
-      isIndex={
-        allowedRoutes.indexOf(props.path.split("/")[2]) > -1 &&
-        props.path.split("/").length <= 3
-      }
-    >
-      <Link to={`/${language || ""}`}>
+    <Nav scroll={scroll + (open ? 76 : 0)} isIndex={isIndex}>
+      <Link to={`/${language || ""}`} onClick={() => setOpen(false)}>
         <Logo style={{ height: "100%" }} />
       </Link>
       <NavMenu>
@@ -195,6 +254,25 @@ export default function Header(props) {
           </NavItem>
         ))}
       </NavMenu>
+      <Hamburger
+        open={open}
+        onClick={() => setOpen(!open)}
+        scroll={scroll + (open ? 76 : 0)}
+        isIndex={isIndex}
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </Hamburger>
+      <HamburgerMenu open={open}>
+        {navLinks.map(({ url, label }, i) => (
+          <Link to={`/${language}/${url}`}>
+            <div key={i} onClick={() => setOpen(false)}>
+              {label}
+            </div>
+          </Link>
+        ))}
+      </HamburgerMenu>
     </Nav>
   );
 }
