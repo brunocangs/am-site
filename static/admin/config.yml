@@ -180,6 +180,7 @@ collections:
         name: "date"
         widget: "datetime"
         format: "DD/MM/YYYY"
+        dateFormat: "DD/MM/YYYY"
       - label: "Onde encontrar"
         hint: "App Store, Play store, Web, etc"
         name: "whereToFind"
