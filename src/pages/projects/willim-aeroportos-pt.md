@@ -2,6 +2,8 @@
 templateKey: project-page
 baseUrl: projetos
 featured: false
+type: main
+date: 06/06/2018
 language: pt
 title: Willim Aeroportos
 technology:
