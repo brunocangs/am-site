@@ -168,6 +168,18 @@ collections:
           widget: "boolean",
           default: false,
         }
+      - label: "Tipo de projeto"
+        name: "type"
+        widget: "select"
+        options:
+          - label: "Projeto Grande"
+            value: "main"
+          - label: "Side Project"
+            value: "sideproject"
+      - label: "Data"
+        name: "date"
+        widget: "datetime"
+        format: "DD/MM/YYYY"
       - label: "Onde encontrar"
         hint: "App Store, Play store, Web, etc"
         name: "whereToFind"
