@@ -2,7 +2,7 @@
 templateKey: technology-page
 baseUrl: tecnologias
 language: pt
-title: 'PostgreSQL, MySQL'
+title: 'PT | PostgreSQL, MySQL'
 logo: /img/react.png
 featured: false
 summary: 'PostgreSQL, MySQL'

@@ -6,9 +6,11 @@ title: Início - App Masters
 banner: /img/banner_img.png
 bannerContent:
   content: >-
-    Muito mais do que colaboradores, queremos devs dispostos a aprender cada vez
-    mais, compartilhar o que aprendeu e crescer conosco!
-  header: 'A melhor empresa para trabalhar com programação, aprender e se divertir'
+    Muito mais do que colaboradores, queremos devs dispostos a aprender sempre,
+    compartilhar o que sabe e crescer conosco!
+  header: >-
+    A melhor empresa em Juiz de Fora para trabalhar com programação, aprender e
+    se divertir
 ourWork: >-
   # O que fazemos
 
@@ -23,20 +25,19 @@ ourWork: >-
   trabalhar com tranquilidade e objetividade.
 manifest:
   content:
-    - content: 'texto texto texto texto texto texto texto texto '
-      title: 'Não queremos apenas clientes, queremos cases de sucesso!'
     - content: >-
-        v Colaboração com o cliente é mais importante que contratos Colaboração
-        com o cliente é mais importante que contratos Colaboração com o cliente
-        é mais importante que contratos
-      title: Colaboração com o cliente é mais importante que contratos
+        Muito mais do que apenas clientes e projetos, buscamos desenvolver
+        projetos dos quais podemos nos orgulhar
+      title: Queremos cases de sucesso!
     - content: >-
-        Responder a mudanças do cliente é mais importante que seguir o plano
-        inicial Responder a mudanças do cliente é mais importante que seguir o
-        plano inicial
-      title: >-
-        Responder a mudanças do cliente é mais importante que seguir o plano
-        inicial
+        Queremos trabalhar com clientes alinhados com nosso mindset, que tenham
+        skill técnico e entendam o valor do que fazemos
+      title: Clientes bons
+    - content: >-
+        Usamos as tecnologias que gostamos e nas quais acreditamos,
+        experimentamos o que há de novo e incorporamos o que funciona bem ao
+        nossos projetos
+      title: Novas tecnologias
     - content: >-
         Betas semanais até a conclusão do projeto Betas semanais até a conclusão
         do projeto Betas semanais até a conclusão do projeto

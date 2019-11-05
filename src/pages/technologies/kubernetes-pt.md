@@ -2,7 +2,7 @@
 templateKey: technology-page
 baseUrl: tecnologias
 language: pt
-title: Kubernetes
+title: PT | Kubernetes
 logo: /img/react.png
 featured: true
 summary: Kubernetes
