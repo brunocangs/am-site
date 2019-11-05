@@ -7,20 +7,20 @@ banner: /img/banner_img.png
 bannerContent:
   content: >-
     Muito mais do que colaboradores, queremos devs dispostos a aprender cada vez
-    mais, compartilhar o que aprender e crescer conosco!
+    mais, compartilhar o que aprendeu e crescer conosco!
   header: 'A melhor empresa para trabalhar com programação, aprender e se divertir'
 ourWork: >-
   # O que fazemos
 
 
-  Somos uma empresa de desenvolvimento para web e app, com uma forte cultura
-  voltada para as novas tecnologias, principalmente no stack JavaScript.
+  Somos uma empresa de desenvolvimento de sistemas web e mobile, com uma forte
+  cultura voltada para as novas tecnologias, principalmente no stack JavaScript.
 
-  Fazemos aplicativos e sistemas web para empresas mundo afora, entregando
-  sempre projetos de alta qualidade, em um prazo adequado.
+  Nossos clientes são empresas mundo afora, para os quais entregamos sempre
+  projetos de alta qualidade em um prazo curto.
 
-  Oferecemos um ótimo ambiente de trabalho, sem stress, onde focamos em fazer
-  nosso melhor pelos nossos projetos.
+  Oferecemos um ótimo ambiente de trabalho, sem stress, onde focamos em
+  trabalhar com tranquilidade e objetividade.
 manifest:
   content:
     - content: 'texto texto texto texto texto texto texto texto '
