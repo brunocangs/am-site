@@ -225,6 +225,7 @@ const useWindowScroll = () => {
 };
 
 const shouldBeTransparent = location => {
+  if (!location || !location.pathname) return true;
   const urlWithoutLanguage = location.pathname.slice(3);
   // Adicionar aqui rotas que devem ter header branco por default
   const routesWithWhiteHeader = [

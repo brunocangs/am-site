@@ -73,6 +73,25 @@ export const BannerContent = styled(Container)`
       line-height: 1.8;
       font-family: "Poppins", sans-serif;
     }
+    /* Buttons */
+    div {
+      display: flex;
+      ${media("medium", true)} {
+        flex-direction: column;
+      }
+      a {
+        flex: 1;
+        :first-child {
+          margin-right: 0;
+          ${media("medium", true)} {
+            margin-bottom: 12px;
+          }
+          ${media("medium")} {
+            margin-right: 12px;
+          }
+        }
+      }
+    }
   }
   /* Side image */
   img {
@@ -401,6 +420,16 @@ export const WeAreHiring = styled(SectionContainer)`
     line-height: 1.8em;
   }
   flex-direction: column;
+  > div a {
+    text-decoration: underline;
+  }
+  > a:last-child {
+    display: block;
+    margin: 32px auto 0 auto;
+    ${media("medium")} {
+      width: 50%;
+    }
+  }
 `;
 
 export const HowMuchIsMyApp = styled(SectionContainer)`
@@ -419,5 +448,9 @@ export const HowMuchIsMyApp = styled(SectionContainer)`
   flex-direction: column;
   a {
     display: block;
+    margin: 32px auto 0 auto;
+    ${media("medium")} {
+      width: 50%;
+    }
   }
 `;

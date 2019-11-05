@@ -74,9 +74,11 @@ const ComponentName = ({ data, pageContext }) => {
             </p>
           )}
           {page * 5 < blogPosts.length && (
-            <Button onClick={() => setPage(page + 1)}>
-              {isEn ? "See more" : "Ver mais"}
-            </Button>
+            <div style={{ width: "25%", margin: "30px auto 0 auto" }}>
+              <Button onClick={() => setPage(page + 1)}>
+                {isEn ? "See more" : "Ver mais"}
+              </Button>
+            </div>
           )}
         </AllBlogContainer>
       </Content>

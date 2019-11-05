@@ -202,7 +202,7 @@ export default props => {
                 <span id="error">{error.message}</span>
               )}
               {success && <span id="success">{successMessage}</span>}
-              <div className="field">
+              <div className="field" style={{ width: "25%", marginTop: 30 }}>
                 <Button className="button is-link" type="submit">
                   {sendLabel}
                 </Button>

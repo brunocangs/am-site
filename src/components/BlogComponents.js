@@ -9,21 +9,110 @@ export const Content = styled.div`
   width: 100%;
   padding-bottom: 60px;
 `;
+
+const getStartBgColor = props => {
+  switch (props.variant) {
+    case "secondary":
+      return "transparent";
+    case "tertiary":
+      return "white";
+    default:
+      return "white";
+  }
+};
+
+const getHoverBgColor = props => {
+  // switch (props.variant) {
+  //   case "secondary":
+  //     return "transparent";
+
+  //   default:
+  //     return "transparent";
+  // }
+  return "transparent";
+};
+
+const getStartFontColor = props => {
+  switch (props.variant) {
+    case "secondary":
+      return "white";
+    case "tertiary":
+      return Colors.blue;
+    default:
+      return Colors.black;
+  }
+};
+
+const getHoverFontColor = props => {
+  switch (props.variant) {
+    case "secondary":
+      return "#fff";
+    case "tertiary":
+      return "white";
+    default:
+      return "white";
+  }
+};
+
+const getStartBorderColor = first => props => {
+  switch (props.variant) {
+    case "secondary":
+      return "transparent";
+    case "tertiary":
+      return "transparent";
+    default:
+      return Colors.black;
+  }
+};
+
+const getHoverBorderColor = first => props => {
+  switch (props.variant) {
+    case "secondary":
+      return "#57ddff";
+    case "tertiary":
+      return "#57ddff";
+    default:
+      return first ? "#57ddff" : "#00b4ff";
+  }
+};
+
 export const Button = styled.button`
-  width: 25%;
-  margin: auto;
-  border: 1px solid ${Colors.blue};
-  padding: 12px 18px;
+  width: 100%;
+  position: relative;
+  padding: 18.5px 40px;
   font-size: 1.2em;
   font-weight: 300;
-  color: ${Colors.blue};
+  color: ${getStartFontColor};
   border-radius: 6px;
-  margin-top: 20px;
   cursor: pointer;
-  transition: all 0.2s ease-in-out;
+  border: 1px solid ${getStartFontColor};
+  background: ${getStartBgColor};
   :hover {
-    background-color: ${Colors.blue};
-    color: white;
+    border: 1px solid transparent;
+    color: ${getHoverFontColor};
+    background: ${getHoverBgColor};
+    ::after {
+      background-image: linear-gradient(
+        to left,
+        ${getHoverBorderColor(true)} 0%,
+        ${getHoverBorderColor()} 100%
+      );
+    }
+  }
+  ::after {
+    content: " ";
+    position: absolute;
+    border-radius: 7px;
+    top: -1px;
+    right: -1px;
+    bottom: -1px;
+    left: -1px;
+    background-image: linear-gradient(
+      to left,
+      ${getStartBorderColor(true)} 0%,
+      ${getStartBorderColor()} 100%
+    );
+    z-index: -1;
   }
 `;
 export const AllBlogContainer = styled(BaseContainer)`
@@ -187,7 +276,7 @@ export const PostWrapper = styled.li`
           font-size: 0.8em;
           color: ${Colors.blue};
           :hover {
-            color: ${Colors.white};
+            color: white;
             background-color: ${Colors.blue};
           }
         }
@@ -227,7 +316,7 @@ export const PostContent = styled(BaseContainer)`
           margin-left: 0;
         }
         :hover {
-          color: ${Colors.white};
+          color: white;
           background-color: ${Colors.blue};
         }
       }

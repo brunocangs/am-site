@@ -19,6 +19,7 @@ import {
   OurWork,
   ManifestItem
 } from "../components/LandingComponents";
+import { Button } from "../components/BlogComponents";
 
 const md = new MdIt();
 
@@ -57,7 +58,6 @@ export default props => {
       </div>
     );
   };
-
   return (
     <>
       <Helmet>
@@ -70,6 +70,14 @@ export default props => {
             <div>
               <h1>{header}</h1>
               <p>{content}</p>
+              <div>
+                <Link to="/pt/alguma-pagina">
+                  <Button variant="tertiary">MUDA AQUI</Button>
+                </Link>
+                <Link to="/pt/alguma-pagina">
+                  <Button variant="secondary">AQUI TAMBEM</Button>
+                </Link>
+              </div>
             </div>
             <img src={`/img/${image.originalName}`} alt={"Banner"} />
           </BannerContent>
@@ -184,18 +192,23 @@ export default props => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    Fazer uma simulação
+                    <Button>Fazer uma simulação</Button>
                   </a>
                 </p>
               </div>
             </HowMuchIsMyApp>
           </>
         )}
-        <WeAreHiring
-          dangerouslySetInnerHTML={{
-            __html: md.render(weAreHiring)
-          }}
-        />
+        <WeAreHiring>
+          <div dangerouslySetInnerHTML={{ __html: md.render(weAreHiring) }} />
+          <a
+            href={"https://programador.emjuizdefora.com/"}
+            target={"blank"}
+            rel="noopener noreferrer"
+          >
+            <Button>Cadastrar agora</Button>
+          </a>
+        </WeAreHiring>
       </Content>
     </>
   );
