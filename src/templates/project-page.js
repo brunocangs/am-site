@@ -34,7 +34,8 @@ export default ({ data }) => {
     devTime,
     devMonths,
     devCommits,
-    image
+    image,
+    whereToFind
   } = frontmatter;
   const [mainPitch, techDetail, financial] = restData.html.split("<hr>");
   const isEn = language === "en";
@@ -54,6 +55,7 @@ export default ({ data }) => {
       <Content>
         <Img fluid={{ ...image.childImageSharp.fluid, aspectRatio: 2.5 }} />
         <ProjectDetailsContainer>
+          <h1>{title}</h1>
           <div dangerouslySetInnerHTML={{ __html: mainPitch }} />
           <div>
             <h2>{aboutDevelopment}</h2>
@@ -71,6 +73,20 @@ export default ({ data }) => {
                 <span>{developmentCommits}</span>
               </li>
             </ul>
+            {whereToFind && (
+              <div>
+                {whereToFind.map((item, i) => (
+                  <a
+                    key={i}
+                    href={item.link}
+                    target={"__blank"}
+                    rel="noopener noreferrer"
+                  >
+                    <Img fixed={item.image.childImageSharp.fixed} />
+                  </a>
+                ))}
+              </div>
+            )}
           </div>
           <div dangerouslySetInnerHTML={{ __html: techDetail }} />
           <div>
@@ -126,7 +142,7 @@ export const query = graphql`
       whereToFind {
         link
         image {
-          ...SiteImageFluid
+          ...SiteImageFixed
         }
       }
       image {

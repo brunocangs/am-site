@@ -58,7 +58,6 @@ export const BannerContent = styled(Container)`
   div {
     /* Title */
     h1 {
-      text-transform: capitalize;
       font-size: 34px;
       line-height: 1.2em;
       ${media("medium", "large")} {
@@ -95,6 +94,7 @@ export const Manifest = styled(SectionContainer)`
     color: ${Colors.darkGrey};
   }
   h1 {
+    text-align: center;
     font-weight: 400;
     font-size: 32px;
     ${media("medium")} {
@@ -162,6 +162,7 @@ export const Projects = styled(SectionContainer)`
   margin-top: 30px;
   flex-direction: column;
   h1 {
+    text-align: center;
     font-weight: 400;
     font-size: 32px;
     ${media("medium")} {
@@ -388,6 +389,7 @@ export const HireUs = styled(SectionContainer)`
 
 export const WeAreHiring = styled(SectionContainer)`
   h1 {
+    text-align: center;
     font-weight: 400;
     font-size: 32px;
     ${media("medium")} {
@@ -403,6 +405,7 @@ export const WeAreHiring = styled(SectionContainer)`
 
 export const HowMuchIsMyApp = styled(SectionContainer)`
   h1 {
+    text-align: center;
     font-weight: 400;
     font-size: 32px;
     ${media("medium")} {

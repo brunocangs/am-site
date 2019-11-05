@@ -5,6 +5,7 @@ import * as Colors from "../styles/colors";
 import { Link } from "gatsby";
 
 export const Content = styled(BaseContainer)`
+  padding-top: 32px;
   flex-direction: column;
   > div:first-of-type {
     display: flex;

@@ -3,11 +3,16 @@ import { BaseContainer } from "./ProjectComponents";
 import media from "../styles/medias";
 import * as Colors from "../styles/colors";
 
+export const ContactContent = styled.div`
+  width: 100%;
+`;
+
 export const Contact = styled(BaseContainer)`
   ${media("large")} {
     max-width: 50%;
   }
   div {
+    padding-top: 32px;
     font-weight: 300;
     width: 100%;
     div {

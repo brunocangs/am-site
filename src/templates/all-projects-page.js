@@ -10,6 +10,7 @@ import {
 import Img from "gatsby-image";
 import { IoIosPin } from "react-icons/io";
 import ClampLines from "react-clamp-lines";
+import { Banner } from "../components/Header";
 
 export const renderProjectItem = ({ node: project }, i) => {
   const {
@@ -35,15 +36,17 @@ export const renderProjectItem = ({ node: project }, i) => {
         <div>
           <div>
             <span>Client{isEn ? "" : "e"}</span>
-            <IoIosPin />
+            <span>{clientName}</span>
           </div>
           <div>
-            <span>{clientName}</span>
+            <IoIosPin />
             <span>{clientLocation}</span>
           </div>
         </div>
         <div>
-          <h2>{title}</h2>
+          <Link to={isEn ? `/en/projects/${slug}` : `/pt/projetos/${slug}`}>
+            <h2>{title}</h2>
+          </Link>
           <ClampLines
             buttons={false}
             text={summary}
@@ -74,13 +77,15 @@ export default ({ data }) => {
   const { frontmatter: page, html } = allProjectsPage;
   const [title] = html.split("<hr>");
   return (
-    <AllProjectsContainer>
-      <Helmet>
-        <title>{page.title}</title>
-      </Helmet>
-      <div dangerouslySetInnerHTML={{ __html: title }} />
-      <ProjectsList>{projects.map(renderProjectItem)}</ProjectsList>
-    </AllProjectsContainer>
+    <div style={{ width: "100%" }}>
+      <Banner title={title.replace(/<[^>]*>/g, "")} />
+      <AllProjectsContainer>
+        <Helmet>
+          <title>{page.title}</title>
+        </Helmet>
+        <ProjectsList>{projects.map(renderProjectItem)}</ProjectsList>
+      </AllProjectsContainer>
+    </div>
   );
 };
 
@@ -93,6 +98,7 @@ export const query = graphql`
           language: { eq: $language }
         }
       }
+      sort: { fields: frontmatter___date }
     ) {
       edges {
         node {

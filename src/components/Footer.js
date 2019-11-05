@@ -7,6 +7,7 @@ import { lightestGrey, lightBlack, darkGrey, black } from "../styles/colors";
 import { Link } from "gatsby";
 
 const FooterContainer = styled.div`
+  font-weight: 300;
   background-color: ${lightestGrey};
   color: ${lightBlack};
   padding: 18px;
@@ -54,19 +55,6 @@ export default props => {
   return (
     <FooterContainer>
       <FooterContent>
-        <h3>{isEn ? "Address" : "Endereço"}</h3>
-        {isEn
-          ? "Rio Branco Avenue 3480, 36025-020, Juiz de Fora, Minas Gerais, Brazil"
-          : "Av. Barão do Rio Branco, 3480 - Passos, Juiz de Fora - MG, 36025-020 3º andar, Sala 1"}
-        <a
-          href="https://www.google.com.br/maps/place/App+Masters/@-21.7725999,-43.3486377,17z/data=!3m1!4b1!4m5!3m4!1s0x989b5d3104ae57:0x9216e0df6326e89f!8m2!3d-21.7725999!4d-43.3471735"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {isEn ? "Open in " : "Abrir no "} Google Maps
-        </a>
-      </FooterContent>
-      <FooterContent>
         {isEn ? (
           <>
             <h3>Relevant links</h3>
@@ -75,6 +63,7 @@ export default props => {
             <Link to="/en/technologies">Technologies</Link>
             <Link to="/en/about">About us</Link>
             <Link to="/en/contact">Contact</Link>
+            <a href={"https://academy.appmasters.io/"}>App Masters Academy</a>
           </>
         ) : (
           <>
@@ -84,6 +73,7 @@ export default props => {
             <Link to="/pt/tecnologias">Tecnologias</Link>
             <Link to="/pt/sobre">Sobre nós</Link>
             <Link to="/pt/contato">Fale conosco</Link>
+            <a href={"https://academy.appmasters.io/"}>App Masters Academy</a>
           </>
         )}
       </FooterContent>
@@ -112,6 +102,19 @@ export default props => {
             <FaLinkedin />
           </a>
         </SocialWrapper>
+      </FooterContent>
+      <FooterContent>
+        <h3>{isEn ? "Address" : "Endereço"}</h3>
+        {isEn
+          ? "Rio Branco Avenue 3480, 36025-020, Juiz de Fora, Minas Gerais, Brazil"
+          : "Av. Barão do Rio Branco, 3480 - Passos, Juiz de Fora - MG, 36025-020 3º andar, Sala 1"}
+        <a
+          href="https://www.google.com.br/maps/place/App+Masters/@-21.7725999,-43.3486377,17z/data=!3m1!4b1!4m5!3m4!1s0x989b5d3104ae57:0x9216e0df6326e89f!8m2!3d-21.7725999!4d-43.3471735"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {isEn ? "Open in " : "Abrir no "} Google Maps
+        </a>
       </FooterContent>
     </FooterContainer>
   );

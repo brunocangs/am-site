@@ -1,11 +1,12 @@
 import styled from "styled-components";
-import { Link } from "gatsby";
+import { Link, graphql, useStaticQuery } from "gatsby";
 import { FaLanguage } from "react-icons/fa";
 import React, { useEffect, useState } from "react";
 import * as Colors from "../styles/colors";
-import { mediumPlus } from "../styles/screens";
 import Logo from "../styles/svgs/white_logo.svg";
 import media from "../styles/medias";
+import Img from "gatsby-image";
+import { match } from "@reach/router/lib/utils";
 
 const Nav = styled.nav`
   position: sticky;
@@ -19,11 +20,11 @@ const Nav = styled.nav`
   padding: 8px;
   height: 75px;
   background: ${props =>
-    props.isIndex && props.scroll < 75 ? "transparent" : "#fff"};
+    props.isTransparent && props.scroll < 75 ? "transparent" : "#fff"};
   color: ${props =>
-    props.isIndex && props.scroll < 75 ? Colors.white : Colors.black};
+    props.isTransparent && props.scroll < 75 ? Colors.white : Colors.black};
   box-shadow: ${props =>
-    props.isIndex && props.scroll < 75
+    props.isTransparent && props.scroll < 75
       ? "none"
       : "0px 1px 3px -2px rgba(0,0,0,0.6)"};
   transition: all 0.3s ease-in-out;
@@ -35,11 +36,13 @@ const Nav = styled.nav`
   ul {
     transition: all 0.4s ease-in-out;
     color: ${props =>
-      props.isIndex && props.scroll < 75 ? Colors.white : Colors.grey};
+      props.isTransparent && props.scroll < 75 ? Colors.white : Colors.grey};
     > li {
       &:hover {
         color: ${props =>
-          props.isIndex && props.scroll < 75 ? Colors.white : Colors.darkGrey};
+          props.isTransparent && props.scroll < 75
+            ? Colors.white
+            : Colors.darkGrey};
       }
     }
   }
@@ -123,7 +126,9 @@ const Hamburger = styled.div`
     padding: 2px;
     transition: all 0.3s ease-in-out;
     background-color: ${props =>
-      props.isIndex && props.scroll < 75 ? Colors.white : Colors.darkBlue};
+      props.isTransparent && props.scroll < 75
+        ? Colors.white
+        : Colors.darkBlue};
     border-radius: 4px;
     :nth-child(1) {
       transform: ${props =>
@@ -219,17 +224,29 @@ const useWindowScroll = () => {
   return scroll;
 };
 
+const shouldBeTransparent = location => {
+  const urlWithoutLanguage = location.pathname.slice(3);
+  // Adicionar aqui rotas que devem ter header branco por default
+  const routesWithWhiteHeader = [
+    "/projetos/:id",
+    "/projects/:id",
+    "/blog/:id",
+    "/tecnologias/:id",
+    "/technologies/:id"
+  ];
+  return !routesWithWhiteHeader.some(item => {
+    return match(item, urlWithoutLanguage);
+  });
+};
+
 export default function Header(props) {
   const [open, setOpen] = useState(false);
   const { language } = props;
   const navLinks = getLinks(language);
   const scroll = useWindowScroll();
-  const allowedRoutes = ["", "blog", "*"];
-  const isIndex =
-    allowedRoutes.indexOf(props.path.split("/")[2]) > -1 &&
-    props.path.split("/").length <= 3;
+  const isTransparent = shouldBeTransparent(props.location);
   return (
-    <Nav scroll={scroll + (open ? 76 : 0)} isIndex={isIndex}>
+    <Nav scroll={scroll + (open ? 76 : 0)} isTransparent={isTransparent}>
       <Link to={`/${language || ""}`} onClick={() => setOpen(false)}>
         <Logo style={{ height: "100%" }} />
       </Link>
@@ -258,7 +275,7 @@ export default function Header(props) {
         open={open}
         onClick={() => setOpen(!open)}
         scroll={scroll + (open ? 76 : 0)}
-        isIndex={isIndex}
+        isTransparent={isTransparent}
       >
         <span></span>
         <span></span>
@@ -266,7 +283,7 @@ export default function Header(props) {
       </Hamburger>
       <HamburgerMenu open={open}>
         {navLinks.map(({ url, label }, i) => (
-          <Link to={`/${language}/${url}`}>
+          <Link to={`/${language}/${url}`} key={i}>
             <div key={i} onClick={() => setOpen(false)}>
               {label}
             </div>
@@ -276,3 +293,50 @@ export default function Header(props) {
     </Nav>
   );
 }
+
+const BannerWrapper = styled.div`
+  margin-top: -75px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  > div {
+    width: 100%;
+    min-height: 300px;
+  }
+  h1 {
+    color: #fff;
+    position: absolute;
+    margin: 0;
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: 34px;
+    line-height: 1.2em;
+    ${media("medium", "large")} {
+      font-size: 45px;
+    }
+    ${media("large")} {
+      font-size: 55px;
+    }
+  }
+`;
+export const Banner = ({ title, fluid }) => {
+  const {
+    bannerImage: {
+      childImageSharp: { fluid: image }
+    }
+  } = useStaticQuery(graphql`
+    query BannerImage {
+      bannerImage: file(relativePath: { eq: "breadcrumb.png" }) {
+        ...SiteImageFluid
+      }
+    }
+  `);
+  return (
+    <BannerWrapper>
+      <Img fluid={fluid || image} />
+      <h1>{title}</h1>
+    </BannerWrapper>
+  );
+};

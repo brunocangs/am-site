@@ -42,7 +42,10 @@ export default ({ data }) => {
               );
             })}
           </div>
-          <h2>{isEn ? "Written by" : "Escrito por"}</h2>
+          <div
+            dangerouslySetInnerHTML={{ __html: html }}
+            style={{ borderBottom: "1px solid #eee", paddingBottom: 24 }}
+          />
           <div>
             <Img
               fixed={postAuthor.frontmatter.image.childImageSharp.fixed}
@@ -53,19 +56,11 @@ export default ({ data }) => {
               <div dangerouslySetInnerHTML={{ __html: postAuthor.html }} />
             </div>
           </div>
-          <div
-            dangerouslySetInnerHTML={{ __html: html }}
-            style={{ borderBottom: "1px solid #eee", paddingBottom: 24 }}
-          />
           <h1 style={{ marginTop: 48 }}>
             {isEn ? "Related posts" : "Posts relacionados"}
           </h1>
           <AllBlogContainer related>
-            <ul>
-              {new Array(3)
-                .fill(relatedPosts.slice(0, 1)[0])
-                .map(renderBlogItem(true))}
-            </ul>
+            <ul>{relatedPosts.map(renderBlogItem(true))}</ul>
           </AllBlogContainer>
         </PostContent>
       </Post>
@@ -82,6 +77,7 @@ export const query = graphql`
       slug
     }
     frontmatter {
+      formattedDate: date(formatString: "DD MMM YYYY", locale: $language)
       templateKey
       title
       language
@@ -141,12 +137,6 @@ export const query = graphql`
       edges {
         node {
           ...BlogPost
-          frontmatter {
-            formattedDate: date(
-              formatString: "DD MMM YYYY - HH:mm"
-              locale: $language
-            )
-          }
         }
       }
     }

@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import { graphql, Link } from "gatsby";
 import Helmet from "react-helmet";
 import Img from "gatsby-image";
@@ -10,7 +10,7 @@ import {
 } from "../components/BlogComponents";
 import { kebabCase } from "lodash";
 import ClampLines from "react-clamp-lines";
-import Fuse from "fuse.js";
+import { Banner } from "../components/Header";
 
 export const renderBlogItem = related => ({ node: post }, i) => {
   const { frontmatter, fields } = post;
@@ -53,52 +53,18 @@ export const renderBlogItem = related => ({ node: post }, i) => {
   );
 };
 const ComponentName = ({ data, pageContext }) => {
-  const [search, setSearch] = useState("");
   const [page, setPage] = useState(1);
-  const { bannerImage, allBlogPosts } = data;
-  const banner = bannerImage.childImageSharp.fluid;
+  const { allBlogPosts } = data;
   const { edges: blogPosts } = allBlogPosts;
   const isEn = pageContext.language === "en";
-  const fuse = useRef(
-    new Fuse(blogPosts.map(({ node }) => node), {
-      keys: ["frontmatter.title", "rawMarkdownBody", "frontmatter.tags"],
-      threshold: 0.2
-    })
-  );
   return (
     <>
       <Helmet>
         <title>Blog - App Masters</title>
       </Helmet>
       <Content>
-        <div>
-          <Img fluid={banner} />
-          <h1>Blog</h1>
-        </div>
+        <Banner title={"Blog"} />
         <AllBlogContainer>
-          <div>
-            <input
-              type="text"
-              value={search}
-              onChange={({ target: { value } }) => setSearch(value)}
-              placeholder={isEn ? "Search" : "Buscar"}
-            />
-            <ul>
-              {fuse.current.search(search).map((item, i) => {
-                const {
-                  frontmatter: { language },
-                  fields: { slug }
-                } = item;
-                return (
-                  <li key={i}>
-                    <Link to={`/${language}/blog/${slug}`}>
-                      {item.frontmatter.title}
-                    </Link>
-                  </li>
-                );
-              })}
-            </ul>
-          </div>
           <ul>{blogPosts.slice(0, page * 5).map(renderBlogItem(false))}</ul>
           {blogPosts.length === 0 && (
             <p>
@@ -132,12 +98,6 @@ export const query = graphql`
       edges {
         node {
           ...BlogPost
-          frontmatter {
-            formattedDate: date(
-              formatString: "DD MMM YYYY - HH:mm"
-              locale: $language
-            )
-          }
         }
       }
     }
@@ -155,9 +115,6 @@ export const query = graphql`
           }
         }
       }
-    }
-    bannerImage: file(relativePath: { eq: "breadcrumb.png" }) {
-      ...SiteImageFluid
     }
   }
 `;

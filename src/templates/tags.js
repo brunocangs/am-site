@@ -6,6 +6,8 @@ import { Content } from "../components/TagsComponents";
 import Helmet from "react-helmet";
 import { renderTechnologyItem } from "./all-technologies-page";
 import { renderBlogItem } from "./all-blog-page";
+import { AllBlogContainer } from "../components/BlogComponents";
+import { Banner } from "../components/Header";
 
 const getStrings = language => {
   let strings = {};
@@ -33,40 +35,42 @@ export default ({ data, pageContext }) => {
   return (
     <>
       <Helmet>
-        <title>{pageContext.tag} tag - App Masters</title>
+        <title>Tag | {pageContext.tag} - App Masters</title>
       </Helmet>
-      <Content>
-        <h1>
-          Tag: <span style={{ fontSize: "0.9em" }}>{pageContext.tag}</span>
-        </h1>
-        {blogs.length > 0 && (
-          <div>
-            <h2>
-              {strings.blogs}
-              {pageContext.tag} ({blogs.length}):
-            </h2>
-            <ul>{blogs.map(renderBlogItem(true))}</ul>
-          </div>
-        )}
-        {projects.length > 0 && (
-          <>
-            <h2>
-              {strings.projects}
-              {pageContext.tag} ({projects.length}):
-            </h2>
-            <ProjectsList>{projects.map(renderProjectItem)}</ProjectsList>
-          </>
-        )}
-        {technologies.length > 0 && (
-          <div>
-            <h2>
-              {strings.technologies}
-              {pageContext.tag} ({technologies.length}):
-            </h2>
-            <div>{technologies.map(renderTechnologyItem)}</div>
-          </div>
-        )}
-      </Content>
+      <div style={{ width: "100%" }}>
+        <Banner title={pageContext.tag} />
+        <Content>
+          {blogs.length > 0 && (
+            <div>
+              <h2>
+                {strings.blogs}
+                {pageContext.tag} ({blogs.length}):
+              </h2>
+              <AllBlogContainer related>
+                <ul>{blogs.map(renderBlogItem(true))}</ul>
+              </AllBlogContainer>
+            </div>
+          )}
+          {projects.length > 0 && (
+            <>
+              <h2>
+                {strings.projects}
+                {pageContext.tag} ({projects.length}):
+              </h2>
+              <ProjectsList>{projects.map(renderProjectItem)}</ProjectsList>
+            </>
+          )}
+          {technologies.length > 0 && (
+            <div>
+              <h2>
+                {strings.technologies}
+                {pageContext.tag} ({technologies.length}):
+              </h2>
+              <div>{technologies.map(renderTechnologyItem)}</div>
+            </div>
+          )}
+        </Content>
+      </div>
     </>
   );
 };

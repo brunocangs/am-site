@@ -27,6 +27,7 @@ export const BaseContainer = styled(SectionContainer)`
 
 export const AllProjectsContainer = styled(BaseContainer)`
   flex-direction: column;
+  padding: 80px 0;
 `;
 const ContainerList = BaseContainer.withComponent("ul");
 
@@ -39,36 +40,26 @@ export const ProjectsList = styled(ContainerList)`
   flex-wrap: wrap;
   list-style: none;
   flex-direction: row;
-  justify-content: space-between;
+  margin: -8px;
   /* Item da lista */
   li {
     border-radius: 6px;
     box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.15);
     overflow: hidden;
     position: relative;
+    margin: 8px;
     /* Tamanhos pra grid */
     /* Menor que medium => 1 item */
     ${media("medium", true)} {
       width: 100%;
-      + li {
-        margin-top: 16px;
-      }
     }
     /* Medium - Large => 2 items */
     ${media("medium", "large")} {
-      width: calc(50% - 12px);
-      /* A partir do terceiro item => segunda linha */
-      + li + li {
-        margin-top: 16px;
-      }
+      width: calc(50% - 16px);
     }
     /* Large => 3 items */
     ${media("large")} {
-      width: calc(33.33% - 12px);
-      /* A partir do quarto item => segunda linha */
-      + li + li + li {
-        margin-top: 16px;
-      }
+      width: calc(33.33% - 16px);
     }
   }
 `;
@@ -84,51 +75,51 @@ export const ProjectItemDetails = styled.div`
     color: ${Colors.black};
     /* Parte com nome do cliente e localização */
     :first-child {
+      display: flex;
       > div {
+        display: inline-flex;
         :first-child {
+          flex: 1;
+          text-align: left;
           color: ${Colors.lightGrey};
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
+          flex-direction: column;
+          align-items: flex-start;
           padding-bottom: 6px;
           span {
+            :first-child {
+              color: ${Colors.black};
+            }
             font-weight: 300;
           }
         }
         :nth-child(2) {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
+          flex: 1;
+          text-align: right;
+          flex-direction: column;
+          align-items: flex-end;
           font-size: 1rem;
           font-weight: 300;
           margin-bottom: 10px;
-          span:first-child {
-            font-weight: 400;
-          }
-          span:nth-child(2) {
-            letter-spacing: 1.05px;
-          }
         }
       }
     }
     :nth-child(2) {
       p {
         font-weight: 300;
+        height: ${lineHeight * 3}em;
       }
     }
-    div {
+    > div:nth-of-type(2) {
       display: flex;
       flex-wrap: wrap;
+      margin: -3px;
       a {
         padding: 4px 6px;
         border: 1px solid ${Colors.blue};
         border-radius: 3px;
         color: ${Colors.blue};
-        margin: 0px 3px;
+        margin: 3px;
         transition: all 0.1s ease-in-out;
-        :first-child {
-          margin-left: 0;
-        }
         :hover {
           color: ${Colors.white};
           background-color: ${Colors.blue};
@@ -157,7 +148,7 @@ export const ProjectDetailsContainer = styled(AllProjectsContainer)`
     margin-top: 48px;
   }
   > div {
-    :nth-child(2) {
+    :nth-of-type(2) {
       ul {
         list-style: none;
         padding: 0;
@@ -187,8 +178,16 @@ export const ProjectDetailsContainer = styled(AllProjectsContainer)`
           }
         }
       }
+      > div {
+        margin-top: 36px;
+        display: flex;
+        justify-content: center;
+        a {
+          margin: 8px;
+        }
+      }
     }
-    :nth-child(4) {
+    :nth-of-type(4) {
       ul {
         list-style: none;
         padding: 0;

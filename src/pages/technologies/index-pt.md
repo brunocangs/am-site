@@ -10,7 +10,7 @@ summary: ' '
 tags:
   - ''
 ---
-As tecnologias que usamos nos projetos
+As tecnologias que usamos
 
 ---
 

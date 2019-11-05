@@ -2,8 +2,9 @@ import React, { useState, useEffect, useRef } from "react";
 import Helmet from "react-helmet";
 import ReCAPTCHA from "react-google-recaptcha";
 
-import { Contact } from "../components/ContactComponents";
+import { Contact, ContactContent } from "../components/ContactComponents";
 import { Button } from "../components/BlogComponents";
+import { Banner } from "../components/Header";
 
 function encode(data) {
   return Object.keys(data)
@@ -120,94 +121,96 @@ export default props => {
   };
 
   return (
-    <Contact>
-      <Helmet>
-        <title>{title} - App Masters</title>
-      </Helmet>
-      <div className="container">
-        <div className="content">
-          <h1>{title}</h1>
-          <form
-            name="contact"
-            method="post"
-            data-netlify="true"
-            data-netlify-recaptcha="true"
-            data-netlify-honeypot="bot-field"
-            onSubmit={handleSubmit}
-          >
-            {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
-            <input type="hidden" name="form-name" value="contact" />
-            <div hidden>
-              <label>
-                Don’t fill this out:{" "}
-                <input name="bot-field" onChange={handleChange(setBot)} />
-              </label>
-            </div>
-            <div className="field">
-              <label className="label" htmlFor={"name"}>
-                {nameLabel}
-              </label>
-              <div className="control">
-                <input
-                  className="input"
-                  type={"text"}
-                  name={"name"}
-                  onChange={handleChange(setName)}
-                  id={"name"}
-                  value={name}
-                  required={true}
-                />
+    <ContactContent>
+      <Banner title={isEn ? "Contact" : "Contato"} />
+      <Contact>
+        <Helmet>
+          <title>{title} - App Masters</title>
+        </Helmet>
+        <div>
+          <div>
+            <form
+              name="contact"
+              method="post"
+              data-netlify="true"
+              data-netlify-recaptcha="true"
+              data-netlify-honeypot="bot-field"
+              onSubmit={handleSubmit}
+            >
+              {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
+              <input type="hidden" name="form-name" value="contact" />
+              <div hidden>
+                <label>
+                  Don’t fill this out:{" "}
+                  <input name="bot-field" onChange={handleChange(setBot)} />
+                </label>
               </div>
-            </div>
-            <div className="field">
-              <label className="label" htmlFor={"email"}>
-                Email
-              </label>
-              <div className="control">
-                <input
-                  className="input"
-                  type={"email"}
-                  name={"email"}
-                  onChange={handleChange(setEmail)}
-                  value={email}
-                  id={"email"}
-                  required={true}
-                />
+              <div className="field">
+                <label className="label" htmlFor={"name"}>
+                  {nameLabel}
+                </label>
+                <div className="control">
+                  <input
+                    className="input"
+                    type={"text"}
+                    name={"name"}
+                    onChange={handleChange(setName)}
+                    id={"name"}
+                    value={name}
+                    required={true}
+                  />
+                </div>
               </div>
-            </div>
-            <div className="field">
-              <label className="label" htmlFor={"message"}>
-                {messageLabel}
-              </label>
-              <div className="control">
-                <textarea
-                  className="textarea"
-                  name={"message"}
-                  onChange={handleChange(setMessage)}
-                  rows={4}
-                  value={message}
-                  id={"message"}
-                  required={true}
-                />
+              <div className="field">
+                <label className="label" htmlFor={"email"}>
+                  Email
+                </label>
+                <div className="control">
+                  <input
+                    className="input"
+                    type={"email"}
+                    name={"email"}
+                    onChange={handleChange(setEmail)}
+                    value={email}
+                    id={"email"}
+                    required={true}
+                  />
+                </div>
               </div>
-            </div>
-            <ReCAPTCHA
-              sitekey={"6Ldesr4UAAAAANgIbrtB2Xg06yAs5e9H-PiPgBip"}
-              onChange={setCaptcha}
-              ref={captchaRef}
-            />
-            {error.field && error.message && (
-              <span id="error">{error.message}</span>
-            )}
-            {success && <span id="success">{successMessage}</span>}
-            <div className="field">
-              <Button className="button is-link" type="submit">
-                {sendLabel}
-              </Button>
-            </div>
-          </form>
+              <div className="field">
+                <label className="label" htmlFor={"message"}>
+                  {messageLabel}
+                </label>
+                <div className="control">
+                  <textarea
+                    className="textarea"
+                    name={"message"}
+                    onChange={handleChange(setMessage)}
+                    rows={4}
+                    value={message}
+                    id={"message"}
+                    required={true}
+                  />
+                </div>
+              </div>
+              <ReCAPTCHA
+                sitekey={"6Ldesr4UAAAAANgIbrtB2Xg06yAs5e9H-PiPgBip"}
+                onChange={setCaptcha}
+                ref={captchaRef}
+              />
+              {error.field && error.message && (
+                <span id="error">{error.message}</span>
+              )}
+              {success && <span id="success">{successMessage}</span>}
+              <div className="field">
+                <Button className="button is-link" type="submit">
+                  {sendLabel}
+                </Button>
+              </div>
+            </form>
+          </div>
         </div>
-      </div>
-    </Contact>
+      </Contact>
+    </ContactContent>
   );
 };

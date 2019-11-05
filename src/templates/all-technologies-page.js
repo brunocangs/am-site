@@ -2,6 +2,7 @@ import React from "react";
 import { graphql } from "gatsby";
 import Helmet from "react-helmet";
 import { Content, TechnologyWrapper } from "../components/TechnologyComponents";
+import { Banner } from "../components/Header";
 
 export const renderTechnologyItem = ({ node: technology }, i) => {
   const { logo, title, language } = technology.frontmatter;
@@ -35,13 +36,17 @@ export default ({ data }) => {
   const [headerHtml] = html.split("<hr>");
   const headerText = headerHtml.replace(/<[^>]*>/g, "");
   return (
-    <Content>
+    <>
       <Helmet>
         <title>{page.title} - App Masters</title>
       </Helmet>
-      <h1>{headerText}</h1>
-      <div>{technologies.map(renderTechnologyItem)}</div>
-    </Content>
+      <div style={{ width: "100%" }}>
+        <Banner title={headerText} />
+        <Content>
+          <div>{technologies.map(renderTechnologyItem)}</div>
+        </Content>
+      </div>
+    </>
   );
 };
 

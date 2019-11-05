@@ -5,6 +5,7 @@ import { Service, Content } from "../components/ServicesComponents";
 import Markdown from "markdown-it";
 import Img from "gatsby-image";
 import { renderTechnologyItem } from "./all-technologies-page";
+import { Banner } from "../components/Header";
 
 const md = Markdown();
 
@@ -17,8 +18,9 @@ export default ({
   const { edges: technolgies } = allTechnologies;
   const isEn = language === "en";
   return (
-    <>
-      <Helmet title={title} defer={false} />
+    <div style={{ width: "100%" }}>
+      <Helmet title={`${title} - App Masters`} defer={false} />
+      <Banner title={title} />
       <Content>
         <h1>{isEn ? "Our services" : "Nossos serviços"}</h1>
         {new Array(5).fill(services.slice(0, 1)[0]).map((service, i) => {
@@ -41,7 +43,7 @@ export default ({
         <h1>{isEn ? "The tech we use" : "As tecnologias que usamos"}</h1>
         <div>{technolgies.map(renderTechnologyItem)}</div>
       </Content>
-    </>
+    </div>
   );
 };
 

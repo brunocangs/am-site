@@ -8,34 +8,6 @@ export const Content = styled.div`
   flex-direction: column;
   width: 100%;
   padding-bottom: 60px;
-  > div {
-    :first-child {
-      margin-top: -75px;
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: relative;
-      > div {
-        width: 100%;
-        min-height: 300px;
-      }
-      h1 {
-        color: #fff;
-        position: absolute;
-        margin: 0;
-        text-transform: capitalize;
-        font-size: 34px;
-        line-height: 1.2em;
-        ${media("medium", "large")} {
-          font-size: 45px;
-        }
-        ${media("large")} {
-          font-size: 55px;
-        }
-      }
-    }
-  }
 `;
 export const Button = styled.button`
   width: 25%;
@@ -58,7 +30,7 @@ export const AllBlogContainer = styled(BaseContainer)`
   max-width: 100%;
   display: flex;
   flex-direction: column;
-  ${props => (props.related ? "padding: 0;" : "")}
+  ${props => (props.related ? "padding: 0; margin: -8px;" : "")}
   /* Lista de posts */
   > ul {
     margin: 0;
@@ -71,9 +43,9 @@ export const AllBlogContainer = styled(BaseContainer)`
       props.related
         ? `
         flex-direction: column;
-        justify-content: space-between;
       ${media("large")} {
         flex-direction: row;
+        align-items: flex-start;
       }
     `
         : ""}
@@ -149,8 +121,12 @@ export const PostWrapper = styled.li`
   ${props =>
     props.related
       ? `
+          ${media("large", false)} {
+            margin-top: 16px;
+          }
           ${media("large")} {
-            max-width: 32%;
+            max-width: calc(33% - 16px);
+            margin: 8px;
           }
           `
       : ""}
@@ -166,7 +142,15 @@ export const PostWrapper = styled.li`
       /* Link */
       a {
         /* Título */
+        :hover {
+          text-decoration: none !important;
+          h2 {
+            color: ${Colors.blue};
+            text-decoration: none !important;
+          }
+        }
         h2 {
+          font-weight: 600;
           margin: 0;
           font-size: 20px;
           ${media("medium")} {
@@ -191,19 +175,17 @@ export const PostWrapper = styled.li`
         display: flex;
         flex-wrap: wrap;
         padding-bottom: 8px;
+        margin: -3px;
         margin-top: 16px;
         /* Tag */
         a {
           padding: 4px 6px;
           border: 1px solid ${Colors.blue};
           border-radius: 3px;
-          margin: 0px 3px;
+          margin: 3px;
           transition: all 0.1s ease-in-out;
           font-size: 0.8em;
           color: ${Colors.blue};
-          :first-child {
-            margin-left: 0;
-          }
           :hover {
             color: ${Colors.white};
             background-color: ${Colors.blue};
@@ -251,7 +233,10 @@ export const PostContent = styled(BaseContainer)`
       }
     }
     /* Wrapper de autor */
-    :nth-of-type(2) {
+    :nth-of-type(3) {
+      margin-top: 48px;
+      padding-bottom: 48px;
+      border-bottom: 1px solid #eee;
       display: flex;
       align-items: flex-start;
       /* Divs internos */
