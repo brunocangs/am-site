@@ -1,7 +1,7 @@
 ---
 title: Tiago Gouvea
-image: /img/post_1.png
+image: /img/notification_icon.jpg
 baseUrl: author
 language: pt
 ---
-Tiago é um Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit a consequuntur fugiat, enim rerum unde facere! Aliquid, rerum voluptate inventore quam odio quod sapiente tempora.
+Fundador e CEO da App Masters, onde trabalha para com as pessoas para que as demandas dos clientes sejam atendidas da melhor forma possível através da tecnologia. Responsável pelo Google Developers Group em Juiz de Fora, um dos fundadores do ecossistema Zero40. Gosta de fazer código e beber café.
