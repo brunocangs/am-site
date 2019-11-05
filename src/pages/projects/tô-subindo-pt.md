@@ -2,6 +2,8 @@
 templateKey: project-page
 baseUrl: projetos
 featured: false
+type: main
+date: 2019-11-05T12:47:45.008Z
 language: pt
 title: Tô Subindo
 technology:
