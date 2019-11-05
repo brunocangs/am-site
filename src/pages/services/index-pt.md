@@ -17,7 +17,7 @@ services:
 
       Trabalhamos exclusivamente no modelo de **contratação por hora**, no qual
       o cliente diz quais habilidades necessita e quantas horas deseja alocar.
-    image: /img/img_3235.jpg
+    image: /img/img_3244.jpg
     tags:
       - React
       - PWA
