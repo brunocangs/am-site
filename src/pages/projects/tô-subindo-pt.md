@@ -2,6 +2,8 @@
 templateKey: project-page
 baseUrl: projetos
 featured: false
+type: main
+date: 2019-11-05T12:47:45.008Z
 language: pt
 title: Tô Subindo
 technology:
@@ -12,7 +14,7 @@ clientLocation: Juiz de Fora / MG
 devTime: 86
 devMonths: 1
 devCommits: 185
-image: /img/bg-banner-to-subindo.jpg
+image: /img/low-carb-thumbnail.jpg
 thumbnailImage: /img/low-carb-thumbnail.jpg
 tags:
   - React
