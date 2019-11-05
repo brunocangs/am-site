@@ -3,7 +3,7 @@ templateKey: blog-post
 title: Projetos sugeridos em processos de seleção
 language: pt
 baseUrl: blog
-date: 2019-10-23T13:49:51.286Z
+date: 2019-10-01T13:49:51.286Z
 author: Tiago Gouvea
 description: Fizemos um post com vários projetos sugeridos em processos de seleção passados
 featuredPost: false
