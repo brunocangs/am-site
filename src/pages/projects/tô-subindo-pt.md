@@ -14,7 +14,7 @@ clientLocation: Juiz de Fora / MG
 devTime: 86
 devMonths: 1
 devCommits: 185
-image: /img/low-carb-thumbnail.jpg
+image: /img/bg-banner-to-subindo.jpg
 thumbnailImage: /img/low-carb-thumbnail.jpg
 tags:
   - React
