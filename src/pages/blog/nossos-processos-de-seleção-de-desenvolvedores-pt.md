@@ -21,46 +21,54 @@ tags:
 ---
 Desde o começo da App Masters temos feitos processos de seleção "diferentes" dos tradicionais. Entendemos a importância de trazer bons desenvolvedores para o time, bem como ter pessoas alinhadas com nossa cultura e nosso "jeito" de ser.
 
-Nosso primeiro processo de seleção de pessoal se dividiu em duas grandes etapas; na primeira os candidatos tinham que aprender a programar em React e desenvolver quantos projetos conseguissem, de uma lista de projetos sugeridos. Cada projeto concluído dava um número determinado de pontos, ficando assim fácil "rankear" os candidatos. Na segunda etapa fizemos um hackathon, onde os candidatos se dividiram em pequenas equipes e tinham que implementar um projeto com React do zero. 
+## O primeiro processo
 
-[foto hackathon]
-
-O que eu tentei observar desde o início do processo foi a iniciativa dos interessados. Neste caso não me importava quantos acharam que não valia a pena tanto esforço para uma vaga, me importava aqueles que encararam o desafio, que aprenderam e se dedicaram para participar. No hackathon, observei a comunicação entre as pessoas, quem se colocava em um papel de liderança, quem codava mais tempo, e até mesmo quem tinha a boa vontade de ajudar o outro time.
+Nosso primeiro processo de seleção de pessoal se dividiu em duas grandes etapas; na primeira os candidatos tinham que **aprender a programar em React** e desenvolver quantos projetos conseguissem, de uma lista de projetos sugeridos. Cada projeto concluído dava um número determinado de pontos, ficando assim fácil "rankear" os candidatos. Na segunda etapa fizemos **um hackathon**, onde os candidatos se dividiram em pequenas equipes e tinham que implementar um projeto com React do zero. 
 
 
-- - - 
 
-Em outro processo de seleção, os candidatos tinham que realizar desafios online de programação (usando HackerRank) para darem entrada no processo, bem como para continuar nele. Fizemos dois níveis de desafios, um primeiro com testes simples de algoritmo, e o segundo totalmente focado em ECMAScript 6. Para os 10 melhores colocados nos desafios demos canecas e adesivos. Os 4 melhores candidatos ganharam um treinamento especial, o "React para Humanos". Por fim, convidamos os três melhores para desenvolver um projeto prático na empresa, para só então selecionarmos o candidato que entraria.
+![Programadores em hackathon de processo de seleção](/img/img_20170427_084616445.jpg)
 
-https://www.hackerrank.com/app-masters-basics
-https://www.hackerrank.com/app-masters-es6
+O que eu tentei observar desde o início do processo foi a iniciativa dos interessados. Neste caso não me importava quantos acharam que não valia a pena tanto esforço para uma vaga, me importava aqueles que **encararam o desafio**, que aprenderam e se dedicaram para participar. No hackathon, observei a comunicação entre as pessoas, quem se colocava em um papel de liderança, quem codava mais tempo, e até mesmo quem tinha a boa vontade de ajudar o outro time.
+
+## HackerHank
+
+Em outro processo de seleção, os candidatos tinham que realizar desafios online de programação, através do [HackerRank](https://www.hackerrank.com/), para darem entrada no processo, bem como para continuar nele. 
+
+Fizemos dois níveis de desafios, um primeiro ([App Masters Basics](https://www.hackerrank.com/app-masters-basics)) com testes simples de algoritmo, e o segundo totalmente focado em ECMAScript 6 ([App Masters ES6](https://www.hackerrank.com/app-masters-es6)). 
+
+Para os 10 melhores colocados nos desafios **demos canecas e adesivos**. Os 4 melhores candidatos **ganharam um treinamento especial**, o "React para Humanos". Por fim, convidamos os três melhores para desenvolver um projeto prático na empresa, para só então selecionarmos o candidato que entraria.
+
 link para react para humanos
 
-[imagem canecas]
+![Canecas para programadores](/img/caneca-programaco-programador-javascript-js-angular-react-d_nq_np_884917-mlb27350606376_052018-f.jpg)
 
 ## As etapas do processo
 
-Em linhas gerais nossos processos acontecem da seguinte forma:
+Gostamos de realizar processos rápidos e divertidos. Em linhas gerais nossos processos acontecem da seguinte forma:
 
-1. Inscrição - O candidato se inscreve no processo;
-1. Projeto(s) de teste - O candidato precisa programar algo, que funcione, e disponibilizar via github pra nós;
-1. Entrevista online - Realizada por texto ou audio no whatsapp, para alinhar as expectativas;
-1. Entrevista presencial - uma conversa rápida para conhecermos melhor o candidato e definirmos se ele encaixa no que buscamos;
-1. Projeto prático in loco - projeto de dois ou três dias, para programar algo real conosco, e vermos como interage, evolui e aprende.
+1. Inscrição - O candidato se inscreve no processo
+2. Projeto(s) de teste - O candidato precisa programar algo que funcione, e disponibilizar via github pra nós, ou nos enviar algo que já tenha feito
+3. Entrevista online - Realizada por texto ou audio no whatsapp, para alinhar as expectativas
+4. Entrevista presencial - uma conversa rápida para conhecermos melhor o candidato e definirmos se ele encaixa no que buscamos
+5. Projeto prático in loco - projeto de dois ou três dias, para programar algo real conosco, e vermos como interage, evolui e aprende
 
 ## O que buscamos
 
-Queremos sempre pessoas de coragem, para enfrentar os problemas, buscar soluções e principalmente com disposição para aprender sempre.
+Queremos sempre pessoas de **coragem**, para enfrentar os problemas, buscar soluções e principalmente com **disposição para aprender** sempre.
 
 Atualmente o inglês é requisito essencial em nossa seleção de pessoal, uma vez que estamos focando em clientes de fora do Brasil.
 
-[link pra clientes fora do brasil.]
+\[link pra post clientes fora do brasil.]
 
 ## O que utilizamos
 
-Temos trabalhado intensamente com React, React Native e Node desde de o inicio da empresa, em 2017. Atualmente temos incluído o Next.js e Firebase cada vez mais em nossos projetos. Estamos falando de uma stack de desenvolvimento totalmente orientada a JavaScript.
+Temos trabalhado intensamente com React, React Native e Node desde de o inicio da empresa, em 2017. Atualmente temos incluído o Next.js e Firebase cada vez mais em nossos projetos, bem como adicionando DevOps ao processo. 
+
+Nossa stack de desenvolvimento então é totalmente orientada ao JavaScript moderno.
 
 ## Como chamar atenção
 
-Ter um github com alguns projetos próprios é o primeiro passo, já que indica que sabe usar o git.
+Algumas dicas para ter ainda mais sucesso em nossos processos de seleção.
 
+* Ter um github com alguns projetos próprios é o primeiro passo - ao menos indica que você sabe usar o git
