@@ -58,3 +58,13 @@ Queremos sempre pessoas de **coragem**, para enfrentar os problemas, buscar solu
 Atualmente o inglês é requisito essencial em nossa seleção de pessoal, uma vez que estamos focando em clientes de fora do Brasil.
 
 \[link pra post clientes fora do brasil.]
+
+## Como chamar atenção
+
+Seguem algumas dicas para ter ainda mais sucesso em nossos processos de seleção. Certamente servirão para todos processos de outras empresas também.
+
+* Ter um github com alguns projetos próprios é o primeiro passo - ao menos indica que você sabe usar o git
+* Ter no seu linkedin uma apresentação curta dizendo exatamente no que você é bom, no que tem focado atualmente e o que espera para o futuro próximo
+* Ter um blog, medium, ou ser ativo em alguma rede social com conteúdo acerca de programação
+* Ter um projeto de exemplo, online, funcionando, na sua stack favorita, para apresentar quando necessário
+
