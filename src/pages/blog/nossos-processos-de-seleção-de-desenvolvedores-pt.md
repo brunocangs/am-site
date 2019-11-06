@@ -25,8 +25,6 @@ Desde o começo da App Masters temos feitos processos de seleção "diferentes" 
 
 Nosso primeiro processo de seleção de pessoal se dividiu em duas grandes etapas; na primeira os candidatos tinham que **aprender a programar em React** e desenvolver quantos projetos conseguissem, de uma lista de projetos sugeridos. Cada projeto concluído dava um número determinado de pontos, ficando assim fácil "rankear" os candidatos. Na segunda etapa fizemos **um hackathon**, onde os candidatos se dividiram em pequenas equipes e tinham que implementar um projeto com React do zero. 
 
-
-
 ![Programadores em hackathon de processo de seleção](/img/img_20170427_084616445.jpg)
 
 O que eu tentei observar desde o início do processo foi a iniciativa dos interessados. Neste caso não me importava quantos acharam que não valia a pena tanto esforço para uma vaga, me importava aqueles que **encararam o desafio**, que aprenderam e se dedicaram para participar. No hackathon, observei a comunicação entre as pessoas, quem se colocava em um papel de liderança, quem codava mais tempo, e até mesmo quem tinha a boa vontade de ajudar o outro time.
@@ -60,15 +58,3 @@ Queremos sempre pessoas de **coragem**, para enfrentar os problemas, buscar solu
 Atualmente o inglês é requisito essencial em nossa seleção de pessoal, uma vez que estamos focando em clientes de fora do Brasil.
 
 \[link pra post clientes fora do brasil.]
-
-## O que utilizamos
-
-Temos trabalhado intensamente com React, React Native e Node desde de o inicio da empresa, em 2017. Atualmente temos incluído o Next.js e Firebase cada vez mais em nossos projetos, bem como adicionando DevOps ao processo. 
-
-Nossa stack de desenvolvimento então é totalmente orientada ao JavaScript moderno.
-
-## Como chamar atenção
-
-Algumas dicas para ter ainda mais sucesso em nossos processos de seleção.
-
-* Ter um github com alguns projetos próprios é o primeiro passo - ao menos indica que você sabe usar o git
