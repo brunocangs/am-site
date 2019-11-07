@@ -16,14 +16,11 @@ ourWork: >-
 
 
   Somos uma empresa de desenvolvimento de sistemas web e mobile, com uma forte
-  cultura voltada para as novas tecnologias, principalmente no stack JavaScript.
-
-
+  cultura voltada para as novas tecnologias, principalmente no stack
+  JavaScript.<br/>
 
   Nossos clientes são empresas mundo afora, para os quais entregamos sempre
-  projetos de alta qualidade em um prazo curto.
-
-
+  projetos de alta qualidade em um prazo curto.<br/>
 
   Oferecemos um ótimo ambiente de trabalho, sem stress, onde focamos em
   trabalhar com tranquilidade e objetividade.
