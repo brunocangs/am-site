@@ -79,7 +79,12 @@ collections:
           widget: "boolean",
         }
       - { label: "Publicado (draft)", name: "featuredPost", widget: "boolean" }
-      - { label: "Imagem", name: "published", widget: image }
+      - {
+          label: "Imagem",
+          name: "published",
+          widget: image,
+          hint: "Imagem de banner (2.5:1)",
+        }
       - { label: "Corpo", name: "body", widget: "markdown" }
       - { label: "Tags", name: "tags", widget: "list" }
   - name: "landing-page"
@@ -133,6 +138,9 @@ collections:
           - label: "Título"
             name: "title"
             widget: "string"
+          - label: "Imagem"
+            name: "image"
+            widget: "image"
           - label: "Conteúdo"
             name: "content"
             widget: "list"
