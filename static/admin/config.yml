@@ -48,9 +48,9 @@ collections:
           widget: "hidden",
           default: "blog-post",
         }
-      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Título", name: "title", widget: "string" }
       - {
-          label: "Language",
+          label: "Língua",
           name: "language",
           widget: "select",
           options:
@@ -72,10 +72,15 @@ collections:
         searchFields: ["title"]
         valueField: "title"
         displayFields: ["title"]
-      - { label: "Description", name: "description", widget: "text" }
-      - { label: "Featured Post", name: "featuredPost", widget: "boolean" }
-      - { label: "Featured Image", name: "featuredImage", widget: image }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Descrição", name: "description", widget: "text" }
+      - {
+          label: "Mostrar na página inicial",
+          name: "featuredPost",
+          widget: "boolean",
+        }
+      - { label: "Publicado (draft)", name: "featuredPost", widget: "boolean" }
+      - { label: "Imagem", name: "published", widget: image }
+      - { label: "Corpo", name: "body", widget: "markdown" }
       - { label: "Tags", name: "tags", widget: "list" }
   - name: "landing-page"
     label: "Página inicial"
