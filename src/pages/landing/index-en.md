@@ -26,6 +26,7 @@ ourWork: >-
 manifest:
   content:
     - content: Collapse content weepwoop
+      image: /img/feature_icon_1.png
       title: >-
         We aren't just looking for clients, we're working towards successful
         cases
@@ -33,21 +34,15 @@ manifest:
         Collapse content weepwoopCollapse content weepwoopCollapse content
         weepwoopCollapse content weepwoopCollapse content weepwoopCollapse
         content weepwoop
+      image: /img/feature_icon_2.png
       title: Collaborating with the clients is more important than just contracts
     - content: >-
         Collapse content weepwoopCollapse content weepwoopCollapse content
         weepwoopCollapse content weepwoopCollapse content weepwoopCollapse
         content weepwoopCollapse content weepwoopCollapse content
         weepwoopCollapse content weepwoop
+      image: /img/feature_icon_3.png
       title: Responding quickly to the client's requests is what's most important
-    - content: >-
-        We'll provide weekly demos until the project is complete We'll provide
-        weekly demos until the project is completeWe'll provide weekly demos
-        until the project is complete We'll provide weekly demos until the
-        project is complete We'll provide weekly demos until the project is
-        complete We'll provide weekly demos until the project is complete We'll
-        provide weekly demos until the project is complete
-      title: We'll provide weekly demos until the project is complete
   title: We've turned our goals into a manifest!
 hireUs: >-
   At App Masters we have a highly skilled and well trained team of developers
