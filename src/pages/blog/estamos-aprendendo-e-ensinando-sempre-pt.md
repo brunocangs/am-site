@@ -11,7 +11,7 @@ description: >-
   grande profissional ou só mais um na multidão.
 featuredPost: true
 published: true
-featureImage: /img/about_img_1.png
+featuredImage: /img/about_img_1.png
 tags:
   - Treinamento
   - React
