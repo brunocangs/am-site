@@ -10,7 +10,7 @@ description: >-
   site, e referência para interessados em saber que tipo de projetos gostávamos
   de pedir em nossos processos de seleção.
 featuredPost: false
-featuredImage: /img/img_3224.jpg
+featuredImage: /img/img_20170427_084616445.jpg
 tags:
   - Selecao
   - React
