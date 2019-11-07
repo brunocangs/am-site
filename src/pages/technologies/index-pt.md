@@ -4,13 +4,14 @@ baseUrl: tecnologias
 language: pt
 title: Tecnologias
 logo: /img/react.png
-bgColor: '#654057'
+bgColor: "#654057"
 featured: false
-summary: ' '
+summary: " "
 tags:
-  - ''
+  - ""
 ---
-As tecnologias que usamos
+
+O que nós dominamos
 
 ---
 

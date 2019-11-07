@@ -193,7 +193,6 @@ export const ProjectDetailsContainer = styled(AllProjectsContainer)`
         padding: 0;
         display: flex;
         flex-direction: row;
-        justify-content: center;
         flex-wrap: wrap;
         margin: 0;
         li {

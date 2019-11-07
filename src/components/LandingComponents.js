@@ -1,7 +1,9 @@
 import styled from "styled-components";
 import * as Colors from "../styles/colors";
 import media from "../styles/medias";
-import React, { useRef, useState, useLayoutEffect } from "react";
+import React from "react";
+import Img from "gatsby-image";
+
 export const Content = styled.div`
   flex: 1;
   margin-top: -75px;
@@ -76,19 +78,10 @@ export const BannerContent = styled(Container)`
     /* Buttons */
     div {
       display: flex;
-      ${media("medium", true)} {
-        flex-direction: column;
-      }
       a {
-        flex: 1;
         :first-child {
           margin-right: 0;
-          ${media("medium", true)} {
-            margin-bottom: 12px;
-          }
-          ${media("medium")} {
-            margin-right: 12px;
-          }
+          margin-right: 12px;
         }
       }
     }
@@ -127,52 +120,43 @@ export const Manifest = styled(SectionContainer)`
   > ul {
     list-style: none;
     padding: 0;
-    border-radius: 6px;
-    border: 1px solid ${Colors.lightestGrey};
-    /* Item da lista */
-    > li {
-      padding: 12px;
-      /* Titulo */
-      > p {
-        cursor: pointer;
-        margin: 0;
-        font-size: 1.15em;
-      }
-      /* Toggle */
-      ul {
-        overflow: hidden;
-        transition: all 0.3s ease-in-out;
-        padding: 0;
-        margin: 0;
-        /* Item do toggle */
-        li {
-        }
-      }
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    font-weight: 300;
+    margin: -8px;
+    justify-content: center;
+    a,
+    h3,
+    strong {
+      font-size: 1.2em;
+      font-weight: 400;
     }
-    /* Item a partir do segundo */
-    li + li {
-      border-top: 1px solid ${Colors.lightestGrey};
+    li {
+      width: calc(75% - 16px);
+      padding: 36px 24px 24px 24px;
+      border-radius: 6px;
+      box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.1);
+      margin: 8px;
+      ${media("large")} {
+        width: calc(33.3% - 16px);
+      }
     }
   }
 `;
 
 export const ManifestItem = props => {
   const i = props.content;
+  const image = props.content.image.childImageSharp;
   const md = props.md;
-  const content = useRef(null);
-  const [height, setHeight] = useState(0);
-  const [open, setOpen] = useState(false);
-  useLayoutEffect(() => {
-    if (content.current) {
-      setHeight(content.current.scrollHeight);
-    }
-  }, [open, height, content]);
   return (
     <li>
-      <p onClick={() => setOpen(!open)}>{i.title}</p>
-      <ul ref={content} style={{ height: open ? height : 0 }}>
-        <li dangerouslySetInnerHTML={{ __html: md.render(i.content) }} />
-      </ul>
+      <Img
+        {...image}
+        style={{ height: 80, width: 80 * image.fixed.aspectRatio }}
+      />
+      <h3>{i.title}</h3>
+      <div dangerouslySetInnerHTML={{ __html: md.render(i.content) }} />
     </li>
   );
 };
@@ -407,6 +391,8 @@ export const HireUs = styled(SectionContainer)`
 `;
 
 export const WeAreHiring = styled(SectionContainer)`
+  display: flex;
+  flex-direction: column;
   h1 {
     text-align: center;
     font-weight: 400;
@@ -424,11 +410,7 @@ export const WeAreHiring = styled(SectionContainer)`
     text-decoration: underline;
   }
   > a:last-child {
-    display: block;
-    margin: 32px auto 0 auto;
-    ${media("medium")} {
-      width: 50%;
-    }
+    align-self: center;
   }
 `;
 
@@ -442,15 +424,16 @@ export const HowMuchIsMyApp = styled(SectionContainer)`
     }
   }
   p {
+    display: flex;
+    flex-direction: column;
     color: ${Colors.darkGrey};
     line-height: 1.8em;
   }
   flex-direction: column;
   a {
-    display: block;
-    margin: 32px auto 0 auto;
-    ${media("medium")} {
-      width: 50%;
+    align-self: center;
+    button {
+      margin: 32px auto 0 auto;
     }
   }
 `;

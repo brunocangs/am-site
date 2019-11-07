@@ -21,7 +21,7 @@ import {
 } from "../components/LandingComponents";
 import { Button } from "../components/BlogComponents";
 
-const md = new MdIt();
+const md = new MdIt({ html: true });
 
 export default props => {
   const {
@@ -72,10 +72,10 @@ export default props => {
               <p>{content}</p>
               <div>
                 <Link to="/pt/alguma-pagina">
-                  <Button variant="tertiary">MUDA AQUI</Button>
+                  <Button variant="tertiary">Texto?</Button>
                 </Link>
                 <Link to="/pt/alguma-pagina">
-                  <Button variant="secondary">AQUI TAMBEM</Button>
+                  <Button variant="secondary">Outro texto?</Button>
                 </Link>
               </div>
             </div>
@@ -170,6 +170,18 @@ export default props => {
                 __html: `<h1>Hire Us!</h1>${md.render(hireUs)}`
               }}
             />
+            <WeAreHiring>
+              <div
+                dangerouslySetInnerHTML={{ __html: md.render(weAreHiring) }}
+              />
+              <a
+                href={"https://programador.emjuizdefora.com/"}
+                target={"blank"}
+                rel="noopener noreferrer"
+              >
+                <Button>Register now</Button>
+              </a>
+            </WeAreHiring>
           </>
         ) : (
           <>
@@ -181,12 +193,25 @@ export default props => {
                 ))}
               </ul>
             </Manifest>
+            <WeAreHiring>
+              <div
+                dangerouslySetInnerHTML={{ __html: md.render(weAreHiring) }}
+              />
+              <a
+                href={"https://programador.emjuizdefora.com/"}
+                target={"blank"}
+                rel="noopener noreferrer"
+              >
+                <Button>Cadastrar agora</Button>
+              </a>
+            </WeAreHiring>
             <HowMuchIsMyApp>
               <div>
                 <h1>Quanto custa um aplicativo?</h1>
                 <p>
                   Gostaria de saber rapidamente o preço da sua ideia? Entre em
                   contato com a gente ou faça um teste rápido
+                  <br />
                   <a
                     href="https://quantocustaumapp.appmasters.io/"
                     target="_blank"
@@ -199,16 +224,6 @@ export default props => {
             </HowMuchIsMyApp>
           </>
         )}
-        <WeAreHiring>
-          <div dangerouslySetInnerHTML={{ __html: md.render(weAreHiring) }} />
-          <a
-            href={"https://programador.emjuizdefora.com/"}
-            target={"blank"}
-            rel="noopener noreferrer"
-          >
-            <Button>Cadastrar agora</Button>
-          </a>
-        </WeAreHiring>
       </Content>
     </>
   );
@@ -234,6 +249,14 @@ export const query = graphql`
         content {
           content
           title
+          image {
+            ...SiteImageFixed
+            childImageSharp {
+              fixed {
+                aspectRatio
+              }
+            }
+          }
         }
         title
       }

@@ -26,7 +26,7 @@ export const renderBlogItem = related => ({ node: post }, i) => {
   const image = featuredImage.childImageSharp.fluid;
   return (
     <PostWrapper key={i} related={related}>
-      <Img fluid={{ ...image, aspectRatio: 2.5 }} />
+      <Img fluid={{ ...image, aspectRatio: 3 }} />
       <div>
         <Link to={`/${language}/blog/${fields.slug}`}>
           <h2>{title}</h2>
@@ -74,11 +74,9 @@ const ComponentName = ({ data, pageContext }) => {
             </p>
           )}
           {page * 5 < blogPosts.length && (
-            <div style={{ width: "25%", margin: "30px auto 0 auto" }}>
-              <Button onClick={() => setPage(page + 1)}>
-                {isEn ? "See more" : "Ver mais"}
-              </Button>
-            </div>
+            <Button onClick={() => setPage(page + 1)}>
+              {isEn ? "See more" : "Ver mais"}
+            </Button>
           )}
         </AllBlogContainer>
       </Content>
@@ -95,7 +93,7 @@ export const query = graphql`
           language: { eq: $language }
         }
       }
-      sort: { order: ASC, fields: frontmatter___date }
+      sort: { order: DESC, fields: frontmatter___date }
     ) {
       edges {
         node {

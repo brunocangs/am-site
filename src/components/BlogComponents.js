@@ -77,11 +77,15 @@ const getHoverBorderColor = first => props => {
 };
 
 export const Button = styled.button`
-  width: 100%;
+  width: ${props => (props.fullWidth ? "100%" : "fit-content")};
   position: relative;
-  padding: 18.5px 40px;
-  font-size: 1.2em;
-  font-weight: 300;
+  padding: 10px 20px;
+  font-size: 1em;
+  ${media("medium")} {
+    padding: 14px 40px;
+    font-size: 1.2em;
+  }
+  font-weight: 400;
   color: ${getStartFontColor};
   border-radius: 6px;
   cursor: pointer;
@@ -138,6 +142,9 @@ export const AllBlogContainer = styled(BaseContainer)`
       }
     `
         : ""}
+  }
+  button {
+    margin: 32px auto 0 auto;
   }
   /* Sidebar com search input */
   > div {
@@ -295,7 +302,7 @@ export const Post = styled.div`
 export const PostContent = styled(BaseContainer)`
   flex-direction: column;
   h1 {
-    margin-bottom: 0;
+    margin-bottom: 12px;
   }
   > div {
     :nth-of-type(1) {
@@ -321,10 +328,28 @@ export const PostContent = styled(BaseContainer)`
         }
       }
     }
+    :nth-of-type(2),
+    :nth-of-type(3) {
+      p,
+      ul,
+      ol,
+      li {
+        font-weight: 300;
+        line-height: 1.8em;
+        color: ${Colors.grey};
+        a,
+        strong {
+          font-weight: 400;
+        }
+        a {
+          text-decoration: underline;
+        }
+      }
+    }
     /* Wrapper de autor */
     :nth-of-type(3) {
-      margin-top: 48px;
-      padding-bottom: 48px;
+      margin-top: 34px;
+      padding-bottom: 24px;
       border-bottom: 1px solid #eee;
       display: flex;
       align-items: flex-start;
@@ -337,6 +362,7 @@ export const PostContent = styled(BaseContainer)`
           margin-left: 14px;
           h3,
           p {
+            line-height: 1.4em;
             margin: 0;
           }
         }

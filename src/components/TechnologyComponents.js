@@ -7,19 +7,21 @@ import { Link } from "gatsby";
 export const Content = styled(BaseContainer)`
   padding-top: 32px;
   flex-direction: column;
+  align-items: center;
   > div:first-of-type {
     display: flex;
-    flex: 1;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
   }
 `;
 
 export const TechnologyWrapper = styled(Link)`
-  width: 45%;
+  width: calc(50% - 20px);
+  margin: 10px;
+  text-align: center;
   ${media("medium")} {
-    width: 22%;
+    width: calc(25% - 16px);
+    margin: 8px;
   }
   :hover {
     div > div:first-child {

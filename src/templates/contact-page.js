@@ -146,12 +146,13 @@ export default props => {
                 </label>
               </div>
               <div className="field">
-                <label className="label" htmlFor={"name"}>
+                <label className="label" htmlFor={"name"} hidden>
                   {nameLabel}
                 </label>
                 <div className="control">
                   <input
                     className="input"
+                    placeholder={nameLabel}
                     type={"text"}
                     name={"name"}
                     onChange={handleChange(setName)}
@@ -162,12 +163,13 @@ export default props => {
                 </div>
               </div>
               <div className="field">
-                <label className="label" htmlFor={"email"}>
+                <label className="label" htmlFor={"email"} hidden>
                   Email
                 </label>
                 <div className="control">
                   <input
                     className="input"
+                    placeholder={"Email"}
                     type={"email"}
                     name={"email"}
                     onChange={handleChange(setEmail)}
@@ -178,11 +180,12 @@ export default props => {
                 </div>
               </div>
               <div className="field">
-                <label className="label" htmlFor={"message"}>
+                <label className="label" htmlFor={"message"} hidden>
                   {messageLabel}
                 </label>
                 <div className="control">
                   <textarea
+                    placeholder={messageLabel}
                     className="textarea"
                     name={"message"}
                     onChange={handleChange(setMessage)}

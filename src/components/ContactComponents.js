@@ -20,6 +20,10 @@ export const Contact = styled(BaseContainer)`
       padding: 4px 0;
       input,
       textarea {
+        ::placeholder {
+          font-size: 0.9em;
+          color: ${Colors.lighterGrey};
+        }
         font-size: 1em;
         font-weight: 300;
         transition: border-color 0.2s ease-in-out;

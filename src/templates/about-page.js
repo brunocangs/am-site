@@ -8,10 +8,10 @@ export default ({ data }) => {
   return (
     <>
       <Helmet>
-        <title>{data.page.frontmatter.title}</title>
+        <title>{data.page.frontmatter.title} - App Masters</title>
       </Helmet>
       <div style={{ width: "100%" }}>
-        <Banner title={data.page.frontmatter.title.split("-")[0]} />
+        <Banner title={data.page.frontmatter.title} />
         <AboutContainer dangerouslySetInnerHTML={{ __html: data.page.html }} />
       </div>
     </>

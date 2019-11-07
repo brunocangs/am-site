@@ -15,12 +15,13 @@ export const Content = styled(BaseContainer)`
 `;
 
 export const Service = styled.section`
+  padding-top: 32px;
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   ${media("medium")} {
     flex-direction: row;
     /* Elementos impares, inverte ordem para alternar posição da imagem */
-    :nth-child(2n + 1) {
+    :nth-of-type(2n) {
       flex-direction: row-reverse;
       /* Margin do div de texto, muda pra margin-left quando impar */
       > div:first-child {
@@ -47,6 +48,19 @@ export const Service = styled.section`
     }
     ${media("medium")} {
       margin-right: 26px;
+    }
+    p,
+    ul,
+    li,
+    ol {
+      font-weight: 300;
+      a,
+      strong {
+        font-weight: 400;
+      }
+      a {
+        text-decoration: underline;
+      }
     }
   }
   /* Div da <Img /> */

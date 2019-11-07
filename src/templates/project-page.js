@@ -114,7 +114,7 @@ export const query = graphql`
   fragment SiteImageFluid on File {
     childImageSharp {
       fluid {
-        ...GatsbyImageSharpFluid
+        ...GatsbyImageSharpFluid_noBase64
         originalName
       }
     }

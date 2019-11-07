@@ -38,7 +38,7 @@ export default ({ data, pageContext }) => {
         <title>Tag | {pageContext.tag} - App Masters</title>
       </Helmet>
       <div style={{ width: "100%" }}>
-        <Banner title={pageContext.tag} />
+        <Banner title={`Tag: ${pageContext.tag}`} />
         <Content>
           {blogs.length > 0 && (
             <div>

@@ -22,8 +22,7 @@ export default ({
       <Helmet title={`${title} - App Masters`} defer={false} />
       <Banner title={title} />
       <Content>
-        <h1>{isEn ? "Our services" : "Nossos serviços"}</h1>
-        {new Array(5).fill(services.slice(0, 1)[0]).map((service, i) => {
+        {services.map((service, i) => {
           const image = service.image.childImageSharp.fluid;
           return (
             <Service key={i} image={image}>
@@ -40,7 +39,7 @@ export default ({
             </Service>
           );
         })}
-        <h1>{isEn ? "The tech we use" : "As tecnologias que usamos"}</h1>
+        <h2>{isEn ? "The tech we use" : "O que nós dominamos"}</h2>
         <div>{technolgies.map(renderTechnologyItem)}</div>
       </Content>
     </div>
