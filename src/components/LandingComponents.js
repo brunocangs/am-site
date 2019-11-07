@@ -432,8 +432,6 @@ export const HowMuchIsMyApp = styled(SectionContainer)`
   flex-direction: column;
   a {
     align-self: center;
-    button {
-      margin: 32px auto 0 auto;
-    }
+    margin: 32px auto 0 auto;
   }
 `;

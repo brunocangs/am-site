@@ -206,21 +206,14 @@ export default props => {
               </a>
             </WeAreHiring>
             <HowMuchIsMyApp>
-              <div>
-                <h1>Quanto custa um aplicativo?</h1>
-                <p>
-                  Gostaria de saber rapidamente o preço da sua ideia? Entre em
-                  contato com a gente ou faça um teste rápido
-                  <br />
-                  <a
-                    href="https://quantocustaumapp.appmasters.io/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Button>Fazer uma simulação</Button>
-                  </a>
-                </p>
-              </div>
+              <div dangerouslySetInnerHTML={{ __html: md.render(hireUs) }} />
+              <a
+                href="https://quantocustaumapp.appmasters.io/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button>Fazer uma simulação</Button>
+              </a>
             </HowMuchIsMyApp>
           </>
         )}
