@@ -9,8 +9,9 @@ description: >-
   Este post tem por objetivo servir de arquivo de alguns posts do nosso antigo
   site, e referência para interessados em saber que tipo de projetos gostávamos
   de pedir em nossos processos de seleção.
+published: true
 featuredPost: true
-published: /img/mockup_01.jpg
+featuredImage: /img/mockup_01.jpg
 tags:
   - Selecao
   - React
