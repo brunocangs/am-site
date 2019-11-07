@@ -44,7 +44,7 @@ manifest:
       title: Novas tecnologias
   title: Convertemos nossos objetivos em um manifesto!
 hireUs: >-
-  ## Quer nos contratar?
+  # Quer nos contratar?
 
 
   Se você é uma empresa interessada em nos contratar para o desenvolvimento de
