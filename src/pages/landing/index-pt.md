@@ -43,7 +43,12 @@ manifest:
       image: /img/feature_icon_3.png
       title: Novas tecnologias
   title: Convertemos nossos objetivos em um manifesto!
-hireUs: unset
+hireUs: >-
+  ## Quer nos contratar?
+
+
+  Se você é uma empresa interessada em nos contratar para o desenvolvimento de
+  uma solução utilize nossa ferramenta de simulação de investimento.
 weAreHiring: >-
   # Trabalhe conosco!
 
