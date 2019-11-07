@@ -78,10 +78,10 @@ collections:
           name: "featuredPost",
           widget: "boolean",
         }
-      - { label: "Publicado (draft)", name: "featuredPost", widget: "boolean" }
+      - { label: "Publicado (draft)", name: "published", widget: "boolean" }
       - {
           label: "Imagem",
-          name: "published",
+          name: "featuredImage",
           widget: image,
           hint: "Imagem de banner (2.5:1)",
         }

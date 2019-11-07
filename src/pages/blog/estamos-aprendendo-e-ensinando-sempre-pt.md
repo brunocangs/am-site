@@ -10,7 +10,8 @@ description: >-
   nisso. Neste nosso meio aprender constantemente é a diferença entre ser um
   grande profissional ou só mais um na multidão.
 featuredPost: true
-published: /img/about_img_1.png
+published: true
+featureImage: /img/about_img_1.png
 tags:
   - Treinamento
   - React
