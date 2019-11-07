@@ -178,7 +178,7 @@ Documentar em inglês
 
 O componente deve receber atributos e lidar com ao menos um estado. Exemplo:
 
-```
+```javascript
 <MeuCompenente ativo={true} valorInicial={1}/>
 ```
 
