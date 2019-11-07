@@ -11,7 +11,7 @@ description: >-
   escrevemos estes post para falar um pouco sobre nossa experiência com algumas
   destas tecnologias.
 featuredPost: true
-featuredImage: /img/about_img.png
+featuredImage: /img/bg-banner-small.jpg
 tags:
   - tecnologias
   - projetos
