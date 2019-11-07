@@ -42,11 +42,6 @@ manifest:
         nossos projetos
       image: /img/feature_icon_3.png
       title: Novas tecnologias
-    - content: >-
-        Betas semanais até a conclusão do projeto Betas semanais até a conclusão
-        do projeto Betas semanais até a conclusão do projeto
-      image: /img/react.png
-      title: Betas semanais até a conclusão do projeto
   title: Convertemos nossos objetivos em um manifesto!
 hireUs: unset
 weAreHiring: >-
