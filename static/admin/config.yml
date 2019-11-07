@@ -151,7 +151,7 @@ collections:
               - label: "Conteúdo"
                 name: "content"
                 widget: "markdown"
-      - label: "Nos contrate (en)"
+      - label: "Nos contrate"
         name: "hireUs"
         widget: "markdown"
       - label: "Estamos contratando"
