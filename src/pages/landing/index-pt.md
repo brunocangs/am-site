@@ -29,19 +29,23 @@ manifest:
     - content: >-
         Muito mais do que apenas clientes e projetos, buscamos desenvolver
         projetos dos quais podemos nos orgulhar
+      image: /img/feature_icon_1.png
       title: Queremos cases de sucesso!
     - content: >-
         Queremos trabalhar com clientes alinhados com nosso mindset, que tenham
         skill técnico e entendam o valor do que fazemos
+      image: /img/feature_icon_2.png
       title: Clientes bons
     - content: >-
         Usamos as tecnologias que gostamos e nas quais acreditamos,
         experimentamos o que há de novo e incorporamos o que funciona bem ao
         nossos projetos
+      image: /img/feature_icon_3.png
       title: Novas tecnologias
     - content: >-
         Betas semanais até a conclusão do projeto Betas semanais até a conclusão
         do projeto Betas semanais até a conclusão do projeto
+      image: /img/react.png
       title: Betas semanais até a conclusão do projeto
   title: Convertemos nossos objetivos em um manifesto!
 hireUs: unset
