@@ -11,7 +11,7 @@ description: >-
   escrevemos estes post para falar um pouco sobre nossa experiência com algumas
   destas tecnologias.
 featuredPost: true
-featuredImage: /img/bg-banner-small.jpg
+published: /img/img_3244.jpg
 tags:
   - tecnologias
   - projetos
@@ -145,4 +145,20 @@ Optei por utilizar o Lumen (uma simplificação do Laravel) por ser mais rápido
 O Lumen, bem como o PHP, são uma boa opção para quem é do mundo PHP, mas em função da nossa relação estreita com o stack JavaScript, optamos por não usar em futuros projetos.
 
 
+### Jest
 
+Muitos programadores resistem as metodologias que envolvam testes unitários... e eu entendo o porque, também nunca fui muito fã, no passado.
+
+Em um grande projeto vimos que os testes ajudariam a manter tudo funcionando, mesmo depois de uma grande mudança. Facilitaria conferir cada pequena parte do sistema, testar se as grandes partes estão funcionando como esperado, e se tudo junto ainda se mantem integro. Eo resultado é que não queremos parar de usar testes nunca mais.
+
+O jest tem sido uma biblioteca adequada pra isso, integrada ao nosso stack, fácil de lidar e usar.
+
+### Postman
+
+Quem desenvolve APIs precisa mesmo usar alguma ferramenta como o Postman, não tem como evoluir sem isso. Eu já usava antes da App Masters, e usamos em todos os projetos que envolveram API até então. 
+
+O Postman permite criar coleções com as requisições, realizar testes em cada chamada para confirmar que o retorno é o esperado, além de permitir também exportar as coleções e executar os mesmos testes em linhas de comando. É uma ferramenta realmente essencial.
+
+### Storybook
+
+Projetos react podem facilmente chegar a ter dezenas ou até centenas de componentes. Ter ciência de cada componente, poder realmente vê-lo em funcionamento sem precisar usar o sistema (ir até aquela tela lá no final do wizard pra ver o tal popup modal) e ainda servir como documentação, isso é basicamente o que o storybook faz.
