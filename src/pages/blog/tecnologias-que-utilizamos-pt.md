@@ -10,8 +10,9 @@ description: >-
   tecnologias. Com algumas tivemos mais sucesso, com outras menos. Por isso
   escrevemos estes post para falar um pouco sobre nossa experiência com algumas
   destas tecnologias.
+published: true
 featuredPost: true
-published: /img/img_3244.jpg
+featuredImage: /img/img_3244.jpg
 tags:
   - tecnologias
   - projetos
