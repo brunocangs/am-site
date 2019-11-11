@@ -9,8 +9,8 @@ description: >-
   Este post tem por objetivo servir de arquivo de alguns posts do nosso antigo
   site, e referência para interessados em saber que tipo de projetos gostávamos
   de pedir em nossos processos de seleção.
+featuredPost: false
 published: true
-featuredPost: true
 featuredImage: /img/mockup_01.jpg
 tags:
   - Selecao
@@ -62,8 +62,6 @@ Para os desafios desta segunda etapa você só poderá usar ES6 JavaScript, e n�
 * O quarto desafio “Erros e promessas” é opcional, faça se quiser, mas saiba que ao faze-lo estará certamente entre os primeiros do processo de seleção.
 * Concluindo esta etapa e ficando entre os sete primeiros colocados, você ganhará uma super caneca. Nas demais posições ganhará dois adesivos.
 
-
-
 ## Tudo sobre star wars
 
 É uma aplicação web, web app ou mobile nativo, que deve ser desenvolvido usando React ou React Native. Em caso de duvida sinta-se a vontade para enviar perguntas no canal #react no slack DevJF. A aplicação deve permitir ao usuário conhecer mais sobre o Star Wars, seus filmes, personagens, planetas e tudo mais! A base de informações deve ser a [SWAPI](http://swapi.co/) que fornece todo dado necessário.
@@ -87,8 +85,6 @@ Seguem os requisitos:
 3. Dizer no repositório o que você usou de componente e tecnologia no projeto, e porque usou;
 4. Publicar o código em repositório público, com documentação em inglês.
 
-
-
 ## Projeto Laravel simples
 
 Precisamos de estudantes que tenham interesse em aprender programação, sempre. Por isso nosso processo começa com um projeto simples a ser desenvolvido usando Laravel e bootstrap. Em caso de duvida sinta-se a vontade para enviar perguntas no canal #php no slack DevJF. Seguem os requisitos:
@@ -107,8 +103,6 @@ Precisamos de estudantes que tenham interesse em aprender programação, sempre.
 2. Publicar o código em repositório público, com documentação em inglês;
 3. Publicar o projeto em produção usando o heroku
 4. Envie o projeto e aguarde o retorno da App Masters. Caso seu projeto seja aprovado, siga para a segunda parte.
-
-
 
 ## Projeto Laravel, segunda parte
 
@@ -129,8 +123,6 @@ https://swapi.co/documentation#people
 2. Permita que a rota de people aceite o parametro order (exemplo /api/people/?order=height), onde order será o nome de uma coluna pelo qual o dado deverá ser ordenado no retorno;
 3. Permita que a rota de people aceite o parametro q (exemplo /api/people/?q=luke), onde serão retornados apenas registros que tenham “luke” em um dos campos de texto.
 
-
-
 ## Seu Spotify
 
 É um web app que deve ser desenvolvido usando React e que permite ao usuário pesquisar por artistas no Spotify, ver seus discos e as músicas de cada álbum. Mas não será o Spotify… dê o nome que você quiser, porque o app é seu! Se fosse meu seria Tiagofy!
@@ -148,8 +140,6 @@ Toda informação sobre a API e você encontra no site para [desenvolvedores do 
 * Não preocupe em fazer uma interface bonita, não é o que validaremos. Queremos ver é funcionando.
 * Se quiser enviar perguntas use o canal #react no slack DevJf.
 
-
-
 ## Criar projeto usando Firebase realtime database
 
 Criar interface simples que permita incluir objetos em uma lista (ao menos 3 dados por objeto). Permitir excluir cada um dos itens.
@@ -162,18 +152,13 @@ Criar interface simples que permita incluir objetos em uma lista (ao menos 3 dad
 * Criar um repositório para o código com readme bem escrito
 * Documentar em inglês
 
-
-
 ## Obter previsão do tempo com React Native
 
 Criar um app pra Android ou iOS que a partir da localização do usuário (ou informando o CEP) obtém a previsão do tempo para hoje e talvez os próximos dias, e exibe em interface bem amigável.
 
-Pontos extras:
-
-Criar um repositório para o código com readme bem escrito
+**Pontos extras:**
+* Criar um repositório para o código com readme bem escrito
 Documentar em inglês
-
-
 
 ## Criar um component React e gerar um pacote NPM para instalação
 
@@ -195,8 +180,6 @@ Se precisar de ajuda pra criar o projeto base do react, uma opção pode ser usa
 * Criar um repositório para o código com readme bem escrito
 * Documentar em inglês
 
-
-
 ## Obter a localização do usuário e exibir na interface detalhes sobre isso
 
 Utilizando javascript obter a localização do visitante, e exibir na interface o endereço completo de onde ele estiver.
@@ -209,8 +192,6 @@ Em JF, dependendo da conexão, a localização pode “cair” em BH, mas, ignor
 * Calcular a distância deste ponto até a App Masters (-21.7725621,-43.3469667)
 * Criar um repositório para o código com readme bem escrito
 * Documentar em inglês
-
-
 
 ## Criar uma interface usando Material Design Lite
 
