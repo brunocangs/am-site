@@ -9,7 +9,8 @@ description: >-
   Contratar programadores para então aceitar clientes, ao invés de negociar com
   cliente e então buscar programadores. Esta inversão de ordem nos ajuda a
   manter sempre uma equipe consistente.
-featuredPost: true
+featuredPost: false
+published: true
 featuredImage: /img/bg-banner-small.jpg
 tags:
   - Oportunidade
@@ -24,16 +25,22 @@ Muitos desenvolvedores ficam constantemente procurando novas oportunidades, mesm
 
 ## Alta demanda de clientes
 
-Empresas que oferecem um serviço de alta qualidade, têm mais demanda por projetos do que conseguem efetivamente atender. Neste sentido a possibilidade de ir aumentando a equipe aos poucos, trazendo sempre desenvolvedores motivados a crescer, é uma boa estratégia, é o que estamos buscando atualmente.
+Empresas que oferecem um serviço de qualidade, têm mais demanda por projetos do que conseguem efetivamente atender. Neste sentido a possibilidade de ir aumentando a equipe aos poucos, trazendo sempre desenvolvedores motivados a crescer, é uma boa estratégia, é o que estamos buscando atualmente.
 
 Contratar programadores, para então aceitar clientes, ao invés de negociar com cliente e então buscar programadores.
 
 ## Giro de mão obra
 
-Quando um desenvolvedor que trabalha conosco decide ir para outra empresa, ficamos inicialmente tristes porque queremos aquela pessoa conosco, mas por outro lado ficamos felizes porque de alguma forma ele vê uma oportunidade de crescimento.
+Quando um desenvolvedor que trabalha conosco decide ir para outra empresa, ficamos inicialmente tristes porque queremos aquela pessoa conosco, mas por outro lado ficamos felizes porque de alguma forma ele vê uma oportunidade de crescimento, e isso faz parte da sua própria evolução.
 
 Da mesma forma outros devs nos procuram, querendo ganhar mais, aprender mais, aproveitar mais o tempo no trabalho, nos tornando então uma boa oportunidade também.
 
 Que devs irão entrar, trabalhar, e depois de um tempo partir para outras empresas, é certo. É assim que o mercado funciona e não há nada de errado nisso. 
 
-Estando sempre abertos para conhecer gente nova mantemos nossa energia sempre em alta.
+## Energia nova
+
+Estando sempre abertos para conhecer gente nova e desta forma mantemos nossa energia sempre em alta. 
+
+Quando um desenvolvedor nos procura buscando uma oportunidade, é uma grande chance também que temos de trazer alguém cheio de energia para o time.
+
+E se você estiver interessado em trabalhar conosco, siga nos conhecendo aqui pelo nosso site e depois se cadastre no Programadores em Juiz de Fora.
