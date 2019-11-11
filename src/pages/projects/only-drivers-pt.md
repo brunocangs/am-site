@@ -2,6 +2,8 @@
 templateKey: project-page
 baseUrl: projetos
 featured: false
+type: main
+date: 2019-11-05T11:59:23.054Z
 language: pt
 title: Only Drivers
 technology:
