@@ -91,6 +91,8 @@ Nós gostamos mesmo do React, não tem mais jeito. Atualmente a comunidade React
 
 Quando falamos em React, falamos em Redux, Saga, Styled Components, hooks e tantas outros conceitos que usamos no dia a dia.
 
+Sobre o Styled Componentes, para o Matheus Assis "a vantagem de modificar o css com condições baseadas em propriedades que você dá para os componentes é um dos pontos mais fortes, aliado a simplicidade de criar componentes padrão do html já setando o css deles, tornando mais fácil manter sua própria lib de componentes visuais para o design."
+
 O React nos dá produtividade, nos permite fazer um código limpo, fácil de implementar e compreender.
 
 ### React Native
