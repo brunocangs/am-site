@@ -2,6 +2,8 @@
 templateKey: project-page
 baseUrl: projects
 featured: true
+type: main
+date: 2019-11-09T11:59:39.893Z
 whereToFind:
   - image: /img/apple_store.png
     link: >-
