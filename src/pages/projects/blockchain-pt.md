@@ -2,6 +2,8 @@
 templateKey: project-page
 baseUrl: projetos
 featured: false
+type: main
+date: 2019-11-05T12:00:18.188Z
 language: pt
 title: Blockchain
 technology:
