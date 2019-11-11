@@ -19,8 +19,26 @@ services:
       o cliente diz quais habilidades necessita e quantas horas deseja alocar.
     image: /img/img_3244.jpg
     tags:
-      - React
-      - PWA
+      - Desenvolvimento
+      - customizado
     title: Desenvolvimento de sistemas web e mobile
+  - description: >-
+      Oferecemos treinamentos das tecnologias com as quais trabalhamos e nas
+      quais acreditamos, tanto para interessados em aprender mais e crescer
+      profissionalmente quanto para empresas.
+
+
+      Os treinamentos presenciais podem acontecer em nosso escritório, onde
+      temos toda a estrutura necessárias a realização dos mesmos.
+
+
+      Treinamentos online podem acontecer em português ou inglês e vão de acordo
+      com a demanda de nossos clientes.
+    image: /img/img_0331.jpg
+    tags:
+      - Treinamentos
+      - cursos
+      - tecnologias
+    title: Treinamentos para pessoas e empresas
 ---
 
