@@ -2,6 +2,8 @@
 templateKey: project-page
 baseUrl: projetos
 featured: false
+type: main
+date: 2019-11-03T11:59:48.861Z
 language: pt
 title: Fibratech Expert
 technology:
