@@ -2,6 +2,8 @@
 templateKey: project-page
 baseUrl: projetos
 featured: false
+type: sideproject
+date: 2019-11-04T11:35:18.847Z
 language: pt
 title: Good Burger
 technology:
