@@ -8,7 +8,8 @@ author: Tiago Gouvea
 description: >-
   Contratar programadores para então aceitar clientes, ao invés de negociar com
   cliente e então buscar programadores. Esta inversão de ordem nos ajuda a
-  manter sempre uma equipe consistente.
+  manter sempre uma equipe consistente. Estamos sempre aceitando novos
+  programadores para o nosso time.
 featuredPost: false
 published: true
 featuredImage: /img/bg-banner-small.jpg
@@ -43,4 +44,6 @@ Estando sempre abertos para conhecer gente nova e desta forma mantemos nossa ene
 
 Quando um desenvolvedor nos procura buscando uma oportunidade, é uma grande chance também que temos de trazer alguém cheio de energia para o time.
 
-E se você estiver interessado em trabalhar conosco, siga nos conhecendo aqui pelo nosso site e depois se cadastre no Programadores em Juiz de Fora.
+## Quer participar?
+
+E se você estiver interessado em trabalhar conosco, siga nos conhecendo aqui pelo nosso site, leia sobre nossos processos de seleção, tecnologias que usamos e depois se cadastre no Programadores em Juiz de Fora.
