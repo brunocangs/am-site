@@ -9,7 +9,7 @@ description: >-
   Desde o princípio tínhamos o objetivo de buscar clientes de fora do Brasil,
   mas sabíamos que precisaríamos aprender muito para chegar a este ponto
 featuredPost: false
-published: false
+published: true
 featuredImage: /img/lowcarb_mockup.png
 tags:
   - Internacionalizacao
