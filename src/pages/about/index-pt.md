@@ -16,4 +16,4 @@ Para os clientes, trabalharemos desenvolvendo aplicações web e mobile usando a
 
 ### Desenvolvedores
 
-Para os desenvolvedores, buscamos ser a melhor opção de trabalho para aprender, ensinar, crescer e se divertir, enquanto atendemos as demandas dos clientes. Queremos ter um time com alta motivação, interesse e capacidade para resolver problemas.
+Para os desenvolvedores, buscamos ser a melhor opção de trabalho para aprender, ensinar, crescer e se divertir, enquanto atendemos as demandas dos clientes. E isso não é coisa da "missão" nem frase de impacto pra atrair colaboradores. Queremos ter sempre um time com alta motivação, capacidade e interesse em resolver problemas.
