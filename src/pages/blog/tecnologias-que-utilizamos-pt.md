@@ -10,8 +10,8 @@ description: >-
   tecnologias. Com algumas tivemos mais sucesso, com outras menos. Por isso
   escrevemos estes post para falar um pouco sobre nossa experiência com algumas
   destas tecnologias.
-published: true
 featuredPost: true
+published: true
 featuredImage: /img/img_3244.jpg
 tags:
   - tecnologias
@@ -47,7 +47,9 @@ Não começamos nenhum novo projeto com Mongo depois disso.
 
 ### Next.JS
 
-Em dois grandes projetos utilizamos o Next.JS e tem sido
+Em dois grandes projetos utilizamos o Next.JS e tem sido muito bom. 
+
+Segundo o João Baraky, "O Next.JS tem sido muito usado porque permite você utilizar o React mantendo o foco em SEO, porque tudo é feito com server-side rendering, então os componentes se tornam HTML diretamente no servidor".
 
 ### Gatsby JS
 
@@ -162,4 +164,4 @@ O Postman permite criar coleções com as requisições, realizar testes em cada
 
 ### Storybook
 
-Projetos react podem facilmente chegar a ter dezenas ou até centenas de componentes. Ter ciência de cada componente, poder realmente vê-lo em funcionamento sem precisar usar o sistema (ir até aquela tela lá no final do wizard pra ver o tal popup modal) e ainda servir como documentação, isso é basicamente o que o storybook faz.
+Projetos React podem facilmente chegar a ter dezenas ou até centenas de componentes. Ter ciência de cada componente, poder realmente vê-lo em funcionamento sem precisar usar o sistema (ir até aquela tela lá no final do wizard pra ver o tal popup modal) e ainda servir como documentação, isso é basicamente o que o storybook faz.
