@@ -7,7 +7,8 @@ date: 2019-10-23T13:58:42.402Z
 author: Tiago Gouvea
 description: >-
   Desde o princípio tínhamos o objetivo de buscar clientes de fora do Brasil,
-  mas sabíamos que precisaríamos aprender muito para chegar a este ponto
+  mas sabíamos que não seria fácil e que precisaríamos aprender muito para
+  chegar a este ponto.
 featuredPost: false
 published: true
 featuredImage: /img/lowcarb_mockup.png
