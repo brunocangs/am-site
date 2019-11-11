@@ -11,7 +11,7 @@ description: >-
   o time, bem como ter pessoas alinhadas com nossa cultura e nosso "jeito" de
   ser.
 featuredPost: false
-published: false
+published: true
 featuredImage: /img/bg-banner-small.jpg
 tags:
   - Selecao
