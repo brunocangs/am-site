@@ -2,6 +2,8 @@
 templateKey: project-page
 baseUrl: projetos
 featured: false
+type: main
+date: 2019-11-05T11:59:14.353Z
 language: pt
 title: UFJF - Eis a questão!
 technology:
