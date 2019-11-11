@@ -3,7 +3,7 @@ templateKey: blog-post
 title: Tecnologias que utilizamos
 language: pt
 baseUrl: blog
-date: 2019-11-06T13:27:20.813Z
+date: 2019-11-11T13:27:20.813Z
 author: Tiago Gouvea
 description: >-
   Ao longo de dois anos e meio conseguimos trabalhar com uma boa variedade de
@@ -14,12 +14,13 @@ featuredPost: true
 published: true
 featuredImage: /img/img_3244.jpg
 tags:
-  - tecnologias
-  - projetos
-  - stack
+  - Tecnologias
+  - Projetos
+  - Stack
   - JavaScript
   - React
   - React Native
+  - TypeScript
 ---
 Começamos a App Masters em 1º de abril de 2017 (é verdade) e logo quando tínhamos a primeira equipe já selecionada, fizemos uma reunião para decidir quais tecnologias usaríamos.
 
@@ -159,6 +160,12 @@ E o resultado é que não queremos parar de usar testes nunca mais.
 
 O jest tem sido uma biblioteca adequada, integrada ao nosso stack, fácil de lidar e usar.
 
+### TypeScript
+
+Por uma ou duas vezes cogitamos adotar o TypeScript, mas não foi unanime na empresa. Em 2019 decidimos por começar efetivamente, até mesmo porque a comunidade React também tem abraçado o TS.
+
+"O básico do TypeScript é a tipagem dos elementos, que te ajuda a manter uma codebase mais segura contra possíveis erros. Além disso, a facilidade de identificação de referências (quem ta chamando o quê, qual componente tá chamando qual propriedade) ajuda tanto no auto complete, acelerando o trabalho mas também em momentos de refactor. Tanto para a IDE conseguir encontrar quais propriedades refatorar, quanto ao programador, pois ele sabe que se algo estiver errado (alguma propriedade foi deixada para trás por exemplo), o TypeScript vai demonstrar como erro.", é o que o Matheus Assis diz.
+
 ### Postman
 
 Quem desenvolve APIs precisa mesmo usar alguma ferramenta como o Postman, não tem como evoluir sem isso. Eu já usava antes da App Masters, e usamos em todos os projetos que envolveram API até então. 
@@ -168,3 +175,7 @@ O Postman permite criar coleções com as requisições, realizar testes em cada
 ### Storybook
 
 Projetos React podem facilmente chegar a ter dezenas ou até centenas de componentes. Ter ciência de cada componente, poder realmente vê-lo em funcionamento sem precisar usar o sistema (ir até aquela tela lá no final do wizard pra ver o tal popup modal) e ainda servir como documentação, isso é basicamente o que o storybook faz.
+
+. . .
+
+Espero que este post tenha te inspirado a experimentar mais tecnologias, e também compartilhar o que aprendeu com cada uma delas. E siga ligado no nosso blog para acompanhar alguma novidadade que postarmos por aqui.
