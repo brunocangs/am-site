@@ -3,7 +3,7 @@ templateKey: technology-page
 baseUrl: tecnologias
 language: pt
 title: Tecnologia | Firebase
-logo: /img/firebase-logo.jpg
+logo: /img/firebase-logo.png
 featured: false
 summary: >-
   O Firebase é uma solução do Google que oferece uma grande variedade de
