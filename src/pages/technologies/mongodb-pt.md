@@ -2,7 +2,7 @@
 templateKey: technology-page
 baseUrl: tecnologias
 language: pt
-title: Tecnologias | MongoDB
+title: PT | MongoDB
 logo: /img/mongo-db-logo.png
 featured: false
 summary: >-
