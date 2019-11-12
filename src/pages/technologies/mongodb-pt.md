@@ -3,8 +3,7 @@ templateKey: technology-page
 baseUrl: tecnologias
 language: pt
 title: Tecnologias | MongoDB
-logo: /img/mongodb_logostacked_fullcolorblack_rgb.png
-bgColor: '#6AD381'
+logo: /img/mongo-db-logo.png
 featured: false
 summary: >-
   MongoDB is a general purpose, document-based, distributed database built for
@@ -15,12 +14,10 @@ tags:
   - NoSQL
   - Data
 ---
-# About
+O MongoDB é um banco de dados orientados a documentos voltado para o armazenamento de informações com estrutura JSON.
 
-MongoDB is a document database, which means it stores data in JSON-like documents. We believe this is the most natural way to think about data, and is much more expressive and powerful than the traditional row/column model.
+O Mongo ganhou visibilidade em um momento onde as alternativas ao tradicional SQL eram buscadas, e cresceu com a adoção por grandes empresas e produtos.
 
-# Rich JSON Documents
+Do lado da programação ele torna mais simples o armazenamento de dados nos mais diversos formatos e otimiza o acesso a informações já processadas previamente.
 
-- The most natural and productive way to work with data.
-- Supports arrays and nested objects as values.
-- Allows for flexible and dynamic schemas.
+Ele não precisa necessariamente substituir o SQL, mas talvez, trabalhar em colaboração para resultar em um produto de alta performance.
