@@ -72,10 +72,10 @@ export default props => {
               <p>{content}</p>
               <div>
                 <Link to="/pt/alguma-pagina">
-                  <Button variant="tertiary">Texto?</Button>
+                  <Button variant="secondary">Texto?</Button>
                 </Link>
                 <Link to="/pt/alguma-pagina">
-                  <Button variant="secondary">Outro texto?</Button>
+                  <Button variant="tertiary">Outro texto?</Button>
                 </Link>
               </div>
             </div>
@@ -92,7 +92,7 @@ export default props => {
           <>
             <Projects>
               <div>
-                <h1>Our projects</h1>
+                <h2>Our projects</h2>
                 <p>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Aliquid deleniti rem qui, fugiat sunt nisi.
@@ -137,7 +137,7 @@ export default props => {
               </ul>
             </Projects>
             <Manifest>
-              <h1>{manifest.title}</h1>
+              <h2>{manifest.title}</h2>
               <ul>
                 {manifest.content.map((content, i) => (
                   <ManifestItem key={i} content={content} md={md} />
@@ -150,7 +150,7 @@ export default props => {
                 <li>{testimonies.slice(1, 3).map(renderTestimony)}</li>
               </ul>
               <div>
-                <h1>Testimonies</h1>
+                <h2>Testimonies</h2>
                 <p>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
                   minima sapiente ratione. Culpa asperiores aliquam dolor,
@@ -167,7 +167,7 @@ export default props => {
             </Testimonies>
             <HireUs
               dangerouslySetInnerHTML={{
-                __html: `<h1>Hire Us!</h1>${md.render(hireUs)}`
+                __html: `<h2>Hire Us!</h2>${md.render(hireUs)}`
               }}
             />
             <WeAreHiring>
@@ -186,25 +186,32 @@ export default props => {
         ) : (
           <>
             <Manifest>
-              <h1>{manifest.title}</h1>
+              <h2>{manifest.title}</h2>
               <ul>
-                {manifest.content.map(content => (
-                  <ManifestItem content={content} md={md} />
+                {manifest.content.map((content, i) => (
+                  <ManifestItem key={i} content={content} md={md} />
                 ))}
               </ul>
             </Manifest>
-            <WeAreHiring>
+            <HireUs style={{ marginTop: 64 }}>
               <div
-                dangerouslySetInnerHTML={{ __html: md.render(weAreHiring) }}
+                dangerouslySetInnerHTML={{
+                  __html: md.render(weAreHiring)
+                }}
               />
-              <a
-                href={"https://programador.emjuizdefora.com/"}
-                target={"blank"}
-                rel="noopener noreferrer"
-              >
-                <Button>Cadastrar agora</Button>
-              </a>
-            </WeAreHiring>
+              <div>
+                <a
+                  href={"https://programador.emjuizdefora.com/"}
+                  target={"blank"}
+                  rel="noopener noreferrer"
+                >
+                  <Button variant={"secondary"}>Cadastrar agora</Button>
+                </a>
+                <Link to="/pt/blog/o-post-de-contratar-gentes">
+                  <Button variant={"tertiary"}>Saber mais</Button>
+                </Link>
+              </div>
+            </HireUs>
             <HowMuchIsMyApp>
               <div dangerouslySetInnerHTML={{ __html: md.render(hireUs) }} />
               <a

@@ -151,6 +151,7 @@ export const query = graphql`
       thumbnailImage {
         ...SiteImageFluid
       }
+      type
       technology
       tags
     }

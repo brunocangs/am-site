@@ -297,6 +297,9 @@ export const Post = styled.div`
   display: flex;
   flex-direction: column;
   padding-bottom: 60px;
+  > div:first-of-type {
+    max-height: 650px;
+  }
 `;
 
 export const PostContent = styled(BaseContainer)`
@@ -343,6 +346,17 @@ export const PostContent = styled(BaseContainer)`
         }
         a {
           text-decoration: underline;
+        }
+      }
+      .gatsby-resp-image-wrapper {
+        max-height: 350px;
+        max-width: 75% !important;
+        margin: 10px;
+        overflow: hidden;
+        img {
+          object-fit: contain;
+          width: 100%;
+          height: 100%;
         }
       }
     }

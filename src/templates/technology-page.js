@@ -8,7 +8,7 @@ export default props => {
   const { data } = props;
   const { html, frontmatter } = data.technology;
   const { title, logo } = frontmatter;
-  const image = logo.childImageSharp.fixed;
+  const image = logo.childImageSharp;
   return (
     <>
       <Helmet>
@@ -18,7 +18,7 @@ export default props => {
         <div>
           <div>
             <h1>{title.split(" |")[1]}</h1>
-            <Img fixed={image} />
+            <Img {...image} />
           </div>
         </div>
         <div dangerouslySetInnerHTML={{ __html: html }} />
@@ -39,9 +39,13 @@ export const query = graphql`
       bgColor
       title
       logo {
-        ...SiteImageFluid
         childImageSharp {
-          fixed(width: 80, height: 80) {
+          fixed(
+            height: 70
+            width: 70
+            fit: CONTAIN
+            background: "transparent"
+          ) {
             ...GatsbyImageSharpFixed
           }
         }

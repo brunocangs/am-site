@@ -16,6 +16,7 @@ exports.createPages = ({ actions, graphql }) => {
               slug
             }
             frontmatter {
+              title
               tags
               templateKey
               baseUrl
@@ -57,7 +58,8 @@ exports.createPages = ({ actions, graphql }) => {
         context: {
           id,
           language: edge.node.frontmatter.language,
-          tags: edge.node.frontmatter.tags
+          tags: edge.node.frontmatter.tags,
+          title: edge.node.frontmatter.title || ""
         }
       });
     });

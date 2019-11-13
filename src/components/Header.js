@@ -242,7 +242,8 @@ const shouldBeTransparent = location => {
 
 export default function Header(props) {
   const [open, setOpen] = useState(false);
-  const { language } = props;
+  let { language } = props.pageContext;
+  language = language || "pt";
   const navLinks = getLinks(language);
   const scroll = useWindowScroll();
   const isTransparent = shouldBeTransparent(props.location);
@@ -307,6 +308,7 @@ const BannerWrapper = styled.div`
     min-height: 300px;
   }
   h1 {
+    text-align: center;
     color: #fff;
     position: absolute;
     margin: 0;

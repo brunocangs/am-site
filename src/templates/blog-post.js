@@ -97,7 +97,12 @@ export const query = graphql`
       }
     }
   }
-  query BlogPostQuery($id: String!, $language: String!, $tags: [String]!) {
+  query BlogPostQuery(
+    $id: String!
+    $language: String!
+    $tags: [String]!
+    $title: String!
+  ) {
     post: markdownRemark(id: { eq: $id }) {
       ...BlogPost
     }
@@ -129,9 +134,10 @@ export const query = graphql`
           tags: { in: $tags }
           language: { eq: $language }
           templateKey: { eq: "blog-post" }
+          title: { ne: $title }
         }
       }
-      sort: { order: ASC, fields: frontmatter___date }
+      sort: { order: DESC, fields: frontmatter___date }
       limit: 3
     ) {
       edges {

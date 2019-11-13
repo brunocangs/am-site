@@ -1,4 +1,4 @@
-module.exports = {
+const cfg = {
   siteMetadata: {
     title: "Gatsby + Netlify CMS Starter",
     siteUrl: "https://appmasters.io",
@@ -79,6 +79,26 @@ module.exports = {
     }, // must be after other CSS plugins
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-styled-components`,
+    `gatsby-plugin-robots-txt`,
     "gatsby-plugin-netlify" // make sure to keep it last in the array
   ]
 };
+
+if (process.env.NODE_ENV !== "development") {
+  const path = require("path");
+  require("dotenv").config({
+    path: path.resolve(__dirname, `.env.${process.env.NODE_ENV}`)
+  });
+  const googleAnalyticsCfg = {
+    resolve: "gatsby-plugin-google-analytics",
+    options: {
+      trackingId: process.env.GATSBY_GOOGLE_ANALYTICS_ID, // <- your tracking ID
+      head: false,
+      anonymize: true,
+      respectDNT: true
+    }
+  };
+  cfg.plugins.push(googleAnalyticsCfg);
+}
+
+module.exports = cfg;

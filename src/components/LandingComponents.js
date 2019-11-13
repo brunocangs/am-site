@@ -60,7 +60,7 @@ export const BannerContent = styled(Container)`
   div {
     /* Title */
     h1 {
-      font-size: 34px;
+      font-size: 30px;
       line-height: 1.2em;
       ${media("medium", "large")} {
         font-size: 45px;
@@ -102,10 +102,10 @@ export const SectionContainer = Container.withComponent("section");
 
 export const Manifest = styled(SectionContainer)`
   flex-direction: column;
-  & *:not(h1) {
+  & *:not(h2) {
     color: ${Colors.darkGrey};
   }
-  h1 {
+  h2 {
     text-align: center;
     font-weight: 400;
     font-size: 32px;
@@ -133,7 +133,7 @@ export const Manifest = styled(SectionContainer)`
       font-weight: 400;
     }
     li {
-      width: calc(75% - 16px);
+      width: calc(95% - 16px);
       padding: 36px 24px 24px 24px;
       border-radius: 6px;
       box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.1);
@@ -164,7 +164,7 @@ export const ManifestItem = props => {
 export const Projects = styled(SectionContainer)`
   margin-top: 30px;
   flex-direction: column;
-  h1 {
+  h2 {
     text-align: center;
     font-weight: 400;
     font-size: 32px;
@@ -252,7 +252,7 @@ export const OurWork = styled(SectionContainer)`
   ${media("medium")} {
     flex-direction: row;
   }
-  h1 {
+  h2 {
     font-weight: 400;
     font-size: 32px;
     ${media("medium")} {
@@ -346,7 +346,7 @@ export const Testimonies = styled(SectionContainer)`
       margin-left: 18px;
     }
   }
-  h1 {
+  h2 {
     font-weight: 400;
     font-size: 32px;
     ${media("medium")} {
@@ -369,7 +369,7 @@ export const HireUs = styled(SectionContainer)`
   background-image: url(/img/cta_bg.png);
   background-position: center center;
   background-size: cover;
-  h1 {
+  h2 {
     font-weight: 800;
     font-size: 45px;
     ${media("medium")} {
@@ -388,12 +388,17 @@ export const HireUs = styled(SectionContainer)`
       text-decoration: underline !important;
     }
   }
+  > div:nth-of-type(2) {
+    button {
+      margin: 6px;
+    }
+  }
 `;
 
 export const WeAreHiring = styled(SectionContainer)`
   display: flex;
   flex-direction: column;
-  h1 {
+  h2 {
     text-align: center;
     font-weight: 400;
     font-size: 32px;
@@ -415,7 +420,7 @@ export const WeAreHiring = styled(SectionContainer)`
 `;
 
 export const HowMuchIsMyApp = styled(SectionContainer)`
-  h1 {
+  h2 {
     text-align: center;
     font-weight: 400;
     font-size: 32px;

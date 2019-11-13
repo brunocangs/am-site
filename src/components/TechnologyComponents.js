@@ -9,6 +9,7 @@ export const Content = styled(BaseContainer)`
   flex-direction: column;
   align-items: center;
   > div:first-of-type {
+    width: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -24,18 +25,18 @@ export const TechnologyWrapper = styled(Link)`
     margin: 8px;
   }
   :hover {
-    div > div:first-child {
+    > div > div:first-child {
       box-shadow: 1px 1px 5px 0px #aaa;
     }
   }
-  div {
+  > div {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     > div:first-child {
-      height: ${80 * Math.sqrt(2) * 1.05}px;
-      width: ${80 * Math.sqrt(2) * 1.05}px;
+      height: ${Math.round(70 * Math.sqrt(2) * 1.1)}px;
+      width: ${Math.round(70 * Math.sqrt(2) * 1.1)}px;
       transition: all 0.1s ease-in-out;
       overflow: visible;
       box-shadow: 1px 1px 4px 0px #ccc;
@@ -68,7 +69,6 @@ export const TechnologyPageWrapper = styled(BaseContainer)`
       h1,
       img {
         display: inline-block;
-        min-width: 80px;
       }
       h1 {
         margin-right: 42px;

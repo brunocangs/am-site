@@ -78,12 +78,12 @@ collections:
           name: "featuredPost",
           widget: "boolean",
         }
-      - { label: "Publicado (draft)", name: "published", widget: "boolean" }
+      - { label: "Publicado", name: "published", widget: "boolean" }
       - {
           label: "Imagem",
           name: "featuredImage",
           widget: image,
-          hint: "Imagem de banner (2.5:1)",
+          hint: "Imagem de banner (2.5:1), Limitado pra 650px de altura",
         }
       - { label: "Corpo", name: "body", widget: "markdown" }
       - { label: "Tags", name: "tags", widget: "list" }

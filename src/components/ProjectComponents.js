@@ -27,7 +27,18 @@ export const BaseContainer = styled(SectionContainer)`
 
 export const AllProjectsContainer = styled(BaseContainer)`
   flex-direction: column;
-  padding: 80px 0;
+  padding: 30px 0 80px 0;
+  > h2 {
+    margin: 48px 0 30px 0;
+    :first-of-type {
+      margin-bottom: 8px;
+    }
+  }
+  > span {
+    display: block;
+    margin: 2px 0 24px 0;
+    font-weight: 300;
+  }
 `;
 const ContainerList = BaseContainer.withComponent("ul");
 

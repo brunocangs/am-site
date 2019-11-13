@@ -3,6 +3,7 @@ import { graphql } from "gatsby";
 import Helmet from "react-helmet";
 import { Content, TechnologyWrapper } from "../components/TechnologyComponents";
 import { Banner } from "../components/Header";
+import Img from "gatsby-image";
 
 export const renderTechnologyItem = ({ node: technology }, i) => {
   const { logo, title, language } = technology.frontmatter;
@@ -18,11 +19,7 @@ export const renderTechnologyItem = ({ node: technology }, i) => {
     >
       <div>
         <div>
-          <img
-            srcSet={image.fixed.srcSet}
-            sizes={image.fixed.sizes}
-            alt={title}
-          />
+          <Img {...image} alt={title} />
         </div>
         <h3>{title.split("| ")[1]}</h3>
       </div>
@@ -43,7 +40,9 @@ export default ({ data }) => {
       <div style={{ width: "100%" }}>
         <Banner title={headerText} />
         <Content>
-          <div>{technologies.map(renderTechnologyItem)}</div>
+          <div style={{ margin: -10 }}>
+            {technologies.map(renderTechnologyItem)}
+          </div>
         </Content>
       </div>
     </>
@@ -63,15 +62,6 @@ export const query = graphql`
       edges {
         node {
           ...TechnologyPage
-          frontmatter {
-            logo {
-              childImageSharp {
-                fixed(width: 80, height: 80) {
-                  ...GatsbyImageSharpFixed
-                }
-              }
-            }
-          }
         }
       }
     }

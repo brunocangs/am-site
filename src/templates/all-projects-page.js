@@ -29,7 +29,7 @@ export const renderProjectItem = ({ node: project }, i) => {
     <li key={i}>
       <div>
         <Link to={isEn ? `/en/projects/${slug}` : `/pt/projetos/${slug}`}>
-          <Img fluid={fluid} />
+          <Img fluid={{ ...fluid, aspectRatio: 1 }} />
         </Link>
       </div>
       <ProjectItemDetails>
@@ -71,11 +71,27 @@ export const renderProjectItem = ({ node: project }, i) => {
     </li>
   );
 };
-export default ({ data }) => {
+export default ({ data, pageContext }) => {
   const { allProjects, allProjectsPage } = data;
   const { edges: projects } = allProjects;
   const { frontmatter: page, html } = allProjectsPage;
   const [title] = html.split("<hr>");
+  const isEn = pageContext.language === "en";
+  const [mainProjects, sideProjects] = projects.reduce(
+    (prev, curr) => {
+      if (
+        curr.node &&
+        curr.node.frontmatter.type &&
+        curr.node.frontmatter.type === "main"
+      ) {
+        prev[0].push(curr);
+      } else {
+        prev[1].push(curr);
+      }
+      return prev;
+    },
+    [[], []]
+  );
   return (
     <div style={{ width: "100%" }}>
       <Banner title={title.replace(/<[^>]*>/g, "")} />
@@ -83,7 +99,20 @@ export default ({ data }) => {
         <Helmet>
           <title>{page.title}</title>
         </Helmet>
-        <ProjectsList>{projects.map(renderProjectItem)}</ProjectsList>
+        <h2>{isEn ? "Client projects" : "Projetos de clientes"}</h2>
+        <span>
+          {isEn
+            ? "Some projects are under NDA so they cannot be listed."
+            : "Alguns projetos não podem ser divulgados, os demais apresentamos aqui."}
+        </span>
+        <ProjectsList>{mainProjects.map(renderProjectItem)}</ProjectsList>
+        <h2>{isEn ? "Internal projects" : "Projetos internos"}</h2>
+        <span>
+          {isEn
+            ? "Projects developed with the intent of studying, training new employees or just for plain fun."
+            : "Projetos que desenvolvemos para fins de estudos, validar alguma tecnologia ou apenas por diversão."}
+        </span>
+        <ProjectsList>{sideProjects.map(renderProjectItem)}</ProjectsList>
       </AllProjectsContainer>
     </div>
   );
