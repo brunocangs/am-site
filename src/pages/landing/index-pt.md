@@ -12,7 +12,7 @@ bannerContent:
     A melhor empresa em Juiz de Fora para trabalhar com programação, aprender e
     se divertir
 ourWork: >-
-  # O que fazemos
+  ## O que fazemos
 
 
   Somos uma empresa de desenvolvimento de sistemas web e mobile, com uma forte
