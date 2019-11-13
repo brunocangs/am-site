@@ -49,7 +49,7 @@ Desde o início da empresa colaboramos com diversos eventos na cidade, provendo 
 
 A oportunidade mais recente foi na Semana da Computação da UFJF (Universidade Federal de Juiz de Fora), onde oferecemos um workshop de Next.JS com o João Baraky apresentando, e também apresentei um projeto pessoal "Computadores para todos", que visa receber doação de notebooks, renova-los, e presentear então jovens da comunidade.
 
-![Programadores de diversas empresa em evento sobre TypeScript](/img/img_20190903_210315029.jpg)
+![Programadores de diversas empresa em evento sobre TypeScript](/img/img_20181211_164658894.jpg)
 
 Por eu ser o principal agitador do Google Developers Group em Juiz de Fora, algumas vezes apresentamos conteúdos e atividades no GDGJF. Falamos principalmente sobre Google Cloud Platform, React, Storybook, Postman e algo mais.
 
