@@ -1,0 +1,432 @@
+backend:
+  name: git-gateway
+  branch: dev
+
+media_folder: static/img
+public_folder: /img
+
+collections:
+  - name: "authors"
+    label: "Autores"
+    folder: "src/pages/authors"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - label: "Nome"
+        name: "title"
+        widget: "string"
+      - label: "Foto"
+        name: "image"
+        widget: "image"
+      - label: "Descrição"
+        name: "body"
+        widget: "markdown"
+      - label: "URL"
+        name: "baseUrl"
+        widget: "hidden"
+        default: "author"
+      - {
+          label: "Language",
+          name: "language",
+          widget: "select",
+          options:
+            [
+              { label: "Português", value: "pt" },
+              { label: "Inglês", value: "en" },
+            ],
+          default: "pt",
+        }
+  - name: "blog"
+    label: "Blog"
+    folder: "src/pages/blog"
+    create: true
+    slug: "{{slug}}-{{language}}"
+    fields:
+      - {
+          label: "Template Key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "blog-post",
+        }
+      - { label: "Título", name: "title", widget: "string" }
+      - {
+          label: "Língua",
+          name: "language",
+          widget: "select",
+          options:
+            [
+              { label: "Português", value: "pt" },
+              { label: "Inglês", value: "en" },
+            ],
+          default: "pt",
+        }
+      - label: "URL base"
+        name: "baseUrl"
+        widget: "string"
+        default: "blog"
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - label: "Autor"
+        name: "author"
+        widget: "relation"
+        collection: "authors"
+        searchFields: ["title"]
+        valueField: "title"
+        displayFields: ["title"]
+      - { label: "Descrição", name: "description", widget: "text" }
+      - {
+          label: "Mostrar na página inicial",
+          name: "featuredPost",
+          widget: "boolean",
+        }
+      - { label: "Publicado", name: "published", widget: "boolean" }
+      - {
+          label: "Imagem",
+          name: "featuredImage",
+          widget: image,
+          hint: "Imagem de banner (2.5:1), Limitado pra 650px de altura",
+        }
+      - { label: "Corpo", name: "body", widget: "markdown" }
+      - { label: "Tags", name: "tags", widget: "list" }
+  - name: "landing-page"
+    label: "Página inicial"
+    folder: "src/pages/landing"
+    create: true
+    slug: "index-{{language}}"
+    fields:
+      - {
+          label: "Template Key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "landing-page",
+        }
+      - { label: "Link base", name: "baseUrl", widget: "string", default: "/" }
+      - {
+          label: "Language",
+          name: "language",
+          widget: "select",
+          options:
+            [
+              { label: "Português", value: "pt" },
+              { label: "Inglês", value: "en" },
+            ],
+          default: "pt",
+        }
+      - { label: "Title", name: "title", widget: "string" }
+      - {
+          label: "Banner",
+          name: "banner",
+          widget: "image",
+          hint: "Imagem da chamada principal (2:1)",
+        }
+      - label: "Textos do banner"
+        name: "bannerContent"
+        widget: "object"
+        fields:
+          - label: "Chamada"
+            name: "header"
+            widget: "string"
+          - label: "Conteúdo"
+            name: "content"
+            widget: "text"
+      - label: "O que fazemos"
+        name: "ourWork"
+        widget: "markdown"
+      - label: "Manifesto"
+        name: "manifest"
+        widget: "object"
+        fields:
+          - label: "Título"
+            name: "title"
+            widget: "string"
+          - label: "Conteúdo"
+            name: "content"
+            widget: "list"
+            fields:
+              - label: "Titulo"
+                name: "title"
+                widget: "string"
+              - label: "Imagem"
+                name: "image"
+                widget: "image"
+              - label: "Conteúdo"
+                name: "content"
+                widget: "markdown"
+      - label: "Nos contrate"
+        name: "hireUs"
+        widget: "markdown"
+      - label: "Estamos contratando"
+        name: "weAreHiring"
+        widget: "markdown"
+  - name: "project"
+    label: "Projetos"
+    folder: "src/pages/projects"
+    create: true
+    slug: "{{slug}}-{{language}}"
+    fields:
+      - {
+          label: "Template Key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "project-page",
+        }
+      - {
+          label: "Link base",
+          name: "baseUrl",
+          widget: "string",
+          default: "projetos",
+        }
+      - {
+          label: "Mostrar na página principal",
+          name: "featured",
+          widget: "boolean",
+          default: false,
+        }
+      - label: "Tipo de projeto"
+        name: "type"
+        widget: "select"
+        options:
+          - label: "Projeto para cliente"
+            value: "main"
+          - label: "Side Project"
+            value: "sideproject"
+      - label: "Data"
+        name: "date"
+        widget: "datetime"
+      - label: "Onde encontrar"
+        hint: "App Store, Play store, Web, etc"
+        name: "whereToFind"
+        widget: "list"
+        fields:
+          - label: "Link"
+            name: "link"
+            widget: "string"
+          - label: "Imagem"
+            name: "image"
+            widget: "image"
+      - {
+          label: "Language",
+          name: "language",
+          widget: "select",
+          options:
+            [
+              { label: "Português", value: "pt" },
+              { label: "Inglês", value: "en" },
+            ],
+          default: "pt",
+        }
+      - { label: "Nome", name: "title", widget: "string" }
+      - label: "Tecnologia"
+        name: "technology"
+        collection: "technologies"
+        searchFields: ["title"]
+        valueField: "title"
+        multiple: true
+        displayFields: ["title"]
+        widget: relation
+      - { label: "Descrição curta", name: "summary", widget: "string" }
+      - {
+          label: "Descrição completa",
+          name: "body",
+          widget: "markdown",
+          default: "## Main pitch\n\nPitchContent\n\n---\n\n## Tech detail\n\nTech content\n\n---\n\n## Financial details\n\nFinancial content",
+        }
+      - { label: "Nome do cliente", name: "clientName", widget: "string" }
+      - {
+          label: "Localização do cliente",
+          name: "clientLocation",
+          widget: "string",
+        }
+      - {
+          label: "Horas de desenvolvimento",
+          name: "devTime",
+          widget: "number",
+          valueType: "int",
+        }
+      - {
+          label: "Meses de desenvolvimento",
+          name: "devMonths",
+          widget: "number",
+          valueType: "int",
+        }
+      - {
+          label: "Quantidade de commits",
+          name: "devCommits",
+          widget: "number",
+          valueType: "int",
+        }
+      - {
+          label: "Imagem",
+          name: "image",
+          widget: "image",
+          hint: "Imagem principal do projeto (2:1)",
+        }
+      - {
+          label: "Thumbnail",
+          name: "thumbnailImage",
+          widget: "image",
+          hint: "Imagem para thumbnail do projeto (1:1)",
+        }
+      - { label: "Tags", name: "tags", widget: "list" }
+  - name: "testimony"
+    label: "Depoimentos"
+    folder: "src/pages/testimonies"
+    create: true
+    slug: "{{slug}}-{{language}}"
+    fields:
+      - { label: "Nome da pessoa", name: "title", widget: "string" }
+      - {
+          label: "Foto",
+          name: "avatar",
+          widget: "image",
+          hint: "Imagem da pessoa (1:1)",
+        }
+      - {
+          label: "Base Url",
+          name: "baseUrl",
+          widget: "hidden",
+          default: "testimony",
+        }
+      - {
+          label: "Nome da empresa ou cliente",
+          name: "clientName",
+          widget: "string",
+        }
+      - {
+          label: "Language",
+          name: "language",
+          widget: "select",
+          options:
+            [
+              { label: "Português", value: "pt" },
+              { label: "Inglês", value: "en" },
+            ],
+          default: "pt",
+        }
+      - { label: "Depoimento", name: "testimony", widget: "text" }
+      - { label: "Tags", name: "tags", widget: "list" }
+  - name: "services"
+    label: "Serviços"
+    folder: "src/pages/services"
+    slug: "{{slug}}-{{language}}"
+    create: true
+    fields:
+      - {
+          label: "Template Key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "all-services-page",
+        }
+      - {
+          label: "Link base",
+          name: "baseUrl",
+          widget: "string",
+          default: "servicos",
+        }
+      - {
+          label: "Language",
+          name: "language",
+          widget: "select",
+          options:
+            [
+              { label: "Português", value: "pt" },
+              { label: "Inglês", value: "en" },
+            ],
+          default: "pt",
+        }
+      - { label: "Título da página", name: "title", widget: "string" }
+      - label: "Servicos"
+        name: "services"
+        widget: "list"
+        fields:
+          - label: "Nome"
+            name: "title"
+            widget: "string"
+          - label: "Imagem"
+            name: "image"
+            widget: "image"
+          - label: "Descrição"
+            name: "description"
+            widget: "markdown"
+          - label: "Tags"
+            name: "tags"
+            widget: "list"
+  - name: "technologies"
+    label: "Tecnologias"
+    folder: "src/pages/technologies"
+    slug: "{{slug}}-{{language}}"
+    create: true
+    fields:
+      - {
+          label: "Template Key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "technology-page",
+        }
+      - {
+          label: "Link base",
+          name: "baseUrl",
+          widget: "string",
+          default: "tecnologias",
+        }
+      - {
+          label: "Language",
+          name: "language",
+          widget: "select",
+          options:
+            [
+              { label: "Português", value: "pt" },
+              { label: "Inglês", value: "en" },
+            ],
+          default: "pt",
+        }
+      - { label: "Título", name: "title", widget: "string" }
+      - {
+          label: "Logo",
+          name: "logo",
+          widget: "image",
+          hint: "Imagem com mesma altura e largura (1:1) e fundo transparente",
+        }
+      - {
+          label: "Mostrar na página principal",
+          name: "featured",
+          widget: "boolean",
+          default: false,
+        }
+      - { label: "Resumo", name: "summary", widget: "string" }
+      - { label: "Corpo", name: "body", widget: "markdown" }
+      - { label: "Tags", name: "tags", widget: "list" }
+  - name: "about"
+    label: "Página Sobre nós"
+    folder: "src/pages/about"
+    create: true
+    slug: "index-{{language}}"
+    fields:
+      - label: "Título"
+        name: "title"
+        widget: "string"
+      - {
+          label: "Template Key",
+          name: "templateKey",
+          widget: "hidden",
+          default: "about-page",
+        }
+      - {
+          label: "Link base",
+          name: "baseUrl",
+          widget: "string",
+          default: "sobre",
+        }
+      - {
+          label: "Language",
+          name: "language",
+          widget: "select",
+          options:
+            [
+              { label: "Português", value: "pt" },
+              { label: "Inglês", value: "en" },
+            ],
+          default: "pt",
+        }
+      - label: "Página"
+        name: "body"
+        widget: "markdown"
