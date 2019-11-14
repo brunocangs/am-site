@@ -12,7 +12,7 @@ description: >-
   ser.
 featuredPost: false
 published: true
-featuredImage: /img/bg-banner-small.jpg
+featuredImage: /img/blog_nossos_processos_selecao.png
 tags:
   - Selecao
   - Trabalho
