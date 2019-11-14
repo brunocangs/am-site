@@ -11,7 +11,7 @@ description: >-
   de pedir em nossos processos de seleção.
 featuredPost: false
 published: true
-featuredImage: /img/mockup_01.jpg
+featuredImage: /img/blog_projetos_processo_selecao.png
 tags:
   - Selecao
   - React
