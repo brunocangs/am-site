@@ -12,7 +12,7 @@ description: >-
   programadores para o nosso time.
 featuredPost: false
 published: true
-featuredImage: /img/bg-banner-small.jpg
+featuredImage: /img/blog_estamos_sempre_contratando.png
 tags:
   - Oportunidade
   - estagio
