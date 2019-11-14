@@ -13,7 +13,7 @@ description: >-
   Fora, bem como de alguns cursos e conteúdos que oferecemos.
 featuredPost: true
 published: true
-featuredImage: /img/about_img_1.png
+featuredImage: /img/blog_aprendendo_ensinando_programacao.png
 tags:
   - Treinamento
   - React
