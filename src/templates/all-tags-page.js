@@ -22,7 +22,7 @@ export default props => {
   return (
     <AllTagContent>
       <Helmet>
-        <title>Tags - App Masters</title>
+        <title>Tags</title>
       </Helmet>
       <h1>Tags</h1>
       <ul>

@@ -60,9 +60,6 @@ export default props => {
   };
   return (
     <>
-      <Helmet>
-        <title>{props.data.landing.frontmatter.title}</title>
-      </Helmet>
       <Content>
         <BannerContainer>
           <img src="/img/banner_bg.png" alt="Person interacting with a phone" />

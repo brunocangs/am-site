@@ -23,7 +23,7 @@ export default ({ data }) => {
   return (
     <>
       <Helmet>
-        <title>{title} - App Maters</title>
+        <title>{title}</title>
       </Helmet>
       <Post>
         <Img fluid={{ ...image, aspectRatio: 2.5 }} />

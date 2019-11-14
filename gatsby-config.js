@@ -1,9 +1,9 @@
 const cfg = {
   siteMetadata: {
-    title: "Gatsby + Netlify CMS Starter",
+    title: "App Masters - Juiz de Fora/MG",
     siteUrl: "https://appmasters.io",
     description:
-      "This repo contains an example business website that is built with Gatsby, and Netlify CMS.It follows the JAMstack architecture by using Git as a single source of truth, and Netlify for continuous deployment, and CDN distribution."
+      "This is the website for the company App Masters located in Juiz de Fora, Minas Gerais, Brasil. App Masters is a tech startup specialized in mobile and web development"
   },
   plugins: [
     "gatsby-plugin-react-helmet",
@@ -78,6 +78,12 @@ const cfg = {
       }
     }, // must be after other CSS plugins
     `gatsby-plugin-sitemap`,
+    {
+      resolve: "gatsby-plugin-manifest",
+      options: {
+        icon: "src/favicon.png"
+      }
+    },
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-robots-txt`,
     "gatsby-plugin-netlify" // make sure to keep it last in the array

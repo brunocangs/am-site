@@ -26,7 +26,9 @@ const FooterContent = styled.div`
   padding: 8px;
   text-align: center;
   color: ${darkGrey};
-  h3 {
+  span {
+    margin: 18px 0;
+    display: block;
     font-size: 16px;
     color: ${black};
     font-weight: 400;
@@ -56,7 +58,7 @@ export default props => {
       <FooterContent>
         {isEn ? (
           <>
-            <h3>Relevant links</h3>
+            <span>Relevant links</span>
             <Link to="/en/projects">Projects</Link>
             <Link to="/en/blog">Blog</Link>
             <Link to="/en/technologies">Technologies</Link>
@@ -66,7 +68,7 @@ export default props => {
           </>
         ) : (
           <>
-            <h3>Links relevantes</h3>
+            <span>Links relevantes</span>
             <Link to="/pt/projetos">Projetos</Link>
             <Link to="/pt/blog">Blog</Link>
             <Link to="/pt/tecnologias">Tecnologias</Link>
@@ -77,7 +79,7 @@ export default props => {
         )}
       </FooterContent>
       <FooterContent>
-        <h3>{isEn ? "Social networks" : "Redes sociais"}</h3>
+        <span>{isEn ? "Social networks" : "Redes sociais"}</span>
         <SocialWrapper>
           <a
             href="https://www.facebook.com/appmasters.io/"
@@ -103,7 +105,7 @@ export default props => {
         </SocialWrapper>
       </FooterContent>
       <FooterContent>
-        <h3>{isEn ? "Address" : "Endereço"}</h3>
+        <span>{isEn ? "Address" : "Endereço"}</span>
         {isEn
           ? "Rio Branco Avenue 3480, 36025-020, Juiz de Fora, Minas Gerais, Brazil"
           : "Av. Barão do Rio Branco, 3480 - Passos, Juiz de Fora - MG, 36025-020 3º andar, Sala 1"}

@@ -58,13 +58,27 @@ export default props => {
   const { children } = props;
   let language = props.path.split("/")[1];
   if (language.length > 2) language = "en";
+  const isEn = language === "en";
   return (
     <>
-      <Helmet>
+      <Helmet
+        defaultTitle="App Masters - Juiz de Fora/MG"
+        titleTemplate="%s - App Masters - Juiz de Fora/MG"
+      >
         <link
           href="https://fonts.googleapis.com/css?family=Open+Sans:800|Poppins:300,400,500,600,700,800|Roboto:300,400,500"
           rel="stylesheet"
         />
+        <meta
+          name="description"
+          content={
+            isEn
+              ? "This is the website for the company App Masters located in Juiz de Fora, Minas Gerais, Brasil. App Masters is a tech startup specialized in mobile and web development"
+              : "Empresa de desenvolvimento de aplicativos e sistemas web em Juiz de Fora. O melhor lugar para trabalhar com programação, aprender e divertir!"
+          }
+        ></meta>
+        <meta name="theme-color" content={Colors.blue}></meta>
+        <html lang={isEn ? "en-US" : "pt-BR"} />
       </Helmet>
       <Globals />
       <header
