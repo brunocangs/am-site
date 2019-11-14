@@ -3,7 +3,7 @@ templateKey: blog-post
 title: 'Projeto de seleção - Master Heroes '
 language: pt
 baseUrl: blog
-date: 2019-11-13T18:44:10.641Z
+date: 2019-11-06T18:44:10.641Z
 author: Tiago Gouvea
 description: >-
   Desenvolver um game onde o jogador testará seu conhecimento sobre
