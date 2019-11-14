@@ -11,7 +11,7 @@ description: >-
   chegar a este ponto.
 featuredPost: false
 published: true
-featuredImage: /img/lowcarb_mockup.png
+featuredImage: /img/blog_trabalhar_para_fora_do_brasil.png
 tags:
   - Internacionalizacao
 ---
