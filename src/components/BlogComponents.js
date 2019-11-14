@@ -8,6 +8,9 @@ export const Content = styled.div`
   flex-direction: column;
   width: 100%;
   padding-bottom: 60px;
+  button {
+    margin: 32px auto 0 auto;
+  }
 `;
 
 const getStartBgColor = props => {
@@ -44,14 +47,15 @@ const getStartFontColor = props => {
 };
 
 const getHoverFontColor = props => {
-  switch (props.variant) {
-    case "secondary":
-      return "#fff";
-    case "tertiary":
-      return "white";
-    default:
-      return "white";
-  }
+  // switch (props.variant) {
+  //   case "secondary":
+  //     return "#fff";
+  //   case "tertiary":
+  //     return "white";
+  //   default:
+  //     return "white";
+  // }
+  return "white";
 };
 
 const getStartBorderColor = first => props => {
@@ -144,7 +148,7 @@ export const AllBlogContainer = styled(BaseContainer)`
         : ""}
   }
   button {
-    margin: 32px auto 0 auto;
+    /* margin: 32px auto 0 auto; */
   }
   /* Sidebar com search input */
   > div {

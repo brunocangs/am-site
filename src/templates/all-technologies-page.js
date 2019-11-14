@@ -35,7 +35,7 @@ export default ({ data }) => {
   return (
     <>
       <Helmet>
-        <title>{page.title} - App Masters</title>
+        <title>{page.title}</title>
       </Helmet>
       <div style={{ width: "100%" }}>
         <Banner title={headerText} />

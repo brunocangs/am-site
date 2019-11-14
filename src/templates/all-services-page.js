@@ -19,7 +19,7 @@ export default ({
   const isEn = language === "en";
   return (
     <div style={{ width: "100%" }}>
-      <Helmet title={`${title} - App Masters`} defer={false} />
+      <Helmet title={title} defer={false} />
       <Banner title={title} />
       <Content>
         {services.map((service, i) => {

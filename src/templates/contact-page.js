@@ -125,7 +125,7 @@ export default props => {
       <Banner title={isEn ? "Contact" : "Contato"} />
       <Contact>
         <Helmet>
-          <title>{title} - App Masters</title>
+          <title>{title}</title>
         </Helmet>
         <div>
           <div>

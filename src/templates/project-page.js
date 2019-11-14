@@ -50,7 +50,7 @@ export default ({ data }) => {
   return (
     <>
       <Helmet>
-        <title>{title} - App Masters</title>
+        <title>{title}</title>
       </Helmet>
       <Content>
         <Img fluid={{ ...image.childImageSharp.fluid, aspectRatio: 2.5 }} />

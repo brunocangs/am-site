@@ -52,7 +52,7 @@ export const renderBlogItem = related => ({ node: post }, i) => {
     </PostWrapper>
   );
 };
-const ComponentName = ({ data, pageContext }) => {
+export default ({ data, pageContext }) => {
   const [page, setPage] = useState(1);
   const { allBlogPosts } = data;
   const { edges: blogPosts } = allBlogPosts;
@@ -60,7 +60,7 @@ const ComponentName = ({ data, pageContext }) => {
   return (
     <>
       <Helmet>
-        <title>Blog - App Masters</title>
+        <title>Blog</title>
       </Helmet>
       <Content>
         <Banner title={"Blog"} />
@@ -73,12 +73,12 @@ const ComponentName = ({ data, pageContext }) => {
                 : `Não temos posts no blog no momento, mas teremos conteúdo em breve`}
             </p>
           )}
-          {page * 5 < blogPosts.length && (
-            <Button onClick={() => setPage(page + 1)}>
-              {isEn ? "See more" : "Ver mais"}
-            </Button>
-          )}
         </AllBlogContainer>
+        {page * 5 < blogPosts.length && (
+          <Button onClick={() => setPage(page + 1)}>
+            {isEn ? "See more" : "Ver mais"}
+          </Button>
+        )}
       </Content>
     </>
   );
@@ -118,5 +118,3 @@ export const query = graphql`
     }
   }
 `;
-
-export default ComponentName;

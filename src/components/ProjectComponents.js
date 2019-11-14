@@ -51,7 +51,7 @@ export const ProjectsList = styled(ContainerList)`
   flex-wrap: wrap;
   list-style: none;
   flex-direction: row;
-  margin: -8px;
+  justify-content: center;
   /* Item da lista */
   li {
     border-radius: 6px;
@@ -70,7 +70,7 @@ export const ProjectsList = styled(ContainerList)`
     }
     /* Large => 3 items */
     ${media("large")} {
-      width: calc(33.33% - 16px);
+      width: calc(${100 / 3}% - 16px);
     }
   }
 `;

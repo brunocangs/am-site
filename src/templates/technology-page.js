@@ -12,7 +12,7 @@ export default props => {
   return (
     <>
       <Helmet>
-        <title>{title} - App Masters</title>
+        <title>{title}</title>
       </Helmet>
       <TechnologyPageWrapper>
         <div>

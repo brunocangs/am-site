@@ -249,7 +249,11 @@ export default function Header(props) {
   const isTransparent = shouldBeTransparent(props.location);
   return (
     <Nav scroll={scroll + (open ? 76 : 0)} isTransparent={isTransparent}>
-      <Link to={`/${language || ""}`} onClick={() => setOpen(false)}>
+      <Link
+        to={`/${language || ""}`}
+        onClick={() => setOpen(false)}
+        alt="App Masters"
+      >
         <Logo style={{ height: "100%" }} />
       </Link>
       <NavMenu>
