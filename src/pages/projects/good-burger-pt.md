@@ -4,18 +4,25 @@ baseUrl: projetos
 featured: false
 type: sideproject
 date: 2019-11-04T11:35:18.847Z
+whereToFind:
+  - image: /img/google_play.png
+    link: 'https://play.google.com/store/apps/details?id=io.appmasters.goodburger'
+  - image: /img/google_play.png
+    link: 'https://good-burger.firebaseapp.com/detalhe/5a675da86a5d640014a647fa'
 language: pt
 title: Good Burger
 technology:
-  - Tecnologias | React Native
-  - Tecnologias | MongoDB
-summary: Ranking das melhores hamburgerias da cidade
+  - PT | React
+  - Tecnologia | Firebase
+  - PT | MongoDB
+  - PT | Node.Js
+summary: Ranking das melhores hamburgerias da cidade.
 clientName: App Masters
-clientLocation: Juiz de Fora/MG
-devTime: 77
+clientLocation: Juiz de Fora/MG - Brasil
+devTime: 177
 devMonths: 1
 devCommits: 172
-image: /img/bg-banner.jpg
+image: /img/good-burger-bg-banner.jpg
 thumbnailImage: /img/projetos_good_burger.png
 tags:
   - React
