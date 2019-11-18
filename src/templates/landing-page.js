@@ -1,6 +1,5 @@
 import React from "react";
 import { graphql, Link } from "gatsby";
-import Helmet from "react-helmet";
 import Img from "gatsby-image";
 import ClampLines from "react-clamp-lines";
 // import { Parallax } from "react-parallax";
@@ -23,14 +22,21 @@ import { Button } from "../components/BlogComponents";
 
 const md = new MdIt({ html: true });
 
+const renderTestimony = ({ node: testimony }, i) => {
+  const { frontmatter } = testimony;
+  const { avatar, testimony: body, title } = frontmatter;
+  const image = avatar.childImageSharp.fluid;
+  return (
+    <div key={i}>
+      <img src={image.src} alt={title} />
+      <h3>{title}</h3>
+      <ClampLines buttons={false} text={body} lines={2} innerElement="p" />
+    </div>
+  );
+};
+
 export default props => {
-  const {
-    landing,
-    allProjects,
-    // allTechnologies,
-    allTestimonies,
-    ourWorkImage
-  } = props.data;
+  const { landing, allProjects, allTestimonies, ourWorkImage } = props.data;
   const {
     banner: {
       childImageSharp: { fluid: image }
@@ -39,25 +45,12 @@ export default props => {
     manifest,
     ourWork,
     weAreHiring,
-    hireUs,
-    language
+    hireUs
   } = landing.frontmatter;
   const { edges: projects } = allProjects;
-  // const { edges: technologies } = allTechnologies;
   const { edges: testimonies } = allTestimonies;
-
-  const renderTestimony = ({ node: testimony }, i) => {
-    const { frontmatter } = testimony;
-    const { avatar, testimony: body, title } = frontmatter;
-    const image = avatar.childImageSharp.fluid;
-    return (
-      <div key={i}>
-        <img src={image.src} alt={title} />
-        <h3>{title}</h3>
-        <ClampLines buttons={false} text={body} lines={2} innerElement="p" />
-      </div>
-    );
-  };
+  const { language } = props.pageContext;
+  const isEn = language === "en";
   return (
     <>
       <Content>
@@ -85,7 +78,7 @@ export default props => {
             <Img fluid={ourWorkImage.childImageSharp.fluid} />
           </div>
         </OurWork>
-        {language === "en" ? (
+        {isEn ? (
           <>
             <Projects>
               <div>

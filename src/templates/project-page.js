@@ -35,7 +35,8 @@ export default ({ data }) => {
     devMonths,
     devCommits,
     image,
-    whereToFind
+    whereToFind,
+    tags
   } = frontmatter;
   const [mainPitch, techDetail, financial] = restData.html.split("<hr>");
   const isEn = language === "en";
@@ -51,6 +52,7 @@ export default ({ data }) => {
     <>
       <Helmet>
         <title>{title}</title>
+        <meta name="keywords" content={tags.join(", ")}></meta>
       </Helmet>
       <Content>
         <Img fluid={{ ...image.childImageSharp.fluid, aspectRatio: 2.5 }} />

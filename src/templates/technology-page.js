@@ -13,6 +13,7 @@ export default props => {
     <>
       <Helmet>
         <title>{title}</title>
+        <meta name="keywords" content={frontmatter.tags.join(", ")}></meta>
       </Helmet>
       <TechnologyPageWrapper>
         <div>

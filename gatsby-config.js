@@ -98,13 +98,20 @@ if (process.env.NODE_ENV !== "development") {
   const googleAnalyticsCfg = {
     resolve: "gatsby-plugin-google-analytics",
     options: {
-      trackingId: process.env.GATSBY_GOOGLE_ANALYTICS_ID, // <- your tracking ID
+      trackingId: process.env.GATSBY_GOOGLE_ANALYTICS_ID,
       head: false,
       anonymize: true,
       respectDNT: true
     }
   };
+  const facebookPixelCfg = {
+    resolve: `gatsby-plugin-facebook-pixel`,
+    options: {
+      pixelId: process.env.GATSBY_PIXEL_ID
+    }
+  };
   cfg.plugins.push(googleAnalyticsCfg);
+  cfg.plugins.push(facebookPixelCfg);
 }
 
 module.exports = cfg;

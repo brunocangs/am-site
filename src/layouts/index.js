@@ -1,10 +1,11 @@
 import React from "react";
-import Header from "../components/Header";
+import Header, { Banner } from "../components/Header";
 import Footer from "../components/Footer";
 import styled, { createGlobalStyle } from "styled-components";
 import * as Colors from "../styles/colors";
 import "../codeHighlight.css";
 import Helmet from "react-helmet";
+import { BaseContainer } from "../components/ProjectComponents";
 
 const Globals = createGlobalStyle`
     *, *::after, *::before {
@@ -78,6 +79,10 @@ export default props => {
           }
         ></meta>
         <meta name="theme-color" content={Colors.blue}></meta>
+        <meta
+          name="keywords"
+          content={`programação, software, aprender, desenvolvimento web, desenvolvimento mobile, javascript, react, react native, tecnologia, trabalho`}
+        />
         <html lang={isEn ? "en-US" : "pt-BR"} />
       </Helmet>
       <Globals />
@@ -86,7 +91,26 @@ export default props => {
       >
         <Header language={language} {...props} />
       </header>
-      <Main>{children}</Main>
+      <Main>
+        {isEn ? (
+          <div style={{ width: "100%" }}>
+            <Banner title={`Not available`} />
+            <BaseContainer
+              style={{ flexDirection: "column", padding: "80px 0" }}
+            >
+              <h2>Sorry for the inconvenience</h2>
+              <p>
+                Our english page is still being built and should be up in a few
+                days.
+                <br />
+                Please return again soon!
+              </p>
+            </BaseContainer>
+          </div>
+        ) : (
+          children
+        )}
+      </Main>
       <footer>
         <Footer language={language} {...props} />
       </footer>
