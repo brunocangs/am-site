@@ -34,8 +34,6 @@ Com o Willim, os biólogos responsáveis podem acompanhar as espécies de pássa
 
 Todas estas informações são processadas para a elaboração automática de diversos relatórios, exigidos aos aeroportos por órgãos como o CENIPA (Centro de Investigação e Prevenção de Acidentes Aeronáuticos), CONAMA (Conselho Nacional do Meio Ambiente) e ANAC (Agência Nacional de Aviação Civil). A proposta do aplicativo é justamente facilitar o envio destas informações, gerindo, calculando e agrupando os dados coletados em campo através de uma única plataforma.
 
----
-
 ## Desenvolvimento
 
 Através de estudos sobre as informações necessárias pelos órgãos de controle e análise dos dados coletados pelos biólogos, foi possível criar um protótipo visual do projeto. O desenvolvimento levou dois meses, desde o primeiro dia de programação até a data de publicação, dada a clareza de objetivo do aplicativo proposto.
@@ -44,10 +42,8 @@ Através de estudos sobre as informações necessárias pelos órgãos de contro
 
 Durante o processo de criação, nossa equipe identificou e propôs melhorias, que foram acatadas e adaptadas em acordo com o cliente. Da mesma forma mudanças pedidas pelo cliente foram incorporadas ao sistema para que o resultado final fosse o melhor possível. Assim, nosso trabalho se ajustou a necessidade, excedendo as expectativas iniciais através da colaboração entre os desenvolvedores e o cliente parceiro.
 
----
-
 ## Dados técnicos
 
-O app foi desenvolvido usando React Native, resultando em aplicação nativa para Android e iOS. Por agora o cliente priorizou a publicação apenas para Android da solução, ficando o iOS para os próximos meses.
+O app foi desenvolvido usando React Native, resultando em aplicação nativa para Android e iOS.
 
 Uma preocupação era como um usuário, em campo, sem Wi-fi ou 3G, acessaria o banco de dados de espécies e registraria as informações. Implementamos para isso uma sincronização de dados, permitindo ao app funcionar 100% offline, tanto para consulta quanto para inclusão de dados.
