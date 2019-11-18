@@ -17,7 +17,7 @@ technology:
 summary: Um quiz game educativo para futuros alunos da UFJF
 clientName: UFJF
 clientLocation: Juiz de Fora/MG - Brasil
-devTime: 439
+devTime: 739
 devMonths: 2
 devCommits: 237
 image: /img/mockup_01_zoom.jpg
