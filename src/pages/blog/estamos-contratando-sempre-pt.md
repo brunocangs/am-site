@@ -46,4 +46,4 @@ Quando um desenvolvedor nos procura buscando uma oportunidade, é uma grande cha
 
 ## Quer participar?
 
-E se você estiver interessado em trabalhar conosco, siga nos conhecendo aqui pelo nosso site, leia sobre nossos processos de seleção, tecnologias que usamos e depois se cadastre no Programadores em Juiz de Fora.
+E se você estiver interessado em trabalhar conosco, siga nos conhecendo aqui pelo nosso site, leia sobre nossos processos de seleção, tecnologias que usamos e depois se cadastre no [Programadores em Juiz de Fora](https://programador.emjuizdefora.com/).
