@@ -4,6 +4,9 @@ baseUrl: projetos
 featured: false
 type: sideproject
 date: 2019-11-01T16:52:22.918Z
+whereToFind:
+  - image: /img/chrome-browser-badge.png
+    link: 'https://programador.emjuizdefora.com/'
 language: pt
 title: Programadores em Juiz de Fora
 technology:
