@@ -15,8 +15,8 @@ clientLocation: Juiz de Fora/MG
 devTime: 77
 devMonths: 1
 devCommits: 172
-image: /img/bg-banner-small.jpg
-thumbnailImage: /img/low-carb-thumbnail.jpg
+image: /img/bg-banner.jpg
+thumbnailImage: /img/projetos_good_burger.png
 tags:
   - React
   - PhoneGap
