@@ -25,7 +25,7 @@ devTime: 400
 devMonths: 3
 devCommits: 375
 image: /img/lowcarb_mockup.png
-thumbnailImage: /img/low-carb-thumbnail.jpg
+thumbnailImage: /img/projetos_low_carb.png
 tags:
   - React
   - React Native
