@@ -10,3 +10,9 @@
   to = "/pt"
   status = 301
   force = true
+  conditions = {Language = ["pt", "pt_BR"]}
+[[redirects]]
+  from = "/"
+  to = "/en"
+  status = 301
+  force = true
