@@ -15,7 +15,7 @@ devTime: 439
 devMonths: 2
 devCommits: 237
 image: /img/mockup_01_zoom.jpg
-thumbnailImage: /img/low-carb-thumbnail.jpg
+thumbnailImage: /img/projetos_ufjf.png
 tags:
   - React
   - PhoneGap
