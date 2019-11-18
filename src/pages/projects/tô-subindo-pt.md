@@ -7,6 +7,8 @@ date: 2019-11-05T12:47:45.008Z
 whereToFind:
   - image: /img/google_play.png
     link: 'https://play.google.com/store/apps/details?id=io.appmasters.tosubindo'
+  - image: /img/chrome-browser-badge.png
+    link: 'https://programador.emjuizdefora.com/'
 language: pt
 title: Tô Subindo
 technology:
