@@ -13,7 +13,8 @@ collections:
     slug: "{{slug}}"
     fields:
       - label: "Id"
-        name:
+        name: "id"
+        widget: "uuid"
       - label: "Nome"
         name: "title"
         widget: "string"
@@ -72,8 +73,8 @@ collections:
         widget: "relation"
         collection: "authors"
         searchFields: ["title"]
-        valueField: "title"
-        displayFields: ["title"]
+        valueField: "uuid"
+        displayFields: ["title", "language"]
       - { label: "Descrição", name: "description", widget: "text" }
       - {
           label: "Mostrar na página inicial",
