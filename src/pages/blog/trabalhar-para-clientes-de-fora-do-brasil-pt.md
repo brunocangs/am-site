@@ -14,6 +14,8 @@ published: true
 featuredImage: /img/blog_trabalhar_para_fora_do_brasil.png
 tags:
   - Internacionalizacao
+  - Exportacao
+  - Outsourcing
 ---
 
 Ao longo dos último dos nossos dois anos de existência desenvolvemos diversos projetos para clientes brasileiros, a maioria de nossa cidade natal, Juiz de Fora.
