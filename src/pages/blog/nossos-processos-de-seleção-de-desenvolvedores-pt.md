@@ -42,13 +42,13 @@ Fizemos duas etapas, dois níveis de desafios, um primeiro ([App Masters Basics]
 
 ![Canecas para programadores](/img/caneca-programaco-programador-javascript-js-angular-react-d_nq_np_884917-mlb27350606376_052018-f.jpg)
 
-Para os 10 melhores colocados nos desafios **demos canecas e adesivos**. Os 4 melhores candidatos **ganharam um treinamento especial**, o "React para Humanos". Por fim, convidamos os três melhores para desenvolver um projeto prático na empresa, para só então selecionarmos o candidato que entraria.
+Para os 10 melhores colocados nos desafios **demos canecas e adesivos**. Os 4 melhores candidatos **ganharam um treinamento especial**, o "[React para Humanos](https://academy.appmasters.io/)". Por fim, convidamos os três melhores para desenvolver um projeto prático na empresa, para só então selecionarmos o candidato que entraria.
 
 ## Programadores em Juiz de Fora
 
 Sempre fui feliz em processos de seleção, desde minha primeira empresa em meiados de 2007. Amigos e parceiros de outras empresas sempre me solicitam para ajudar em processos de seleção, seja divulgando para minha rede de contatos, seja realizando o processo mesmo por completo.
 
-Desta demanda surgiu a ideia de criar uma plataforma voltada para empresas encontrarem e contratarem desenvolvedores. Desenvolvemos o Programadores em Juiz de Fora, como um side project para estudar server side rendering e ser algo realmente útil para a cidade.
+Desta demanda surgiu a ideia de criar uma plataforma voltada para empresas encontrarem e contratarem desenvolvedores. Desenvolvemos o [Programadores em Juiz de Fora](https://programador.emjuizdefora.com/), como um side project para estudar server side rendering e ser algo realmente útil para a cidade.
 
 De lá pra cá já fizemos alguns processos de seleção nossos pela ferramenta, e de vários clientes também, tendo 86% de sucesso na contratação, das vagas publicadas até então.
 
@@ -70,7 +70,7 @@ Tentamos fazer o processo todo sempre em poucos dias, para manter os candidatos 
 
 Queremos sempre pessoas de **coragem** para enfrentar as dificuldades, buscar soluções e principalmente com **disposição para aprender** sempre.
 
-Atualmente o inglês é requisito essencial em nossa seleção de pessoal, uma vez que estamos focando em clientes de fora do Brasil.
+Atualmente o inglês é requisito essencial em nossa seleção de pessoal, uma vez que estamos focando em [clientes de fora do Brasil](https://site-appmasters-github.netlify.com/pt/blog/trabalhar-para-clientes-de-fora-do-brasil).
 
 ## Como chamar atenção
 
@@ -83,6 +83,6 @@ Seguem algumas dicas para ter ainda mais sucesso em nossos processos de seleçã
 
 ## Como participar
 
-Estamos com processo de seleção sempre aberto, se quiser participar o primeiro passo é se cadastrar no Programadores em Juiz de Fora. 
+Estamos com [processo de seleção sempre aberto](https://site-appmasters-github.netlify.com/pt/blog/estamos-contratando-sempre), se quiser participar o primeiro passo é se cadastrar no Programadores em Juiz de Fora. 
 
 Nos vemos lá!
