@@ -13,8 +13,7 @@ collections:
     slug: "{{slug}}"
     fields:
       - label: "Id"
-        name: "id"
-        widget: "uuid"
+        name:
       - label: "Nome"
         name: "title"
         widget: "string"
@@ -222,9 +221,9 @@ collections:
         name: "technology"
         collection: "technologies"
         searchFields: ["title"]
-        valueField: "title"
+        valueField: "uuid"
         multiple: true
-        displayFields: ["title"]
+        displayFields: ["title", "language"]
         widget: relation
       - { label: "Descrição curta", name: "summary", widget: "string" }
       - {
@@ -359,6 +358,9 @@ collections:
     slug: "{{slug}}-{{language}}"
     create: true
     fields:
+      - label: "Id"
+        name: "id"
+        widget: "uuid"
       - {
           label: "Template Key",
           name: "templateKey",
