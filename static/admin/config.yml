@@ -12,6 +12,9 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
+      - label: "Id"
+        name: "id"
+        widget: "uuid"
       - label: "Nome"
         name: "title"
         widget: "string"
