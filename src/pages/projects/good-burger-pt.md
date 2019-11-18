@@ -7,7 +7,7 @@ date: 2019-11-04T11:35:18.847Z
 whereToFind:
   - image: /img/google_play.png
     link: 'https://play.google.com/store/apps/details?id=io.appmasters.goodburger'
-  - image: /img/google_play.png
+  - image: /img/chrome-browser-badge.png
     link: 'https://good-burger.firebaseapp.com/detalhe/5a675da86a5d640014a647fa'
 language: pt
 title: Good Burger
