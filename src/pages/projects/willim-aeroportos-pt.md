@@ -14,11 +14,11 @@ summary: >-
   Aplicativo utilizado em aeroportos para auxiliar biólogos no controle de dados
   e prevenção de acidentes aeronáuticos
 clientName: Sama Soluções Ambientais
-clientLocation: Juiz de Fora / MG
+clientLocation: Juiz de Fora/MG - Brasil
 devTime: 656
 devMonths: 4
 devCommits: 849
-image: /img/bg-banner.jpg
+image: /img/willim-bg-banner.jpg
 thumbnailImage: /img/projetos_willim.png
 tags:
   - React
