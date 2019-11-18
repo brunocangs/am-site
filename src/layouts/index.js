@@ -103,7 +103,7 @@ export default props => {
                 Our english page is still being built and should be up in a few
                 days.
                 <br />
-                Please return again soon!
+                Please come back soon!
               </p>
             </BaseContainer>
           </div>

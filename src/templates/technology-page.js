@@ -12,7 +12,7 @@ export default props => {
   return (
     <>
       <Helmet>
-        <title>{title}</title>
+        <title>{title.split(" |")[1]}</title>
         <meta name="keywords" content={frontmatter.tags.join(", ")}></meta>
       </Helmet>
       <TechnologyPageWrapper>

@@ -166,6 +166,12 @@ const HamburgerMenu = styled.div`
     text-align: center;
     font-size: 1.3em;
   }
+  a:last-of-type {
+    position: absolute;
+    bottom: 20px;
+    right: 0;
+    left: 0;
+  }
 `;
 
 const getLinks = language => {
@@ -247,6 +253,7 @@ export default function Header(props) {
   const navLinks = getLinks(language);
   const scroll = useWindowScroll();
   const isTransparent = shouldBeTransparent(props.location);
+  const isEn = language === "en";
   return (
     <Nav scroll={scroll + (open ? 76 : 0)} isTransparent={isTransparent}>
       <Link
@@ -262,12 +269,10 @@ export default function Header(props) {
           {language.charAt(0).toUpperCase() + language.slice(1)}
           <Drowpdown>
             <DropdownItem>
-              <Link to={"/en"}>{language === "en" ? "English" : "Inglês"}</Link>
+              <Link to={"/en"}>English</Link>
             </DropdownItem>
             <DropdownItem>
-              <Link to={"/pt"}>
-                {language === "en" ? "Portuguese" : "Português"}
-              </Link>
+              <Link to={"/pt"}>Português</Link>
             </DropdownItem>
           </Drowpdown>
         </NavItem>
@@ -295,6 +300,17 @@ export default function Header(props) {
             </div>
           </Link>
         ))}
+        {isEn ? (
+          <Link to={`/pt`} key={"pt"}>
+            <div onClick={() => setOpen(false)}>
+              Ir para versão em Português
+            </div>
+          </Link>
+        ) : (
+          <Link to={`/en`} key={"en"}>
+            <div onClick={() => setOpen(false)}>Go to English version</div>
+          </Link>
+        )}
       </HamburgerMenu>
     </Nav>
   );

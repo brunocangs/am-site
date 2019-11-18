@@ -61,7 +61,15 @@ export default ({ data }) => {
             {isEn ? "Related posts" : "Posts relacionados"}
           </h1>
           <AllBlogContainer related>
-            <ul>{relatedPosts.map(renderBlogItem(true))}</ul>
+            {relatedPosts.length > 0 ? (
+              <ul>{relatedPosts.map(renderBlogItem(true))}</ul>
+            ) : (
+              <p style={{ margin: 8 }}>
+                {isEn
+                  ? `We couldn't find any posts related to this one`
+                  : "Não encontramos nenhum post relacionado a este"}
+              </p>
+            )}
           </AllBlogContainer>
         </PostContent>
       </Post>
@@ -88,7 +96,11 @@ export const query = graphql`
       description
       featuredPost
       featuredImage {
-        ...SiteImageFluid
+        childImageSharp {
+          fluid(quality: 100) {
+            ...GatsbyImageSharpFluid
+          }
+        }
       }
       tags
     }
