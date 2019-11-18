@@ -11,6 +11,7 @@ collections:
     folder: "src/pages/authors"
     create: true
     slug: "{{slug}}"
+    summary: "{{title}} - {{language}}"
     fields:
       - label: "Id"
         name: "id"
@@ -43,6 +44,7 @@ collections:
     label: "Blog"
     folder: "src/pages/blog"
     create: true
+    summary: "{{title}} - {{language}}"
     slug: "{{slug}}-{{language}}"
     fields:
       - {
@@ -164,6 +166,7 @@ collections:
     label: "Projetos"
     folder: "src/pages/projects"
     create: true
+    summary: "{{title}} - {{language}}"
     slug: "{{slug}}-{{language}}"
     fields:
       - {
@@ -274,6 +277,7 @@ collections:
     label: "Depoimentos"
     folder: "src/pages/testimonies"
     create: true
+    summary: "{{title}} - {{language}}"
     slug: "{{slug}}-{{language}}"
     fields:
       - { label: "Nome da pessoa", name: "title", widget: "string" }
@@ -358,6 +362,7 @@ collections:
     folder: "src/pages/technologies"
     slug: "{{slug}}-{{language}}"
     create: true
+    summary: "{{title}} - {{language}}"
     fields:
       - label: "Id"
         name: "id"
@@ -405,6 +410,7 @@ collections:
     label: "Página Sobre nós"
     folder: "src/pages/about"
     create: true
+    summary: "{{title}} - {{language}}"
     slug: "index-{{language}}"
     fields:
       - label: "Título"
