@@ -7,13 +7,15 @@ date: 2019-11-03T11:59:48.861Z
 language: pt
 title: Fibratech Expert
 technology:
-  - Tecnologias | MongoDB
-  - Firebase
+  - PT | MongoDB
+  - Tecnologia | Firebase
+  - PT | Node.Js
+  - PT | React
 summary: >-
   Sistema para simplificar a captação de possíveis clientes e potencializar a
   efetivação de novas matrículas
 clientName: Fibratech Academia
-clientLocation: Juiz de Fora / MG
+clientLocation: Juiz de Fora/MG - Brasil
 devTime: 466
 devMonths: 2
 devCommits: 736
@@ -30,8 +32,6 @@ Segundo Isabela Marzullo, gerente da unidade Alameda, "o expert nos ajudou muito
 
 Sendo de uso interno, o sistema organiza os dados daqueles que visitam a academia, através de um aplicativo para tablet que fica na recepção de cada unidade da academia. Através do processo de interações com o interessado e um trabalho de marketing bem direcionado, aumentou-se as chances de transformá-los em clientes ativos da Fibratech.
 
----
-
 ## Desenvolvimento
 
 Nossa proposta foi de criar um app para digitalizar o processo de captação utilizando um tablet e, a partir dos dados obtidos do cliente, utilizar a “fórmula de resultados” criada pela equipe da Fibratech para propor um programa de atividades que auxiliem o futuro cliente a alcançar seus objetivos.
@@ -41,8 +41,6 @@ Após esta interação inicial, os dados do contato são salvos e vinculados a u
 Além de acompanhar os processos, o sistema fornece estatísticas completas de resultados e alcance das metas em diversos níveis, permitindo a tomada rápida de ações quando necessário, para que a empresa esteja sempre realizando as vendas desejadas.
 
 Ao longo do projeto, pivotamos algumas vezes a pedido do próprio cliente, quando algum recurso não esperado era identificado como essencial e precisávamos incluí-lo. Como utilizamos SCRUM, mudar o produto em desenvolvimento faz parte do processo, como diz nosso manifesto. E, após a primeira versão final, foi necessário interagir com os gerentes de todas as unidades para realização de treinamento e acompanhamento do uso correto do app.
-
----
 
 ## Detalhes técnicos
 
