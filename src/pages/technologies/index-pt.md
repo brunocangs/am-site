@@ -1,14 +1,14 @@
 ---
+id: 533d8375-82c6-4939-a230-23aba5c92797
 templateKey: all-technologies-page
 baseUrl: tecnologias
 language: pt
 title: Tecnologias
 logo: /img/react.png
-bgColor: "#654057"
 featured: false
-summary: " "
+summary: ' '
 tags:
-  - ""
+  - ''
 ---
 
 O que nós dominamos
