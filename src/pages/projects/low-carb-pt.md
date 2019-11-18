@@ -18,11 +18,11 @@ technology:
 summary: >-
   App para auxiliar aqueles que iniciaram sua dieta low carb e acompanhá-los em
   sua progressão
-clientName: Turi Souza
-clientLocation: Brazil
-devTime: 400
+clientName: Dr. Turi Souza
+clientLocation: Niterói/RJ - Brazil
+devTime: 623
 devMonths: 3
-devCommits: 375
+devCommits: 477
 image: /img/lowcarb_mockup.png
 thumbnailImage: /img/low-carb-thumbnail.jpg
 tags:
