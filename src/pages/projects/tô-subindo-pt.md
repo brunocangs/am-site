@@ -4,16 +4,22 @@ baseUrl: projetos
 featured: false
 type: sideproject
 date: 2019-11-05T12:47:45.008Z
+whereToFind:
+  - image: /img/google_play.png
+    link: 'https://play.google.com/store/apps/details?id=io.appmasters.tosubindo'
 language: pt
 title: Tô Subindo
 technology:
-  - Firebase
-summary: Um aplicativo para incentivar as pessoas a usarem as escadas
+  - PT | React
+  - Tecnologia | Firebase
+  - PT | Node.Js
+  - PT | MongoDB
+summary: Um aplicativo para incentivar as pessoas a usarem as escadas.
 clientName: App Masters
-clientLocation: Juiz de Fora / MG
-devTime: 86
+clientLocation: Juiz de Fora/MG - Brasil
+devTime: 126
 devMonths: 1
-devCommits: 185
+devCommits: 112
 image: /img/bg-banner-to-subindo.jpg
 thumbnailImage: /img/projetos_to_subindo.png
 tags:
