@@ -1,4 +1,5 @@
 ---
+id: 7c025321-fa47-4dcf-9251-6edc8ef52abd
 templateKey: technology-page
 baseUrl: tecnologias
 language: pt

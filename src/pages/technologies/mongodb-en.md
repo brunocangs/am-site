@@ -1,10 +1,10 @@
 ---
+id: 92fbd0e2-662d-4032-8d8e-06123b77b119
 templateKey: technology-page
 baseUrl: technologies
 language: en
 title: Technologies | MongoDB
 logo: /img/mongodb_logostacked_fullcolorblack_rgb.png
-bgColor: '#6AD381'
 featured: false
 summary: >-
   MongoDB is a general purpose, document-based, distributed database built for  
