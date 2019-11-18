@@ -15,7 +15,7 @@ devTime: 86
 devMonths: 1
 devCommits: 185
 image: /img/bg-banner-to-subindo.jpg
-thumbnailImage: /img/low-carb-thumbnail.jpg
+thumbnailImage: /img/projetos_to_subindo.png
 tags:
   - React
 ---

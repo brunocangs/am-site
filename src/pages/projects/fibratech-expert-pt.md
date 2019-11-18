@@ -18,7 +18,7 @@ devTime: 466
 devMonths: 2
 devCommits: 736
 image: /img/mockup-01.jpg
-thumbnailImage: /img/low-carb-thumbnail.jpg
+thumbnailImage: /img/projetos_fibratech.png
 tags:
   - React
 ---

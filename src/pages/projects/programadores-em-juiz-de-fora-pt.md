@@ -17,7 +17,7 @@ devTime: 617
 devMonths: 3
 devCommits: 1651
 image: /img/bg-banner.jpg
-thumbnailImage: /img/about_img_1.png
+thumbnailImage: /img/projetos_programadores_em_juiz_de_fora.png
 tags:
   - Programadores
   - Vagas

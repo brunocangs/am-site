@@ -14,8 +14,8 @@ clientLocation: Belo Horizonte / MG
 devTime: 70
 devMonths: 1
 devCommits: 73
-image: /img/bg-banner-to-subindo.jpg
-thumbnailImage: /img/low-carb-thumbnail.jpg
+image: /img/blockchain-3508589_1920.png
+thumbnailImage: /img/projetos_blockchain.png
 tags:
   - Blockchain
 ---

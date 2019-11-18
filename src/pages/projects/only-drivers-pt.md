@@ -15,7 +15,7 @@ devTime: 183
 devMonths: 2
 devCommits: 202
 image: /img/mockup_01.jpg
-thumbnailImage: /img/low-carb-thumbnail.jpg
+thumbnailImage: /img/projetos_onlydrivers.png
 tags:
   - React
 ---
