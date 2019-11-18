@@ -19,7 +19,7 @@ devTime: 656
 devMonths: 4
 devCommits: 849
 image: /img/bg-banner.jpg
-thumbnailImage: /img/low-carb-thumbnail.jpg
+thumbnailImage: /img/projetos_willim.png
 tags:
   - React
   - ReactNative
