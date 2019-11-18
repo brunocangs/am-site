@@ -7,9 +7,11 @@ date: 2018-10-23T13:55:01.364Z
 language: pt
 title: Willim Aeroportos
 technology:
-  - Tecnologias | React Native
-  - Tecnologias | MongoDB
-  - Firebase
+  - Tecnologia | Firebase
+  - PT | MongoDB
+  - PT | React Native
+  - PT | React
+  - PT | Node.Js
 summary: >-
   Aplicativo utilizado em aeroportos para auxiliar biólogos no controle de dados
   e prevenção de acidentes aeronáuticos
