@@ -1,10 +1,10 @@
 ---
+id: c925ab8b-afca-4c33-b63a-e9c513eccdd3
 templateKey: technology-page
 baseUrl: technologies
 language: en
-title: Technologies | React
+title: React
 logo: /img/react.png
-bgColor: '#145567'
 featured: true
 summary: React is a package
 tags:
