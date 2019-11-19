@@ -16,7 +16,9 @@ technology:
   - Tecnologia | Firebase
   - PT | Node.Js
   - PT | MongoDB
-summary: Um aplicativo para incentivar as pessoas a usarem as escadas.
+summary: >-
+  Um aplicativo para incentivar as pessoas a usarem as escadas dando pontos para
+  quem sobe ou desce.
 clientName: App Masters
 clientLocation: Juiz de Fora/MG - Brasil
 devTime: 126
