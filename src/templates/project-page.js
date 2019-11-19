@@ -98,7 +98,7 @@ export default ({ data }) => {
                 .filter(i => {
                   return (
                     data.markdownRemark.frontmatter.technology.indexOf(
-                      i.node.frontmatter.title
+                      i.node.frontmatter.id
                     ) > -1
                   );
                 })

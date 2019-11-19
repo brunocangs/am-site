@@ -21,7 +21,7 @@ export const renderTechnologyItem = ({ node: technology }, i) => {
         <div>
           <Img {...image} alt={title} />
         </div>
-        <h3>{title.split("| ")[1]}</h3>
+        <h3>{title}</h3>
       </div>
     </TechnologyWrapper>
   );

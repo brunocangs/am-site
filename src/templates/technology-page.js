@@ -12,13 +12,13 @@ export default props => {
   return (
     <>
       <Helmet>
-        <title>{title.split(" |")[1]}</title>
+        <title>{title}</title>
         <meta name="keywords" content={frontmatter.tags.join(", ")}></meta>
       </Helmet>
       <TechnologyPageWrapper>
         <div>
           <div>
-            <h1>{title.split(" |")[1]}</h1>
+            <h1>{title}</h1>
             <Img {...image} />
           </div>
         </div>
@@ -37,7 +37,7 @@ export const query = graphql`
       baseUrl
       summary
       language
-      bgColor
+      id
       title
       logo {
         childImageSharp {
