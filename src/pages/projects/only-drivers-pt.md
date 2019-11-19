@@ -9,7 +9,9 @@ title: Only Drivers
 technology:
   - PT | React
   - Tecnologia | Firebase
-summary: Um aplicativo para contratar os melhores motoristas
+summary: >-
+  Aplicativo para contratar os melhores motoristas da cidade, para que conduzam
+  seu carro por você.
 clientName: Chofer da Hora
 clientLocation: Juiz de Fora/MG - Brasil
 devTime: 183
