@@ -7,12 +7,12 @@
   YARN_FLAGS = "--no-ignore-optional"
 [[redirects]]
   from = "/"
-  to = "/pt"
+  to = "/en"
   status = 301
   force = true
-  conditions = {Language = ["pt", "pt_BR"]}
+  conditions = {Language = ["en", "en_US"]}
 [[redirects]]
   from = "/"
-  to = "/en"
+  to = "/pt"
   status = 301
   force = true
