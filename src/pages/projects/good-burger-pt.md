@@ -16,7 +16,7 @@ technology:
   - Tecnologia | Firebase
   - PT | MongoDB
   - PT | Node.Js
-summary: Ranking das melhores hamburgerias da cidade.
+summary: O Ranking das melhores hamburgerias da cidade em um web app leve e prático.
 clientName: App Masters
 clientLocation: Juiz de Fora/MG - Brasil
 devTime: 177
