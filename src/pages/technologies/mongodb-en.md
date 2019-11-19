@@ -3,7 +3,7 @@ id: 92fbd0e2-662d-4032-8d8e-06123b77b119
 templateKey: technology-page
 baseUrl: technologies
 language: en
-title: Technologies | MongoDB
+title: MongoDB
 logo: /img/mongodb_logostacked_fullcolorblack_rgb.png
 featured: false
 summary: >-
