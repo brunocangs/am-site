@@ -7,8 +7,8 @@ date: 2019-11-05T11:59:23.054Z
 language: pt
 title: Only Drivers
 technology:
-  - PT | React
-  - Tecnologia | Firebase
+  - 2e611b48-37da-4527-bf70-fe66ad71bc41
+  - 5c7e8c15-9336-40a3-ad99-33d0fa050309
 summary: >-
   Aplicativo para contratar os melhores motoristas da cidade, para que conduzam
   seu carro por você.
