@@ -47,7 +47,7 @@ export const query = graphql`
             fit: CONTAIN
             background: "transparent"
           ) {
-            ...GatsbyImageSharpFixed
+            ...GatsbyImageSharpFixed_withWebp
           }
         }
       }

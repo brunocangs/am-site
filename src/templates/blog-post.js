@@ -98,7 +98,7 @@ export const query = graphql`
       featuredImage {
         childImageSharp {
           fluid(quality: 100) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
@@ -133,7 +133,7 @@ export const query = graphql`
             image {
               childImageSharp {
                 fixed(width: 64, height: 64) {
-                  ...GatsbyImageSharpFixed
+                  ...GatsbyImageSharpFixed_withWebp
                 }
               }
             }

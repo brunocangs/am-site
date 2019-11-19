@@ -116,7 +116,7 @@ export const query = graphql`
   fragment SiteImageFluid on File {
     childImageSharp {
       fluid {
-        ...GatsbyImageSharpFluid
+        ...GatsbyImageSharpFluid_withWebp
         originalName
       }
     }
@@ -124,7 +124,7 @@ export const query = graphql`
   fragment SiteImageFixed on File {
     childImageSharp {
       fixed {
-        ...GatsbyImageSharpFixed
+        ...GatsbyImageSharpFixed_withWebp
         originalName
       }
     }
@@ -146,7 +146,7 @@ export const query = graphql`
         image {
           childImageSharp {
             fixed(width: 170) {
-              ...GatsbyImageSharpFixed
+              ...GatsbyImageSharpFixed_withWebp
             }
           }
         }
@@ -191,7 +191,7 @@ export const query = graphql`
             logo {
               childImageSharp {
                 smallLogo: fluid(maxWidth: 85) {
-                  ...GatsbyImageSharpFluid
+                  ...GatsbyImageSharpFluid_withWebp
                 }
               }
             }
