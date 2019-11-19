@@ -54,7 +54,7 @@ export const renderBlogItem = related => ({ node: post }, i) => {
 };
 export default ({ data, pageContext }) => {
   const [page, setPage] = useState(1);
-  const pageSize = page * 3;
+  const pageSize = page * 10;
   const { allBlogPosts } = data;
   const { edges: blogPosts } = allBlogPosts;
   const isEn = pageContext.language === "en";
@@ -76,7 +76,7 @@ export default ({ data, pageContext }) => {
           )}
         </AllBlogContainer>
         {pageSize < blogPosts.length && (
-          <Button variant={"secondary"} onClick={() => setPage(page + 1)}>
+          <Button onClick={() => setPage(page + 1)}>
             {isEn ? "See more" : "Ver mais"}
           </Button>
         )}

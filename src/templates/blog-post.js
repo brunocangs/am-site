@@ -27,7 +27,7 @@ export default ({ data }) => {
         <meta name="keywords" content={tags.join(", ")}></meta>
       </Helmet>
       <Post>
-        <Img fluid={{ ...image, aspectRatio: 2.5 }} />
+        <Img fluid={{ ...image }} />
         <PostContent>
           <h1>{title}</h1>
           <div>

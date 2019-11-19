@@ -77,7 +77,7 @@ collections:
         widget: "relation"
         collection: "authors"
         searchFields: ["title"]
-        valueField: "uuid"
+        valueField: "id"
         displayFields: ["title", "language"]
       - { label: "Descrição", name: "description", widget: "text" }
       - {
@@ -227,7 +227,7 @@ collections:
         name: "technology"
         collection: "technologies"
         searchFields: ["title"]
-        valueField: "uuid"
+        valueField: "id"
         multiple: true
         displayFields: ["title", "language"]
         widget: relation

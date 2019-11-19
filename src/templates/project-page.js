@@ -55,7 +55,7 @@ export default ({ data }) => {
         <meta name="keywords" content={tags.join(", ")}></meta>
       </Helmet>
       <Content>
-        <Img fluid={{ ...image.childImageSharp.fluid, aspectRatio: 2.5 }} />
+        <Img fluid={{ ...image.childImageSharp.fluid }} />
         <ProjectDetailsContainer>
           <h1>{title}</h1>
           <div dangerouslySetInnerHTML={{ __html: mainPitch }} />
@@ -144,7 +144,11 @@ export const query = graphql`
       whereToFind {
         link
         image {
-          ...SiteImageFixed
+          childImageSharp {
+            fixed(width: 170) {
+              ...GatsbyImageSharpFixed
+            }
+          }
         }
       }
       image {

@@ -429,10 +429,20 @@ export const HowMuchIsMyApp = styled(SectionContainer)`
     }
   }
   p {
+    text-align: center;
     display: flex;
     flex-direction: column;
     color: ${Colors.darkGrey};
     line-height: 1.8em;
+    line-height: 1.8em;
+    margin: 10px auto;
+    ${media("large")} {
+      max-width: 60%;
+    }
+    a {
+      font-weight: 400;
+      text-decoration: underline !important;
+    }
   }
   flex-direction: column;
   a {

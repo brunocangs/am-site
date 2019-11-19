@@ -1,7 +1,7 @@
-import { useEffect } from "react";
-import { Banner } from "../components/Header";
-import React from "react";
-import { Link } from "gatsby";
+// import { useEffect } from "react";
+// import { Banner } from "../components/Header";
+// import React from "react";
+// import { Link } from "gatsby";
 export default () => {
   // useEffect(() => {
   //   if (typeof navigator !== "undefined") {

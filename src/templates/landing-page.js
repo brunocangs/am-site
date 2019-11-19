@@ -60,14 +60,14 @@ export default props => {
             <div>
               <h1>{header}</h1>
               <p>{content}</p>
-              <div>
+              {/* <div>
                 <Link to="/pt/alguma-pagina">
                   <Button variant="secondary">Texto?</Button>
                 </Link>
                 <Link to="/pt/alguma-pagina">
                   <Button variant="tertiary">Outro texto?</Button>
                 </Link>
-              </div>
+              </div> */}
             </div>
             <img src={`/img/${image.originalName}`} alt={"Banner"} />
           </BannerContent>
@@ -197,7 +197,7 @@ export default props => {
                 >
                   <Button variant={"secondary"}>Cadastrar agora</Button>
                 </a>
-                <Link to="/pt/blog/o-post-de-contratar-gentes">
+                <Link to="/pt/blog/estamos-contratando-sempre">
                   <Button variant={"tertiary"}>Saber mais</Button>
                 </Link>
               </div>
@@ -240,9 +240,14 @@ export const query = graphql`
           content
           title
           image {
-            ...SiteImageFixed
             childImageSharp {
-              fixed {
+              fixed(
+                height: 80
+                width: 80
+                fit: CONTAIN
+                background: "transparent"
+              ) {
+                ...GatsbyImageSharpFixed
                 aspectRatio
               }
             }

@@ -26,6 +26,9 @@ const FooterContent = styled.div`
   padding: 8px;
   text-align: center;
   color: ${darkGrey};
+  :last-child {
+    line-height: 1.5em;
+  }
   span {
     margin: 18px 0;
     display: block;
@@ -106,9 +109,18 @@ export default props => {
       </FooterContent>
       <FooterContent>
         <span>{isEn ? "Address" : "Endereço"}</span>
-        {isEn
-          ? "Rio Branco Avenue 3480, 36025-020, Juiz de Fora, Minas Gerais, Brazil"
-          : "Av. Barão do Rio Branco, 3480 - Passos, Juiz de Fora - MG, 36025-020 3º andar, Sala 1"}
+        {isEn ? (
+          "Rio Branco Avenue 3480, 36025-020, Juiz de Fora, Minas Gerais, Brazil"
+        ) : (
+          <>
+            Av. Barão do Rio Branco 3480
+            <br />
+            3º andar, Sala 1<br />
+            Bairro Bom Passos, Juiz de Fora - MG
+            <br />
+            CEP 36025-020
+          </>
+        )}
         <a
           href="https://www.google.com.br/maps/place/App+Masters/@-21.7725999,-43.3486377,17z/data=!3m1!4b1!4m5!3m4!1s0x989b5d3104ae57:0x9216e0df6326e89f!8m2!3d-21.7725999!4d-43.3471735"
           target="_blank"

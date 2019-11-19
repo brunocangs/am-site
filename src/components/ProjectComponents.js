@@ -104,11 +104,16 @@ export const ProjectItemDetails = styled.div`
           }
         }
         :nth-child(2) {
+          svg {
+            height: 1.35em;
+            width: 1.35em;
+            padding: 0.1em;
+          }
           flex: 1;
           text-align: right;
           flex-direction: column;
           align-items: flex-end;
-          font-size: 1rem;
+          font-size: 1em;
           font-weight: 300;
           margin-bottom: 10px;
         }
@@ -152,6 +157,12 @@ export const Content = styled.div`
     padding-left: 14px;
   }
   padding-bottom: 60px;
+  > div:first-child {
+    img {
+      object-position: center top !important;
+    }
+    max-height: 650px;
+  }
 `;
 
 export const ProjectDetailsContainer = styled(AllProjectsContainer)`

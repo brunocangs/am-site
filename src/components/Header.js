@@ -198,16 +198,20 @@ const getLinks = language => {
   } else {
     navLinks = [
       {
+        url: "/blog",
+        label: "Blog"
+      },
+      {
         url: "/projetos",
         label: "Projetos"
       },
       {
-        url: "/servicos",
-        label: "Serviços"
+        url: "/tecnologias",
+        label: "Tecnologias"
       },
       {
-        url: "/blog",
-        label: "Blog"
+        url: "/servicos",
+        label: "Serviços"
       },
       {
         url: "/sobre",
