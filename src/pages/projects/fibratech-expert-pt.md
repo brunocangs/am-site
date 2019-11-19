@@ -7,10 +7,10 @@ date: 2019-11-03T11:59:48.861Z
 language: pt
 title: Fibratech Expert
 technology:
-  - PT | MongoDB
-  - Tecnologia | Firebase
-  - PT | Node.Js
-  - PT | React
+  - 2e611b48-37da-4527-bf70-fe66ad71bc41
+  - d93e87bf-4d65-4107-9d29-3e1ac6f8dad9
+  - fbecf863-4cf1-44e0-9a27-df32f01d33d6
+  - 5c7e8c15-9336-40a3-ad99-33d0fa050309
 summary: >-
   Sistema para simplificar a captação de possíveis clientes e potencializar a
   efetivação de novas matrículas
