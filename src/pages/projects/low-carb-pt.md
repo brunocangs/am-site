@@ -13,16 +13,19 @@ whereToFind:
 language: pt
 title: Emagreça já
 technology:
-  - Tecnologias | React Native
-  - Tecnologias | MongoDB
+  - PT | React Native
+  - PT | React
+  - PT | Node.Js
+  - PT | MongoDB
+  - Tecnologia | Firebase
 summary: >-
   App para auxiliar aqueles que iniciaram sua dieta low carb e acompanhá-los em
   sua progressão
-clientName: Turi Souza
-clientLocation: Brazil
-devTime: 400
+clientName: Dr. Turi Souza
+clientLocation: Niterói/RJ - Brasil
+devTime: 623
 devMonths: 3
-devCommits: 375
+devCommits: 477
 image: /img/lowcarb_mockup.png
 thumbnailImage: /img/low-carb-thumbnail.jpg
 tags:
@@ -45,8 +48,6 @@ Com toda a informação adquirida e as ideias em mente, seguimos para um protót
 
 Ao final do projeto, abrimos o app para testes beta, onde apenas convidados poderiam instalar o aplicativo para experimentar. Depois de algumas semanas em beta, ajustamos os últimos detalhes e liberamos o app Emagreça Já nas lojas.
 
-- - -
-
 ## Detalhes técnicos
 
 Um recurso que ficou muito bom é a possibilidade do app funcionar 100% offline, assim, independente de ter conexão ou não, o usuário consegue ter acesso aos cardápios, receitas e alimentos permitidos.
@@ -54,8 +55,6 @@ Um recurso que ficou muito bom é a possibilidade do app funcionar 100% offline,
 Utilizamos, como em todos os outros projetos, uma ferramenta de registro de falhas online, onde, caso aconteça algum erro com algum usuário, somos avisados imediatamente para verificação e possível correção, mantendo assim o app sempre em perfeito funcionamento.
 
 O projeto foi desenvolvido para Android e iOS, nativo nos dois ambientes, com React Native. A API foi desenvolvida em node com MongoDB e está em funcionamento no heroku. A “área administrativa” foi implementada com React e está hospedada no firebase.
-
-- - -
 
 ## Recepção e retorno sobre investimento
 

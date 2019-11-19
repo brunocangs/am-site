@@ -15,6 +15,7 @@ tags:
   - Seleção
   - Oportunidade
   - Vaga
+  - Projeto
 ---
 Desenvolver um game utilizando a [SuperHero API](https://superheroapi.com/index.html), onde o jogador testará seu conhecimento sobre super-heróis.
 

@@ -20,6 +20,7 @@ tags:
   - Juiz de Fora
   - App Masters
   - Vagas
+  - Projeto
 ---
 Este post tem por objetivo servir de arquivo de alguns posts do nosso antigo site, e referência para interessados em saber que tipo de projetos gostávamos de pedir em nossos processos de seleção.
 
