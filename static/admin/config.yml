@@ -4,6 +4,8 @@ backend:
 locale: "pt"
 media_folder: static/img
 public_folder: /img
+slug:
+  clean_accents: true
 
 collections:
   - name: "authors"
