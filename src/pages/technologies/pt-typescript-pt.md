@@ -1,8 +1,9 @@
 ---
+id: 3dff409f-9cec-4df2-85b4-ae9b50df845d
 templateKey: technology-page
 baseUrl: tecnologias
 language: pt
-title: PT | TypeScript
+title: TypeScript
 logo: /img/typescript-logo.png
 featured: false
 summary: TypeScript
