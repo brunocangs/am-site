@@ -10,7 +10,7 @@ technology:
   - Blockchain
 summary: Blockhain para gerir pagamentos e confirmações de entregas
 clientName: Antonio
-clientLocation: Belo Horizonte / MG
+clientLocation: Belo Horizonte/MG - Brasil
 devTime: 70
 devMonths: 1
 devCommits: 73
