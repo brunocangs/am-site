@@ -10,9 +10,9 @@ whereToFind:
 language: pt
 title: Programadores em Juiz de Fora
 technology:
-  - PT | React
-  - PT | Node.Js
-  - PT | PostgreSQL
+  - 2e611b48-37da-4527-bf70-fe66ad71bc41
+  - fbecf863-4cf1-44e0-9a27-df32f01d33d6
+  - 31fe4e06-c873-4cfa-9aca-6429dcced0b2
 summary: >-
   Plataforma white-label para contração de desenvolvedores por empresas de Juiz
   de Fora.
