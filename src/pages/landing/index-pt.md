@@ -34,7 +34,7 @@ manifest:
     - content: >-
         Queremos trabalhar com clientes alinhados com nosso mindset, que tenham
         skill técnico e entendam o valor do que fazemos
-      image: /img/good-clients.png
+      image: /img/target.png
       title: Clientes bons
     - content: >-
         Usamos as tecnologias que gostamos e nas quais acreditamos,
