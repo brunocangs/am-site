@@ -12,10 +12,10 @@ whereToFind:
 language: pt
 title: Tô Subindo
 technology:
-  - PT | React
-  - Tecnologia | Firebase
-  - PT | Node.Js
-  - PT | MongoDB
+  - 2e611b48-37da-4527-bf70-fe66ad71bc41
+  - fbecf863-4cf1-44e0-9a27-df32f01d33d6
+  - d93e87bf-4d65-4107-9d29-3e1ac6f8dad9
+  - 5c7e8c15-9336-40a3-ad99-33d0fa050309
 summary: >-
   Um aplicativo para incentivar as pessoas a usarem as escadas dando pontos para
   quem sobe ou desce.
