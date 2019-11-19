@@ -3,7 +3,7 @@ id: d93e87bf-4d65-4107-9d29-3e1ac6f8dad9
 templateKey: technology-page
 baseUrl: tecnologias
 language: pt
-title: PT | MongoDB
+title: MongoDB
 logo: /img/mongo-db-logo.png
 featured: false
 summary: >-
