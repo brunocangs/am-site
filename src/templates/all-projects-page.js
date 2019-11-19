@@ -44,8 +44,11 @@ export const renderProjectItem = ({ node: project }, i) => {
           </div>
         </div>
         <div>
-          <Link to={isEn ? `/en/projects/${slug}` : `/pt/projetos/${slug}`}>
-            <h2>{title}</h2>
+          <Link
+            to={isEn ? `/en/projects/${slug}` : `/pt/projetos/${slug}`}
+            itemProp="url"
+          >
+            <h2 itemProp="name">{title}</h2>
           </Link>
           <ClampLines
             buttons={false}
