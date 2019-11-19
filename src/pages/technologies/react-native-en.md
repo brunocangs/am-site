@@ -1,10 +1,10 @@
 ---
+id: 8e2ced04-31d9-4f05-923a-44ad810d0b09
 templateKey: technology-page
 baseUrl: technologies
 language: en
-title: Technologies | React Native
+title: React Native
 logo: /img/react.png
-bgColor: '#145567'
 featured: true
 summary: Summary of React Native
 tags:
