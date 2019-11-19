@@ -26,6 +26,14 @@ tags:
 ---
 O Mais vale é um aplicativo que oferece aos usuários descontos em diversos estabelecimentos, seja pelo consumo de produtos e serviços das empresas, por fidelização, como também premiando através de sorteios.
 
+Para as empresas conveniadas a vantagem é trazer cada vez mais novos clientes, atraindo-os com promoções e demais vantagens, permitindo também a fidelização. Para os usuários o aplicativo oferece uma forma consistente de economizar e conhecer novos estabelecimentos, dos mais variados segmentos.
+
+Através do aplicativo o usuário "baixa" um cupom de desconto, que é validado via QRCode no momento da compra, validando assim a utilização.
+
+Além do desconto ao consumir produtos e serviços, o aplicativo permite a empresa implementar a fidelidade, onde a cada compra o cliente ganha "pontos", que após alcançar determinada quantidade, podem ser trocados por outros outros produtos.
+
+O sorteio também foi uma forma de atrair mais usuários, oferecendo a possibilidade de se inscreverem para ganhar vantagens, com sorteios periódicos.
+
 ## Tecnologia
 
 Desenvolvemos o sistema utilizando React Native nas versões Android e iOS, os quais estão em beta interno atualmente nas duas lojas.
