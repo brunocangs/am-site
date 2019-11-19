@@ -14,7 +14,9 @@ technology:
   - PT | MongoDB
   - PT | Node.Js
   - Tecnologia | Firebase
-summary: Um quiz game educativo para futuros alunos da UFJF
+summary: >-
+  Um quiz game educativo para estudantes interessados na UFJF que trás muito
+  conhecimento e informação.
 clientName: UFJF
 clientLocation: Juiz de Fora/MG - Brasil
 devTime: 739
