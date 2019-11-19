@@ -1,8 +1,9 @@
 ---
+id: ca65dded-5de3-4dab-aed4-239e2271e5b1
 templateKey: technology-page
 baseUrl: tecnologias
 language: pt
-title: PT | Next.js
+title: Next.js
 logo: /img/nextjs-logo.png
 featured: true
 summary: Next.js
