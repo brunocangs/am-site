@@ -1,8 +1,9 @@
 ---
+id: 2e611b48-37da-4527-bf70-fe66ad71bc41
 templateKey: technology-page
 baseUrl: tecnologias
 language: pt
-title: PT | React
+title: React
 logo: /img/react.png
 featured: true
 summary: React
