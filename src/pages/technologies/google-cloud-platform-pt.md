@@ -3,7 +3,7 @@ id: 84bf2840-82a2-4363-a889-111c442dddd9
 templateKey: technology-page
 baseUrl: tecnologias
 language: pt
-title: PT | Google Cloud Platform
+title: Google Cloud Platform
 logo: /img/google-cloud-platform-logo.png
 featured: false
 summary: Google Cloud Platform
