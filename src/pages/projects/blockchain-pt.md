@@ -7,7 +7,8 @@ date: 2019-11-05T12:00:18.188Z
 language: pt
 title: Blockchain
 technology:
-  - Blockchain
+  - 8962db14-cd78-42fa-8bee-21e9a95e4fb7
+  - 2e611b48-37da-4527-bf70-fe66ad71bc41
 summary: Blockhain para gerir pagamentos e confirmações de entregas
 clientName: Antonio Hoffert
 clientLocation: Belo Horizonte/MG - Brasil
