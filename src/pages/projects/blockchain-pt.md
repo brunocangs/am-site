@@ -8,8 +8,9 @@ language: pt
 title: Blockchain
 technology:
   - 8962db14-cd78-42fa-8bee-21e9a95e4fb7
+  - 2e611b48-37da-4527-bf70-fe66ad71bc41
 summary: Blockhain para gerir pagamentos e confirmações de entregas
-clientName: Antonio
+clientName: Antonio Hoffert
 clientLocation: Belo Horizonte/MG - Brasil
 devTime: 70
 devMonths: 1
@@ -21,4 +22,8 @@ tags:
 ---
 O blockchain veio para mudar a forma como as transações acontecem, tornado as informações públicas, e ao mesmo tempo, mais seguras.
 
-Estamos começando um projeto com Blockchain, mas ainda não temos como apresentar aqui os detalhes. Assim que caminharmos um pouco mais atualizaremos este conteúdo.
+Desenvolvemos para o Antônio Hoffert, economista e especialista em blockchain, uma prova de conceito utilizando o blockchain através da rede Ethereum. 
+
+De acordo com o termo de confidencialidade não podemos apresentar maiores detalhes acerca do projeto.
+
+Para a interface visual foi utilizado React, por permitir uma implementação rápida e prática da solução, e para interação com o Ethereum utilizamos o web3.js.

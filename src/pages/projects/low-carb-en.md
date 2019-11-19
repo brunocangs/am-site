@@ -13,9 +13,10 @@ whereToFind:
 language: en
 title: Low Carb App
 technology:
-  - Technologies | React Native
-  - Technologies | MongoDB
-  - Technologies | React
+  - 833639d7-b646-4a23-b9e3-373c04d21766
+  - 5c7e8c15-9336-40a3-ad99-33d0fa050309
+  - d93e87bf-4d65-4107-9d29-3e1ac6f8dad9
+  - fbecf863-4cf1-44e0-9a27-df32f01d33d6
 summary: >-
   Low Carb is your direct guide to the latest low carb diets and manners, as
   well as intermittent fasting so you can start losing weight immediately

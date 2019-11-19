@@ -13,11 +13,10 @@ whereToFind:
 language: pt
 title: Emagreça já
 technology:
-  - PT | React Native
-  - PT | React
-  - PT | Node.Js
-  - PT | MongoDB
-  - Tecnologia | Firebase
+  - 833639d7-b646-4a23-b9e3-373c04d21766
+  - fbecf863-4cf1-44e0-9a27-df32f01d33d6
+  - 5c7e8c15-9336-40a3-ad99-33d0fa050309
+  - d93e87bf-4d65-4107-9d29-3e1ac6f8dad9
 summary: >-
   App para auxiliar aqueles que iniciaram sua dieta low carb e acompanhá-los em
   sua progressão
