@@ -1,8 +1,9 @@
 ---
+id: 3366ac07-2bc0-43ce-8a38-863b2759763a
 templateKey: technology-page
 baseUrl: tecnologias
 language: pt
-title: PT | MySQL
+title: MySQL
 logo: /img/mysql-logo.png
 featured: false
 summary: MySQL

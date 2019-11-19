@@ -1,8 +1,9 @@
 ---
+id: fbecf863-4cf1-44e0-9a27-df32f01d33d6
 templateKey: technology-page
 baseUrl: tecnologias
 language: pt
-title: PT | Node.Js
+title: Node.Js
 logo: /img/nodejs-logo.png
 featured: false
 summary: Node.Js

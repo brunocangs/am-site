@@ -1,8 +1,9 @@
 ---
+id: 833639d7-b646-4a23-b9e3-373c04d21766
 templateKey: technology-page
 baseUrl: tecnologias
 language: pt
-title: PT | React Native
+title: React Native
 logo: /img/react-native-logo.png
 featured: true
 summary: Resumo de React Native

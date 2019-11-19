@@ -1,8 +1,9 @@
 ---
+id: 022936ab-3a3d-418c-b752-826b88da839d
 templateKey: technology-page
 baseUrl: tecnologias
 language: pt
-title: PT | GraphQL
+title: GraphQL
 logo: /img/graphql-logo.png
 featured: false
 summary: GraphQL

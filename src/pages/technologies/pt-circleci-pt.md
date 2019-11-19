@@ -1,8 +1,9 @@
 ---
+id: 9550f19b-f994-4887-bd41-af1320411876
 templateKey: technology-page
 baseUrl: tecnologias
 language: pt
-title: PT | CircleCI
+title: CircleCI
 logo: /img/circleci-logo.png
 featured: false
 summary: CircleCI

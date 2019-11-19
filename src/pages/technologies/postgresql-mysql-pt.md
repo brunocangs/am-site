@@ -1,8 +1,9 @@
 ---
+id: 31fe4e06-c873-4cfa-9aca-6429dcced0b2
 templateKey: technology-page
 baseUrl: tecnologias
 language: pt
-title: PT | PostgreSQL
+title: PostgreSQL
 logo: /img/postgres-logo.png
 featured: false
 summary: PostgreSQL
