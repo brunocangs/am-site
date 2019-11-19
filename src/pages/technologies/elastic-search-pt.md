@@ -3,7 +3,7 @@ id: a8197f30-f4ad-4865-9ed8-dfc7592d0f4d
 templateKey: technology-page
 baseUrl: tecnologias
 language: pt
-title: PT | Elastic Search
+title: Elastic Search
 logo: /img/elasticsearch-logo.png
 featured: false
 summary: Elastic Search
