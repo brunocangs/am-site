@@ -56,14 +56,20 @@ const Main = styled.main`
 
 export default props => {
   const { children } = props;
-  let language = props.path.split("/")[1];
+  let language = props.pageContext.language;
   if (language.length > 2) language = "en";
   const isEn = language === "en";
   return (
     <>
       <Helmet
-        defaultTitle="App Masters - Juiz de Fora/MG"
-        titleTemplate="%s - App Masters - Juiz de Fora/MG"
+        defaultTitle={
+          isEn ? "App Masters - Brazil" : "App Masters - Juiz de Fora/MG"
+        }
+        titleTemplate={
+          isEn
+            ? "%s - App Masters - Brazil"
+            : "%s - App Masters - Juiz de Fora/MG"
+        }
       >
         <link
           href="https://fonts.googleapis.com/css?family=Open+Sans:800|Poppins:300,400,500,600,700,800|Roboto:300,400,500"
