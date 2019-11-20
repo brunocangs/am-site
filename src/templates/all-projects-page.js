@@ -144,7 +144,7 @@ export const query = graphql`
           language: { eq: $language }
         }
       }
-      sort: { fields: frontmatter___date }
+      sort: { fields: frontmatter___date, order: DESC }
     ) {
       edges {
         node {

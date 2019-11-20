@@ -169,6 +169,17 @@ export const ProjectDetailsContainer = styled(AllProjectsContainer)`
   h2 {
     margin-top: 48px;
   }
+  p > span {
+    max-height: 350px;
+    max-width: 75% !important;
+    margin: 10px;
+    overflow: hidden;
+    img {
+      object-fit: contain;
+      width: 100%;
+      height: 100%;
+    }
+  }
   > div {
     :nth-of-type(2) {
       ul {
