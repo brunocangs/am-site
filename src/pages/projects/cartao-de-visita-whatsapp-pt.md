@@ -4,6 +4,9 @@ baseUrl: projetos
 featured: false
 type: sideproject
 date: 2019-11-20T13:26:38.602Z
+whereToFind:
+  - image: /img/google_play.png
+    link: 'https://play.google.com/store/apps/details?id=com.whatsappcontactcard'
 language: pt
 title: Cartão de Visita WhatsApp
 technology:
