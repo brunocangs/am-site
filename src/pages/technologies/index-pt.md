@@ -11,8 +11,10 @@ tags:
   - ''
 ---
 
-O que nós dominamos
+Tecnologias
 
 ---
 
-a
+Desde o princípio optamos por trabalhar com tecnologias que gostamos e nas quais acreditamos. Estamos atualmente fortemente ligados a uma stack JavaScript e temos explorado cada vez mais os seus recursos.
+
+Estas são as principais tecnologias (não todas) que temos usados em nossos projetos.
