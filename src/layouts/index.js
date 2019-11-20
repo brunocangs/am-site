@@ -56,8 +56,8 @@ const Main = styled.main`
 
 export default props => {
   const { children } = props;
-  let language = props.pageContext.language;
-  if (!language || language.length > 2) language = "en";
+  let language = props.pageContext.language || props.path.split("/")[1];
+  if (language.length > 2) language = "en";
   const isEn = language === "en";
   return (
     <>
