@@ -15,6 +15,7 @@ export const Content = styled(BaseContainer)`
 
 export const AllTagContent = styled(BaseContainer)`
   flex-direction: column;
+  line-height: 2.2em;
   ul {
     list-style: none;
     padding: 0;

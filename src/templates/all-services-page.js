@@ -19,7 +19,22 @@ export default ({
   const isEn = language === "en";
   return (
     <div style={{ width: "100%" }}>
-      <Helmet title={title} defer={false} />
+      <Helmet title={title} defer={false}>
+        <meta
+          name="description"
+          content={
+            isEn
+              ? "Interested on our company? Here are the services we can provide"
+              : "Interessado na empresa? Estes são os serviçõs que oferecemos"
+          }
+        />
+        <link
+          rel="canonical"
+          href={`https://appmasters.io/${language}/${
+            isEn ? "services" : "servicos"
+          }`}
+        />
+      </Helmet>
       <Banner title={title} />
       <Content>
         {services.map((service, i) => {

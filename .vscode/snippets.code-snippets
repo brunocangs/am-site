@@ -23,5 +23,12 @@
       "export const light${1/(.*)/${1:/capitalize}/} = color($1).lighten(0.2).hex();",
       "export const dark${1/(.*)/${1:/capitalize}/} = color($1).darken(0.2).hex();"
     ]
+  },
+  "canonincal": {
+    "scope": "javascript,typescript,javascriptreact",
+    "prefix": "canon",
+    "body": [
+      "<link rel=\"canonical\" href={`https://appmasters.io/\\${language\\}/${isEn ? '$1' : '$2'}`} />"
+    ]
   }
 }

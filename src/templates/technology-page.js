@@ -9,11 +9,24 @@ export default props => {
   const { html, frontmatter } = data.technology;
   const { title, logo } = frontmatter;
   const image = logo.childImageSharp;
+  const isEn = props.pageContext.language === "en";
   return (
     <>
       <Helmet>
         <title>{title}</title>
         <meta name="keywords" content={frontmatter.tags.join(", ")}></meta>
+        <meta
+          name="description"
+          content={
+            isEn
+              ? `Technical information and details on how we use ${title}`
+              : `Informações técnicas e detalhes de como utilizamos ${title}`
+          }
+        />
+        <link
+          rel="canonical"
+          href={`https://appmasters.io/${props.pageContext.language}/${props.data.technology.fields.slug}`}
+        />
       </Helmet>
       <TechnologyPageWrapper>
         <div>

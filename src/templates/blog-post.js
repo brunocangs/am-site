@@ -11,9 +11,21 @@ import { kebabCase } from "lodash";
 import { renderBlogItem } from "./all-blog-page";
 
 export default ({ data }) => {
-  const { html, frontmatter } = data.post;
+  const {
+    html,
+    frontmatter,
+    fields: { slug }
+    // tableOfContents
+  } = data.post;
   const { edges: authors } = data.allAuthors;
-  const { title, language, featuredImage, tags, author } = frontmatter;
+  const {
+    title,
+    language,
+    featuredImage,
+    tags,
+    author,
+    description
+  } = frontmatter;
   const image = featuredImage.childImageSharp.fluid;
   const { node: postAuthor } = authors.find(
     i => i.node.frontmatter.title === author
@@ -24,7 +36,12 @@ export default ({ data }) => {
     <>
       <Helmet>
         <title>{title}</title>
+        <link
+          rel="canonical"
+          href={`https://appmasters.io/${language}/blog/${slug}`}
+        />
         <meta name="keywords" content={tags.join(", ")}></meta>
+        <meta name="description" content={description} />
       </Helmet>
       <Post>
         <Img fluid={{ ...image }} />
@@ -57,9 +74,9 @@ export default ({ data }) => {
               <div dangerouslySetInnerHTML={{ __html: postAuthor.html }} />
             </div>
           </div>
-          <h1 style={{ marginTop: 48 }}>
+          <h2 style={{ marginTop: 48 }}>
             {isEn ? "Related posts" : "Posts relacionados"}
-          </h1>
+          </h2>
           <AllBlogContainer related>
             {relatedPosts.length > 0 ? (
               <ul>{relatedPosts.map(renderBlogItem(true))}</ul>
@@ -82,6 +99,7 @@ export const query = graphql`
     id
     html
     rawMarkdownBody
+    # tableOfContents
     fields {
       slug
     }

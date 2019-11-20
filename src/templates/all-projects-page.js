@@ -101,6 +101,20 @@ export default ({ data, pageContext }) => {
       <AllProjectsContainer>
         <Helmet>
           <title>{page.title}</title>
+          <meta
+            name="description"
+            content={
+              isEn
+                ? `Index of the projects we've worked on, either for clients or internally for learning and tooling.`
+                : `Índice de todos os projetos desenvolvidos pela empresa, seja para clientes ou para aprendizado e criação de ferramentas internas.`
+            }
+          />
+          <link
+            rel="canonical"
+            href={`https://appmasters.io/${pageContext.language}/${
+              isEn ? "projects" : "projetos"
+            }`}
+          />
         </Helmet>
         <h2>{isEn ? "Client projects" : "Projetos de clientes"}</h2>
         <span>
@@ -112,7 +126,7 @@ export default ({ data, pageContext }) => {
         <h2>{isEn ? "Internal projects" : "Projetos internos"}</h2>
         <span>
           {isEn
-            ? "Projects developed with the intent of studying, training new employees or just for plain fun."
+            ? "Projects developed with the intent of studying, training new employees or just for fun."
             : "Projetos que desenvolvemos para fins de estudos, validar alguma tecnologia ou apenas por diversão."}
         </span>
         <ProjectsList>{sideProjects.map(renderProjectItem)}</ProjectsList>

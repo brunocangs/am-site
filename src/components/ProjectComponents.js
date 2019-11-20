@@ -51,7 +51,6 @@ export const ProjectsList = styled(ContainerList)`
   flex-wrap: wrap;
   list-style: none;
   flex-direction: row;
-  justify-content: center;
   /* Item da lista */
   li {
     border-radius: 6px;

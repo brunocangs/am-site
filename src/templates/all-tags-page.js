@@ -3,6 +3,7 @@ import { graphql, Link } from "gatsby";
 import Helmet from "react-helmet";
 import { AllTagContent } from "../components/TagsComponents";
 import { kebabCase } from "lodash";
+import { Banner } from "../components/Header";
 
 export default props => {
   const { allTags } = props.data;
@@ -19,26 +20,52 @@ export default props => {
       });
     }
   });
+  const { language } = props.pageContext;
+  const isEn = language === "en";
   return (
-    <AllTagContent>
-      <Helmet>
-        <title>Tags</title>
-      </Helmet>
-      <h1>Tags</h1>
-      <ul>
-        {tagArray.map((tag, i) => {
-          return (
-            <li key={i}>
-              <Link
-                to={`/${props.pageContext.language}/tags/${kebabCase(tag)}`}
-              >
-                {tag}
-              </Link>
-            </li>
-          );
-        })}
-      </ul>
-    </AllTagContent>
+    <div style={{ width: "100%" }}>
+      <Banner title="Tags" />
+      <AllTagContent>
+        <Helmet>
+          <title>Tags</title>
+          <meta
+            name="description"
+            content={
+              isEn
+                ? "Index of the tags used to describe our projects and blog posts"
+                : "Índice das tags utilizadas na descrição dos nossos projetos e postagens do blog"
+            }
+          />
+          <link
+            rel="canonical"
+            href={`https://appmasters.io/${language}/tags`}
+          />
+        </Helmet>
+        <ul>
+          {tagArray
+            .sort(function(a, b) {
+              if (a.toLowerCase() < b.toLowerCase()) {
+                return -1;
+              }
+              if (a.toLowerCase() > b.toLowerCase()) {
+                return 1;
+              }
+              return 0;
+            })
+            .map((tag, i) => {
+              return (
+                <li key={i}>
+                  <Link
+                    to={`/${props.pageContext.language}/tags/${kebabCase(tag)}`}
+                  >
+                    {tag}
+                  </Link>
+                </li>
+              );
+            })}
+        </ul>
+      </AllTagContent>
+    </div>
   );
 };
 

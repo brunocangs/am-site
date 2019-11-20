@@ -55,7 +55,10 @@ export default props => {
     <>
       <Content>
         <BannerContainer>
-          <img src="/img/banner_bg.png" alt="Person interacting with a phone" />
+          <img
+            src="/img/banner_bg.png"
+            alt="Doodle of a person interacting with a phone"
+          />
           <BannerContent>
             <div>
               <h1>{header}</h1>
@@ -69,7 +72,10 @@ export default props => {
                 </Link>
               </div> */}
             </div>
-            <img src={`/img/${image.originalName}`} alt={"Banner"} />
+            <img
+              src={`/img/${image.originalName}`}
+              alt={"Blue background banner"}
+            />
           </BannerContent>
         </BannerContainer>
         <OurWork>

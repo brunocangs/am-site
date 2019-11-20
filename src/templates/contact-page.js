@@ -126,6 +126,18 @@ export default props => {
       <Contact>
         <Helmet>
           <title>{title}</title>
+          <meta
+            name="description"
+            content={
+              isEn
+                ? `Want to send us a message, discuss an idea or hire us? Get in touch here!`
+                : `Quer conversar com a gente, discutir uma ideia ou fazer parte da nossa equipe? Entre em contato por aqui!`
+            }
+          />
+          <link
+            rel="canonical"
+            href={`https://appmasters.io/${isEn ? `en/contact` : `pt/contato`}`}
+          />
         </Helmet>
         <div>
           <div>

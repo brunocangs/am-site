@@ -62,6 +62,18 @@ export default ({ data, pageContext }) => {
     <>
       <Helmet>
         <title>Blog</title>
+        <link
+          rel="canonical"
+          href={`https://appmasters.io/${pageContext.language}/blog`}
+        />
+        <meta
+          name="description"
+          content={
+            isEn
+              ? "A blog written by the App Masters developers. Includes experience from previous and current projects, as well as experiments or business advice"
+              : "Blog mantido pelos funcionários da App Masters. Contém conteúdo sobre tecnologias utilizadas em projetos passados e atuais, processos de seleção e sobre a vida de desenvolvedor."
+          }
+        ></meta>
       </Helmet>
       <Content>
         <Banner title={"Blog"} />

@@ -87,21 +87,24 @@ export default props => {
           <a
             href="https://www.facebook.com/appmasters.io/"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noopener noreferrer external nofollow"
+            title="Facebook"
           >
             <FaFacebook />
           </a>
           <a
             href="https://www.instagram.com/appmasters.io/"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noopener noreferrer external nofollow"
+            title="Instagram"
           >
             <FaInstagram />
           </a>
           <a
             href="https://www.linkedin.com/company/appmasters.io/"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noopener noreferrer external nofollow"
+            title="LinkedIn"
           >
             <FaLinkedin />
           </a>
@@ -124,7 +127,7 @@ export default props => {
         <a
           href="https://www.google.com.br/maps/place/App+Masters/@-21.7725999,-43.3486377,17z/data=!3m1!4b1!4m5!3m4!1s0x989b5d3104ae57:0x9216e0df6326e89f!8m2!3d-21.7725999!4d-43.3471735"
           target="_blank"
-          rel="noopener noreferrer"
+          rel="noopener noreferrer external nofollow"
         >
           {isEn ? "Open in " : "Abrir no "} Google Maps
         </a>

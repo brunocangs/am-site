@@ -8,6 +8,7 @@ import { renderTechnologyItem } from "./all-technologies-page";
 import { renderBlogItem } from "./all-blog-page";
 import { AllBlogContainer } from "../components/BlogComponents";
 import { Banner } from "../components/Header";
+import { kebabCase } from "lodash";
 
 const getStrings = language => {
   let strings = {};
@@ -31,11 +32,27 @@ export default ({ data, pageContext }) => {
   const { edges: blogs } = data.allBlogs;
   const { edges: projects } = data.allProjects;
   const { edges: technologies } = data.allTechnologies;
-  const strings = getStrings(pageContext.language);
+  const { language } = pageContext;
+  const isEn = language === "en";
+  const strings = getStrings(language);
   return (
     <>
       <Helmet>
-        <title>{`Tags | ${pageContext.tag}`}</title>
+        <title>{`Tag - ${pageContext.tag}`}</title>
+        <meta
+          name="description"
+          content={
+            isEn
+              ? `All of our content that was tagged with ${pageContext.tag}`
+              : `Todos os nossos conteúdos que foram marcados com a tag ${pageContext.tag}`
+          }
+        />
+        <link
+          rel="canonical"
+          href={`https://appmasters.io/${language}/tags/${kebabCase(
+            pageContext.tag
+          )}`}
+        />
       </Helmet>
       <div style={{ width: "100%", paddingBottom: 60 }}>
         <Banner title={`Tag: ${pageContext.tag}`} />

@@ -36,7 +36,8 @@ export default ({ data }) => {
     devCommits,
     image,
     whereToFind,
-    tags
+    tags,
+    summary
   } = frontmatter;
   const [mainPitch, techDetail, financial] = restData.html.split("<hr>");
   const isEn = language === "en";
@@ -53,6 +54,13 @@ export default ({ data }) => {
       <Helmet>
         <title>{title}</title>
         <meta name="keywords" content={tags.join(", ")}></meta>
+        <meta name="description" content={summary} />
+        <link
+          rel="canonical"
+          href={`https://appmasters.io/${language}/${
+            isEn ? "projects" : "projetos"
+          }/${restData.fields.slug}`}
+        />
       </Helmet>
       <Content>
         <Img fluid={{ ...image.childImageSharp.fluid }} />

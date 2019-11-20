@@ -27,15 +27,30 @@ export const renderTechnologyItem = ({ node: technology }, i) => {
   );
 };
 
-export default ({ data }) => {
+export default ({ data, pageContext: { language } }) => {
   const { edges: technologies } = data.allTechnologies;
   const { frontmatter: page, html } = data.allTechnologiesPage;
   const [headerHtml] = html.split("<hr>");
   const headerText = headerHtml.replace(/<[^>]*>/g, "");
+  const isEn = language === "en";
   return (
     <>
       <Helmet>
         <title>{page.title}</title>
+        <meta
+          name="description"
+          content={
+            isEn
+              ? `Index of the technologies and libraries we're experienced with, and that can be used when developing a project.`
+              : `Índice das tecnologias e bibliotecas que dominamos e podem ser utilizadas ao desenvolver um projeto.`
+          }
+        />
+        <link
+          rel="canonical"
+          href={`https://appmasters.io/${language}/${
+            isEn ? "technologies" : "tecnologias"
+          }`}
+        />
       </Helmet>
       <div style={{ width: "100%" }}>
         <Banner title={headerText} />
