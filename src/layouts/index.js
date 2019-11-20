@@ -1,11 +1,10 @@
 import React from "react";
-import Header, { Banner } from "../components/Header";
+import Header from "../components/Header";
 import Footer from "../components/Footer";
 import styled, { createGlobalStyle } from "styled-components";
 import * as Colors from "../styles/colors";
 import "../codeHighlight.css";
 import Helmet from "react-helmet";
-import { BaseContainer } from "../components/ProjectComponents";
 
 const Globals = createGlobalStyle`
     *, *::after, *::before {
@@ -91,26 +90,7 @@ export default props => {
       >
         <Header language={language} {...props} />
       </header>
-      <Main>
-        {isEn ? (
-          <div style={{ width: "100%" }}>
-            <Banner title={`Not available`} />
-            <BaseContainer
-              style={{ flexDirection: "column", padding: "80px 0" }}
-            >
-              <h2>Sorry for the inconvenience</h2>
-              <p>
-                Our english page is still being built and should be up in a few
-                days.
-                <br />
-                Please come back soon!
-              </p>
-            </BaseContainer>
-          </div>
-        ) : (
-          children
-        )}
-      </Main>
+      <Main>{children}</Main>
       <footer>
         <Footer language={language} {...props} />
       </footer>

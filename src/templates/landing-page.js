@@ -19,6 +19,8 @@ import {
   ManifestItem
 } from "../components/LandingComponents";
 import { Button } from "../components/BlogComponents";
+import { Banner } from "../components/Header";
+import { BaseContainer } from "../components/ProjectComponents";
 
 const md = new MdIt({ html: true });
 
@@ -52,18 +54,17 @@ export default props => {
   const { language } = props.pageContext;
   const isEn = language === "en";
   return (
-    <>
-      <Content>
-        <BannerContainer>
-          <img
-            src="/img/banner_bg.png"
-            alt="Doodle of a person interacting with a phone"
-          />
-          <BannerContent>
-            <div>
-              <h1>{header}</h1>
-              <p>{content}</p>
-              {/* <div>
+    <Content>
+      <BannerContainer>
+        <img
+          src="/img/banner_bg.png"
+          alt="Doodle of a person interacting with a phone"
+        />
+        <BannerContent>
+          <div>
+            <h1>{header}</h1>
+            <p>{content}</p>
+            {/* <div>
                 <Link to="/pt/alguma-pagina">
                   <Button variant="secondary">Texto?</Button>
                 </Link>
@@ -71,157 +72,171 @@ export default props => {
                   <Button variant="tertiary">Outro texto?</Button>
                 </Link>
               </div> */}
-            </div>
-            <img
-              src={`/img/${image.originalName}`}
-              alt={"Blue background banner"}
-            />
-          </BannerContent>
-        </BannerContainer>
-        <OurWork>
-          <div dangerouslySetInnerHTML={{ __html: md.render(ourWork) }} />
-          <div>
-            <Img fluid={ourWorkImage.childImageSharp.fluid} />
           </div>
-        </OurWork>
-        {isEn ? (
-          <>
-            <Projects>
-              <div>
-                <h2>Our projects</h2>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Aliquid deleniti rem qui, fugiat sunt nisi.
-                </p>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor
-                  minus commodi hic eum. Voluptate ab tenetur saepe voluptates
-                  reprehenderit amet eius laborum excepturi officiis pariatur
-                  quas molestiae, ullam incidunt accusantium.
-                </p>
-                <p>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Repudiandae doloremque consectetur, omnis aperiam suscipit
-                  voluptate totam unde aut!
-                </p>
-              </div>
-              <ul>
-                {projects.map(({ node: project }, i) => {
-                  const {
-                    title,
-                    summary,
-                    thumbnailImage
-                  } = project.frontmatter;
-                  const { fluid } = thumbnailImage.childImageSharp;
-                  return (
-                    <Link to={`/en/projects/${project.fields.slug}`} key={i}>
-                      <li>
-                        <Img fluid={fluid} />
-                        <div>
-                          <h2>{title}</h2>
-                          <ClampLines
-                            buttons={false}
-                            text={summary}
-                            lines={2}
-                            innerElement="p"
-                          />
-                        </div>
-                      </li>
-                    </Link>
-                  );
-                })}
-              </ul>
-            </Projects>
-            <Manifest>
-              <h2>{manifest.title}</h2>
-              <ul>
-                {manifest.content.map((content, i) => (
-                  <ManifestItem key={i} content={content} md={md} />
-                ))}
-              </ul>
-            </Manifest>
-            <Testimonies>
-              <ul>
-                <li>{testimonies.slice(0, 1).map(renderTestimony)}</li>
-                <li>{testimonies.slice(1, 3).map(renderTestimony)}</li>
-              </ul>
-              <div>
-                <h2>Testimonies</h2>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
-                  minima sapiente ratione. Culpa asperiores aliquam dolor,
-                  veniam quas quod beatae, atque, iste earum eum porro cum quam
-                  at nam labore.
-                </p>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
-                  minima sapiente ratione. Culpa asperiores aliquam dolor,
-                  veniam quas quod beatae, atque, iste earum eum porro cum quam
-                  at nam labore.
-                </p>
-              </div>
-            </Testimonies>
-            <HireUs
-              dangerouslySetInnerHTML={{
-                __html: `<h2>Hire Us!</h2>${md.render(hireUs)}`
-              }}
-            />
-            <WeAreHiring>
-              <div
-                dangerouslySetInnerHTML={{ __html: md.render(weAreHiring) }}
-              />
-              <a
-                href={"https://programador.emjuizdefora.com/"}
-                target={"blank"}
-                rel="noopener noreferrer"
-              >
-                <Button>Register now</Button>
-              </a>
-            </WeAreHiring>
-          </>
-        ) : (
-          <>
-            <Manifest>
-              <h2>{manifest.title}</h2>
-              <ul>
-                {manifest.content.map((content, i) => (
-                  <ManifestItem key={i} content={content} md={md} />
-                ))}
-              </ul>
-            </Manifest>
-            <HireUs style={{ marginTop: 64 }}>
-              <div
+          <img
+            src={`/img/${image.originalName}`}
+            alt={"Blue background banner"}
+          />
+        </BannerContent>
+      </BannerContainer>
+      {!isEn ? (
+        <>
+          <OurWork>
+            <div dangerouslySetInnerHTML={{ __html: md.render(ourWork) }} />
+            <div>
+              <Img fluid={ourWorkImage.childImageSharp.fluid} />
+            </div>
+          </OurWork>
+          {isEn ? (
+            <>
+              <Projects>
+                <div>
+                  <h2>Our projects</h2>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Aliquid deleniti rem qui, fugiat sunt nisi.
+                  </p>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Dolor minus commodi hic eum. Voluptate ab tenetur saepe
+                    voluptates reprehenderit amet eius laborum excepturi
+                    officiis pariatur quas molestiae, ullam incidunt
+                    accusantium.
+                  </p>
+                  <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Repudiandae doloremque consectetur, omnis aperiam suscipit
+                    voluptate totam unde aut!
+                  </p>
+                </div>
+                <ul>
+                  {projects.map(({ node: project }, i) => {
+                    const {
+                      title,
+                      summary,
+                      thumbnailImage
+                    } = project.frontmatter;
+                    const { fluid } = thumbnailImage.childImageSharp;
+                    return (
+                      <Link to={`/en/projects/${project.fields.slug}`} key={i}>
+                        <li>
+                          <Img fluid={fluid} />
+                          <div>
+                            <h2>{title}</h2>
+                            <ClampLines
+                              buttons={false}
+                              text={summary}
+                              lines={2}
+                              innerElement="p"
+                            />
+                          </div>
+                        </li>
+                      </Link>
+                    );
+                  })}
+                </ul>
+              </Projects>
+              <Manifest>
+                <h2>{manifest.title}</h2>
+                <ul>
+                  {manifest.content.map((content, i) => (
+                    <ManifestItem key={i} content={content} md={md} />
+                  ))}
+                </ul>
+              </Manifest>
+              <Testimonies>
+                <ul>
+                  <li>{testimonies.slice(0, 1).map(renderTestimony)}</li>
+                  <li>{testimonies.slice(1, 3).map(renderTestimony)}</li>
+                </ul>
+                <div>
+                  <h2>Testimonies</h2>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Fuga minima sapiente ratione. Culpa asperiores aliquam
+                    dolor, veniam quas quod beatae, atque, iste earum eum porro
+                    cum quam at nam labore.
+                  </p>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Fuga minima sapiente ratione. Culpa asperiores aliquam
+                    dolor, veniam quas quod beatae, atque, iste earum eum porro
+                    cum quam at nam labore.
+                  </p>
+                </div>
+              </Testimonies>
+              <HireUs
                 dangerouslySetInnerHTML={{
-                  __html: md.render(weAreHiring)
+                  __html: `<h2>Hire Us!</h2>${md.render(hireUs)}`
                 }}
               />
-              <div>
+              <WeAreHiring>
+                <div
+                  dangerouslySetInnerHTML={{ __html: md.render(weAreHiring) }}
+                />
                 <a
                   href={"https://programador.emjuizdefora.com/"}
                   target={"blank"}
                   rel="noopener noreferrer"
                 >
-                  <Button variant={"secondary"}>Cadastrar agora</Button>
+                  <Button>Register now</Button>
                 </a>
-                <Link to="/pt/blog/estamos-contratando-sempre">
-                  <Button variant={"tertiary"}>Saber mais</Button>
-                </Link>
-              </div>
-            </HireUs>
-            <HowMuchIsMyApp>
-              <div dangerouslySetInnerHTML={{ __html: md.render(hireUs) }} />
-              <a
-                href="https://quantocustaumapp.appmasters.io/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Button>Fazer uma simulação</Button>
-              </a>
-            </HowMuchIsMyApp>
-          </>
-        )}
-      </Content>
-    </>
+              </WeAreHiring>
+            </>
+          ) : (
+            <>
+              <Manifest>
+                <h2>{manifest.title}</h2>
+                <ul>
+                  {manifest.content.map((content, i) => (
+                    <ManifestItem key={i} content={content} md={md} />
+                  ))}
+                </ul>
+              </Manifest>
+              <HireUs style={{ marginTop: 64 }}>
+                <div
+                  dangerouslySetInnerHTML={{
+                    __html: md.render(weAreHiring)
+                  }}
+                />
+                <div>
+                  <a
+                    href={"https://programador.emjuizdefora.com/"}
+                    target={"blank"}
+                    rel="noopener noreferrer"
+                  >
+                    <Button variant={"secondary"}>Cadastrar agora</Button>
+                  </a>
+                  <Link to="/pt/blog/estamos-contratando-sempre">
+                    <Button variant={"tertiary"}>Saber mais</Button>
+                  </Link>
+                </div>
+              </HireUs>
+              <HowMuchIsMyApp>
+                <div dangerouslySetInnerHTML={{ __html: md.render(hireUs) }} />
+                <a
+                  href="https://quantocustaumapp.appmasters.io/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button>Fazer uma simulação</Button>
+                </a>
+              </HowMuchIsMyApp>
+            </>
+          )}
+        </>
+      ) : (
+        <BaseContainer style={{ paddingTop: 38 }}>
+          <div>
+            <h2>It's almost done</h2>
+            <p>
+              Our english page is still being built and should be up on December
+              15th. Please come back soon!
+            </p>
+          </div>
+        </BaseContainer>
+      )}
+    </Content>
   );
 };
 

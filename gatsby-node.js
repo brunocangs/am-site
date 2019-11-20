@@ -35,7 +35,12 @@ exports.createPages = ({ actions, graphql }) => {
     const posts = result.data.allMarkdownRemark.edges;
 
     posts.forEach(edge => {
-      if (!edge.node.frontmatter.templateKey) return;
+      if (
+        !edge.node.frontmatter.templateKey ||
+        (edge.node.frontmatter.language === "en" &&
+          edge.node.frontmatter.templateKey !== "landing-page")
+      )
+        return;
       const id = edge.node.id;
       let path = "";
       if (edge.node.frontmatter.baseUrl) {

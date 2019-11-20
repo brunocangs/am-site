@@ -10,9 +10,4 @@ summary: ' '
 tags:
   - ''
 ---
-The technologies we use
-
----
 Lul
-
----

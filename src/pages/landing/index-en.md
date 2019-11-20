@@ -6,10 +6,8 @@ title: Home - App Masters
 banner: /img/banner_img.png
 bannerContent:
   content: >-
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam tenetur
-    distinctio alias harum quo eveniet cupiditate ex, iure deleniti
-    reprehenderit?
-  header: 'Your idea, built in record-breaking time'
+    We are entirely dedicated to bringing you vision to life, on all platforms. Our bilingual engineers work hard to develop products and services that will exceed all expectations.
+  header: Cloud, web and mobile experts, delivering reliable handmade software solutions.
 ourWork: >-
   ## What we do
 

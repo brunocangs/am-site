@@ -58,29 +58,31 @@ export default props => {
   const isEn = language === "en";
   return (
     <FooterContainer>
-      <FooterContent>
-        {isEn ? (
-          <>
-            <span>Relevant links</span>
-            <Link to="/en/projects">Projects</Link>
-            <Link to="/en/blog">Blog</Link>
-            <Link to="/en/technologies">Technologies</Link>
-            <Link to="/en/about">About us</Link>
-            <Link to="/en/contact">Contact</Link>
-            <a href={"https://academy.appmasters.io/"}>App Masters Academy</a>
-          </>
-        ) : (
-          <>
-            <span>Links relevantes</span>
-            <Link to="/pt/projetos">Projetos</Link>
-            <Link to="/pt/blog">Blog</Link>
-            <Link to="/pt/tecnologias">Tecnologias</Link>
-            <Link to="/pt/sobre">Sobre nós</Link>
-            <Link to="/pt/contato">Fale conosco</Link>
-            <a href={"https://academy.appmasters.io/"}>App Masters Academy</a>
-          </>
-        )}
-      </FooterContent>
+      {!isEn && (
+        <FooterContent>
+          {isEn ? (
+            <>
+              <span>Relevant links</span>
+              <Link to="/en/projects">Projects</Link>
+              <Link to="/en/blog">Blog</Link>
+              <Link to="/en/technologies">Technologies</Link>
+              <Link to="/en/about">About us</Link>
+              <Link to="/en/contact">Contact</Link>
+              <a href={"https://academy.appmasters.io/"}>App Masters Academy</a>
+            </>
+          ) : (
+            <>
+              <span>Links relevantes</span>
+              <Link to="/pt/projetos">Projetos</Link>
+              <Link to="/pt/blog">Blog</Link>
+              <Link to="/pt/tecnologias">Tecnologias</Link>
+              <Link to="/pt/sobre">Sobre nós</Link>
+              <Link to="/pt/contato">Fale conosco</Link>
+              <a href={"https://academy.appmasters.io/"}>App Masters Academy</a>
+            </>
+          )}
+        </FooterContent>
+      )}
       <FooterContent>
         <span>{isEn ? "Social networks" : "Redes sociais"}</span>
         <SocialWrapper>

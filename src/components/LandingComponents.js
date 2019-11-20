@@ -71,7 +71,7 @@ export const BannerContent = styled(Container)`
     }
     /* Content */
     p {
-      font-size: 15px;
+      font-size: 18px;
       line-height: 1.8;
       font-family: "Poppins", sans-serif;
     }

@@ -76,6 +76,7 @@ export const ProjectsList = styled(ContainerList)`
 
 export const ProjectItemDetails = styled.div`
   padding: 18px;
+  padding-bottom: 0;
   transition: transform 0.2s ease-in-out;
   background-color: white;
   h2 {

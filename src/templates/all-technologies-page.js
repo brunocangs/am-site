@@ -29,10 +29,9 @@ export const renderTechnologyItem = ({ node: technology }, i) => {
 
 export default ({ data, pageContext: { language } }) => {
   const { edges: technologies } = data.allTechnologies;
-  const { frontmatter: page, html } = data.allTechnologiesPage;
-  const [headerHtml] = html.split("<hr>");
-  const headerText = headerHtml.replace(/<[^>]*>/g, "");
+  const { frontmatter: page, html: content } = data.allTechnologiesPage;
   const isEn = language === "en";
+  const headerText = isEn ? "Technologies" : "Tecnologias";
   return (
     <>
       <Helmet>
@@ -55,6 +54,7 @@ export default ({ data, pageContext: { language } }) => {
       <div style={{ width: "100%" }}>
         <Banner title={headerText} />
         <Content>
+          <div dangerouslySetInnerHTML={{ __html: content }} />
           <div style={{ margin: -10 }}>
             {technologies.map(renderTechnologyItem)}
           </div>

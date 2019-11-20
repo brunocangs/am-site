@@ -56,7 +56,7 @@ export const renderProjectItem = ({ node: project }, i) => {
             lines={3}
             innerElement="p"
           />
-          <div>
+          {/* <div>
             {tags.map((tag, i) => {
               return (
                 <Link
@@ -68,7 +68,7 @@ export const renderProjectItem = ({ node: project }, i) => {
                 </Link>
               );
             })}
-          </div>
+          </div> */}
         </div>
       </ProjectItemDetails>
     </li>

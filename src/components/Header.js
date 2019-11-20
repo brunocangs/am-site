@@ -179,21 +179,21 @@ const getLinks = language => {
   if (language === "en") {
     navLinks = [
       {
-        url: "/projects",
-        label: "Projects"
-      },
-      {
-        url: "/services",
-        label: "Services"
-      },
-      {
-        url: "/blog",
-        label: "Blog"
-      },
-      {
-        url: "/about",
-        label: "About us"
+        url: "/",
+        label: ""
       }
+      // {
+      //   url: "/services",
+      //   label: "Services"
+      // },
+      // {
+      //   url: "/blog",
+      //   label: "Blog"
+      // },
+      // {
+      //   url: "/about",
+      //   label: "About us"
+      // }
     ];
   } else {
     navLinks = [

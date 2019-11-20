@@ -8,7 +8,8 @@ export const Content = styled(BaseContainer)`
   padding-top: 32px;
   flex-direction: column;
   align-items: center;
-  > div:first-of-type {
+  > div:nth-of-type(2) {
+    padding-top: 24px;
     width: 100%;
     display: flex;
     flex-direction: row;
