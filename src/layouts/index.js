@@ -21,6 +21,7 @@ const Globals = createGlobalStyle`
     body {
         min-height: 100vh;
         display: flex;
+        flex-direction: column;
     }
     .clamp-lines__button {
       padding: 0;
@@ -37,7 +38,7 @@ const Globals = createGlobalStyle`
         flex-direction: column;
         flex: 1;
     }
-    h1, h2, h3, h4, h5 {
+    p, h1, h2, h3, h4, h5 {
       font-family: "Poppins", sans-serif;
     }
     a {

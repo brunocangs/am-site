@@ -4,6 +4,7 @@ import Img from "gatsby-image";
 import ClampLines from "react-clamp-lines";
 // import { Parallax } from "react-parallax";
 import MdIt from "markdown-it";
+import Helmet from "react-helmet";
 
 import {
   Content,
@@ -19,7 +20,6 @@ import {
   ManifestItem
 } from "../components/LandingComponents";
 import { Button } from "../components/BlogComponents";
-import { Banner } from "../components/Header";
 import { BaseContainer } from "../components/ProjectComponents";
 
 const md = new MdIt({ html: true });
@@ -55,6 +55,9 @@ export default props => {
   const isEn = language === "en";
   return (
     <Content>
+      <Helmet>
+        <link rel="canonical" href={`https://appmasters.io/${language}`} />
+      </Helmet>
       <BannerContainer>
         <img
           src="/img/banner_bg.png"

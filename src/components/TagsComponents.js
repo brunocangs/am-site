@@ -8,7 +8,6 @@ export const Content = styled(BaseContainer)`
   > div:last-child > div {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
     flex: 1;
   }
 `;
