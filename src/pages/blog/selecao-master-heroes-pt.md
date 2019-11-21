@@ -17,7 +17,11 @@ tags:
   - Vaga
   - Projeto
 ---
-Desenvolver um game utilizando a [SuperHero API](https://superheroapi.com/index.html), onde o jogador testará seu conhecimento sobre super-heróis.
+Este post apresenta o projeto de seleção que usaremos no processo de novembro de 2019 para desenvolvedores React/JavaScript.
+
+### Objetivo
+
+Desenvolver um web game utilizando a [SuperHero API](https://superheroapi.com/index.html), onde o jogador testará seu conhecimento sobre super-heróis.
 
 ### Requisitos do projeto
 
@@ -39,7 +43,9 @@ Desenvolver um game utilizando a [SuperHero API](https://superheroapi.com/index.
 
 ### Avaliação do projeto
 
-Iremos avaliar inicialmente se o jogo funciona perfeitamente, se vai do começo ao fim e se permite a interação adequada. Daremos até **100 pontos** pelo projeto até aqui.
+Iremos avaliar inicialmente se o jogo funciona perfeitamente, se vai do começo ao fim e se permite a interação adequada. Daremos até **100 pontos** pelo projeto até aqui. Opcionalmente você pode fazer os itens abaixo, para ganhar ainda mais pontos. 
+
+O selecionado não será obrigatoriamente o que tiver mais pontos, mas isso pode aumentar as chances. Quantos mais pontos, melhor será o projeto em seu github, que poderá servir para futuros processos de seleção também. #FicaDica
 
 ### Ganhando pontos extras
 
@@ -69,3 +75,9 @@ Criamos duas features maiores onde você pode ganhar pontos, além de alguns req
 * Utilizar o React com Next.JS - **Pontos extras: 30**
 * Redux - **Pontos extras: 30**
 * TypeScript - **Pontos extras: 40**
+
+---
+
+Agora é partir para a implementação. Se tiver qualquer duvida fale conosco por email ou whatsapp.
+
+Boa sorte!
