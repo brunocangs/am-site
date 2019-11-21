@@ -19,8 +19,8 @@ clientLocation: Juiz de Fora/MG  - Brasil
 devTime: 387
 devMonths: 2
 devCommits: 253
-image: /img/projetos_whatsapp.png
-thumbnailImage: /img/whatsapp-mock2.png
+image: /img/projeto_maior_taskmasters.png
+thumbnailImage: /img/projetos_task_masters.png
 tags:
   - Gerencia de Projeto
   - Gestao do tempo
