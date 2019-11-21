@@ -89,7 +89,7 @@ export default props => {
         }
       >
         <link
-          href="https://fonts.googleapis.com/css?family=Poppins:300,400,600,700"
+          href="https://fonts.googleapis.com/css?family=Poppins:300,400,600,700&display=swap"
           rel="stylesheet"
         />
         <meta name="og:image" content={`https://appmasters.io${ogImage}`} />

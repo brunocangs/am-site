@@ -368,9 +368,8 @@ export const HireUs = styled(SectionContainer)`
   max-width: unset !important;
   flex-direction: column;
   text-align: center;
-  background-image: url(/img/cta_bg.png);
-  background-position: center center;
-  background-size: cover;
+  justify-content: center;
+  background-color: ${Colors.blue};
   h2 {
     font-weight: 800;
     font-size: 45px;
@@ -393,6 +392,17 @@ export const HireUs = styled(SectionContainer)`
   > div:nth-of-type(2) {
     button {
       margin: 6px;
+    }
+  }
+  > picture {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
   }
 `;

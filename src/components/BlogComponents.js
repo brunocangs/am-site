@@ -322,13 +322,10 @@ export const PostContent = styled(BaseContainer)`
         padding: 4px 6px;
         border: 1px solid ${Colors.blue};
         border-radius: 3px;
-        margin: 0px 3px;
+        margin: 3px;
         transition: all 0.1s ease-in-out;
         font-size: 0.8em;
         color: ${Colors.blue};
-        :first-child {
-          margin-left: 0;
-        }
         :hover {
           color: white;
           background-color: ${Colors.blue};

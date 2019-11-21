@@ -162,7 +162,7 @@ const HamburgerMenu = styled.div`
   div {
     color: ${Colors.grey};
     font-weight: 300;
-    padding: 18px;
+    padding: 10px;
     text-align: center;
     font-size: 1.3em;
   }

@@ -17,7 +17,8 @@ import {
   WeAreHiring,
   HowMuchIsMyApp,
   OurWork,
-  ManifestItem
+  ManifestItem,
+  SectionContainer
 } from "../components/LandingComponents";
 import { Button } from "../components/BlogComponents";
 import { BaseContainer } from "../components/ProjectComponents";
@@ -44,7 +45,8 @@ export default props => {
     allProjects,
     allTestimonies,
     ourWorkImage,
-    bannerImage: { childImageSharp: banner }
+    bannerImage: { childImageSharp: banner },
+    hireUsImage: { childImageSharp: hireUsImage }
   } = props.data;
   const {
     banner: { childImageSharp: image },
@@ -171,11 +173,13 @@ export default props => {
                   </p>
                 </div>
               </Testimonies>
-              <HireUs
-                dangerouslySetInnerHTML={{
-                  __html: `<h2>Hire Us!</h2>${md.render(hireUs)}`
-                }}
-              />
+              <HireUs>
+                <div
+                  dangerouslySetInnerHTML={{
+                    __html: `<h2>Hire Us!</h2>${md.render(hireUs)}`
+                  }}
+                />
+              </HireUs>
               <WeAreHiring>
                 <div
                   dangerouslySetInnerHTML={{ __html: md.render(weAreHiring) }}
@@ -200,6 +204,18 @@ export default props => {
                 </ul>
               </Manifest>
               <HireUs style={{ marginTop: 64 }}>
+                <picture>
+                  <source
+                    type="image/webp"
+                    srcSet={hireUsImage.fluid.srcSetWebp}
+                    sizes={hireUsImage.fluid.sizes}
+                  />
+                  <source
+                    srcSet={hireUsImage.fluid.srcSet}
+                    sizes={hireUsImage.fluid.sizes}
+                  />
+                  <img src={hireUsImage.fluid.src} />
+                </picture>
                 <div
                   dangerouslySetInnerHTML={{
                     __html: md.render(weAreHiring)
@@ -364,6 +380,9 @@ export const query = graphql`
       ...SiteImageFluid
     }
     bannerImage: file(relativePath: { eq: "banner_bg.png" }) {
+      ...SiteImageFluid
+    }
+    hireUsImage: file(relativePath: { eq: "cta_bg.png" }) {
       ...SiteImageFluid
     }
   }
