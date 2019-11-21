@@ -78,7 +78,6 @@ export const ProjectItemDetails = styled.div`
   padding: 18px;
   padding-bottom: 0;
   transition: transform 0.2s ease-in-out;
-  background-color: white;
   h2 {
     margin: 0;
   }
@@ -158,9 +157,6 @@ export const Content = styled.div`
   }
   padding-bottom: 60px;
   > div:first-child {
-    img {
-      object-position: center top !important;
-    }
     max-height: 650px;
   }
 `;

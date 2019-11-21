@@ -10,7 +10,7 @@ const Globals = createGlobalStyle`
     *, *::after, *::before {
         box-sizing: border-box;
         outline: none;
-        font-family: 'Roboto', sans-serif;
+        font-family: 'Poppins', sans-serif;
     }
     body, html {
         margin: 0;
@@ -64,7 +64,9 @@ export default props => {
     <>
       <Helmet
         defaultTitle={
-          isEn ? "App Masters - Brazil" : "App Masters - Juiz de Fora/MG"
+          isEn
+            ? "Mobile and web software development - App Masters"
+            : "App Masters - Desenvolvimento de sistemas web e mobile em Juiz de Fora, MG"
         }
         titleTemplate={
           isEn
@@ -73,8 +75,12 @@ export default props => {
         }
       >
         <link
-          href="https://fonts.googleapis.com/css?family=Open+Sans:800|Poppins:300,400,500,600,700,800|Roboto:300,400,500"
+          href="https://fonts.googleapis.com/css?family=Poppins:300,400,600,700"
           rel="stylesheet"
+        />
+        <meta
+          name="og:image"
+          content="https://appmasters.io/img/app-masters-om-image.png"
         />
         <meta
           name="description"
@@ -89,7 +95,7 @@ export default props => {
           name="keywords"
           content={`programação, software, aprender, desenvolvimento web, desenvolvimento mobile, javascript, react, react native, tecnologia, trabalho`}
         />
-        <html lang={isEn ? "en-US" : "pt-BR"} />
+        <html lang={isEn ? "en" : "pt"} />
       </Helmet>
       <Globals />
       <header
