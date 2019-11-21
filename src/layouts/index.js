@@ -5,6 +5,7 @@ import styled, { createGlobalStyle } from "styled-components";
 import * as Colors from "../styles/colors";
 import "../codeHighlight.css";
 import Helmet from "react-helmet";
+import { useStaticQuery, graphql } from "gatsby";
 
 const Globals = createGlobalStyle`
     *, *::after, *::before {
@@ -56,6 +57,19 @@ const Main = styled.main`
 `;
 
 export default props => {
+  const {
+    image: {
+      childImageSharp: {
+        fixed: { src: ogImage }
+      }
+    }
+  } = useStaticQuery(graphql`
+    query LayoutQuery {
+      image: file(relativePath: { eq: "app-masters-om-image.png" }) {
+        ...SiteImageFixed
+      }
+    }
+  `);
   const { children } = props;
   let language = props.pageContext.language || props.path.split("/")[1];
   if (language.length > 2) language = "en";
@@ -78,10 +92,7 @@ export default props => {
           href="https://fonts.googleapis.com/css?family=Poppins:300,400,600,700"
           rel="stylesheet"
         />
-        <meta
-          name="og:image"
-          content="https://appmasters.io/img/app-masters-om-image.png"
-        />
+        <meta name="og:image" content={`https://appmasters.io${ogImage}`} />
         <meta
           name="description"
           content={
