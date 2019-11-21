@@ -59,7 +59,7 @@ export default ({ data }) => {
           rel="canonical"
           href={`https://appmasters.io/${language}/${
             isEn ? "projects" : "projetos"
-          }/${restData.fields.slug}`}
+          }/${restData.fields.slug}/`}
         />
       </Helmet>
       <Content>

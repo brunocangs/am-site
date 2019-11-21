@@ -28,7 +28,7 @@ export const renderBlogItem = related => ({ node: post }, i) => {
     <PostWrapper key={i} related={related}>
       <Img fluid={{ ...image, aspectRatio: 3 }} />
       <div>
-        <Link to={`/${language}/blog/${fields.slug}`}>
+        <Link to={`/${language}/blog/${fields.slug}/`}>
           <h2>{title}</h2>
           <span>{author}</span>
           <br />
@@ -39,7 +39,7 @@ export const renderBlogItem = related => ({ node: post }, i) => {
           {tags.map((tag, i) => {
             return (
               <Link
-                to={`/${language}/tags/${kebabCase(tag)}`}
+                to={`/${language}/tags/${kebabCase(tag)}/`}
                 key={i}
                 style={{ display: "block" }}
               >
@@ -64,7 +64,7 @@ export default ({ data, pageContext }) => {
         <title>Blog</title>
         <link
           rel="canonical"
-          href={`https://appmasters.io/${pageContext.language}/blog`}
+          href={`https://appmasters.io/${pageContext.language}/blog/`}
         />
         <meta
           name="description"

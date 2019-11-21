@@ -7,6 +7,6 @@
   YARN_FLAGS = "--no-ignore-optional"
 [[redirects]]
   from = "/"
-  to = "/pt"
+  to = "/pt/"
   status = 301
   force = true

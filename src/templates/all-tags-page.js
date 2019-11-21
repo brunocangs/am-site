@@ -38,7 +38,7 @@ export default props => {
           />
           <link
             rel="canonical"
-            href={`https://appmasters.io/${language}/tags`}
+            href={`https://appmasters.io/${language}/tags/`}
           />
         </Helmet>
         <ul>
@@ -56,7 +56,9 @@ export default props => {
               return (
                 <li key={i}>
                   <Link
-                    to={`/${props.pageContext.language}/tags/${kebabCase(tag)}`}
+                    to={`/${props.pageContext.language}/tags/${kebabCase(
+                      tag
+                    )}/`}
                   >
                     {tag}
                   </Link>

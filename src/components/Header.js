@@ -273,16 +273,16 @@ export default function Header(props) {
           {language.charAt(0).toUpperCase() + language.slice(1)}
           <Drowpdown>
             <DropdownItem>
-              <Link to={"/en"}>English</Link>
+              <Link to={"/en/"}>English</Link>
             </DropdownItem>
             <DropdownItem>
-              <Link to={"/pt"}>Português</Link>
+              <Link to={"/pt/"}>Português</Link>
             </DropdownItem>
           </Drowpdown>
         </NavItem>
         {navLinks.map(({ url, label }, i) => (
           <NavItem key={i}>
-            <Link to={`/${language}/${url}`}>{label}</Link>
+            <Link to={`/${language}/${url}/`}>{label}</Link>
           </NavItem>
         ))}
       </NavMenu>
@@ -298,20 +298,20 @@ export default function Header(props) {
       </Hamburger>
       <HamburgerMenu open={open}>
         {navLinks.map(({ url, label }, i) => (
-          <Link to={`/${language}/${url}`} key={i}>
+          <Link to={`/${language}/${url}/`} key={i}>
             <div key={i} onClick={() => setOpen(false)}>
               {label}
             </div>
           </Link>
         ))}
         {isEn ? (
-          <Link to={`/pt`} key={"pt"}>
+          <Link to={`/pt/`} key={"pt"}>
             <div onClick={() => setOpen(false)}>
               Ir para versão em Português
             </div>
           </Link>
         ) : (
-          <Link to={`/en`} key={"en"}>
+          <Link to={`/en/`} key={"en"}>
             <div onClick={() => setOpen(false)}>Go to English version</div>
           </Link>
         )}
@@ -330,6 +330,7 @@ const BannerWrapper = styled.div`
   > div {
     width: 100%;
     min-height: 300px;
+    background-color: ${Colors.blue};
   }
   h1 {
     text-align: center;

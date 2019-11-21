@@ -25,7 +25,7 @@ export default props => {
         />
         <link
           rel="canonical"
-          href={`https://appmasters.io/${props.pageContext.language}/${props.data.technology.fields.slug}`}
+          href={`https://appmasters.io/${props.pageContext.language}/${props.data.technology.fields.slug}/`}
         />
       </Helmet>
       <TechnologyPageWrapper>

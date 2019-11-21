@@ -21,6 +21,7 @@ import {
 } from "../components/LandingComponents";
 import { Button } from "../components/BlogComponents";
 import { BaseContainer } from "../components/ProjectComponents";
+import * as Colors from "../styles/colors";
 
 const md = new MdIt({ html: true });
 
@@ -38,11 +39,15 @@ const renderTestimony = ({ node: testimony }, i) => {
 };
 
 export default props => {
-  const { landing, allProjects, allTestimonies, ourWorkImage } = props.data;
   const {
-    banner: {
-      childImageSharp: { fluid: image }
-    },
+    landing,
+    allProjects,
+    allTestimonies,
+    ourWorkImage,
+    bannerImage: { childImageSharp: banner }
+  } = props.data;
+  const {
+    banner: { childImageSharp: image },
     bannerContent: { content, header },
     manifest,
     ourWork,
@@ -56,12 +61,13 @@ export default props => {
   return (
     <Content>
       <Helmet>
-        <link rel="canonical" href={`https://appmasters.io/${language}`} />
+        <link rel="canonical" href={`https://appmasters.io/${language}/`} />
       </Helmet>
       <BannerContainer>
-        <img
-          src="/img/banner_bg.png"
-          alt="Doodle of a person interacting with a phone"
+        <Img
+          {...banner}
+          style={{ backgroundColor: Colors.blue }}
+          alt="Blue gradient background"
         />
         <BannerContent>
           <div>
@@ -76,10 +82,7 @@ export default props => {
                 </Link>
               </div> */}
           </div>
-          <img
-            src={`/img/${image.originalName}`}
-            alt={"Blue background banner"}
-          />
+          <Img {...image} />
         </BannerContent>
       </BannerContainer>
       {!isEn ? (
@@ -121,7 +124,7 @@ export default props => {
                     } = project.frontmatter;
                     const { fluid } = thumbnailImage.childImageSharp;
                     return (
-                      <Link to={`/en/projects/${project.fields.slug}`} key={i}>
+                      <Link to={`/en/projects/${project.fields.slug}/`} key={i}>
                         <li>
                           <Img fluid={fluid} />
                           <div>
@@ -210,7 +213,7 @@ export default props => {
                   >
                     <Button variant={"secondary"}>Cadastrar agora</Button>
                   </a>
-                  <Link to="/pt/blog/estamos-contratando-sempre">
+                  <Link to="/pt/blog/estamos-contratando-sempre/">
                     <Button variant={"tertiary"}>Saber mais</Button>
                   </Link>
                 </div>
@@ -358,6 +361,9 @@ export const query = graphql`
       }
     }
     ourWorkImage: file(relativePath: { eq: "about_img_1.png" }) {
+      ...SiteImageFluid
+    }
+    bannerImage: file(relativePath: { eq: "banner_bg.png" }) {
       ...SiteImageFluid
     }
   }

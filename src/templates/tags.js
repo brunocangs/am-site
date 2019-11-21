@@ -51,7 +51,7 @@ export default ({ data, pageContext }) => {
           rel="canonical"
           href={`https://appmasters.io/${language}/tags/${kebabCase(
             pageContext.tag
-          )}`}
+          )}/`}
         />
       </Helmet>
       <div style={{ width: "100%", paddingBottom: 60 }}>

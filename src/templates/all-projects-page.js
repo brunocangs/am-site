@@ -1,6 +1,5 @@
 import React from "react";
 import { graphql, Link } from "gatsby";
-import { kebabCase } from "lodash";
 import Helmet from "react-helmet";
 import {
   AllProjectsContainer,
@@ -16,7 +15,7 @@ export const renderProjectItem = ({ node: project }, i) => {
   const {
     title,
     summary,
-    tags,
+    // tags,
     clientName,
     clientLocation,
     thumbnailImage,
@@ -28,7 +27,7 @@ export const renderProjectItem = ({ node: project }, i) => {
   return (
     <li key={i}>
       <div>
-        <Link to={isEn ? `/en/projects/${slug}` : `/pt/projetos/${slug}`}>
+        <Link to={isEn ? `/en/projects/${slug}/` : `/pt/projetos/${slug}/`}>
           <Img fluid={{ ...fluid, aspectRatio: 1 }} />
         </Link>
       </div>
@@ -45,7 +44,7 @@ export const renderProjectItem = ({ node: project }, i) => {
         </div>
         <div>
           <Link
-            to={isEn ? `/en/projects/${slug}` : `/pt/projetos/${slug}`}
+            to={isEn ? `/en/projects/${slug}/` : `/pt/projetos/${slug}/`}
             itemProp="url"
           >
             <h2 itemProp="name">{title}</h2>
@@ -60,7 +59,7 @@ export const renderProjectItem = ({ node: project }, i) => {
             {tags.map((tag, i) => {
               return (
                 <Link
-                  to={`/${language}/tags/${kebabCase(tag)}`}
+                  to={`/${language}/tags/${kebabCase(tag)}/`}
                   key={i}
                   style={{ display: "block" }}
                 >
@@ -113,7 +112,7 @@ export default ({ data, pageContext }) => {
             rel="canonical"
             href={`https://appmasters.io/${pageContext.language}/${
               isEn ? "projects" : "projetos"
-            }`}
+            }/`}
           />
         </Helmet>
         <h2>{isEn ? "Client projects" : "Projetos de clientes"}</h2>

@@ -38,7 +38,7 @@ export default ({ data }) => {
         <title>{title}</title>
         <link
           rel="canonical"
-          href={`https://appmasters.io/${language}/blog/${slug}`}
+          href={`https://appmasters.io/${language}/blog/${slug}/`}
         />
         <meta name="keywords" content={tags.join(", ")}></meta>
         <meta name="description" content={description} />
@@ -51,7 +51,7 @@ export default ({ data }) => {
             {tags.map((tag, i) => {
               return (
                 <Link
-                  to={`/${language}/tags/${kebabCase(tag)}`}
+                  to={`/${language}/tags/${kebabCase(tag)}/`}
                   key={i}
                   style={{ display: "block" }}
                 >

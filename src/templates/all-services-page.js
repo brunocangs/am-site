@@ -32,7 +32,7 @@ export default ({
           rel="canonical"
           href={`https://appmasters.io/${language}/${
             isEn ? "services" : "servicos"
-          }`}
+          }/`}
         />
       </Helmet>
       <Banner title={title} />

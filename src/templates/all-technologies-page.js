@@ -48,7 +48,7 @@ export default ({ data, pageContext: { language } }) => {
           rel="canonical"
           href={`https://appmasters.io/${language}/${
             isEn ? "technologies" : "tecnologias"
-          }`}
+          }/`}
         />
       </Helmet>
       <div style={{ width: "100%" }}>

@@ -17,8 +17,7 @@ export const BannerContainer = styled.section`
   width: 100%;
   position: relative;
   height: 700px;
-  > img {
-    position: absolute;
+  > div {
     right: 0;
     bottom: 0;
     left: 0;
@@ -26,6 +25,9 @@ export const BannerContainer = styled.section`
     width: 100%;
     height: 100%;
     object-fit: cover;
+    :nth-of-type(2) {
+      position: absolute;
+    }
   }
   ${media("medium", "large")} {
     height: 750px;
@@ -57,7 +59,8 @@ export const BannerContent = styled(Container)`
   align-items: center;
   color: #fff;
   /* Text container */
-  div {
+  > div:first-of-type {
+    flex: 1;
     /* Title */
     h1 {
       font-size: 30px;
@@ -87,9 +90,8 @@ export const BannerContent = styled(Container)`
     }
   }
   /* Side image */
-  img {
+  > div:nth-of-type(2) {
     display: none;
-    height: 100%;
     width: 45%;
     object-fit: contain;
     ${media("medium")} {

@@ -20,7 +20,9 @@ export default ({ data, pageContext: { language } }) => {
         />
         <link
           rel="canonical"
-          href={`https://appmasters.io/${language}/${isEn ? "about" : "sobre"}`}
+          href={`https://appmasters.io/${language}/${
+            isEn ? "about" : "sobre"
+          }/`}
         />
       </Helmet>
       <div style={{ width: "100%" }}>
