@@ -229,7 +229,7 @@ export default props => {
                   >
                     <Button variant={"secondary"}>Cadastrar agora</Button>
                   </a>
-                  <Link to="/pt/blog/estamos-contratando-sempre/">
+                  <Link to="/pt/blog/sempre-contratando/">
                     <Button variant={"tertiary"}>Saber mais</Button>
                   </Link>
                 </div>
