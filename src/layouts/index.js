@@ -92,7 +92,32 @@ export default props => {
           href="https://fonts.googleapis.com/css?family=Poppins:300,400,600,700&display=swap"
           rel="stylesheet"
         />
+        <meta
+          name="twitter:title"
+          content={
+            isEn
+              ? "Mobile and web software development - App Masters"
+              : "App Masters - Desenvolvimento de sistemas web e mobile"
+          }
+        />
+        <meta
+          name="twitter:description"
+          content={isEn ? "App Masters home page" : "Página da App Masters"}
+        />
         <meta name="og:image" content={`https://appmasters.io${ogImage}`} />
+        <meta
+          name="twitter:image"
+          content={`https://appmasters.io${ogImage}`}
+        />
+        <meta
+          name="twitter:image:alt"
+          content={
+            isEn
+              ? `Blue gradient background with App Masters logo in black`
+              : "Gradiente azul de fundo com logo da App Masters em preto"
+          }
+        />
+
         <meta
           name="description"
           content={
