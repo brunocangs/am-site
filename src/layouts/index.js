@@ -106,6 +106,7 @@ export default props => {
           name="keywords"
           content={`programação, software, aprender, desenvolvimento web, desenvolvimento mobile, javascript, react, react native, tecnologia, trabalho`}
         />
+        <meta name="twitter:card" content="summary" />
         <html lang={isEn ? "en" : "pt"} />
       </Helmet>
       <Globals />
