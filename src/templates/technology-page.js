@@ -9,6 +9,7 @@ export default props => {
   const { html, frontmatter } = data.technology;
   const { title, logo } = frontmatter;
   const image = logo.childImageSharp;
+  const { language } = props.pageContext;
   const isEn = props.pageContext.language === "en";
   return (
     <>
@@ -27,6 +28,34 @@ export default props => {
           rel="canonical"
           href={`https://appmasters.io/${props.pageContext.language}/${props.data.technology.fields.slug}/`}
         />
+        <script type="application/ld+json">
+          {`
+          {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+              "@type": "ListItem",
+              "position": 1,
+              "name": "App Masters",
+              "item": "https://appmasters.io/${language}/"
+            },{
+              "@type": "ListItem",
+              "position": 2,
+              "name": "${isEn ? "Technologies" : "Tecnologia"}",
+              "item": "https://appmasters.io/${language}/${
+            isEn ? "technologies" : "tecnologias"
+          }/"
+            },{
+              "@type": "ListItem",
+              "position": 3,
+              "name": "${title}",
+              "item": "https://appmasters.io/${language}/${
+            isEn ? "technologies" : "tecnologias"
+          }/${title}"
+            }]
+          }
+          `}
+        </script>
       </Helmet>
       <TechnologyPageWrapper>
         <div>
