@@ -14,7 +14,8 @@ export default ({ data }) => {
   const {
     html,
     frontmatter,
-    fields: { slug }
+    fields: { slug },
+    parent: { mtime }
     // tableOfContents
   } = data.post;
   const { edges: authors } = data.allAuthors;
@@ -27,12 +28,18 @@ export default ({ data }) => {
     description,
     date
   } = frontmatter;
-  const image = featuredImage.childImageSharp.fluid;
+  const {
+    fluid: image,
+    meta1x1,
+    meta4x3,
+    meta16x9
+  } = featuredImage.childImageSharp;
   const { node: postAuthor } = authors.find(
     i => i.node.frontmatter.title === author
   );
   const { edges: relatedPosts } = data.allRelatedPosts;
   const isEn = language === "en";
+  console.log(mtime);
   return (
     <>
       <Helmet>
@@ -67,17 +74,31 @@ export default ({ data }) => {
           }
           `}
         </script>
-        <script>
+        <script type="application/ld+json">
           {`
           {
             "@context": "https://schema.org",
             "@type": "Article",
-            "image": [
-              "https://example.com/photos/1x1/photo.jpg",
-              "https://example.com/photos/4x3/photo.jpg",
-              "https://example.com/photos/16x9/photo.jpg"
-            ],
-            "datePublished": "${date}"
+            "image": ${JSON.stringify(
+              [meta1x1.src, meta4x3.src, meta16x9.src].map(
+                i => `https://appmasters.io${i}`
+              )
+            )},
+            "datePublished": "${date}",
+            "headline": "${title}",
+            "author": "${postAuthor.frontmatter.title}",
+            "publisher": {
+              "@type":"Organization",
+              "name": "App Masters",
+              "logo": {
+                "@type": "ImageObject",
+                "height": ${data.publisherLogo.childImageSharp.fixed.height},
+                "width": ${data.publisherLogo.childImageSharp.fixed.width},
+                "url": "${data.publisherLogo.childImageSharp.fixed.src}"
+              }
+            },
+            "dateModified": "${mtime}",
+            "mainEntityOfPage": "https://appmasters.io/${language}/blog/${slug}/"
           }
           `}
         </script>
@@ -142,6 +163,11 @@ export const query = graphql`
     fields {
       slug
     }
+    parent {
+      ... on File {
+        mtime
+      }
+    }
     frontmatter {
       formattedDate: date(formatString: "DD MMM YYYY", locale: $language)
       templateKey
@@ -156,6 +182,33 @@ export const query = graphql`
         childImageSharp {
           fluid(quality: 100) {
             ...GatsbyImageSharpFluid_withWebp
+          }
+          meta1x1: fixed(
+            width: 500
+            height: 500
+            fit: COVER
+            quality: 50
+            cropFocus: ATTENTION
+          ) {
+            src
+          }
+          meta4x3: fixed(
+            width: 800
+            height: 600
+            fit: COVER
+            quality: 50
+            cropFocus: ATTENTION
+          ) {
+            src
+          }
+          meta16x9: fixed(
+            width: 960
+            height: 540
+            fit: COVER
+            quality: 50
+            cropFocus: ATTENTION
+          ) {
+            src
           }
         }
       }
@@ -213,6 +266,15 @@ export const query = graphql`
       edges {
         node {
           ...BlogPost
+        }
+      }
+    }
+    publisherLogo: file(relativePath: { eq: "publisher_white_logo.png" }) {
+      childImageSharp {
+        fixed(height: 60) {
+          src
+          height
+          width
         }
       }
     }
