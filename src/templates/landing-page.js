@@ -17,8 +17,7 @@ import {
   WeAreHiring,
   HowMuchIsMyApp,
   OurWork,
-  ManifestItem,
-  SectionContainer
+  ManifestItem
 } from "../components/LandingComponents";
 import { Button } from "../components/BlogComponents";
 import { BaseContainer } from "../components/ProjectComponents";
@@ -46,7 +45,12 @@ export default props => {
     allTestimonies,
     ourWorkImage,
     bannerImage: { childImageSharp: banner },
-    hireUsImage: { childImageSharp: hireUsImage }
+    hireUsImage: { childImageSharp: hireUsImage },
+    favicon: {
+      childImageSharp: {
+        fixed: { src: favicon }
+      }
+    }
   } = props.data;
   const {
     banner: { childImageSharp: image },
@@ -64,6 +68,27 @@ export default props => {
     <Content>
       <Helmet>
         <link rel="canonical" href={`https://appmasters.io/${language}/`} />
+        <script type="application/ld+json">
+          {`
+          {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "App Masters",
+            "url": "https://appmasters.io/${language}/",
+            "logo": "https://appmasters.io${favicon}",
+            "address": {
+              "@type": "PostalAddress",
+              "addressCountry": "BR",
+              "postalCode": "36025-020",
+              "streetAddress": "${
+                isEn
+                  ? "3480 Barão do Rio Branco Avenue"
+                  : "Avenida Barão do Rio Branco, 3480"
+              }"
+            }
+          }
+          `}
+        </script>
       </Helmet>
       <BannerContainer>
         <Img
@@ -214,7 +239,12 @@ export default props => {
                     srcSet={hireUsImage.fluid.srcSet}
                     sizes={hireUsImage.fluid.sizes}
                   />
-                  <img src={hireUsImage.fluid.src} />
+                  <img
+                    src={hireUsImage.fluid.src}
+                    alt={
+                      "Blue background with graphics of color swatches and phones"
+                    }
+                  />
                 </picture>
                 <div
                   dangerouslySetInnerHTML={{
@@ -384,6 +414,15 @@ export const query = graphql`
     }
     hireUsImage: file(relativePath: { eq: "cta_bg.png" }) {
       ...SiteImageFluid
+    }
+    favicon: file(relativePath: { eq: "favicon.png" }) {
+      id
+      childImageSharp {
+        id
+        fixed {
+          src
+        }
+      }
     }
   }
 `;

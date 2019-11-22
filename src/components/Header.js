@@ -266,6 +266,7 @@ export default function Header(props) {
         alt="App Masters"
       >
         <Logo style={{ height: "100%" }} />
+        <span hidden>App Masters</span>
       </Link>
       <NavMenu>
         <NavItem>
@@ -363,7 +364,7 @@ export const Banner = ({ title, fluid }) => {
   `);
   return (
     <BannerWrapper>
-      <Img fluid={fluid || image} />
+      <Img fluid={fluid || image} alt="Blue gradient" />
       <h1>{title}</h1>
     </BannerWrapper>
   );

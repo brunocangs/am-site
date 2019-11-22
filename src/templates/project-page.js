@@ -61,6 +61,34 @@ export default ({ data }) => {
             isEn ? "projects" : "projetos"
           }/${restData.fields.slug}/`}
         />
+        <script type="application/ld+json">
+          {`
+          {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+              "@type": "ListItem",
+              "position": 1,
+              "name": "App Masters",
+              "item": "https://appmasters.io/${language}/"
+            },{
+              "@type": "ListItem",
+              "position": 2,
+              "name": "${isEn ? "Projects" : "Projetos"}",
+              "item": "https://appmasters.io/${language}/${
+            isEn ? "projects" : "projetos"
+          }/"
+            },{
+              "@type": "ListItem",
+              "position": 3,
+              "name": "${title}",
+              "item": "https://appmasters.io/${language}/blog/${
+            restData.fields.slug
+          }/"
+            }]
+          }
+          `}
+        </script>
       </Helmet>
       <Content>
         <Img fluid={{ ...image.childImageSharp.fluid }} />

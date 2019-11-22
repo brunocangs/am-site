@@ -150,6 +150,7 @@ export const Manifest = styled(SectionContainer)`
 export const ManifestItem = props => {
   const i = props.content;
   const image = props.content.image.childImageSharp;
+  console.log(image);
   const md = props.md;
   return (
     <li>

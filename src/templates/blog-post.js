@@ -24,7 +24,8 @@ export default ({ data }) => {
     featuredImage,
     tags,
     author,
-    description
+    description,
+    date
   } = frontmatter;
   const image = featuredImage.childImageSharp.fluid;
   const { node: postAuthor } = authors.find(
@@ -42,6 +43,44 @@ export default ({ data }) => {
         />
         <meta name="keywords" content={tags.join(", ")}></meta>
         <meta name="description" content={description} />
+        <script type="application/ld+json">
+          {`
+          {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+              "@type": "ListItem",
+              "position": 1,
+              "name": "App Masters",
+              "item": "https://appmasters.io/${language}/"
+            },{
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Blog",
+              "item": "https://appmasters.io/${language}/blog/"
+            },{
+              "@type": "ListItem",
+              "position": 3,
+              "name": "${title}",
+              "item": "https://appmasters.io/${language}/blog/${slug}/"
+            }]
+          }
+          `}
+        </script>
+        <script>
+          {`
+          {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "image": [
+              "https://example.com/photos/1x1/photo.jpg",
+              "https://example.com/photos/4x3/photo.jpg",
+              "https://example.com/photos/16x9/photo.jpg"
+            ],
+            "datePublished": "${date}"
+          }
+          `}
+        </script>
       </Helmet>
       <Post>
         <Img fluid={{ ...image }} />

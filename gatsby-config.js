@@ -86,7 +86,7 @@ const cfg = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        icon: "src/favicon.png"
+        icon: "static/img/favicon.png"
       }
     },
     `gatsby-plugin-styled-components`,
