@@ -20,7 +20,7 @@ const getStartBgColor = props => {
     case "tertiary":
       return "white";
     default:
-      return "white";
+      return "transparent";
   }
 };
 
@@ -59,14 +59,15 @@ const getHoverFontColor = props => {
 };
 
 const getStartBorderColor = first => props => {
-  switch (props.variant) {
-    case "secondary":
-      return "transparent";
-    case "tertiary":
-      return "transparent";
-    default:
-      return Colors.black;
-  }
+  // switch (props.variant) {
+  //   case "secondary":
+  //     return "transparent";
+  //   case "tertiary":
+  //     return "transparent";
+  //   default:
+  //     return Colors.black;
+  // }
+  return "transparent";
 };
 
 const getHoverBorderColor = first => props => {
@@ -95,6 +96,7 @@ export const Button = styled.button`
   cursor: pointer;
   border: 1px solid ${getStartFontColor};
   background: ${getStartBgColor};
+  z-index: 1;
   :hover {
     border: 1px solid transparent;
     color: ${getHoverFontColor};

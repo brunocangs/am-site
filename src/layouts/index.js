@@ -133,6 +133,162 @@ export default props => {
         />
         <meta name="twitter:card" content="summary" />
         <html lang={isEn ? "en" : "pt"} />
+        <style>
+          {`
+          .primary {
+            box-sizing: border-box;
+            outline: none;
+            font-family: 'Poppins',sans-serif;
+            width: fit-content;
+            position: relative;
+            font-weight: 400;
+            color: #222;
+            border-radius: 6px;
+            cursor: pointer;
+            border: 1px solid #222;
+            background: transparent;
+            z-index: 1;
+            padding: 14px 40px;
+            font-size: 1.2em;
+            display: block;
+          }
+          .primary::after {
+            content: " ";
+            position: absolute;
+            border-radius: 7px;
+            top: -1px;
+            right: -1px;
+            bottom: -1px;
+            left: -1px;
+            background-image: linear-gradient( to left,transparent 0%,transparent 100% );
+            z-index: -1;
+          }
+          .primary:hover {
+            box-sizing: border-box;
+            outline: none;
+            font-family: 'Poppins',sans-serif;
+            width: fit-content;
+            position: relative;
+            font-weight: 400;
+            border-radius: 6px;
+            cursor: pointer;
+            z-index: 1;
+            padding: 14px 40px;
+            font-size: 1.2em;
+            border: 1px solid transparent;
+            color: white;
+            background: transparent;
+          }
+          .primary:hover::after {
+            background-image: linear-gradient( to left,#57ddff 0%,#00b4ff 100% );
+          }
+          .secondary {
+            display: block;
+            box-sizing: border-box;
+            outline: none;
+            font-family: 'Poppins',sans-serif;
+            width: fit-content;
+            position: relative;
+            font-weight: 400;
+            color: white;
+            border-radius: 6px;
+            cursor: pointer;
+            border: 1px solid white;
+            background: transparent;
+            z-index: 1;
+            padding: 14px 40px;
+            font-size: 1.2em;
+          }
+          .secondary::after {
+            content: " ";
+            position: absolute;
+            border-radius: 7px;
+            top: -1px;
+            right: -1px;
+            bottom: -1px;
+            left: -1px;
+            background-image: linear-gradient( to left,transparent 0%,transparent 100% );
+            z-index: -1;
+          }
+          .secondary:hover {
+            box-sizing: border-box;
+            outline: none;
+            font-family: 'Poppins',sans-serif;
+            width: fit-content;
+            position: relative;
+            font-weight: 400;
+            border-radius: 6px;
+            cursor: pointer;
+            z-index: 1;
+            padding: 14px 40px;
+            font-size: 1.2em;
+            border: 1px solid transparent;
+            color: white;
+            background: transparent;
+          }
+          .secondary:hover::after{
+            background-image: linear-gradient( to left,#57ddff 0%,#57ddff 100% );
+          }
+
+          .tertiary {
+            display: block;
+            box-sizing: border-box;
+            outline: none;
+            font-family: 'Poppins',sans-serif;
+            width: fit-content;
+            position: relative;
+            font-weight: 400;
+            color: #0ab6ff;
+            border-radius: 6px;
+            cursor: pointer;
+            border: 1px solid #0ab6ff;
+            background: white;
+            z-index: 1;
+            padding: 14px 40px;
+            font-size: 1.2em;
+          }
+          .tertiary::after {
+            content: " ";
+            position: absolute;
+            border-radius: 7px;
+            top: -1px;
+            right: -1px;
+            bottom: -1px;
+            left: -1px;
+            background-image: linear-gradient( to left,transparent 0%,transparent 100% );
+            z-index: -1;
+          }
+          .tertiary:hover {
+            box-sizing: border-box;
+            outline: none;
+            font-family: 'Poppins',sans-serif;
+            width: fit-content;
+            position: relative;
+            font-weight: 400;
+            border-radius: 6px;
+            cursor: pointer;
+            z-index: 1;
+            padding: 14px 40px;
+            font-size: 1.2em;
+            border: 1px solid transparent;
+            color: white;
+            background: transparent;
+          }
+          .tertiary:hover::after {
+            background-image: linear-gradient( to left,#57ddff 0%,#57ddff 100% );
+          }
+          `}
+        </style>
+        <script>
+          {`
+      (function(w,d,t,u,n,a,m){w['MauticTrackingObject']=n;
+      w[n]=w[n]||function(){(w[n].q=w[n].q||[]).push(arguments)},a=d.createElement(t),
+      m=d.getElementsByTagName(t)[0];a.async=1;a.src=u;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://mautic.appmasters.io/mtc.js','mt');
+
+  mt('send', 'pageview');
+    `}
+        </script>
       </Helmet>
       <Globals />
       <header
