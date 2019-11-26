@@ -21,12 +21,12 @@ Este post apresenta o projeto de seleção que usaremos no processo de novembro 
 
 ### Objetivo
 
-Desenvolver um web game utilizando a [SuperHero API](https://superheroapi.com/index.html), onde o jogador testará seu conhecimento sobre super-heróis.
+Desenvolver um web game utilizando a [SuperHero API](https://github.com/akabab/superhero-api), onde o jogador testará seu conhecimento sobre super-heróis.
 
 ### Requisitos do projeto
 
 * Ao carregar o jogador verá uma interface de boas vindas
-* Ao iniciar, o sistema deve obter todos os personagens da API e salvar em estado local
+* Ao iniciar, o sistema deve obter [todos os personagens](https://cdn.rawgit.com/akabab/superhero-api/0.2.0/api/all.json) da API e salvar em estado local
 * Randomizar a ordem dos personagens para exibição e apresentar o primeiro personagem 
 * O componente que apresenta o personagem mostra três botões, cada um com o nome de um personagem para o usuário selecionar
 * Ao acertar o nome do super-herói, o usuário ganha 20 pontos
@@ -76,7 +76,7 @@ Criamos duas features maiores onde você pode ganhar pontos, além de alguns req
 * Redux - **Pontos extras: 30**
 * TypeScript - **Pontos extras: 40**
 
----
+- - -
 
 Agora é partir para a implementação. Se tiver qualquer duvida fale conosco por email ou whatsapp.
 
