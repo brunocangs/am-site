@@ -55,7 +55,7 @@ export default ({ data, pageContext: { language } }) => {
         <Banner title={headerText} />
         <Content>
           <div dangerouslySetInnerHTML={{ __html: content }} />
-          <div style={{ margin: -10 }}>
+          <div style={{ margin: -10, marginTop: 40 }}>
             {technologies.map(renderTechnologyItem)}
           </div>
         </Content>

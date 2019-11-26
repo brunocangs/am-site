@@ -152,67 +152,6 @@ export const AllBlogContainer = styled(BaseContainer)`
   button {
     /* margin: 32px auto 0 auto; */
   }
-  /* Sidebar com search input */
-  > div {
-    margin-top: 1em;
-    width: 100%;
-    display: block;
-    position: relative;
-    /* Só mostra resultados se foco no input */
-    :focus-within {
-      ul {
-        visibility: visible;
-      }
-    }
-    /* Input */
-    input {
-      width: 100%;
-      border: 1px solid ${Colors.lighterGrey};
-      padding: 8px 12px;
-      margin: 0;
-      font-size: 1.1em;
-      font-weight: 300;
-      border-radius: 6px;
-      outline: none;
-      :active,
-      :focus {
-        border-color: ${Colors.blue};
-      }
-    }
-    /* Lista de resultados da busca */
-    > ul {
-      visibility: hidden;
-      list-style: none;
-      padding: 0;
-      right: 0;
-      left: 0;
-      position: absolute;
-      top: calc(100% + 6px);
-      margin: 0;
-      z-index: 1;
-      /* Items da busca */
-      li {
-        padding: 8px 16px;
-        background-color: white;
-        border: 1px solid ${Colors.lightestGrey};
-        /* Lógica de borda pra não exibir quando não houver resultados */
-        :first-child {
-          border-top-left-radius: 4px;
-          border-top-right-radius: 4px;
-          :not(:last-child) {
-            border-bottom-width: 0;
-          }
-        }
-        :last-child {
-          border-bottom-left-radius: 4px;
-          border-bottom-right-radius: 4px;
-        }
-        + li {
-          border-bottom-width: 0;
-        }
-      }
-    }
-  }
 `;
 
 export const PostWrapper = styled.li`

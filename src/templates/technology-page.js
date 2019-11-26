@@ -7,7 +7,7 @@ import Img from "gatsby-image";
 export default props => {
   const { data } = props;
   const { html, frontmatter } = data.technology;
-  const { title, logo } = frontmatter;
+  const { title, logo, summary } = frontmatter;
   const image = logo.childImageSharp;
   const { language } = props.pageContext;
   const isEn = props.pageContext.language === "en";
@@ -16,14 +16,7 @@ export default props => {
       <Helmet>
         <title>{title}</title>
         <meta name="keywords" content={frontmatter.tags.join(", ")}></meta>
-        <meta
-          name="description"
-          content={
-            isEn
-              ? `Technical information and details on how we use ${title}`
-              : `Informações técnicas e detalhes de como utilizamos ${title}`
-          }
-        />
+        <meta name="description" content={summary} />
         <link
           rel="canonical"
           href={`https://appmasters.io/${props.pageContext.language}/${props.data.technology.fields.slug}/`}

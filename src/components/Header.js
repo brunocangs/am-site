@@ -1,12 +1,13 @@
 import styled from "styled-components";
 import { Link, graphql, useStaticQuery } from "gatsby";
-import { FaLanguage } from "react-icons/fa";
+import { FaLanguage, FaSearch } from "react-icons/fa";
 import React, { useEffect, useState } from "react";
 import * as Colors from "../styles/colors";
 import Logo from "../styles/svgs/white_logo.svg";
 import media from "../styles/medias";
 import Img from "gatsby-image";
 import { match } from "@reach/router/lib/utils";
+import { Input } from "./ContactComponents";
 
 const Nav = styled.nav`
   position: sticky;
@@ -61,6 +62,10 @@ const NavMenu = styled.ul`
   }
 `;
 
+const SearchInput = styled(Input)`
+  padding: 3px 6px;
+`;
+
 const Drowpdown = styled.ul`
   list-style: none;
   position: absolute;
@@ -89,7 +94,8 @@ const NavItem = styled.li`
     font-size: 1.8em;
     margin-right: 4px;
   }
-  &:first-child {
+  &:nth-of-type(2),
+  &:nth-of-type(1) {
     position: relative;
     margin-right: 8px;
     cursor: pointer;
@@ -243,7 +249,8 @@ const shouldBeTransparent = location => {
     "/projects/:id",
     "/blog/:id",
     "/tecnologias/:id",
-    "/technologies/:id"
+    "/technologies/:id",
+    "/search"
   ];
   return !routesWithWhiteHeader.some(item => {
     return match(item, urlWithoutLanguage);
@@ -251,7 +258,22 @@ const shouldBeTransparent = location => {
 };
 
 export default function Header(props) {
+  const SearchForm = () => (
+    <form action={`/${language}/${isEn ? "search" : "busca"}`}>
+      <SearchInput
+        isTransparent={isTransparent}
+        scroll={scroll + (open ? 76 : 0)}
+        id="q"
+        name="q"
+        pattern=".{3,}"
+        required
+        title="3 characters minimum"
+        placeholder={isEn ? "Search" : "Busca"}
+      />
+    </form>
+  );
   const [open, setOpen] = useState(false);
+  const [searchOpen, setSearchOpen] = useState("");
   let { language } = props.pageContext;
   language = language || "pt";
   const navLinks = getLinks(language);
@@ -269,6 +291,30 @@ export default function Header(props) {
         <span hidden>App Masters</span>
       </Link>
       <NavMenu>
+        {!isEn && (
+          <NavItem>
+            {searchOpen && <SearchForm />}
+            <div
+              style={{
+                height: "1em",
+                width: "calc(1em + 8px)",
+                marginRight: 8,
+                marginLeft: 8,
+                display: "flex",
+                alignItems: "center"
+              }}
+            >
+              <FaSearch
+                style={{
+                  fontSize: "1em",
+                  verticalAlign: "middle",
+                  margin: 0
+                }}
+                onClick={() => setSearchOpen(!searchOpen)}
+              />
+            </div>
+          </NavItem>
+        )}
         <NavItem>
           <FaLanguage />
           {language.charAt(0).toUpperCase() + language.slice(1)}
@@ -298,6 +344,7 @@ export default function Header(props) {
         <span></span>
       </Hamburger>
       <HamburgerMenu open={open}>
+        <SearchForm />
         {navLinks.map(({ url, label }, i) => (
           <Link to={`/${language}/${url}/`} key={i}>
             <div key={i} onClick={() => setOpen(false)}>

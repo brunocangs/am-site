@@ -50,6 +50,9 @@ export default props => {
       childImageSharp: {
         fixed: { src: favicon }
       }
+    },
+    latestBlog: {
+      edges: [{ node: latestBlog }]
     }
   } = props.data;
   const {
@@ -88,6 +91,20 @@ export default props => {
             }
           }
           `}
+        </script>
+        <script type="application/ld+json">
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              "url": "https://appmasters.io/pt/",
+              "potentialAction": {
+                "@type": "SearchAction",
+                "target": "https://appmasters.io/${language}/search?q={search_term_string}",
+                "query-input": "required name=search_term_string"
+              }
+            }
+            `}
         </script>
       </Helmet>
       <BannerContainer>
@@ -228,6 +245,31 @@ export default props => {
                   ))}
                 </ul>
               </Manifest>
+              <OurWork>
+                <div>
+                  <Link to={`/pt/blog/${latestBlog.fields.slug}/`}>
+                    <h2 style={{ marginTop: 0 }}>
+                      {latestBlog.frontmatter.title}
+                    </h2>
+                  </Link>
+                  <p>{latestBlog.frontmatter.description}</p>
+                  <p>
+                    Leia o post completo&nbsp;
+                    <Link
+                      to={`/pt/blog/${latestBlog.fields.slug}/`}
+                      style={{ textDecoration: "underline" }}
+                    >
+                      aqui
+                    </Link>
+                  </p>
+                </div>
+                <div>
+                  <Img
+                    style={{ borderRadius: 12 }}
+                    {...latestBlog.frontmatter.featuredImage.childImageSharp}
+                  />
+                </div>
+              </OurWork>
               <HireUs style={{ marginTop: 64 }}>
                 <picture>
                   <source
@@ -421,6 +463,32 @@ export const query = graphql`
         id
         fixed {
           src
+        }
+      }
+    }
+    latestBlog: allMarkdownRemark(
+      filter: {
+        frontmatter: {
+          language: { eq: $language }
+          featuredPost: { eq: true }
+          templateKey: { eq: "blog-post" }
+        }
+      }
+      sort: { fields: frontmatter___date, order: DESC }
+      limit: 1
+    ) {
+      edges {
+        node {
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+            description
+            featuredImage {
+              ...SiteImageFluid
+            }
+          }
         }
       }
     }

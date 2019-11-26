@@ -15,6 +15,11 @@ export const Content = styled(BaseContainer)`
     flex-direction: row;
     flex-wrap: wrap;
   }
+  > div:nth-of-type(1) {
+    p {
+      font-weight: 300;
+    }
+  }
 `;
 
 export const TechnologyWrapper = styled(Link)`

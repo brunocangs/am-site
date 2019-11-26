@@ -39,7 +39,6 @@ export default ({ data }) => {
   );
   const { edges: relatedPosts } = data.allRelatedPosts;
   const isEn = language === "en";
-  console.log(mtime);
   return (
     <>
       <Helmet>
@@ -158,7 +157,6 @@ export const query = graphql`
   fragment BlogPost on MarkdownRemark {
     id
     html
-    rawMarkdownBody
     # tableOfContents
     fields {
       slug

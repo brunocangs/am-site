@@ -6,7 +6,24 @@ import * as Colors from "../styles/colors";
 export const ContactContent = styled.div`
   width: 100%;
 `;
-
+export const Input = styled.input`
+  ::placeholder {
+    font-size: 0.9em;
+    color: ${Colors.lighterGrey};
+  }
+  font-size: 1em;
+  font-weight: 300;
+  transition: border-color 0.2s ease-in-out;
+  width: 100%;
+  border: 1px solid ${Colors.lightestGrey};
+  padding: 8px;
+  border-radius: 6px;
+  :focus,
+  :active,
+  :focus-within {
+    border-color: ${Colors.blue};
+  }
+`;
 export const Contact = styled(BaseContainer)`
   ${media("large")} {
     max-width: 50%;
