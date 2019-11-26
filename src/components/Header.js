@@ -8,6 +8,7 @@ import media from "../styles/medias";
 import Img from "gatsby-image";
 import { match } from "@reach/router/lib/utils";
 import { Input } from "./ContactComponents";
+import { Button } from "./BlogComponents";
 
 const Nav = styled.nav`
   position: sticky;
@@ -258,7 +259,7 @@ const shouldBeTransparent = location => {
 };
 
 export default function Header(props) {
-  const SearchForm = () => (
+  const SearchForm = ({ showButton }) => (
     <form action={`/${language}/${isEn ? "search" : "busca"}`}>
       <SearchInput
         isTransparent={isTransparent}
@@ -270,6 +271,15 @@ export default function Header(props) {
         title="3 characters minimum"
         placeholder={isEn ? "Search" : "Busca"}
       />
+      {showButton && (
+        <Button
+          fullWidth
+          type="submit"
+          style={{ margin: "10px 0", padding: "6px 0" }}
+        >
+          {isEn ? "Submit" : "Pesquisar"}
+        </Button>
+      )}
     </form>
   );
   const [open, setOpen] = useState(false);
@@ -344,7 +354,7 @@ export default function Header(props) {
         <span></span>
       </Hamburger>
       <HamburgerMenu open={open}>
-        <SearchForm />
+        <SearchForm showButton />
         {navLinks.map(({ url, label }, i) => (
           <Link to={`/${language}/${url}/`} key={i}>
             <div key={i} onClick={() => setOpen(false)}>
