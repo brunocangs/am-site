@@ -33,6 +33,8 @@ Que bom seria para nossa saúde se ao invés de usarmos elevadores, subirmos de 
 
 Foi desta ideia que Tiago Gouvêa, o CEO da App Masters, criou o Tô subindo. Um app que incentiva as pessoas a se exercitarem usando escadas e serem mais ativas.
 
+O projeto foi desenvolvido como parte de um processo de seleção, e depois seguiu em desenvolvimento como um Projeto Interno.
+
 Ao começar a usar o aplicativo, o usuário tem a opção de incluir uma nova escadaria, seja de casa ou do trabalho. Em seguida um PDF contendo os QRCodes da escada é disponibilizado para impressão, e fixação na escadaria nos respectivos andares.
 
 ![Pessoa subindo escada e lendo QRCode](/img/baraky_to_subindo.jpg)
