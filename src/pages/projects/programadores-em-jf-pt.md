@@ -32,13 +32,17 @@ O mercado de tecnologia é aquecido e se faz necessário estar sempre em busca d
 
 Inicialmente fomos entender a dor das empresas ao tentar contratar, e também saber dos programadores o que viam que poderia ser melhorado nos processos de seleção. Desta forma a plataforma tem alguns pequenos detalhes para atender estes públicos, tentando garantir que os candidatos para uma vaga sejam sempre qualificados para estas, bem como não permitindo as empresas fazerem contato com os desenvolvedores enquanto não se interessarem efetivamente por uma vaga.
 
+> Conseguimos acelerar nosso processo seletivo e encontrar ótimas pessoas para todas as vagas que abrimos na ferramenta. Além disso, todo o cuidado da equipe e os filtros que a ferramenta oferece ajudam muito para encontrar o profissional certo de forma rápida e sem esforço! - Rodrigo Nunes - Reportei
+
 Ainda com a intenção de fornecermos uma plataforma mais eficaz, criamos um processo de validação das empresas que se registram e da vagas oferecidas de forma a só levar aos usuários oportunidades realmente relevantes.
 
 # Resultados
 
 O CEO da App Masters, Tiago Gouvêa, é o principal agitador da comunidade de desenvolvedores em Juiz de Fora, fazendo parte de vários grupos e sendo responsável por um Google Developers Group na cidade. Por este motivo foi relativamente rápido conquistar a confiança de centenas de desenvolvedores logo nas primeiras semanas.
 
-As empresas também já recorriam ao Tiago Gouvêa solicitando apoio na divulgação de vagas e principalmente para realização de processos de seleção, então a ferramenta veio para facilitar todo esse processo.
+As empresas também já recorriam ao nosso CEO Tiago Gouvêa, solicitando apoio na divulgação de vagas e principalmente para realização de processos de seleção, então a ferramenta veio para facilitar todo esse processo.
+
+> Buscávamos um profissional Full-Stack e a App Master nos ajudou deste a definição do perfil do profissional, bem como com toda a avaliação técnica dos candidatos. Foi uma ótima experiência e hoje estamos em pleno desenvolvimento.  Leandro Ribeiro de Almeida - Proveu Indústria Eletrônica
 
 Até o presente momento tivemos uma taxa de sucesso de 82% nas vagas incluídas, ou seja, empresas que encontraram o desenvolvedor que procuravam através de nossa plataforma.
 
