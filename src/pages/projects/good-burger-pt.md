@@ -35,8 +35,6 @@ Como resultado deste processo Bruno Cangussu e o Julio Piubello criaram o Good B
 
 A ideia do aplicativo surgiu do notável interesse dos colaboradores da App Masters por hambúrguer.
 
-- - -
-
 ## Desenvolvimento e experimentação
 
 O foco era conhecer os desenvolvedores, passar para eles nossas técnicas e padrões, e ter como resultado um projeto minimamente útil. Logo na versão Alpha já estávamos nós mesmos utilizando, avaliando as hamburgerias que visitávamos e aprendendo também com isso.
@@ -44,8 +42,6 @@ O foco era conhecer os desenvolvedores, passar para eles nossas técnicas e padr
 O interesse dos amigos quanto ao projeto nos fez continuar o desenvolvimento, mesmo depois da conclusão do MVP , buscando uma forma de tornar o uso bem intuitivo e interativo.
 
 Atualmente o aplicativo tem usuários assíduos que buscam as melhores opções em hamburgerias, e isto nos deixa bem contentes.
-
-- - -
 
 ## Dados técnicos
 
