@@ -24,6 +24,8 @@ O blockchain veio para mudar a forma como as transações acontecem, tornado as 
 
 Desenvolvemos para o Antônio Hoffert, economista e especialista em blockchain, uma prova de conceito utilizando o blockchain através da rede Ethereum. 
 
+> A App Masters foi fundamental na confecção técnica de uma prova de conceito em Conciliação de Pagamentos Distribuída baseada na tecnologia Blockchain. Profissionais de excelência e de fácil relacionamento pessoal.
+
 De acordo com o termo de confidencialidade não podemos apresentar maiores detalhes acerca do projeto.
 
 Para a interface visual foi utilizado React, por permitir uma implementação rápida e prática da solução, e para interação com o Ethereum utilizamos o web3.js.
