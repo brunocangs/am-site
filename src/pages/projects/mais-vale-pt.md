@@ -10,7 +10,10 @@ whereToFind:
 language: pt
 title: Mais Vale
 technology:
-  - Firebase
+  - 2e611b48-37da-4527-bf70-fe66ad71bc41
+  - 833639d7-b646-4a23-b9e3-373c04d21766
+  - 3366ac07-2bc0-43ce-8a38-863b2759763a
+  - 5c7e8c15-9336-40a3-ad99-33d0fa050309
 summary: >-
   Acesso a descontos e promoções de produtos e serviços em diversas cidades,
   além de controle de fidelidade.
@@ -24,7 +27,7 @@ thumbnailImage: /img/projetos_mais_vale.png
 tags:
   - React
 ---
-O Mais vale é um aplicativo que oferece aos usuários descontos em diversos estabelecimentos, seja pelo consumo de produtos e serviços das empresas, por fidelização, como também premiando através de sorteios.
+O [Mais vale](http://maisvale.appmasters.io/) é um aplicativo que oferece aos usuários descontos em diversos estabelecimentos, seja pelo consumo de produtos e serviços das empresas, por fidelização, como também premiando através de sorteios.
 
 Para as empresas conveniadas a vantagem é trazer cada vez mais novos clientes, atraindo-os com promoções e demais vantagens, permitindo também a fidelização. Para os usuários o aplicativo oferece uma forma consistente de economizar e conhecer novos estabelecimentos, dos mais variados segmentos.
 
