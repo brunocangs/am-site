@@ -151,7 +151,7 @@ export default props => {
               data-netlify-recaptcha="true"
               data-netlify-honeypot="bot-field"
               onSubmit={handleSubmit}
-              action={isEn ? `/en/success` : `/pt/sucesso`}
+              action={isEn ? `/en/success/` : `/pt/sucesso/`}
             >
               {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
               <input
