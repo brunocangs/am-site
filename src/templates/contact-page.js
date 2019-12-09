@@ -59,7 +59,8 @@ export default props => {
     field: "",
     message: ""
   });
-  const isEn = props.pageContext.language === "en";
+  const { language } = props.pageContext;
+  const isEn = language === "en";
   const {
     title,
     nameLabel,
@@ -97,7 +98,7 @@ export default props => {
       });
     }
     const form = e.target;
-    fetch("/?no-cache=1", {
+    fetch(form.getAttribute("action"), {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({
@@ -144,15 +145,20 @@ export default props => {
         <div>
           <div>
             <form
-              name="contact"
+              value={isEn ? "contact" : "contato"}
               method="post"
               data-netlify="true"
               data-netlify-recaptcha="true"
               data-netlify-honeypot="bot-field"
               onSubmit={handleSubmit}
+              action={isEn ? `/en/success` : `/pt/sucesso`}
             >
               {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
-              <input type="hidden" name="form-name" value="contact" />
+              <input
+                type="hidden"
+                name="form-name"
+                value={isEn ? "contact" : "contato"}
+              />
               <div hidden>
                 <label>
                   Don’t fill this out:{" "}
