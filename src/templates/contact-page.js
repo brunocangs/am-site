@@ -145,7 +145,7 @@ export default props => {
         <div>
           <div>
             <form
-              value={isEn ? "contact" : "contato"}
+              name={isEn ? "contact" : "contato"}
               method="post"
               data-netlify="true"
               data-netlify-recaptcha="true"
