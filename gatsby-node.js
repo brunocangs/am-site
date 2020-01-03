@@ -46,13 +46,14 @@ exports.createPages = ({ actions, graphql }) => {
       if (edge.node.frontmatter.baseUrl) {
         const { baseUrl } = edge.node.frontmatter;
         const url = baseUrl.startsWith("/") ? baseUrl : `/${baseUrl}`;
-        path += `${edge.node.frontmatter.language}${url}`;
+        path += `${edge.node.frontmatter.language}${url}/`;
         if (edge.node.fields.slug !== "index") {
-          path += `/${edge.node.fields.slug}`;
+          path += `${edge.node.fields.slug}/`;
         }
       } else {
-        path += edge.node.fields.slug;
+        path += edge.node.fields.slug + "/";
       }
+      path.replace(/\/\//g, '/');
       createPage({
         path,
         tags: edge.node.frontmatter.tags,

@@ -138,7 +138,7 @@ export default props => {
           <link
             rel="canonical"
             href={`https://appmasters.io/${
-              isEn ? `en/contact` : `pt/contato`
+              isEn ? `en/contact/` : `pt/contato/`
             }/`}
           />
         </Helmet>
