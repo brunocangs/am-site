@@ -53,7 +53,7 @@ exports.createPages = ({ actions, graphql }) => {
       } else {
         path += edge.node.fields.slug + "/";
       }
-      path.replace(/\/\//g, '/');
+      path = path.replace(/\/\//g, '/');
       createPage({
         path,
         tags: edge.node.frontmatter.tags,
