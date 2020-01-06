@@ -13,60 +13,60 @@ whereToFind:
 language: en
 title: Low Carb App
 technology:
-  - 833639d7-b646-4a23-b9e3-373c04d21766
-  - 5c7e8c15-9336-40a3-ad99-33d0fa050309
-  - d93e87bf-4d65-4107-9d29-3e1ac6f8dad9
-  - fbecf863-4cf1-44e0-9a27-df32f01d33d6
+  - 8e2ced04-31d9-4f05-923a-44ad810d0b09
+  - 4fa7939c-30e5-43a5-8e56-fa64c47fbbc3
+  - 92fbd0e2-662d-4032-8d8e-06123b77b119
+  - 7f100892-1f9f-4266-b024-59ca1ad0873e
 summary: >-
   Low Carb is your direct guide to the latest low carb diets and manners, as
   well as intermittent fasting so you can start losing weight immediately
-clientName: Turi Souza
+clientName: Dr. Turi Souza
 clientLocation: Brazil
-devTime: 400
+devTime: 623
 devMonths: 3
-devCommits: 375
+devCommits: 477
 image: /img/lowcarb_mockup.png
 thumbnailImage: /img/projetos_low_carb.png
 tags:
   - React
   - React Native
   - MongoDB
+  - Node.Js
 ---
-# Emagreça já - Sua dieta Low Carb
+We developed alongside Dr. Turí Souza, author of the book 'Emagreça Já'
+(Lose Weight Now in portuguese), an app to support those who started their low carb diet and accompany them in their progress. Offering useful information and always new recipes according to their profile, goals and even health problems. It's the Low Carb App
 
-Desenvolvemos juntamente com o Dr. Turí Souza, autor do livro Emagreça Já,  um app para auxiliar aqueles que iniciaram sua dieta low carb e acompanhá-los em sua progressão, oferecendo informações úteis e receitas sempre novas de acordo com seu perfil, objetivos e até problemas de saúde. Trata-se do Emagreça Já.
+The freedom to create and the focus on results for the user allowed us to plan
+something that exceeded our client's expectations and deliver an app that really
+makes a difference in people's lives.
 
-A liberdade de criação e o foco no resultado para o usuário nos permitiram planejar algo que superasse as expectativas do nosso cliente e entregar um app que realmente fizesse diferença na rotina das pessoas.
+## Development 
 
-## Desenvolvimento
+To be able to develop an app that was very accurate and useful to the public
+following the Low Carb Diet, Intermittent Fasting and HIIT, we had to our
+subjects first. Firstly, we set out to read Dr. Turí Souza's book 'Emagreça Já', and only then did we start the project.
 
-Para conseguirmos desenvolver um app que fosse muito preciso e útil para o público que estivesse seguindo a Dieta Low Carb, Jejum Intermitente e HIIT, era preciso primeiramente conhecer a fundo sobre o assunto. Portanto, antes de mais nada, nos propusemos a ler o livro Emagreça Já, do Dr. Turí Souza, e só então demos início ao projeto.
+After gathering all the information and ideas, we moved to a functional
+prototype of the app that represented the format we envisioned. The prototype
+could be accessed [here](https://www.fluidui.com/editor/live/preview/cF9hM3AzUXN3azhrZWFTaWFRdU5UYVBxN2dWNUpUTDBiNw==). We introduced it to the customer and, based on their feedback, we refined the application - a process we repeated with each new version we developed. That way we were able to improve the application and deliver it exactly as Dr. Turí had expected.
 
-Com toda a informação adquirida e as ideias em mente, seguimos para um protótipo funcional do app que representasse o formato que imaginamos. O protótipo pode ser acessado [aqui](https://www.fluidui.com/editor/live/preview/cF9hM3AzUXN3azhrZWFTaWFRdU5UYVBxN2dWNUpUTDBiNw==). Apresentamos ao cliente e, a partir de seu feedback, fomos refinando o app – processo que repetíamos a cada nova versão concluída. Assim, nós íamos melhorando o aplicativo e deixando-o exatamente como o Dr. Turí esperava.
+> “My experience with App Masters has been great. We have been working together on the project from the start, which delivered the best customer experience. The readiness to meet my needs, fulfilling the planning and bringing productive suggestions to the development of my app is being a big difference.” – Dr Turí
 
-> “Minha experiência com a App Masters tem sido ótima. Desde o início do meu projeto estamos trabalhando em conjunto buscando a melhor experiência para os clientes. A prontidão em atender minhas necessidades, cumprindo o planejamento e trazendo sugestões produtivas para o desenvolvimento do meu aplicativo está sendo um grande diferencial.” - Dr. Turi
-
-Ao final do projeto, abrimos o app para testes beta, onde apenas convidados poderiam instalar o aplicativo para experimentar. Depois de algumas semanas em beta, ajustamos os últimos detalhes e liberamos o app Emagreça Já nas lojas.
-
----
-
-## Detalhes técnicos
-
-Um recurso que ficou muito bom é a possibilidade do app funcionar 100% offline, assim, independente de ter conexão ou não, o usuário consegue ter acesso aos cardápios, receitas e alimentos permitidos.
-
-Utilizamos, como em todos os outros projetos, uma ferramenta de registro de falhas online, onde, caso aconteça algum erro com algum usuário, somos avisados imediatamente para verificação e possível correção, mantendo assim o app sempre em perfeito funcionamento.
-
-O projeto foi desenvolvido para Android e iOS, nativo nos dois ambientes, com React Native. A API foi desenvolvida em node com MongoDB e está em funcionamento no heroku. A “área administrativa” foi implementada com React e está hospedada no firebase.
+At the end of the project, we opened the app for beta testing, where only guests
+could install the app to try it out. After a couple of weeks in beta, we tweaked
+the final details and released the App 'Emagreça Já' in Stores.
 
 ---
 
+## Reception and return on investments
 
-## Recepção e retorno sobre investimento
+---
 
-Não é fácil ter uma boa ideia no momento certo, que atenda uma demanda real e tenha boa aceitação. Mas assim aconteceu com o Emagreça Já. O app está à venda na Play Store e Google Play por R$9,90 e alcançou mais de mil vendas em menos de dois meses, sem investimento em marketing. Essa aceitação se reflete em vendas, gerando um retorno de investimento de aproximadamente 40% em aproximadamente 50 dias.
+## Technical details
 
-![Gráfico de instalações do app](/img/instalacoes_lowcarb-1.png "Instalações")
+A feature that turned out great is the possibility for the app to work 100% offline, so regardless of having a connection or not the user can have access to the menus, recipes and allowed foods.
 
-João Paulo, um dos usuários, está bastante satisfeito com o Emagreça Já e o avaliou como 5 estrelas. 
+We used, as in all other projects, an online error logging tool. Therefore, if any error occurs to any user, we are immediately notified for verification and correction, consequently keeping the app always in working order.
 
-> “Perdi quase 17 quilos em 3 meses depois de ler o livro do Dr. Turí Souza. Com esse app, agora eu estou tranquilo de conseguir manter o meu peso com sucesso.” - João Paulo
+The project was developed for Android and iOS, native in both environments, with React Native. The API was developed in Node with MongoDB and is hosted on Heroku. The “admin area” was implemented with React and is hosted on Firebase.
+
