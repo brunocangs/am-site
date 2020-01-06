@@ -15,12 +15,10 @@ tags:
   - NoSQL
   - Data
 ---
-## About
+MongoDB is a document based data store with a focus on storing JSON data.
 
-MongoDB is a document database, which means it stores data in JSON-like documents. We believe this is the most natural way to think about data, and is much more expressive and powerful than the traditional row/column model.
+It gained visibility through a moment where alternatives to SQL were being sought after, and gained adoption in important products and companies.
 
-## Rich JSON Documents
+Programming-wise it makes storing data in any shape simpler and optimizes the access to the information.
 
-- The most natural and productive way to work with data.
-- Supports arrays and nested objects as values.
-- Allows for flexible and dynamic schemas.
+It's not meant to take over SQL, necessarily, but being used alongside it can result in a high performance product.
