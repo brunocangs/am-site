@@ -8,7 +8,7 @@ whereToFind:
   - image: /img/chrome-browser-badge.png
     link: 'https://app.choferdahora.com.br/'
 language: en
-title: Chauffeur of the Hour
+title: Only drivers
 technology:
   - c925ab8b-afca-4c33-b63a-e9c513eccdd3
   - 4fa7939c-30e5-43a5-8e56-fa64c47fbbc3
@@ -27,7 +27,7 @@ To facilitate the hiring of a driver, who instead of meeting you in his car (suc
 That is the premise of the service offered by Only Drivers, the "Chauffeur of the Hour”, to offer several highly skilled drivers to drive your car.
 
 
-The app was born from the customers’ search for convenience in hiring drivers, while being able schedule appointments in advance, knowing the driver that will serve you, as well as rating the received service.
+The app (Chofer da Hora) was born from the customers’ search for convenience in hiring drivers, while being able schedule appointments in advance, knowing the driver that will serve you, as well as rating the received service.
 
 ## Technologies
 
