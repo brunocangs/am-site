@@ -16,8 +16,8 @@ technology:
   - 7f100892-1f9f-4266-b024-59ca1ad0873e
   - 976409e3-1489-447e-a21a-2b01234e0d5c
 summary: >-
-  App for salespeople from the beauty product company Hinode to keep track of
-  their leads from first contact until they complete the sale
+  App for beauty product salespeople from Hinode to keep track of their leads
+  from first contact until they complete the sale
 clientName: Go Diamond
 clientLocation: Brazil
 devTime: 275
@@ -31,22 +31,22 @@ tags:
   - React
   - React Native
 ---
-Resellers of products such as herbalife and Hinode deal with many people, make dozens of contacts daily and eventually make it difficult to keep up with each of them.
+Resellers of beauty products such as Herbalife and Hinode deal with many people, make dozens of daily contacts and eventually it becomes difficult to keep up with all of them.
    
-Thinking about this demand introduced Go Diamond, an application to facilitate the management of these leads, from the first contact to the completion of the business. We then developed an MVP, which is available in stores.
+Thinking about this demand that we introduced Go Diamond, an application to facilitate the management of these leads, from the first contact until the completion of the deal. We then developed an MVP, which is available in stores.
 
-Initially the user reports his or her monthly sales goals, conversion information (such as “I need to make 3 calls to get a visit”) and other metrics, in order to help the app track them throughout the month.
+Initially the user reports their monthly sales goals, conversion information (such as “I need to make 3 calls to get a visit”) and other metrics in order to help the app track them throughout the month.
 
-Once the lead is included in the app, it will keep track of contacts, meetings and presentations, keeping a detailed schedule of upcoming actions to be taken, always aiming to reach monthly sales goals.
-
-
-## Service Subscription
-
-Many applications have been converting their business model to subscription in order to earn more significant recurring revenue.
-
-MVP was developed with subscription functionality, both in Android and iOS versions. The user can try the application for a few days before opting for subscription.
+Once the lead is included in the app, it will keep track of contacts, meetings and presentations, keeping a detailed schedule of upcoming actions to be taken, always aiming to reach their monthly sales goals.
 
 
-## Technology
+## Subscription Service
 
-We developed the project using React Native, with Node backend and PostgreSql database.
+Many applications have been converting their business model into a subscription model in order to earn a more significant recurring revenue.
+
+The MVP was developed with the subscription functionality, both in Android and iOS versions. The user can try the application for a few days for free before opting for subscription.
+
+
+## Technologies
+
+We developed the project using React Native, with a Node backend and PostgreSQL database.
