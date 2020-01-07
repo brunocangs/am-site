@@ -27,8 +27,13 @@ tags:
   - Programadores
   - Vagas
   - Oportunidades
+  - Desenvolvedores
+  - Dev
+  - Desenvolvimento
+  - Contratar
+  - Empresa
 ---
-O mercado de tecnologia é aquecido e se faz necessário estar sempre em busca de novos profissionais para integrar as equipes das empresas; este projeto nasceu desta demanda, da constante necessidade das empresas encontrarem desenvolvedores para contratação. 
+O mercado de tecnologia está aquecido e se faz necessário estar sempre em busca de novos profissionais para integrar as equipes das empresas. Este projeto nasceu desta demanda, da constante necessidade das empresas encontrarem desenvolvedores para contratação. 
 
 Inicialmente fomos entender a dor das empresas ao tentar contratar, e também saber dos programadores o que viam que poderia ser melhorado nos processos de seleção. Desta forma a plataforma tem alguns pequenos detalhes para atender estes públicos, tentando garantir que os candidatos para uma vaga sejam sempre qualificados para estas, bem como não permitindo as empresas fazerem contato com os desenvolvedores enquanto não se interessarem efetivamente por uma vaga.
 
@@ -36,7 +41,7 @@ Inicialmente fomos entender a dor das empresas ao tentar contratar, e também sa
 
 Ainda com a intenção de fornecermos uma plataforma mais eficaz, criamos um processo de validação das empresas que se registram e da vagas oferecidas de forma a só levar aos usuários oportunidades realmente relevantes.
 
-# Resultados
+## Resultados
 
 O CEO da App Masters, Tiago Gouvêa, é o principal agitador da comunidade de desenvolvedores em Juiz de Fora, fazendo parte de vários grupos e sendo responsável por um Google Developers Group na cidade. Por este motivo foi relativamente rápido conquistar a confiança de centenas de desenvolvedores logo nas primeiras semanas.
 
@@ -46,7 +51,7 @@ As empresas também já recorriam ao nosso CEO Tiago Gouvêa, solicitando apoio 
 
 Até o presente momento tivemos uma taxa de sucesso de 82% nas vagas incluídas, ou seja, empresas que encontraram o desenvolvedor que procuravam através de nossa plataforma.
 
-# Só em Juiz de Fora?
+## Só em Juiz de Fora?
 
 Somos de Juiz de Fora e é aqui onde conhecemos mais pessoas, por isso a plataforma é ligada a cidade.
 
@@ -54,7 +59,7 @@ Porém desenvolvemos todo o projeto no modelo white-label, ou seja, incluir outr
 
 Para expandir para outras cidades, precisamos de parceiros que seja altamente ativos em suas comunidades de programadores, afim de propiciar a rápida adoção pelos usuários. Se você tiver interesse, [fale conosco](https://appmasters.io/pt/contato).
 
-# Tecnologias
+## Tecnologias
 
 Estávamos interessados em adquirir mais prática com o server-side rendering utilizando node e React, e este projeto nos permitiu utilizar estas ferramentas e aumentar nosso conhecimento.
 
