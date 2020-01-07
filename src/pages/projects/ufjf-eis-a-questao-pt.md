@@ -28,6 +28,7 @@ tags:
   - React
   - PhoneGap
   - Firebase
+  - React Native
 ---
 Um app muito interessante que desenvolvemos é o game Eis a Questão, elaborado lado a lado com a UFJF e financiado pela Fundação de Amparo à Pesquisa do Estado de Minas Gerais (FAPEMIG). A interação constante com o cliente permitiu um resultado além das expectativas, tanto para a universidade quanto para os usuários.
 
