@@ -32,7 +32,7 @@ tags:
 ---
 Um app muito interessante que desenvolvemos é o game Eis a Questão, elaborado lado a lado com a UFJF e financiado pela Fundação de Amparo à Pesquisa do Estado de Minas Gerais (FAPEMIG). A interação constante com o cliente permitiu um resultado além das expectativas, tanto para a universidade quanto para os usuários.
 
-Os dois principais objetivos do projeto são; apresentar aos estudantes do ensino médio os projetos científicos em desenvolvimento na UFJF, e funcionar como um "teste vocacional", auxiliando na percepção das áreas de interesse e facilitando a identificação dos cursos onde pode haver mais afinidade.
+Os dois principais objetivos do projeto eram de apresentar aos estudantes do ensino médio os projetos científicos em desenvolvimento na UFJF, e funcionar como um "teste vocacional", auxiliando na percepção das áreas de interesse e facilitando a identificação dos cursos onde pode haver mais afinidade.
 
 Voltado para alunos do ensino médio, o game cria um ambiente lúdico no qual o jogador presta o ENEM, entra na universidade, descobre mais sobre os cursos, desenvolve seus conhecimentos, forma-se e até faz mestrado na UFJF. Tudo isso através de missões de perguntas e respostas divertidas e interativas, onde o aluno aprende se divertindo.
 
@@ -42,7 +42,7 @@ O game desenvolvido por nós também conta com um sistema de pontuação, que cl
 
 Desde a concepção do game, nossa equipe esteve sempre em contato com os responsáveis pelo projeto na UFJF. Durante todo o processo, eles foram experimentando cada versão, validando as interações e sugerindo melhorias para o app.
 
-"Atribuo o sucesso desse projeto à qualidade da equipe, ao trabalho árduo, à paciência e persistência de todos os envolvidos. O diálogo constante entre a equipe da UFJF e os programadores foram fundamentais para que chegássemos ao resultado pretendido”, Bárbara Duque, coordenadora de Divulgação Científica da Imagem Institucional da UFJF.
+> "Atribuo o sucesso desse projeto à qualidade da equipe, ao trabalho árduo, à paciência e persistência de todos os envolvidos. O diálogo constante entre a equipe da UFJF e os programadores foram fundamentais para que chegássemos ao resultado pretendido” - Bárbara Duque, coordenadora de Divulgação Científica da Imagem Institucional da UFJF.
 
 É dessa forma, com muito compartilhamento de ideias, que nós gostamos de trabalhar. Afinal, aqui na App Masters acreditamos que, só assim, tudo sairá conforme o esperado, e o app possa ser um verdadeiro sucesso, atingindo todos os objetivos traçados, conquistando as metas do cliente e surpreendendo o público ao qual foi destinado.
 
