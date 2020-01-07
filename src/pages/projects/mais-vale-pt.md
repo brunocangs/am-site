@@ -27,11 +27,11 @@ thumbnailImage: /img/projetos_mais_vale.png
 tags:
   - React
 ---
-O [Mais vale](http://maisvale.appmasters.io/) é um aplicativo que oferece aos usuários descontos em diversos estabelecimentos, seja pelo consumo de produtos e serviços das empresas, por fidelização, como também premiando através de sorteios.
+O [Mais vale](https://maisvale.appmasters.io/) é um aplicativo que oferece aos usuários descontos em diversos estabelecimentos, seja pelo consumo de produtos e serviços das empresas, por fidelização, como também premiando através de sorteios.
 
 Para as empresas conveniadas a vantagem é trazer cada vez mais novos clientes, atraindo-os com promoções e demais vantagens, permitindo também a fidelização. Para os usuários o aplicativo oferece uma forma consistente de economizar e conhecer novos estabelecimentos, dos mais variados segmentos.
 
-> A atenção dada ao projeto pelo time da App Masters, desde o primeiro contato, nos trouxe a segurança necessária para tirar do papel o MaisVale. Tivemos (e continuamos a ter) uma excelente experiência e podemos dizer, sem qualquer receio, que competência técnica, suporte sem igual e atenção aos detalhes são os diferenciais da empresa. - Bernardo Almeida - Mais Vale
+> "A atenção dada ao projeto pelo time da App Masters, desde o primeiro contato, nos trouxe a segurança necessária para tirar do papel o MaisVale. Tivemos (e continuamos a ter) uma excelente experiência e podemos dizer, sem qualquer receio, que competência técnica, suporte sem igual e atenção aos detalhes são os diferenciais da empresa." - Bernardo Almeida - Mais Vale
 
 Através do aplicativo o usuário "baixa" um cupom de desconto, que é validado via QRCode no momento da compra, validando assim a utilização.
 
