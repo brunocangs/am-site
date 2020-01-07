@@ -44,7 +44,7 @@ Desde a concepção do game, nossa equipe esteve sempre em contato com os respon
 
 > "Atribuo o sucesso desse projeto à qualidade da equipe, ao trabalho árduo, à paciência e persistência de todos os envolvidos. O diálogo constante entre a equipe da UFJF e os programadores foram fundamentais para que chegássemos ao resultado pretendido” - Bárbara Duque, coordenadora de Divulgação Científica da Imagem Institucional da UFJF.
 
-É dessa forma, com muito compartilhamento de ideias, que nós gostamos de trabalhar. Afinal, aqui na App Masters acreditamos que, só assim, tudo sairá conforme o esperado, e o app possa ser um verdadeiro sucesso, atingindo todos os objetivos traçados, conquistando as metas do cliente e surpreendendo o público ao qual foi destinado.
+É dessa forma, com muito compartilhamento de ideias, que nós gostamos de trabalhar. Afinal, aqui na App Masters acreditamos que só assim tudo sairá conforme o esperado e o app poderá ser um verdadeiro sucesso. atingindo todos os objetivos traçados, conquistando as metas do cliente e surpreendendo o público ao qual foi destinado.
 
 ## Recepção
 
