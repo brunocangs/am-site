@@ -31,7 +31,7 @@ tags:
   - React
   - React Native
 ---
-Revendedores de produtos como herbalife e Hinode lidam com muitas pessoas, realizam dezenas de contatos diariamente e eventualmente se torna difícil acompanhar o andamento de cada um deles.
+Revendedores de produtos como Gerbalife e Hinode lidam com muitas pessoas, realizam dezenas de contatos diariamente e eventualmente se torna difícil acompanhar o andamento de cada um deles.
 
 Pensando nesta demanda que surge o Go Diamond, um aplicativo para facilitar a gestão destes leads, desde o primeiro contato até a efetivação do negócio. Desenvolvemos então um MVP, que está disponível nas lojas.
 
