@@ -23,7 +23,7 @@ image: /img/willim-bg-banner.jpg
 thumbnailImage: /img/projetos_willim.png
 tags:
   - React
-  - ReactNative
+  - React Native
 ---
 Com uma proposta inovadora para inovar os processos de registro de monitoramento de espécies da fauna em campo, o Willim é um aplicativo utilizado em aeroportos, feito para auxiliar biólogos no controle de dados e prevenção de acidentes aeronáuticos.
 
