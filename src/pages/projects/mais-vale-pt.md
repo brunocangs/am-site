@@ -26,6 +26,12 @@ image: /img/mais-vale-mockup-1.png
 thumbnailImage: /img/projetos_mais_vale.png
 tags:
   - React
+  - React Native
+  - MySQL
+  - Cupons
+  - Desconto
+  - Promoção
+  - Promoções
 ---
 O [Mais vale](https://maisvale.appmasters.io/) é um aplicativo que oferece aos usuários descontos em diversos estabelecimentos, seja pelo consumo de produtos e serviços das empresas, por fidelização, como também premiando através de sorteios.
 
