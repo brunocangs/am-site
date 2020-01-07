@@ -28,6 +28,8 @@ thumbnailImage: /img/projetos_godiamond.png
 tags:
   - Hinode
   - Herbalife
+  - React
+  - React Native
 ---
 Revendedores de produtos como herbalife e Hinode lidam com muitas pessoas, realizam dezenas de contatos diariamente e eventualmente se torna difícil acompanhar o andamento de cada um deles.
 
