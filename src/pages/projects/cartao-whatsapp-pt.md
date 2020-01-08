@@ -22,6 +22,7 @@ image: /img/whatsapp-mock2.png
 thumbnailImage: /img/projetos_whatsapp.png
 tags:
   - WhatsApp
+  - React Native
 ---
 Pessoas que precisam do WhatsApp para fazer contatos rápidos em eventos ou demais momentos.
 
