@@ -3,7 +3,7 @@ id: 922518a9-b80c-4d12-8f4d-24007592ab44
 templateKey: technology-page
 baseUrl: technologies
 language: en
-title: Google Cloud
+title: Google Cloud Platform
 logo: /img/google-cloud-platform-logo.png
 featured: false
 summary: GCP
