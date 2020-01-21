@@ -5,12 +5,22 @@ import ReCAPTCHA from "react-google-recaptcha";
 import { Contact, ContactContent } from "../components/ContactComponents";
 import { Button } from "../components/BlogComponents";
 import { Banner } from "../components/Header";
+import Airtable from "airtable";
+import { promisify } from "util";
 
+Airtable.configure({
+  endpointUrl: "https://api.airtable.com",
+  apiKey: "key7DGYrn59XOAe0C"
+});
+
+const base = Airtable.base("appQNoJ01I2S0yyRA");
+const create = promisify(base("Contatos").create);
 function encode(data) {
   return Object.keys(data)
     .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
     .join("&");
 }
+
 const getStrings = isEn => {
   return isEn
     ? {
@@ -97,21 +107,15 @@ export default props => {
         message: getError(isEn, "captcha")
       });
     }
-    const form = e.target;
-    fetch(form.getAttribute("action"), {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({
-        "form-name": form.getAttribute("name"),
-        ...{
-          name,
-          email,
-          message,
-          "bot-field": bot,
-          "g-captcha-response": captcha
+    create([
+      {
+        fields: {
+          Name: name,
+          Email: email,
+          Message: message
         }
-      })
-    })
+      }
+    ])
       .then(() => setSuccess(true))
       .catch(e => {
         setError({
