@@ -1,14 +1,11 @@
-import React from "react";
-import { graphql, Link } from "gatsby";
-import Helmet from "react-helmet";
-import {
-  Post,
-  PostContent,
-  AllBlogContainer
-} from "../components/BlogComponents";
-import Img from "gatsby-image";
-import { kebabCase } from "lodash";
-import { renderBlogItem } from "./all-blog-page";
+import { graphql, Link } from 'gatsby';
+import Img from 'gatsby-image';
+import { kebabCase } from 'lodash';
+import React from 'react';
+import Helmet from 'react-helmet';
+
+import { AllBlogContainer, Post, PostContent } from '../components/BlogComponents';
+import { renderBlogItem } from './all-blog-page';
 
 export default ({ data }) => {
   const {
