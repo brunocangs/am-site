@@ -36,9 +36,10 @@ exports.createPages = ({ actions, graphql }) => {
 
     posts.forEach(edge => {
       if (
-        !edge.node.frontmatter.templateKey ||
-        (edge.node.frontmatter.language === "en" &&
-          edge.node.frontmatter.templateKey !== "landing-page")
+        !edge.node.frontmatter.templateKey
+        // ||
+        // (edge.node.frontmatter.language === "en" &&
+        //   edge.node.frontmatter.templateKey !== "landing-page")
       )
         return;
       const id = edge.node.id;
@@ -53,7 +54,7 @@ exports.createPages = ({ actions, graphql }) => {
       } else {
         path += edge.node.fields.slug + "/";
       }
-      path = path.replace(/\/\//g, '/');
+      path = path.replace(/\/\//g, "/");
       createPage({
         path,
         tags: edge.node.frontmatter.tags,

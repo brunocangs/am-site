@@ -1,14 +1,15 @@
-import styled from "styled-components";
-import { Link, graphql, useStaticQuery } from "gatsby";
-import { FaLanguage, FaSearch } from "react-icons/fa";
-import React, { useEffect, useState } from "react";
-import * as Colors from "../styles/colors";
-import Logo from "../styles/svgs/white_logo.svg";
-import media from "../styles/medias";
-import Img from "gatsby-image";
-import { match } from "@reach/router/lib/utils";
-import { Input } from "./ContactComponents";
-import { Button } from "./BlogComponents";
+import { match } from '@reach/router/lib/utils';
+import { graphql, Link, useStaticQuery } from 'gatsby';
+import Img from 'gatsby-image';
+import React, { useEffect, useState } from 'react';
+import { FaLanguage, FaSearch } from 'react-icons/fa';
+import styled from 'styled-components';
+
+import * as Colors from '../styles/colors';
+import media from '../styles/medias';
+import Logo from '../styles/svgs/white_logo.svg';
+import { Button } from './BlogComponents';
+import { Input } from './ContactComponents';
 
 const Nav = styled.nav`
   position: sticky;
@@ -186,21 +187,25 @@ const getLinks = language => {
   if (language === "en") {
     navLinks = [
       {
-        url: "/",
-        label: ""
+        url: "/projects",
+        label: "Projects"
+      },
+      {
+        url: "/services",
+        label: "Services"
+      },
+      {
+        url: "/blog",
+        label: "Blog"
+      },
+      {
+        url: "/technologies",
+        label: "Technologies"
+      },
+      {
+        url: "/about",
+        label: "About us"
       }
-      // {
-      //   url: "/services",
-      //   label: "Services"
-      // },
-      // {
-      //   url: "/blog",
-      //   label: "Blog"
-      // },
-      // {
-      //   url: "/about",
-      //   label: "About us"
-      // }
     ];
   } else {
     navLinks = [
